@@ -18,8 +18,8 @@ def sync(source_dirs, destination_bucket):
 
 
 if __name__ == '__main__':
-    filename = sys.argv[0]
-    destination_bucket = sys.argv[1]
+    filename = sys.argv[1]
+    destination_bucket = sys.argv[2]
     with open(filename, 'rb') as f:
         source_dirs = json.load(f)["source_dirs"]
         sync(source_dirs, destination_bucket)
