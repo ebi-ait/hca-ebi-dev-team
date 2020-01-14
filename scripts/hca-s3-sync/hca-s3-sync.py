@@ -6,13 +6,10 @@ import subprocess
 
 def sync_bucket_dir(source_dir, destination_bucket):
     print(f'Syncing {source_dir} to bucket {destination_bucket}')
-    cmd = ['aws', 's3', 'sync', source_dir, destination_bucket]
-    p = subprocess.Popen(cmd, shell=True)
-    for line in p.stdout:
-        print(line)
-    p.wait()
+    cmd = f'aws s3 sync {source_dir} {destination_bucket}'
+    p = subprocess.call(cmd.split(" "), shell=True)
     print(f'Completed syncing {source_dir} to bucket {destination_bucket}')
-    return p.returncode
+    return p
 
 
 def sync(source_dirs, destination_bucket):
