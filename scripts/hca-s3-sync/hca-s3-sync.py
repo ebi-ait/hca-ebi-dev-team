@@ -6,8 +6,7 @@ import subprocess
 
 def sync_bucket_dir(source_dir, destination_bucket):
     print(f'Syncing {source_dir} to bucket {destination_bucket}')
-    cmd = f'aws s3 sync {source_dir} {destination_bucket}'
-    p = subprocess.call(cmd.split(" "), shell=True)
+    p = subprocess.call(f'aws s3 sync {source_dir} {destination_bucket}'.split(" "))
     print(f'Completed syncing {source_dir} to bucket {destination_bucket}')
     return p
 
@@ -19,8 +18,8 @@ def sync(source_dirs, destination_bucket):
 
 
 if __name__ == '__main__':
-    filename = sys.argv[1]
-    destination_bucket = sys.argv[2]
+    filename = sys.argv[0]
+    destination_bucket = sys.argv[1]
     with open(filename, 'rb') as f:
         source_dirs = json.load(f)["source_dirs"]
         sync(source_dirs, destination_bucket)
