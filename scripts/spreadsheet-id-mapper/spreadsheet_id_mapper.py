@@ -20,6 +20,7 @@ def entity_id_path(entity_type: str) -> Tuple[str, str]:
     else:
         raise Exception(f'Unknown ingest entity type: {entity_type}')
 
+
 def _uuid_entity_id_map(entities: Iterable[Dict]) -> Dict[str, Dict[str, str]]:
     entity_id_uuid_map = dict()
 
@@ -60,6 +61,7 @@ def uuid_entity_id_map(submission_resource: Dict, ingest_api: IngestApi) -> Dict
       ...
     }
 
+    :param ingest_api: an instance of the ingest-api client
     :param submission_resource: A submission resource represented as a JSON object/dict
     :return: a mapping of the local IDs in the submission (i.e spreadsheet IDs) to their corresponding UUIDs
     """
@@ -70,6 +72,7 @@ def uuid_entity_id_map(submission_resource: Dict, ingest_api: IngestApi) -> Dict
     projects = ingest_api.get_related_entities("projects", submission_resource, "projects")
 
     return _uuid_entity_id_map(chain(biomaterials, files, processes, protocols, projects))
+
 
 def main(ingest_api_url: str, submission_uuid: str):
     ingest_api = IngestApi(url=ingest_api_url)
@@ -82,14 +85,10 @@ def main(ingest_api_url: str, submission_uuid: str):
         print(f'Writing mapping JSON to {mapping_filename}')
         json.dump(mapping, f, indent=4, sort_keys=True)
 
+
 if __name__ == "__main__":
     ingest_api_url = sys.argv[1]
     submission_uuids = sys.argv[2].split(",")
 
     for submission_uuid in submission_uuids:
         main(ingest_api_url, submission_uuid)
-
-
-
-
-
