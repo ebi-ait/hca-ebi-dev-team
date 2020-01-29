@@ -23,7 +23,7 @@ Given a submission UUID, outputs a mapping of the IDs within the spreadsheet to 
 (requires python3.x)
 
 1. `pip install -r requirements.txt`
-2. `python3 spreadsheet_id_mapper <ingest API URL> <list of comma-separated spreadsheet submission UUIDs>`
+2. `python3 spreadsheet_id_mapper.py <ingest API URL> <list of comma-separated spreadsheet submission UUIDs>`
 
 Example:
 
