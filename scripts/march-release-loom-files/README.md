@@ -11,17 +11,30 @@ then sync it with the given bucket.
 
 ```shell script
 python cp-loom-files.py one_organ_datasets <s3_bucket>
+python cp-loom-files.py multi_organ_datasets <s3_bucket>
 ```
 
 The following assumes you have installed the AWS CLI. No access key or secret is required as the bucket is public (for now).
 ## List content of S3 bucket
 ```shell script
-aws s3 ls <s3_bucket>
+aws s3 ls s3://<bucket_name>
 ```
 
-## Copy/replace files in S3 bucket
+## List content of a particular project in bucket
 ```shell script
-aws s3 cp <file_name> <s3_bucket>
+aws s3 ls s3://<bucket_name>/<project_name>
+```
+
+## Copy/replace files after modification for a project
+
+All files in current working dir
+```shell script
+aws s3 cp . s3://<bucket_name>/<project_name>
+```
+
+Specific file
+```shell script
+aws s3 cp <file_name> s3://<bucket_name>/<project_name>
 ```
 
 

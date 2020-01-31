@@ -17,7 +17,8 @@ def download_list(json_data):
 
 def download(project, file):
     download_path = tmp_folder + "/" + project
-    os.removedirs(download_path)
+    if os.path.exists(download_path):
+        subprocess.call(['rm', '-rf', download_path])
     os.makedirs(download_path)
     print(f'Downloading {project} {file}')
     subprocess.call(['wget', '-P', download_path, file])
@@ -34,8 +35,8 @@ if __name__ == '__main__':
         data = json.load(datasets)
         ls = download_list(data)
         print(f'Download started')
-        #with Pool(12) as p:
-        #    p.map(lambda l: download(l[0], l[1]), ls)
+        with Pool(12) as p:
+            p.map(lambda l: download(l[0], l[1]), ls)
         print(f'Download completed')
         print(f'Syncing started')
         sync_s3_bucket(s3_bucket)
