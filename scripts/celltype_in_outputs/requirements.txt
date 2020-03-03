@@ -1,0 +1,5 @@
+loompy
+scanpy
+pandas
+argparse
+requests
