@@ -1,0 +1,1331 @@
+cell_suspension.biomaterial_core.biomaterial_id,inferred_cell_type,organism_part,cell_suspension.provenance.document_id
+24088_6_227,monocyte,blood,7dfa5ec8-8eb2-4746-9642-37cf85b43bb5
+24088_6_170,T cell,blood,a8cd706f-3294-4c53-995c-4077b55849a2
+24088_3_75,T cell,blood,8f585ea8-08b3-462f-91a2-66edbf1c1761
+24088_6_51,T cell,blood,fc315d76-acb1-4ad4-af00-8304733e6095
+24088_4_73,T cell,blood,7d97c898-b011-4e6e-8b2e-c0a48e90034e
+24088_6_166,monocyte,blood,dc8632b8-0a76-410a-b2d7-cd1ea6c730d9
+24088_6_275,monocyte,blood,e96c2199-7ea1-4dca-be14-8a1e4739684e
+24088_6_71,T cell,blood,1d83139b-64fc-4c04-8bd9-b08f7f222628
+24088_6_248,T cell,blood,1bbd28c8-91bd-4136-a933-a6c72ed84361
+24088_5_35,T cell,blood,81bca794-c6b2-485e-a19e-220ea0164afc
+24088_3_145,T cell,blood,d113540a-a853-4690-b485-0ea5c97cbe96
+24088_3_325,T cell,blood,8decc861-7123-4cd1-a122-413addc3bb13
+24088_6_107,monocyte,blood,373567d5-95b1-4a55-bc7c-ff1bf499ef71
+24088_5_326,T cell,blood,b4064c43-ed16-4a51-b0e4-3adfac89728a
+24088_5_344,plasma cell,blood,8b3e80e9-b1b3-41e8-b46d-cd68387f4f0c
+24088_5_215,monocyte,blood,9ab9d455-2674-4f02-aaa2-71d829bf56ed
+24088_6_262,T cell,blood,38418d0d-9830-4038-950e-087ea2f22414
+24088_4_16,T cell,blood,f8536526-90a8-457f-a728-72934c889dc2
+24088_5_150,T cell,blood,05000ef4-8ae4-4309-afac-74edfc87718c
+24088_4_61,T cell,blood,e003909d-b19d-480e-85f5-7e71325c6bf0
+24088_3_229,T cell,blood,b7933fb3-049a-4e81-a893-30153e55b64d
+24088_5_225,T cell,blood,f5afa630-678e-4d01-af2d-638c9f8863e9
+24088_5_10,T cell,blood,8f8be5e0-f2b6-421d-b3df-c6dd70f632cb
+24088_3_117,monocyte,blood,25807f61-ff86-4e12-be5b-c5ef929ded42
+24088_5_226,T cell,blood,0f1980a9-8a36-4be0-b96f-0038068fde89
+24088_3_150,T cell,blood,ed326f00-11ec-4e60-a658-5786fc186601
+24088_5_230,T cell,blood,00451a81-8031-43db-b60a-89fcf5c4e493
+24088_3_233,T cell,blood,9f3ee8a2-a0d4-46a6-8f4f-65b6e45671d3
+24088_6_40,monocyte,blood,f9f2dd2a-851a-41bc-9b1b-c09c073d94cd
+24088_5_16,CD16-positive natural killer cell (NK CD16+),blood,411a55d1-5a1a-4899-94d4-e28b2ee964f9
+24088_5_37,T cell,blood,6a78bee4-5502-4239-8ca7-bd27a36fe786
+24088_6_285,T cell,blood,b3f57964-4d32-4679-9045-e3201b09bb6c
+24088_6_240,T cell,blood,7cbfb20c-be1f-4e12-8a5f-cc43e5f38911
+24088_3_171,T cell,blood,1c0823df-1659-49e4-8d65-ec5032d37049
+24088_4_152,CD16-positive natural killer cell (NK CD16+),blood,20fe0cd8-9c2e-4b17-a298-6995e8f355e2
+24088_3_380,T cell,blood,406b1d55-1c04-4019-b82a-1e4f33539bc2
+24088_3_338,CD16-negative natural killer cell (NK CD16-),blood,312fd5cd-7843-4453-a6ea-1a6ee4232c4e
+24088_4_79,granulocyte,blood,08a64beb-14e0-4ba3-9fb6-be246fca68e1
+24088_6_135,monocyte,blood,18a91ec4-0154-48bb-8c30-595ef2b467f5
+24088_3_189,plasmacytoid dendritic cell (DC2),blood,7ed8fb4c-a4fd-4527-a002-6b1921d92b8b
+24088_3_14,monocyte,blood,8266ea04-499b-49b9-b170-2e993a9a5ae1
+24088_3_227,T cell,blood,287febf3-64d3-4121-97e5-3c49cc84a84f
+24088_6_47,CD16-positive natural killer cell (NK CD16+),blood,8aacb6d6-4929-473c-b11d-d6f3a46f3737
+24088_4_183,T cell,blood,65493123-7172-46c0-9287-9fbdcd350b20
+24088_4_161,T cell,blood,90fcbb74-8279-48a4-9272-7c3f23dd932d
+24088_4_130,T cell,blood,626aa81c-5b50-4586-9edb-5ab0846d3247
+24088_6_16,monocyte,blood,fd773e21-af4c-462a-9a21-5a2242df2da5
+24088_4_119,T cell,blood,998f678a-6659-40f0-979e-925b39a7471f
+24088_6_251,monocyte,blood,de15d9a7-b8d0-4b87-9331-5d05ab8c8d21
+24088_3_240,T cell,blood,9b078b33-5ffc-4528-9267-a3bf79811f94
+24088_6_30,CD16-positive natural killer cell (NK CD16+),blood,36a896d2-1968-4f4b-aa6a-c0cdd0c54171
+24088_4_141,T cell,blood,0f870ac9-35d0-44a4-9de3-598f8900c996
+24088_4_29,T cell,blood,66097a61-fe15-4e02-b4b1-36d4c0fc304f
+24088_3_195,CD16-positive natural killer cell (NK CD16+),blood,c3c21682-b1cf-4bdc-87ec-227df3d85c1d
+24088_4_75,NA,blood,9fb4159e-ba98-4a5c-a0a0-34c02ed06429
+24088_5_203,T cell,blood,fb2457e2-7639-4a10-b2ee-597e247f9d7c
+24088_3_295,villous cytotrophoblast (VCT),blood,1586748f-ed34-4629-836d-5ede517ef3ce
+24088_3_257,T cell,blood,fb24f2f0-8c6c-4bf4-8b69-be29ed4e0364
+24088_6_273,monocyte,blood,ab57f523-dd72-4136-99b6-13776d5bbbb0
+24088_6_223,T cell,blood,602c61a9-dff1-4b9c-8c08-d8611e67d819
+24088_3_346,T cell,blood,d961c752-3ead-47c0-8990-1f26e7ad1c12
+24088_5_362,plasmacytoid dendritic cell (DC2),blood,e2e120cd-7030-4c46-ae0d-b5fda1a3d856
+24088_5_354,T cell,blood,d043e6dc-430b-4e7e-9f7c-807cecb2a17f
+24088_3_190,monocyte,blood,59ae354c-ed43-4ba8-b807-ffd2a458e92b
+24088_3_246,T cell,blood,db6d0c18-95c9-48ed-b7ea-6db7c07acf14
+24088_3_140,monocyte,blood,3b0a77e0-4167-47d8-ba3d-efb12eb1c118
+24088_3_293,granulocyte,blood,a678102b-f851-4114-93c9-054a0211dc6b
+24088_6_300,monocyte,blood,dde7735e-f9c6-4b5a-af78-d3bb9572c99a
+24088_5_371,NA,blood,8516c723-68a4-4219-bba0-6d6e2758392d
+24088_3_165,plasmacytoid dendritic cell (DC2),blood,7c722848-4e86-4b48-8acb-e3639a1f24cb
+24088_5_211,CD16-positive natural killer cell (NK CD16+),blood,2f91f3e4-6de5-446a-aecb-53f762d3e8d0
+24088_3_17,monocyte,blood,cde381de-dc2d-40f7-8d01-9af37dfb3819
+24088_3_201,T cell,blood,b769f7b2-8db0-4672-a531-b910d6752577
+24088_3_315,T cell,blood,fece0400-7fb4-4e72-9af8-3a49a028db49
+24088_3_363,CD16-negative natural killer cell (NK CD16-),blood,de19f1f5-77db-4aa6-ae6d-7a4b48957e90
+24088_3_186,plasma cell,blood,30f02eec-7bf0-475e-a16f-4264915f7220
+24088_3_98,T cell,blood,41be9c07-7256-4147-b421-0feafa43f2f6
+24088_3_121,T cell,blood,518abe90-7ecb-4d2f-ba20-53a3b950cbc7
+24088_6_61,monocyte,blood,b266bec8-f747-4559-8913-491b7003c5d6
+24088_4_182,T cell,blood,4818dc88-299a-4034-b1d9-9c7075df7457
+24088_4_109,T cell,blood,ac71d967-e324-44e5-a8b6-4c210eae7ec2
+24088_6_98,NA,blood,d6f6a8fc-2ce0-4661-a506-77606b54b2ec
+24088_5_90,T cell,blood,568b86bb-7775-4138-998d-344e5be49866
+24088_6_266,T cell,blood,3e1aa0a1-7952-4aa0-8e50-f431bdd84483
+24088_4_5,T cell,blood,14bb8776-86cd-40ad-b5f2-77f60c937936
+24088_6_183,NA,blood,0cf5a57f-f642-4b1e-8018-a26293934814
+24088_5_270,monocyte,blood,edd48bc0-6a5b-44f9-8ee0-1e0b6784e2aa
+24088_5_204,T cell,blood,0af60bd9-b00d-4092-aa0c-34753c763264
+24088_4_82,NA,blood,e3e958af-2a9a-43bf-b242-590bc0d2e7ce
+24088_3_99,T cell,blood,ad8a4884-32fa-4b3f-b2a3-4d746d9d5a2a
+24088_4_11,CD16-positive natural killer cell (NK CD16+),blood,5d199f00-b1b9-43ab-a06c-e5a2d23c5ac2
+24088_6_358,T cell,blood,7a4b9e2c-423b-46ba-af88-65ac768bf25e
+24088_6_343,CD16-positive natural killer cell (NK CD16+),blood,5167e400-c7e8-4bbd-896f-b721836e5057
+24088_6_265,T cell,blood,67b7a2ba-a624-47e7-956c-4edc29c0c239
+24088_5_373,CD16-positive natural killer cell (NK CD16+),blood,2500172f-4155-4c47-b227-508d8578549a
+24088_4_53,T cell,blood,9493fd23-de09-4816-8f18-81729171e739
+24088_3_371,T cell,blood,03e880a2-5afc-47e0-a209-c1f13343bdf1
+24088_5_119,T cell,blood,1a42f9d0-0609-46f9-9120-06ff8eb21247
+24088_5_1,T cell,blood,40bad906-59d0-463d-ba9d-39398bdd5f85
+24088_6_247,T cell,blood,9a586cb9-eb0b-482b-9a86-630bfa3d45f3
+24088_5_257,T cell,blood,5fcef608-e944-4c7e-a5ae-129d9e5d8f9c
+24088_6_221,T cell,blood,e631a3ea-a516-445d-ab90-314611cc593e
+24088_4_113,T cell,blood,83fb4c1c-7798-422a-a2f4-6085fa552768
+24088_4_124,CD16-positive natural killer cell (NK CD16+),blood,c619d461-0ea5-4ea7-8a56-ad32cc6d2fd1
+24088_5_7,T cell,blood,dd7a0e7f-fcc2-437f-ab91-5a51382d5cd4
+24088_4_160,T cell,blood,6590807f-d8f8-4d01-afd0-da0891e832f6
+24088_3_64,monocyte,blood,5620d482-357a-4cb1-a935-da8a7c798b9f
+24088_5_89,CD16-positive natural killer cell (NK CD16+),blood,b567ec3e-64e4-463d-b43d-cdab4f218661
+24088_6_81,NA,blood,1a375ae8-1c67-4582-8e80-e383eb51ee1f
+24088_5_144,T cell,blood,e1f80986-9a89-4025-ab3e-7a369e1c5c5a
+24088_3_296,T cell,blood,b1d86197-59df-475a-b2e9-8e9ca6b04a78
+24088_6_192,T cell,blood,9e763e37-14b4-454f-9409-ab7935c7e7d7
+24088_3_305,T cell,blood,26b6c5cf-660d-4ecf-be42-aea1c52e8ade
+24088_5_278,T cell,blood,6b8a41ae-5cf1-4fa2-90cd-55c7221afbe4
+24088_3_23,T cell,blood,9e6b54e7-a8bb-457e-9011-3810cdc92967
+24088_3_359,T cell,blood,3ea8a33a-6781-47b2-b1cb-a9f353754f71
+24088_5_91,T cell,blood,d5433cc4-8868-40cb-9eea-fe3368c77577
+24088_6_268,T cell,blood,b2c6fb52-3bb0-4ab3-b09f-b09e828ed7d5
+24088_3_348,T cell,blood,d775a4f4-1255-42c3-b6ef-3c1954f04c3f
+24088_3_177,T cell,blood,2ddff42f-030f-43b6-a46b-c8e1c26d73d1
+24088_4_129,CD16-negative natural killer cell (NK CD16-),blood,212bc89e-3351-410e-ace6-c364468361c7
+24088_5_9,T cell,blood,78510734-2c09-4c62-869a-f13b112ccce5
+24088_5_367,monocyte,blood,17b0fcda-54ad-4153-bee6-c9893711b857
+24088_6_143,T cell,blood,07e47890-5480-4b62-b23d-2c3d3057c2de
+24088_3_248,T cell,blood,ce8228e9-6672-4da2-a277-3e3d9d014be1
+24088_3_79,T cell,blood,d99beaf6-f82b-4af0-96b9-12011cf3b8e4
+24088_6_225,monocyte,blood,66450924-8232-401b-8c40-e18019793555
+24088_5_133,CD16-negative natural killer cell (NK CD16-),blood,6fb4ef09-31b8-4c2c-86cd-be540ab0e885
+24088_3_356,T cell,blood,812a3841-6e2f-4060-a094-780f38a2e3b9
+24088_3_378,T cell,blood,1e927452-3648-43d8-aa7c-667a82c55d66
+24088_5_376,CD16-positive natural killer cell (NK CD16+),blood,b291af60-da6e-4a6f-9f75-7bb5719eea89
+24088_3_312,CD16-negative natural killer cell (NK CD16-),blood,32884683-e01e-4e07-8407-bc7fa344d899
+24088_4_84,T cell,blood,d018ff3a-e906-4568-8fb1-9da5e4bcc0e9
+24088_3_345,CD16-positive natural killer cell (NK CD16+),blood,e18af759-f75c-40e6-91f6-7acee5310877
+24088_6_120,CD16-positive natural killer cell (NK CD16+),blood,b9264c11-3dbd-40df-a00d-f96679360029
+24088_6_24,T cell,blood,c9a908d7-807a-4551-ad74-9d26e5ab0d9d
+24088_5_57,T cell,blood,aff51939-5be7-4632-aa5a-8a44d4cce739
+24088_3_78,NA,blood,257cdd0d-4dba-40c5-9386-47ca44262bea
+24088_4_137,T cell,blood,0de6e5ee-4f9d-432b-a063-3a21e781ca41
+24088_6_102,CD16-positive natural killer cell (NK CD16+),blood,e3d7568e-5ca8-45e8-b739-4115f2a34d1d
+24088_3_373,T cell,blood,83b4b622-4266-4129-a1ee-5eb5a971c0e3
+24088_5_283,T cell,blood,0f9381f9-e89a-464d-927b-5e33cc4504a1
+24088_5_298,T cell,blood,dded9d27-a466-46f5-883b-86194fab743d
+24088_6_187,plasmacytoid dendritic cell (DC2),blood,92f053e5-c180-4926-9304-7255148b8f09
+24088_3_369,NA,blood,571b3c9c-9cbc-4c51-a608-0713929044ac
+24088_4_38,T cell,blood,e66872c4-da03-4ffd-957e-79f1b76d6598
+24088_6_121,T cell,blood,d08ca8e9-f43e-4ddd-b5f5-341cde0ebe59
+24088_5_252,T cell,blood,709d6cbe-ee91-4f7d-9337-f1b33003294b
+24088_6_38,monocyte,blood,11350fa2-c827-47c9-b150-6f438738b843
+24088_3_230,T cell,blood,c33a65ac-391d-4ce7-a3bf-6dab0a784dba
+24088_4_189,T cell,blood,4a2cdce7-4a65-471e-9439-607d52d280f5
+24088_6_282,plasmacytoid dendritic cell (DC2),blood,d8164a0d-07da-43d1-b683-e40b6c50a317
+24088_4_81,granulocyte,blood,97645359-f95d-4a39-b0a6-e95e205a437c
+24088_5_109,NA,blood,48ba8d65-c4d4-4820-bb53-768805d02dea
+24088_4_25,T cell,blood,0ced9ef7-2c67-4361-957b-3affe4e299a7
+24088_4_105,monocyte,blood,b798cd2e-afc4-43aa-a706-9b4529b5117e
+24088_4_50,T cell,blood,8241fb00-0980-4f19-8d88-518979785438
+24088_5_120,T cell,blood,f81f788f-8195-4ab9-8126-824d77f1f135
+24088_6_33,CD16-positive natural killer cell (NK CD16+),blood,54393759-df94-48f9-914f-54b2c0ca1321
+24088_3_270,villous cytotrophoblast (VCT),blood,121992dc-a627-47c1-a601-fd8aceef1943
+24088_3_271,monocyte,blood,40217bd0-a5d2-4d7f-acd4-2194f658d0d0
+24088_3_202,T cell,blood,992d0907-5a56-45f8-9479-bff4574fafb9
+24088_5_165,T cell,blood,e4cd8a28-46a3-4b2b-86f5-9865b522e34f
+24088_3_46,monocyte,blood,8d07bb63-d2fe-4f88-a0da-12d732276e0a
+24088_6_15,monocyte,blood,f5a324ae-025d-495a-9cf1-61b5b3e2499a
+24088_6_260,monocyte,blood,b9800614-9ec8-45f3-9999-ae095190bc3f
+24088_5_54,T cell,blood,29ac0339-52f3-457e-a7f9-343904ecaf55
+24088_3_237,T cell,blood,1e3b6aea-7807-4fd3-87cb-081c1b665dd9
+24088_3_5,T cell,blood,65859e2c-8217-4041-86da-e110b00296d8
+24088_6_305,monocyte,blood,8298f5ec-a792-471f-8761-8a6fa38d7d0e
+24088_6_18,monocyte,blood,2714fb9a-1288-4eea-9cf8-39e2ab15cd5b
+24088_6_339,CD16-positive natural killer cell (NK CD16+),blood,fd26e4f4-e47e-4aae-8932-f5ad88f3eeb5
+24088_6_12,monocyte,blood,5e02ed7f-5561-4363-910a-5284dec8d8fc
+24088_3_255,T cell,blood,c2435ddd-9479-432f-82a0-8909a729c1de
+24088_6_375,plasmacytoid dendritic cell (DC2),blood,d3a59cb4-e463-4258-bab7-648c1858db0d
+24088_4_159,T cell,blood,8ef245d9-92ba-4f60-9ced-40249efafc9a
+24088_3_328,T cell,blood,d343442d-c05c-4da5-8150-4b372bca24a2
+24088_6_280,monocyte,blood,49484708-8a32-4fb6-bb3d-81b40832933b
+24088_3_276,T cell,blood,14638b34-44f3-4dff-a3dd-543f3ad1d6b8
+24088_3_224,CD16-positive natural killer cell (NK CD16+),blood,74eac61c-ca6b-4456-a757-88791d258af4
+24088_5_234,T cell,blood,a2962581-f0a3-4262-9246-c2568a0c1e8d
+24088_5_208,T cell,blood,00cbfc9d-4b92-47c0-8cdf-4a8979a5675b
+24088_3_215,CD16-positive natural killer cell (NK CD16+),blood,2fa28ac0-0e80-436f-af58-078a9dc6b696
+24088_6_157,villous cytotrophoblast (VCT),blood,eb6d157e-1818-46ec-845f-c3a9cf977814
+24088_5_244,monocyte,blood,f25738dd-d17c-4a0b-8f9b-7d94bf815a74
+24088_5_106,T cell,blood,22acfe52-3667-4b2e-b16f-a0d4408440ab
+24088_6_342,T cell,blood,44d0679b-6a81-40a0-9796-bae5567e9c3c
+24088_6_333,CD16-positive natural killer cell (NK CD16+),blood,642ec322-e186-4a00-a49e-271362c37410
+24088_5_81,T cell,blood,5f3e297e-91d6-496f-9e3b-9604bd9e3d3f
+24088_5_44,T cell,blood,e3849c2d-5b87-4b82-bca8-c4049db9d393
+24088_6_278,monocyte,blood,d24828f0-8da3-4005-9d04-491028f9444a
+24088_5_18,CD16-positive natural killer cell (NK CD16+),blood,af0be933-513f-46eb-b824-d5f1285fdef1
+24088_6_277,monocyte,blood,cf0a2662-0987-4e9c-a3fb-438c52acbb45
+24088_3_309,T cell,blood,d9368ad9-0dfb-4f82-af42-5b0279a2318e
+24088_6_122,T cell,blood,b4031dfb-bf34-4b36-90ef-dde7769893d8
+24088_6_365,T cell,blood,96116516-f039-48e6-962f-dd7991cb9fe8
+24088_4_190,T cell,blood,f00cd8cd-6c75-4b84-80da-ed9e3806f382
+24088_3_318,CD16-negative natural killer cell (NK CD16-),blood,ff3e42f3-3e74-4d5a-b0aa-8799ae206818
+24088_6_165,monocyte,blood,4d7e594e-fe0f-4201-948a-0447a65b0015
+24088_5_30,T cell,blood,037e6224-4adb-4a63-85e6-ee66b0a41489
+24088_6_374,plasma cell,blood,9e12e758-7934-49f7-ba4c-6d460d159e4d
+24088_6_19,plasmacytoid dendritic cell (DC2),blood,646a41dc-377c-4154-af9b-c682a7c54499
+24088_3_163,monocyte,blood,f420fdcb-2daf-444a-85df-9172bd6d0a38
+24088_5_135,CD16-positive natural killer cell (NK CD16+),blood,4816bfc3-0106-45fb-9eb7-ec6c3eb640a1
+24088_5_205,T cell,blood,197b53d0-f5bc-466f-8b6f-3d0ac5b4b85c
+24088_4_13,T cell,blood,0145bb42-b62a-4613-a538-2e5e298616f9
+24088_5_173,plasma cell,blood,999acf95-1fd3-41f8-b7b6-ead43dd0e9c6
+24088_6_239,T cell,blood,8aae58f8-f05f-4a65-88bc-b8bbb6e32371
+24088_5_149,NA,blood,57ac739b-063f-42c8-9c2a-53c9af99cb96
+24088_5_262,monocyte,blood,8911d571-8a7e-4e68-bd50-42e68f23e9b0
+24088_6_58,T cell,blood,93106a0f-a70a-4d91-8227-92318dbebf44
+24088_6_346,T cell,blood,ae3c5c92-cfe8-4f1e-bce6-d6cb450e21f0
+24088_5_342,monocyte,blood,495d0292-c7ac-4919-98ad-21ed43f0ec75
+24088_4_65,T cell,blood,a3314d28-7301-46dc-abd8-5ec63b0fa32d
+24088_5_177,T cell,blood,9910006e-3844-4213-bf0b-f1be266d43a5
+24088_6_310,T cell,blood,c0a75294-95e8-4e73-8731-7ee93e7189d1
+24088_3_167,T cell,blood,b3281014-cdb5-484b-84c0-a6b66be42b74
+24088_5_85,T cell,blood,cfa29c5f-a2ea-4a70-873a-4bbb0f303972
+24088_6_149,T cell,blood,32648d81-96b1-4446-883b-4da49b24deb2
+24088_5_258,T cell,blood,89aa557a-46d6-4b43-a594-ca6e4957da0a
+24088_5_346,CD16-positive natural killer cell (NK CD16+),blood,c67fa476-c376-4dc8-8c9f-a11fa8158649
+24088_3_288,NA,blood,023be319-dd5e-4252-b29d-416e5ae5e83a
+24088_3_169,T cell,blood,86ce6875-9165-467c-898a-bff5072a8dee
+24088_5_13,CD16-positive natural killer cell (NK CD16+),blood,566dbf6e-c651-4442-ba1d-fed2500b2be5
+24088_4_107,T cell,blood,21f520be-9764-4617-9b0a-ce991e6a587a
+24088_5_75,T cell,blood,18f67794-8ab9-4172-8b2c-4f738574ec24
+24088_6_284,monocyte,blood,2b69e22c-4db4-4bf5-b26e-a20c886bca71
+24088_6_46,monocyte,blood,2ebb0590-b1d9-434a-88af-f3fc181e210b
+24088_5_324,T cell,blood,e6ae1f90-6c0b-43ad-ab2f-0c6861d2300a
+24088_3_67,monocyte,blood,d76f9fb8-2d6c-4105-a663-d370fdb15286
+24088_3_69,monocyte,blood,3ee3fe28-d1f1-4f35-b044-98ea439d1515
+24088_6_334,CD16-positive natural killer cell (NK CD16+),blood,c8a126a6-529a-4793-9466-12a0ae8fd18d
+24088_3_37,monocyte,blood,692aab65-d25d-460c-9d53-efa67de096a5
+24088_5_363,monocyte,blood,ba18d8ba-e24b-4507-954e-3b06bb9be0f0
+24088_5_240,monocyte,blood,766718d5-37d7-4601-abd5-5f73422cb606
+24088_3_157,plasmacytoid dendritic cell (DC2),blood,018460db-cd69-4c1e-a511-0cc9ef3b2265
+24088_4_93,T cell,blood,4e4ca4e3-701f-4a59-aaec-bf8f0156c319
+24088_5_65,CD16-positive natural killer cell (NK CD16+),blood,5422a85e-8d8d-4358-8086-0c8f1c13426d
+24088_6_67,monocyte,blood,c062a6a1-2b9b-4ec9-b22d-6355a23dcc64
+24088_3_221,CD16-positive natural killer cell (NK CD16+),blood,efbafab0-ec96-4c4b-9534-ecfbec5ca06e
+24088_6_299,monocyte,blood,812cd56f-1039-41ab-b12e-fc2887aef8dd
+24088_5_227,T cell,blood,5bb0a926-b9b8-4f9a-8ac1-d3aa848ac1ef
+24088_5_116,NA,blood,acd37d08-326a-49db-9868-0e30d05f3400
+24088_4_18,T cell,blood,9231cb37-5362-4144-b806-eddf9519ec73
+24088_6_231,plasmacytoid dendritic cell (DC2),blood,606cc5dc-289c-40d8-a5b8-3aff75ae6a6a
+24088_3_11,T cell,blood,d877c5c4-b216-4cd3-98c4-06b680877d78
+24088_5_136,T cell,blood,963cd896-b637-469f-9c62-0119004a4e94
+24088_5_43,T cell,blood,28456868-6cc1-43f8-a932-dddfca3da883
+24088_6_303,monocyte,blood,1826462e-0c16-4af1-b216-36b8f0c4b522
+24088_3_81,T cell,blood,c0be26d4-e9c2-4149-952b-f79eb0342564
+24088_5_356,CD16-positive natural killer cell (NK CD16+),blood,09d0f0dd-1403-4cbd-b42e-4aa0b83eacab
+24088_6_373,monocyte,blood,dd2be0a9-a72a-4bab-92e2-14ae280a69d0
+24088_4_184,CD16-positive natural killer cell (NK CD16+),blood,e4a71ebe-0ab8-48d9-98ed-c852d2abc371
+24088_5_196,NA,blood,dbcc8096-85aa-4078-9aee-df1a47fe04f1
+24088_3_57,T cell,blood,111cdd29-c508-4343-b23b-afd549b272a6
+24088_6_48,CD16-positive natural killer cell (NK CD16+),blood,95b3b878-fbca-45d4-b07a-c0654baed831
+24088_6_272,T cell,blood,3aa254ef-fc43-48b5-80e4-2842007baa09
+24088_4_7,T cell,blood,6ba35638-c1d9-4354-982e-6004714b68de
+24088_3_124,T cell,blood,3fad1540-97fd-493a-bff2-e06a3dd1465a
+24088_3_303,T cell,blood,7b17b9f2-a7d3-43bd-99b9-52d0dd6704fa
+24088_6_238,T cell,blood,6261a55c-a3f9-4231-a7c4-633209f36243
+24088_3_214,CD16-positive natural killer cell (NK CD16+),blood,7613073a-8607-4f54-bce0-1e88704fbccd
+24088_6_22,NA,blood,2f84dba1-1799-4fec-b542-6f8fd0377f0a
+24088_3_327,T cell,blood,5d2c6824-f1d8-4138-8313-45af7b40f26c
+24088_3_184,plasma cell,blood,e4b61478-8985-45e7-8d71-241d19a24b24
+24088_6_101,T cell,blood,df553cbf-05ba-49d1-89af-0def6cfd593b
+24088_3_87,monocyte,blood,e6b830c5-4277-494e-91b7-90b2703456a5
+24088_4_22,T cell,blood,da841f8b-72d5-4c68-86c9-ca46f7762bea
+24088_5_95,T cell,blood,8ccdcde4-9749-4029-aed1-27b9c610c41a
+24088_6_376,plasmacytoid dendritic cell (DC2),blood,72e9db98-867b-425e-b32b-a912fc977549
+24088_6_259,monocyte,blood,9762c59f-7c48-465a-a37f-e887cdc1299b
+24088_6_234,monocyte,blood,e7edc710-d89f-4dcc-8153-b3cf07826982
+24088_4_35,T cell,blood,63281ef1-dc73-4801-b751-35e1b080936a
+24088_5_48,T cell,blood,5c4a10b5-ef33-4f2f-af58-a277184baaf5
+24088_5_107,T cell,blood,167607ce-2d1a-4d47-b2a8-b3a9c8293817
+24088_3_339,T cell,blood,98fbaf87-a4c6-4711-9d4a-ec1f4b712101
+24088_3_156,plasmacytoid dendritic cell (DC2),blood,c3f151df-2228-493c-95af-add6ec4380dd
+24088_4_179,T cell,blood,c67343c9-3c2d-4c1c-895b-41a6a485cd3e
+24088_6_21,monocyte,blood,76cee8bc-c93c-4520-b092-f2191856299f
+24088_6_91,monocyte,blood,97720586-3026-4aa8-8a91-86030dedb14e
+24088_6_128,T cell,blood,ce9b2318-c706-4376-a059-fc044c4c4648
+24088_5_39,T cell,blood,8475aabf-b106-45ac-bf1d-80fb51a423c0
+24088_4_44,T cell,blood,f7fda8a2-effa-4e37-9811-89024ed57522
+24088_4_15,T cell,blood,1c2eca2b-1414-4edb-a3cf-edef0d5dfd28
+24088_5_220,monocyte,blood,df77d942-7c73-4445-a18f-e442835c7f82
+24088_6_325,monocyte,blood,74f0a814-62d9-41a6-901f-dda0f6c4545a
+24088_5_2,T cell,blood,e513ef9b-ab17-4c6a-9141-d23e53107e97
+24088_4_9,CD16-positive natural killer cell (NK CD16+),blood,47604c22-4e8a-42e9-8322-03f920b9a4e4
+24088_6_253,monocyte,blood,ed46640d-dcce-4f2a-8afa-a8303134db07
+24088_5_15,T cell,blood,d1e49810-f3cf-4779-97df-9c0a2c2a44a8
+24088_3_191,CD16-positive natural killer cell (NK CD16+),blood,3166ada9-07cc-47b7-a6c4-64a5782df111
+24088_3_74,T cell,blood,b2519ae6-597a-409b-9ed8-c2eaa193a2e3
+24088_3_88,monocyte,blood,1073dfee-3aeb-4e85-adca-b50e5334e6dc
+24088_5_232,T cell,blood,ec824840-f6c4-4675-b9d4-3ecdc31ee5ba
+24088_6_77,T cell,blood,2dc1172e-e6b1-4da7-bb8c-63aec43f9c37
+24088_3_52,T cell,blood,06f654d5-67c6-4182-a9bf-3dcaa46e4ef3
+24088_6_362,T cell,blood,3b3d8a87-14f0-414f-b333-13d908c91725
+24088_3_180,plasmacytoid dendritic cell (DC2),blood,b883d042-0cee-4bbc-96ce-4f6673f55bfb
+24088_5_378,T cell,blood,96f55c83-8652-4524-9f51-d7e7223eeab8
+24088_4_133,T cell,blood,5a5a5a7c-a7ad-4b94-9f72-28e9251cad3d
+24088_5_322,NA,blood,93a8a8aa-815a-4b7e-9f83-645c11e265eb
+24088_4_162,T cell,blood,a844b8b3-ede2-4bf7-b82b-cbf8ee7803c5
+24088_6_62,monocyte,blood,0f32be8c-93f3-4af1-86f7-dbea4ec8657b
+24088_4_135,T cell,blood,63eea798-6228-44d6-8865-bc9403d9dbb6
+24088_3_164,monocyte,blood,a8f20b5d-4f56-4785-a5db-4485eee659ba
+24088_6_108,monocyte,blood,c856396a-b15f-4676-b783-37ab16afe681
+24088_3_128,T cell,blood,a4f4dad9-60fd-4cad-ab28-834d7d758b31
+24088_6_306,monocyte,blood,43cd9d4d-1a40-4586-9503-cf4d76962517
+24088_6_293,T cell,blood,c8f7c55f-e749-4c98-93d6-c645b714f540
+24088_6_42,monocyte,blood,21aebde0-108a-415e-8ec8-8da906424306
+24088_4_186,T cell,blood,99f7f8e6-c8d6-4fb0-8409-8787a0b083ae
+24088_5_190,T cell,blood,7f01cd83-bdcd-4d3c-a30b-704f5415fb81
+24088_5_137,T cell,blood,1cd8cc4a-c9c0-406b-82d0-8487a03f8460
+24088_6_37,monocyte,blood,10856df9-e034-47a4-b0b9-fc1d7b2c2a65
+24088_4_117,T cell,blood,3d4b2dee-7c8c-4b6d-af6a-6790bdf9a108
+24088_5_292,monocyte,blood,ccb072ee-7077-44c1-8778-d7c1ccbce295
+24088_3_161,T cell,blood,5ef8b634-78ef-4af5-b688-570ebceabb83
+24088_5_87,T cell,blood,78c03847-a5b3-488c-b00c-4c3d5f758aa6
+24088_5_12,T cell,blood,0a9f619a-87c6-4653-94b5-f4a84b71aee5
+24088_3_193,T cell,blood,84b271e8-5b74-4844-b8ae-b94a378cccbd
+24088_6_86,monocyte,blood,8468f1ff-3c72-4abd-b7b7-740adf79071a
+24088_6_200,T cell,blood,1f44c2ab-901a-46ff-be5c-6a1e2dd20af2
+24088_3_278,T cell,blood,d5f9b816-259c-461a-8fc7-1a73a6805931
+24088_3_251,T cell,blood,300d2661-0f55-4acc-8438-864f624ed1cf
+24088_3_372,T cell,blood,164e5a6f-0d5f-4cec-94c4-7265b638688e
+24088_3_242,CD16-positive natural killer cell (NK CD16+),blood,a2160bc2-3b66-4eae-a96a-17fc7254a798
+24088_6_68,monocyte,blood,22213a4d-9504-498c-9790-03b393322ed9
+24088_6_313,T cell,blood,9ebad67d-6b10-420a-acd9-ede339b68996
+24088_3_366,CD16-positive natural killer cell (NK CD16+),blood,c82c7557-e486-4cc8-ae90-73c449f11914
+24088_5_269,monocyte,blood,14b872d5-23d0-4970-8e06-e14d4f670b04
+24088_4_23,T cell,blood,e2ad260c-de02-45f8-9745-0f14cf7599ec
+24088_3_138,monocyte,blood,c0d8e354-40e9-4878-b573-23d8287bd694
+24088_5_329,T cell,blood,246f5190-e52d-4381-b769-08fc2e725cca
+24088_3_329,T cell,blood,9169b8ea-bf7d-490f-857b-45785f338c92
+24088_3_258,NA,blood,6353d31e-b243-4c30-ac68-ae697bab488e
+24088_6_188,monocyte,blood,7c9739da-8f6a-489d-bfd0-8da5b73bee64
+24088_6_80,monocyte,blood,0167e12c-c45d-4f15-b7d7-bad8b77ceb2d
+24088_4_138,T cell,blood,625ad1af-7af2-4ad7-82a9-efc2ce2b43a5
+24088_6_140,monocyte,blood,d151101f-287c-46c3-aea5-a9deffee491b
+24088_6_311,T cell,blood,0da9a6af-6cff-404e-93ed-d3ea50f2682e
+24088_5_327,T cell,blood,886ccdce-90f0-44b7-8c37-1ff66376e9cf
+24088_3_160,plasma cell,blood,6fd1a7b6-cde0-4f0f-9f4d-912c6961b983
+24088_3_183,T cell,blood,41ab6e66-449c-43df-b2d1-ddd7bdbac368
+24088_4_177,CD16-negative natural killer cell (NK CD16-),blood,99823020-90b1-4661-b14d-160f5e436e95
+24088_6_11,CD16-positive natural killer cell (NK CD16+),blood,1a3e7881-de3d-46f8-8304-0e0ab90591bf
+24088_5_284,T cell,blood,7e1a2465-4750-4067-b1d1-0fcd9dda6c34
+24088_3_92,monocyte,blood,3ab22266-845d-4c00-ba78-dd0f2a63c5b6
+24088_6_1,CD16-positive natural killer cell (NK CD16+),blood,12487a46-8ec7-488e-9eea-14d44a6b0b7d
+24088_4_41,T cell,blood,7076314f-3163-4952-8dd1-96641bb5be06
+24088_6_76,T cell,blood,3b92a5ff-95f6-4380-b650-d9e277fbea76
+24088_6_79,decidual natural killer cell (dNK2),blood,851291cb-fd5a-4f2e-aef4-46be055114de
+24088_6_218,T cell,blood,be6507fd-2450-4e8e-841d-3a2866ca8744
+24088_3_1,T cell,blood,c63c5292-1623-4743-a71f-34c47b538dce
+24088_6_337,T cell,blood,c310497f-9557-40d5-83b8-3e04f501020a
+24088_5_222,monocyte,blood,c9696976-d068-49c4-8984-5a64d042f162
+24088_6_74,monocyte,blood,0cfaf28f-0ad5-48e1-852a-31e8ff70e526
+24088_3_267,monocyte,blood,24b96d52-0b58-4900-8de1-bf7edbdc1cd2
+24088_6_171,T cell,blood,95954c40-eb02-40d2-91b8-ae036a972d1c
+24088_3_175,T cell,blood,7beb49b0-2291-4be2-ae76-c274a7a7ebd3
+24088_6_249,monocyte,blood,f7126367-c9ed-4358-bc85-81f6f703c647
+24088_3_200,T cell,blood,389e52f7-653f-4769-9c58-2a15c5182e31
+24088_5_350,T cell,blood,62a0b12f-fc0a-46c9-bc94-afd0d6db8a8c
+24088_3_76,NA,blood,320b37cb-1340-4647-b612-3dc57ae14b58
+24088_3_323,T cell,blood,eedcba1f-1d1e-4041-83bf-80d5560d0df2
+24088_6_31,CD16-positive natural killer cell (NK CD16+),blood,5a843eb4-524f-4f8f-b70d-4eb2198a2650
+24088_4_69,T cell,blood,3815dc31-9d2a-4d5e-99aa-6399ca66be24
+24088_6_210,monocyte,blood,f01b7662-6989-4cb4-868c-d5cf83c2a032
+24088_5_110,NA,blood,217c9673-28ef-41c8-8903-b004212c4d40
+24088_4_126,T cell,blood,dbc7d8ad-f85b-4e69-b5ee-d600417c5096
+24088_3_28,T cell,blood,f8d73ade-3671-4061-92a0-bd2cedc038ce
+24088_3_59,monocyte,blood,2ce3fdc5-c77a-438a-8bb4-6e2ff3eb8f69
+24088_6_180,plasma cell,blood,91eca41a-4596-4817-9904-17a53eb42580
+24088_5_111,T cell,blood,e071003d-cc51-493d-8d3e-6b0d852752c1
+24088_4_167,CD16-negative natural killer cell (NK CD16-),blood,5df63463-46c8-4b43-9f77-cc28e7e584c4
+24088_5_306,T cell,blood,6afe8944-9bd8-4dd9-babf-c5a9bb4c39a9
+24088_6_133,monocyte,blood,97cbb9c6-17d0-4441-8557-dec54e263284
+24088_4_42,T cell,blood,a0e552f9-ecd3-4693-9ed8-b6381ea8e90c
+24088_5_247,monocyte,blood,f81c1ebc-a791-4e06-996d-34c8c8139ef7
+24088_3_29,T cell,blood,81115046-3e8f-4a33-b1ba-640813b7df9b
+24088_3_279,T cell,blood,44989307-018e-48fa-b97a-19b654e74151
+24088_3_349,T cell,blood,75c91021-2e1b-4e62-acc9-e08af5fe025d
+24088_6_78,T cell,blood,966ee727-2d69-446f-8fc5-d13b51a7398c
+24088_4_185,T cell,blood,ae3f21d3-f159-430a-9319-a1d0cac46f2b
+24088_6_72,monocyte,blood,63dc433f-5e59-4e3c-a52a-70c001d62c86
+24088_3_62,monocyte,blood,abbd019b-4c4e-4a74-829d-9b537c610d5b
+24088_3_253,T cell,blood,87e66cf9-32c6-49c7-951b-698762cb43ef
+24088_5_361,plasmacytoid dendritic cell (DC2),blood,f450618f-e8cd-429a-964f-7b1eeb4583c5
+24088_5_221,monocyte,blood,293890a0-d1e0-4537-a4e6-e54a702adc71
+24088_6_214,T cell,blood,1904a6e3-d817-49e8-8460-17a88c3e2087
+24088_6_288,T cell,blood,ec2f4e34-a44e-4ac2-baec-d2e523fe0de9
+24088_6_307,monocyte,blood,9bcc3af1-53f2-49dc-beea-244826f7cca0
+24088_3_364,T cell,blood,85d88d54-7859-45b1-b2c8-88e2f2439c7f
+24088_6_89,monocyte,blood,94fab23b-f9ce-4a3d-909e-830818a5cd35
+24088_6_43,monocyte,blood,193bfe4a-1109-40fd-a285-73ed7a415cba
+24088_3_216,T cell,blood,5f1d0ad3-8c2f-4314-8011-76ab833c176f
+24088_3_50,T cell,blood,2a9595ca-7fcf-4e52-8690-0066baaa7374
+24088_3_322,T cell,blood,195d9044-7dcb-405b-9b8e-940c4e2d66e4
+24088_4_48,CD16-positive natural killer cell (NK CD16+),blood,35b3ca3b-9fed-456c-9bc2-d5fa074c87a7
+24088_3_107,monocyte,blood,fa208838-f3f6-4834-92d0-6e29010ac449
+24088_5_365,T cell,blood,33f28087-8097-4ae9-9b23-e72f4e9961e1
+24088_4_157,T cell,blood,49b6417d-23af-4a18-acd8-a9818179836d
+24088_5_202,T cell,blood,84fd2639-fbb0-43b4-b324-751130474177
+24088_6_125,T cell,blood,4596861d-7c7f-4287-b38d-e6709b34ddfb
+24088_4_74,monocyte,blood,f9de5c25-781e-452e-8f45-aaca3f7b94c2
+24088_3_7,T cell,blood,0c8d9776-fd7b-4e7d-b8b9-43c05de46c2b
+24088_5_42,CD16-positive natural killer cell (NK CD16+),blood,8ab52c70-20dc-4e8d-acf2-fd9e0f154e5d
+24088_5_97,T cell,blood,455c6351-384c-4679-959d-a883ab538ddf
+24088_6_331,monocyte,blood,7024d2c6-8a23-4df0-838f-60c452c6a5fc
+24088_5_76,T cell,blood,13c951e8-caa9-47a8-9fb3-15383e748d7f
+24088_5_14,CD16-positive natural killer cell (NK CD16+),blood,c8115b4d-2be8-4034-b2ab-c5d138f0d399
+24088_6_131,monocyte,blood,4dcf58f9-27fe-4ba1-8df1-3657453e6df7
+24088_5_280,T cell,blood,3eba297b-3cef-45da-8cac-c5acc8c8fca3
+24088_3_247,T cell,blood,f20ad1ba-77f5-4e88-91d5-54bb9e86b5e4
+24088_6_244,T cell,blood,72e6e896-3e78-4b60-b11b-47377e3b3907
+24088_5_33,T cell,blood,b0f96f09-1243-48fe-a54b-d7837b27d89b
+24088_6_124,T cell,blood,9a0b4465-6a70-4858-a4b9-029d0e5ca127
+24088_5_60,T cell,blood,1be0eb12-8cc9-4892-9eed-dd9d74b9c47c
+24088_4_39,T cell,blood,a2e4a4f2-50e1-4fe3-b46c-a775c25d4d9b
+24088_3_292,NA,blood,40eef395-4568-4dc1-8fde-f00be050d98c
+24088_6_172,NA,blood,6be74900-f0c5-457c-a7d8-b0576fba8b55
+24088_6_276,monocyte,blood,ebb00b57-8379-482b-b289-838c00bcd79b
+24088_3_205,T cell,blood,c170832c-017a-46b5-a27e-a58970b1bee1
+24088_3_97,T cell,blood,1800fcad-e0b0-451e-b3e1-72e2d07c13d4
+24088_6_155,plasma cell,blood,0d3099ef-931d-4fc7-8368-2ba17701de96
+24088_4_33,T cell,blood,5232f0eb-3a9a-467a-a114-aa5badb5150a
+24088_3_127,T cell,blood,e96696fc-39c1-4b41-a508-ab167eeccdaf
+24088_5_276,T cell,blood,eb8ff807-8a82-49a2-a822-88b02e0a763f
+24088_4_149,CD16-negative natural killer cell (NK CD16-),blood,1649e587-d31e-45f0-be68-6ce8ba7c7fbd
+24088_6_164,T cell,blood,fc9e9b9a-ff28-4277-b0cc-36ffbfd4a746
+24088_5_213,monocyte,blood,78509f72-34f8-4c12-a24c-3f48e9ee7fec
+24088_6_209,monocyte,blood,3562ac30-5f58-40c2-a770-4be0715034d5
+24088_6_292,T cell,blood,20086d71-5f61-4e7b-a8e0-9606a1c7a100
+24088_6_348,T cell,blood,a2c0ffdd-106f-4b20-8b6a-82c33b534b15
+24088_3_21,monocyte,blood,06786644-8bed-4376-99c9-1476782e8afc
+24088_3_310,T cell,blood,214f7ef2-a176-4ffa-8019-bbf416691ed9
+24088_4_59,T cell,blood,85fb023e-4ad4-40c1-a4e8-49eaa532c8c5
+24088_5_104,T cell,blood,c87de221-2cd4-4611-8beb-5f224b99d319
+24088_3_265,NA,blood,5a5485a5-56a9-4458-a54b-86e4d0f9d82f
+24088_5_233,T cell,blood,b5964da5-9591-4eed-b700-5632dc83f311
+24088_5_352,CD16-positive natural killer cell (NK CD16+),blood,7f75b253-d025-42c8-9a40-ad9eead6a759
+24088_5_157,T cell,blood,f821c854-de5c-402f-91af-fad5b7df5566
+24088_6_199,T cell,blood,1a69b428-045b-4404-8038-fc68cc02ac7f
+24088_3_168,T cell,blood,86fc79ae-cb88-48d2-85be-599055d1d78d
+24088_4_170,T cell,blood,b262bcdd-9d60-46eb-a089-afa093d06dfb
+24088_6_75,monocyte,blood,eb120ad9-64eb-4b41-aaad-c4b679cf9e4f
+24088_6_134,monocyte,blood,f121262c-166b-4db5-beb9-c68dc2d05873
+24088_5_255,T cell,blood,ef46d68f-7ef6-4d40-bfba-2a5a06ba8535
+24088_5_192,monocyte,blood,bfa57647-a96e-402e-9b1c-d5b72b8c589c
+24088_6_287,T cell,blood,423ae2bc-8103-46d0-b51f-e5f317ceceb4
+24088_3_181,plasmacytoid dendritic cell (DC2),blood,e34bf619-ae84-4047-8ddd-d734a3fd14e9
+24088_3_58,T cell,blood,182c8540-e91b-4e57-bec8-5d5cdae07196
+24088_3_300,T cell,blood,38e16800-114f-4b5a-a11e-bca8eefbdc8a
+24088_4_4,T cell,blood,b1e77555-9f14-4a2c-90ff-df29b6a2fd56
+24088_5_285,monocyte,blood,a6bb5763-b0ad-4166-acd2-06568a0a253e
+24088_6_150,T cell,blood,658c61a2-975f-4ddc-81fc-4b78f9e41a29
+24088_6_167,CD16-positive natural killer cell (NK CD16+),blood,49f26ec3-03f0-480f-94a4-76ed5d503c1e
+24088_5_59,CD16-positive natural killer cell (NK CD16+),blood,ccc3bab8-693e-46a1-a057-4fd8fbd2b0d4
+24088_6_327,monocyte,blood,03ba67f6-42a1-4f5f-8525-a51861f50b45
+24088_3_13,monocyte,blood,3a0b317a-7dcd-4cda-8aa6-5de8bc0ec795
+24088_6_252,monocyte,blood,f2d2b13a-16fe-4b22-b0ec-53732db350e0
+24088_6_215,T cell,blood,8118998e-169c-40e9-aea1-d92d9acc24ec
+24088_4_163,T cell,blood,d071fa92-ad07-4e17-ae3b-5cfba5881fdb
+24088_5_254,T cell,blood,ef7840f4-4c64-4b1b-9e08-4c892a2489a0
+24088_6_274,monocyte,blood,2c87d7cc-c23a-4374-953c-09546bd20323
+24088_5_79,T cell,blood,3600c4c9-6054-41bb-a9c0-8f3b9a71fde8
+24088_4_62,T cell,blood,b059d60d-08c2-4606-b29c-5811bec63617
+24088_4_90,T cell,blood,135334c8-35e6-425c-976b-6722979fbe82
+24088_6_363,T cell,blood,0dae2130-0804-41b0-9875-d4ef89257233
+24088_5_268,monocyte,blood,30bbdc09-8948-4b8b-8d82-05656131eb4d
+24088_3_110,monocyte,blood,4450a39f-c3e4-42a6-be9e-903227b20475
+24088_6_301,monocyte,blood,8c558850-2899-4db0-8777-3857ce2c8a51
+24088_4_43,T cell,blood,dd0748df-c23b-4bca-8821-4b0d020d82cc
+24088_6_73,NA,blood,f7c31e90-ccfa-4a69-8624-fff1faf3a049
+24088_3_283,T cell,blood,00bf53e2-efac-4c97-b121-abb148c863e3
+24088_3_101,T cell,blood,feacc5fd-e970-4c1f-ba0a-eab8c42dd504
+24088_3_105,T cell,blood,76c46851-de8a-4933-b33f-da20458f2c77
+24088_3_120,T cell,blood,cd9bd473-3ae7-4484-887c-3df768a2cdc2
+24088_5_101,T cell,blood,78224393-4aae-474c-a645-84391770fbbf
+24088_4_153,T cell,blood,14588ee9-8809-42e5-9998-1668c5294511
+24088_3_123,T cell,blood,3c9b5cbd-2a15-483f-931b-077b792b0f1b
+24088_3_330,T cell,blood,bc463f56-708e-4cdd-abc5-42c972fa33d4
+24088_5_331,T cell,blood,5acd0cc4-e227-461d-81a2-cd0d2017e882
+24088_6_326,monocyte,blood,bb550490-0d75-4a1c-b012-e52155ca5e04
+24088_3_203,T cell,blood,8ad11eb9-0557-4076-9f67-11dc93b8338b
+24088_3_108,monocyte,blood,40f8e7d9-1f66-415f-a45a-6af0fa287c96
+24088_5_142,CD16-negative natural killer cell (NK CD16-),blood,420f0c09-50ac-4010-9401-5a73ce519d7d
+24088_3_148,T cell,blood,b08da3dc-badd-4dad-8116-3a76a4aa62ec
+24088_5_337,plasmacytoid dendritic cell (DC2),blood,42a9ef02-4dba-4d5a-8825-5cb7df1d85b2
+24088_6_226,monocyte,blood,2e5ad628-e16e-4ce7-ad55-bcff33ac249d
+24088_4_147,T cell,blood,2a66662c-af8e-4aa0-bd5c-5d5adb478312
+24088_3_47,T cell,blood,09385536-a270-47f9-9691-b7b76832247c
+24088_6_256,monocyte,blood,78b93cc9-739a-4613-9eb1-81507afa5a4e
+24088_3_239,CD16-positive natural killer cell (NK CD16+),blood,86177c83-e2e1-402d-8415-3aa02d4b7c56
+24088_6_182,plasmacytoid dendritic cell (DC2),blood,6558b2e6-fb11-41db-a1c5-c7307ffe3def
+24088_5_212,NA,blood,ddbb3c83-ef59-441b-8f3a-0a4f2e4329c2
+24088_5_210,T cell,blood,7278928e-5ec9-412b-a368-acc4d3f0f719
+24088_5_176,CD16-negative natural killer cell (NK CD16-),blood,2a79b74d-6834-4921-aaa7-fa97eb0ba53f
+24088_5_379,CD16-positive natural killer cell (NK CD16+),blood,4943fcb2-0760-4009-852d-59c50232d6d9
+24088_6_10,T cell,blood,997c362c-af70-4842-b88a-04f6142f04a8
+24088_4_78,NA,blood,1f211379-4926-457b-a609-47d146c67f3a
+24088_5_180,T cell,blood,238b48b1-816f-4271-bcd9-7e6ad17b255a
+24088_3_102,T cell,blood,000c7508-1f40-494d-bf7a-d95a23e6916d
+24088_6_162,T cell,blood,7c13b7a5-d3a7-48a4-9621-eb68ed0b560d
+24088_6_44,monocyte,blood,9037c620-fd59-4bab-b058-2bedf3ff4fb3
+24088_4_14,T cell,blood,d7fc352e-dcb1-46a3-b792-628c065d22e2
+24088_6_191,T cell,blood,c89bfa38-3a3a-49a8-a845-8f4a95de6b36
+24088_3_153,T cell,blood,512f5193-0a41-43cd-afa6-15d5aba0c01d
+24088_6_354,plasmacytoid dendritic cell (DC2),blood,8d6d5531-aafd-43f2-ad1d-caa0b1090161
+24088_6_163,plasmacytoid dendritic cell (DC2),blood,8d3ccb29-f354-474b-b36f-d7c96ce5b588
+24088_5_349,T cell,blood,b7ccf2ea-d920-4344-85d6-ad7c50adfb40
+24088_5_6,NA,blood,f9ff9292-225a-4d02-95fa-63a78c3f8b2f
+24088_5_195,monocyte,blood,b0f53cc3-5ff3-48ec-a4ca-111772e0858a
+24088_6_93,monocyte,blood,b9c5895c-cc40-474c-83f0-421af46d0679
+24088_4_91,T cell,blood,42b06efe-5e13-4dc8-ba47-21e02617562a
+24088_6_64,monocyte,blood,898afd50-ec30-427b-9511-f66ecb79846a
+24088_6_269,T cell,blood,df968de4-74d1-4988-8c01-d964faf24970
+24088_3_326,T cell,blood,a89245a4-dfb1-4b7d-9196-7e45dad7e1ff
+24088_3_361,CD16-negative natural killer cell (NK CD16-),blood,1ea35d77-a450-448a-87ca-323ee17f933f
+24088_6_169,T cell,blood,b65ccce5-6015-4b0f-939c-94f7c49e2c74
+24088_3_199,T cell,blood,66123fe8-10ec-4bd2-a214-0a6c11861e1d
+24088_6_316,T cell,blood,3970e4e3-45fe-4969-a200-57cfd5bfa587
+24088_3_137,monocyte,blood,cbc36b0d-9499-4e30-b0cc-d07ff5fad8bf
+24088_6_352,monocyte,blood,b100a8fd-ff0b-4a9e-ab5d-f8613e64045b
+24088_3_20,monocyte,blood,9b8e39dc-9313-48d3-93c0-5e23611ced89
+24088_6_204,monocyte,blood,9da279ad-f27a-48a8-b102-308428b941e2
+24088_3_351,T cell,blood,4424580f-a54c-4621-99a0-f7bc0525edf2
+24088_5_274,T cell,blood,748bf70a-88f1-42d9-ab0f-a1b743bbdadc
+24088_3_222,T cell,blood,22a78cf1-784f-4e94-89fa-e2af8dba20c2
+24088_6_351,monocyte,blood,cd016e53-8c16-4b37-9019-ac4e35ccf12f
+24088_6_146,T cell,blood,e76723ae-8540-4b83-989c-adb3b4224008
+24088_3_220,T cell,blood,488162d8-e7a9-4312-9a76-a21cc68c5c97
+24088_6_26,CD16-positive natural killer cell (NK CD16+),blood,644c4d53-0811-42c6-9d00-ee54b7f80ca6
+24088_5_301,T cell,blood,594330fe-d3c4-48e4-a6c1-76a9afda4ce4
+24088_6_369,plasmacytoid dendritic cell (DC2),blood,0d672768-36ac-4330-bfed-164ab264f184
+24088_6_104,CD16-positive natural killer cell (NK CD16+),blood,c0712fa4-c1cf-4b72-87d9-5e82ed8c0d99
+24088_6_378,plasmacytoid dendritic cell (DC2),blood,40f7ccc2-7238-4592-af02-c951690d0cd3
+24088_3_40,monocyte,blood,b6c14735-3dcc-4df4-8c5c-a3eef88e8a96
+24088_3_287,granulocyte,blood,ed0ddf0c-da3a-42f4-97cc-4e21eb5ac83a
+24088_4_165,T cell,blood,06af754e-bd2a-41dc-a39b-d6e85fbf112b
+24088_4_28,T cell,blood,31db77bc-c713-448f-94ec-967b2b91f8bf
+24088_5_156,T cell,blood,943b2d83-4c84-400d-af3d-4e2045aea9a2
+24088_3_60,monocyte,blood,ce049559-48bc-4e0d-9405-e462b477f990
+24088_5_31,T cell,blood,c9e6215f-7a76-462d-9cf7-42b77a48a7bd
+24088_6_129,T cell,blood,6b82d553-dc23-4127-a0c7-779d6781ccbc
+24088_5_312,monocyte,blood,02539900-87bb-4f17-808c-9e3ac70fc2eb
+24088_3_261,granulocyte,blood,9486d8df-378d-4915-bb6b-1c9735a0ba1d
+24088_5_134,T cell,blood,7ab449b6-25ce-4204-b1a8-fe922f116e4b
+24088_3_314,decidual natural killer cell (dNK3),blood,93c0335c-6604-46fe-80a1-592646212201
+24088_5_228,T cell,blood,94cc86ed-fce2-4e57-8ae8-350f713fafb0
+24088_5_179,T cell,blood,41230816-dea2-4a5b-b7ca-02d774deccd5
+24088_4_45,T cell,blood,04010437-efb7-499e-ae45-10ab1e45d087
+24088_5_105,CD16-positive natural killer cell (NK CD16+),blood,0ab1202f-a49e-499d-932c-c11d3a2a01df
+24088_6_3,CD16-positive natural killer cell (NK CD16+),blood,2b8b8bb4-62f1-49a1-9292-3ee4c0992c84
+24088_3_158,plasma cell,blood,8f32babd-6e50-4190-9174-3977f91ecaa4
+24088_6_123,T cell,blood,914341d5-6bd6-4899-bcb7-7e58f1448229
+24088_5_261,monocyte,blood,0ec3f623-c2b4-4aa1-8fb7-f32ef096822e
+24088_3_367,CD16-negative natural killer cell (NK CD16-),blood,934c649c-ea39-4b7a-a0e1-c7cb592e299b
+24088_4_37,T cell,blood,62427e27-a7ff-48ef-8fcd-d442c345f29c
+24088_3_304,T cell,blood,f427858f-2a4b-4c5e-b56c-8970dfbdb4ef
+24088_3_272,NA,blood,ad2ed2e7-8436-4bf0-99f3-a2bfdb53e8ce
+24088_3_225,T cell,blood,ab274309-8b56-4bcd-8f89-bcda85dd7ea5
+24088_4_178,CD16-negative natural killer cell (NK CD16-),blood,b301178e-7a52-4565-b640-080d38f57c51
+24088_5_214,monocyte,blood,8c623c45-6eb0-4e78-a39d-cf2e8310c884
+24088_6_340,T cell,blood,f8ccdc8b-78ff-4e2d-82b8-8b5463e3969e
+24088_6_153,T cell,blood,78fd22a1-8613-49f5-8c96-38bfe743c1a4
+24088_3_82,T cell,blood,bea713e2-4f92-494d-a0ef-0376a16b06bd
+24088_5_229,T cell,blood,1ac105b6-2e48-4519-ac7f-27335a9e19b4
+24088_4_32,CD16-positive natural killer cell (NK CD16+),blood,644dafd8-62c8-43d3-a1ff-4402baef8b33
+24088_6_161,villous cytotrophoblast (VCT),blood,9312f7b8-9dc7-4e25-a1c2-6c284261e44c
+24088_6_283,monocyte,blood,4312b16a-c259-44e2-8431-33ac879bceea
+24088_5_300,T cell,blood,d4a28c64-4bf3-4b4e-aca8-ee3510b1d4bd
+24088_5_154,NA,blood,93d36638-eba8-418d-9348-a12c1823006d
+24088_6_8,CD16-positive natural killer cell (NK CD16+),blood,8e0c82fb-f5cd-446c-8762-b50f72e20324
+24088_5_22,NA,blood,3a7a1bde-0ae5-4cc3-89c4-cfce57818baa
+24088_6_320,T cell,blood,8ae35e3c-7d76-4c76-b898-79da05b31631
+24088_5_139,T cell,blood,c2392b3a-6a41-4470-8ded-77207a7180db
+24088_3_352,T cell,blood,397d891b-e0c3-4757-9943-ebb290b270cc
+24088_3_84,monocyte,blood,e99710b9-749f-4eda-b7bb-0feb84102472
+24088_4_77,NA,blood,1237374b-2b4a-407d-af92-9ba9c74a6d92
+24088_6_148,T cell,blood,31001177-647a-4691-9305-3a35b4db1535
+24088_5_161,T cell,blood,4beccb92-d12c-4225-9379-628e034f04aa
+24088_5_21,T cell,blood,5e181efb-0122-48c8-a971-8cbfd23f4f77
+24088_5_122,T cell,blood,f1e2389b-507e-48a5-9f6b-228c8a34a62e
+24088_6_2,T cell,blood,7d3f1f30-e0f2-49d3-85ec-cc9aac7c7a52
+24088_3_332,T cell,blood,5d44dd80-b6e6-449d-b2a5-50bf0ce9d0be
+24088_5_171,NA,blood,2323f5da-256f-40d7-b846-305aebf83700
+24088_3_125,T cell,blood,d1e13474-49ef-4ccd-987c-e8ee61bb82ef
+24088_5_73,T cell,blood,ece8c3d0-bf21-4573-91fb-83dc86109e33
+24088_6_328,monocyte,blood,fbeca213-3773-430d-8c52-4fb86bbe8925
+24088_5_333,T cell,blood,e7c26625-254d-4439-b7d2-5a47efc3eac5
+24088_6_242,T cell,blood,23f80f6e-c1fb-43b8-8a52-fb1701b97668
+24088_6_113,monocyte,blood,964728e0-282a-4ebd-a374-c15cdd8f8256
+24088_5_293,monocyte,blood,3f53fcc0-c4d9-4c46-ae14-11e423cd6200
+24088_6_23,CD16-positive natural killer cell (NK CD16+),blood,e1925f00-eba8-4834-acb4-1aac909a597d
+24088_6_359,T cell,blood,aa37781f-b411-4d23-834f-26c084ada5ca
+24088_5_47,T cell,blood,4401ca63-ee0d-4e85-9de4-3515684c65da
+24088_5_127,T cell,blood,0d34a248-8d97-4594-bebb-e069ce75d7cf
+24088_5_28,T cell,blood,b9bf62e2-a54c-4e3f-b167-87473ba88ff8
+24088_5_375,T cell,blood,40f1eed0-8a65-461d-b0a7-56959646a7e4
+24088_5_279,T cell,blood,483fa285-ca6e-4abc-b4c6-7550169a1972
+24088_6_370,plasmacytoid dendritic cell (DC2),blood,47249594-3e49-40aa-a84f-d7fe7e6a910b
+24088_4_36,T cell,blood,30cec8c8-2db9-4314-a6f1-9de55f7f3e49
+24088_6_41,monocyte,blood,560bbb95-ae92-4b18-b178-277ef6cf5208
+24088_3_111,monocyte,blood,a86f6fa7-b712-4fb2-81ae-39d31f7ed6a2
+24088_6_145,T cell,blood,ea1c8f24-2ba0-4212-8c0c-05156e95d5a6
+24088_3_289,NA,blood,414424f9-dc64-4ef6-bb8d-3a7f6f3af771
+24088_3_362,T cell,blood,5a1c7da1-a10a-46dc-954f-81aa356f89a8
+24088_5_191,monocyte,blood,c3c64b69-13eb-4693-97f9-d78095ea3b96
+24088_3_25,T cell,blood,7e7261c5-97bf-47c7-aba9-0f5d26098210
+24088_5_194,monocyte,blood,1ec18160-de7d-4785-b913-375017c8ef46
+24088_5_40,T cell,blood,28762d05-1c96-437a-8253-2c91979b924a
+24088_5_336,T cell,blood,c34c0663-273e-4dee-86e2-85c05bf3c1c7
+24088_6_229,monocyte,blood,d73d7183-4ae8-446e-8894-4071bbb682d6
+24088_4_173,CD16-negative natural killer cell (NK CD16-),blood,aa4ce7c7-38e9-4d6e-80de-b5a402cf22ff
+24088_4_27,T cell,blood,60efb3b5-f760-484e-8e64-2918dc2b9d22
+24088_5_155,T cell,blood,60ca8151-24a6-4301-99ca-c89390273579
+24088_3_61,monocyte,blood,823eaa7d-2103-4487-be90-97901f931048
+24088_5_223,monocyte,blood,7fc29c5b-6d95-4f8e-ad5b-2a647253ac66
+24088_5_162,T cell,blood,f413a5dc-4afa-46b3-b243-1ef1194948ff
+24088_5_259,T cell,blood,a1807b55-75ae-4051-8008-5cfe2ad550de
+24088_5_357,monocyte,blood,b9b670b7-039b-4deb-907a-41333a3572b1
+24088_5_151,T cell,blood,22f4a23a-c24f-4943-847c-c4d990cf7637
+24088_6_367,T cell,blood,526e70c7-7054-4294-a82b-d166264156b4
+24088_4_8,T cell,blood,9221808f-d8eb-4bf9-9258-b821909f6e63
+24088_4_2,T cell,blood,10b2cce2-328f-4858-9b32-1b88eb42e460
+24088_6_185,monocyte,blood,7694c590-6ea4-4315-949b-d1cd06fccb57
+24088_3_340,T cell,blood,4e9df427-241c-47cb-ad83-4b2f9d25cecd
+24088_3_299,T cell,blood,9185dbb5-50d4-4a04-ad3b-1809e5517536
+24088_3_188,plasmacytoid dendritic cell (DC2),blood,5b984b8a-14eb-4633-878f-297b1d389c10
+24088_4_150,CD16-negative natural killer cell (NK CD16-),blood,434bb6c2-e3d9-4b9a-bfed-d0f7b23b0c28
+24088_5_206,T cell,blood,1608b61e-08fc-4a58-b795-e1abd2b7631d
+24088_5_316,monocyte,blood,7e97a624-dcfa-4852-94d8-bb15f584a13a
+24088_4_114,T cell,blood,7229e64b-82ab-400d-9703-eaa1423bcc8f
+24088_6_57,CD16-positive natural killer cell (NK CD16+),blood,3046027d-cfd6-4975-8b2a-25547e419e85
+24088_3_118,monocyte,blood,07166a59-f897-406c-b210-45cfd86e3212
+24088_6_271,T cell,blood,dc2f050b-197a-4e87-b7fe-693ffc5eb416
+24088_5_38,CD16-positive natural killer cell (NK CD16+),blood,a0080b1a-77ea-4026-bcdc-b3c52ced49e3
+24088_5_8,NA,blood,0a8a69b8-4884-4cc8-96d8-92f96f194e53
+24088_6_347,monocyte,blood,167596cf-7ac2-486b-8e10-2e01fa44f880
+24088_5_5,T cell,blood,3f49fd2e-9342-45ae-af9f-d28949262148
+24088_5_325,T cell,blood,ae374935-d794-4e52-93d6-b55695374619
+24088_3_281,T cell,blood,a3fee52d-ab13-4e5b-b17a-63d58ce5346e
+24088_6_106,NA,blood,9e3dfc2f-7a0b-49b3-bd3b-81cfc8f24476
+24088_4_110,T cell,blood,bba787f7-8fd6-4c6d-a5e1-36d9c9b509ac
+24088_5_146,T cell,blood,8ef8a6b6-7e81-429b-a7b8-56334111230e
+24088_6_345,monocyte,blood,9f533d56-1079-4f2c-9bf7-7ffeaf3afbfa
+24088_5_186,T cell,blood,bccb93fa-6b31-4c5e-bbfb-3678058cb95e
+24088_3_259,T cell,blood,2d3bfb3b-cb6b-4e23-8527-dfa1b84105c0
+24088_6_156,villous cytotrophoblast (VCT),blood,1d406d92-86d3-43a6-9655-bfa5f0e7c4e7
+24088_5_323,T cell,blood,afd1e3b5-b7f0-49f9-bc3f-89bf4a0e268d
+24088_5_265,monocyte,blood,f4920ef3-5ae5-49ef-b970-b43b91171ad7
+24088_6_289,T cell,blood,0d772267-0753-470a-852f-bead68bce168
+24088_5_217,monocyte,blood,03edbda1-5fab-4426-9304-e91d0a1778ed
+24088_5_72,T cell,blood,1b2d7b39-78b6-41f5-9bc1-da24d64dfd63
+24088_6_119,T cell,blood,3661e43d-a72d-4e8b-9a21-f543eeb0b06c
+24088_5_231,T cell,blood,a83c477a-27c6-4687-acbf-6e216464865b
+24088_6_50,T cell,blood,ca498d69-59e2-4a04-908e-f94ce4e1c7e3
+24088_3_135,monocyte,blood,3a1fd256-b8e3-4c57-9ab6-2149af8cf3a2
+24088_5_351,T cell,blood,2fe40dba-f67f-4664-be0c-7e3964dfb9b4
+24088_4_34,NA,blood,8da47f58-23a6-406f-841a-f5ae0a5bf1f7
+24088_3_275,T cell,blood,04374868-e021-4659-95a7-42fd3f39b6fe
+24088_3_96,T cell,blood,4b7ec7b2-647a-486f-b61e-c623849c034d
+24088_5_341,plasmacytoid dendritic cell (DC2),blood,d002b0bc-afd5-4b2d-a480-5a6fae2fb4b8
+24088_3_86,monocyte,blood,91961d19-dbaf-4a44-a0c0-81999d46301c
+24088_6_377,plasma cell,blood,4b6d4693-7e68-49a9-a93e-1bf6b70eb03a
+24088_5_50,T cell,blood,4ff23f85-ed03-4bc2-ac5c-c1f761711d29
+24088_6_353,monocyte,blood,00fdffb0-44c4-47c6-8a40-98536d81e57d
+24088_6_291,T cell,blood,f5dce013-33bb-4831-bfe9-595cb2ff3e80
+24088_3_106,T cell,blood,89a99623-28b7-4f1c-af02-25b924085478
+24088_3_63,monocyte,blood,6ad12ab6-46d6-48f0-b073-69175cd32f6a
+24088_5_317,monocyte,blood,1d6a23ac-f60d-410e-a055-8bdb64e4cb6f
+24088_5_143,T cell,blood,79f8e9a6-0595-4c23-a2c6-0bf45a967402
+24088_6_212,NA,blood,da21cd3e-ddd0-428b-a966-c9b854cd7e7f
+24088_3_273,T cell,blood,43858fec-0a4c-40a5-9a82-64ee27962ec7
+24088_5_334,monocyte,blood,f99ed6d9-c6da-4e09-bb71-d79905cfe654
+24088_3_263,monocyte,blood,06923068-8202-40c4-a42e-d51070fb574c
+24088_6_147,T cell,blood,2d7955b1-e0ba-46df-8c17-7625e30138f9
+24088_4_95,NA,blood,ce8de6ce-1030-4353-a4cb-4a77d99e8267
+24088_6_174,NA,blood,9d06d40c-6f3b-4f89-be75-60406033064c
+24088_4_3,T cell,blood,8034fe00-e5be-4aec-b434-b694a1adc89a
+24088_5_169,CD16-positive natural killer cell (NK CD16+),blood,ef592b1b-9c43-4bf3-a0a5-01977227a350
+24088_5_183,CD16-negative natural killer cell (NK CD16-),blood,6565a28d-4045-4a6a-8a8d-7c6fa8ed769d
+24088_3_38,monocyte,blood,6f2d18bd-2fd4-4d3b-9a82-0b28fb091754
+24088_3_126,T cell,blood,56086750-d6c5-4107-8124-523ebc0aa56d
+24088_6_178,T cell,blood,59824e4d-b5ee-405d-80e4-66504576b91b
+24088_5_117,T cell,blood,4bb6d055-62c7-4503-9878-4da4fe1ded9a
+24088_6_136,monocyte,blood,aeff9343-7506-4b82-b34c-d6fad6666122
+24088_6_56,T cell,blood,f5da7425-99bc-43a3-89e4-c4ba4770f880
+24088_6_9,CD16-positive natural killer cell (NK CD16+),blood,79e72718-ded6-424e-98cd-b8e09e119f47
+24088_6_115,monocyte,blood,c843585a-987d-4bbf-a2e2-8749dfb68f4c
+24088_6_95,monocyte,blood,7926fd80-cf0f-4291-bbaf-51426db2fe62
+24088_5_175,CD16-positive natural killer cell (NK CD16+),blood,57dbb0ea-cead-4f17-8555-78c50655e325
+24088_4_87,T cell,blood,b20760ea-b476-4736-8975-b9f4fce3bc57
+24088_4_64,T cell,blood,a0e87eb8-53bc-4cf3-8ca6-26c33aef8b4f
+24088_3_83,monocyte,blood,f32730c6-c033-4e5c-bf38-e375bf547ac7
+24088_3_94,monocyte,blood,a53e79ab-a6fb-4bf1-ae8a-bcf191f230d3
+24088_6_263,T cell,blood,5a9a3dbc-e535-4c27-93ef-5acb0b332588
+24088_5_236,T cell,blood,9cbae5e5-7bb6-4ca5-9b67-9ce4aaba1bd3
+24088_4_26,T cell,blood,dd16b96e-cb64-4b6d-94fd-703eee660054
+24088_4_166,T cell,blood,a4f16d2a-60ca-4f7b-9c42-14ef563bcfbe
+24088_5_125,T cell,blood,19feb3e8-eb5c-4f83-a939-78224f877c2a
+24088_3_143,T cell,blood,797c5756-a264-4619-b1c9-fd468c0451bf
+24088_6_70,monocyte,blood,54f59c29-aa89-482c-9d39-bcff146730a3
+24088_6_52,CD16-positive natural killer cell (NK CD16+),blood,af0b21d9-b78f-4b98-ab8c-4acd027f7815
+24088_3_70,monocyte,blood,20588f58-147e-40b3-b5ea-c4965fca0ccf
+24088_6_100,T cell,blood,0f636acf-21fd-4b36-b905-4eba8f0ca827
+24088_4_97,T cell,blood,c377b8a3-4665-4fe3-8add-50587c6d10ae
+24088_3_347,T cell,blood,254f8b63-2e4e-4693-9a56-9b883b18b566
+24088_6_83,monocyte,blood,46af34e1-e316-4ec7-b3a4-9fbb2f831c3e
+24088_6_196,NA,blood,2305f4e2-9998-453d-b921-2f47b2adc289
+24088_5_302,T cell,blood,fcd154f1-1dec-4025-9977-382fe3fc2d73
+24088_5_84,NA,blood,d5adc88f-99da-4a61-8180-047b7d510495
+24088_6_236,monocyte,blood,f6a5cfb7-6d37-4667-828e-af888ac3b477
+24088_3_197,T cell,blood,d2368deb-4c81-4e69-8af8-cc37d15a956e
+24088_4_154,T cell,blood,f478ad87-ec8f-4bb2-a256-e267420ac437
+24088_6_357,T cell,blood,a03d97fc-0492-4a18-8a2d-c8f400f89240
+24088_5_25,T cell,blood,a3d1b3ce-3a38-48fe-9fda-8b195ce787f8
+24088_4_66,T cell,blood,d3c06c6e-1803-433d-9d3b-3d49cc5dc1b9
+24088_3_116,monocyte,blood,4485f1c3-a9d7-48ea-83fb-3498b38a1a68
+24088_5_23,T cell,blood,f7bfd1a4-29f5-4264-9484-e01b2e9cd3f9
+24088_3_77,T cell,blood,061b2fd9-8e8a-4a93-8b09-f7226a2b086f
+24088_5_286,monocyte,blood,98fd4b4a-e10d-4ae0-b0b8-9e9b2a524650
+24088_6_355,plasmacytoid dendritic cell (DC2),blood,17874ba1-2d30-4a5b-8802-e53016c5375d
+24088_5_62,CD16-positive natural killer cell (NK CD16+),blood,fedc492e-7c50-4093-b27d-ce034fc1b263
+24088_6_190,monocyte,blood,fd7c9bb5-7266-4a9c-9ebb-731cbf5c174f
+24088_3_196,CD16-positive natural killer cell (NK CD16+),blood,6f911f3c-a5ac-480c-8c6e-5dbdf501f16a
+24088_6_216,T cell,blood,2c5a40c4-8af8-44b6-ba6f-79b2d82ad17b
+24088_6_302,monocyte,blood,68127f30-ebe7-4383-961a-1fa15c0f2c4f
+24088_5_163,CD16-negative natural killer cell (NK CD16-),blood,54bee304-6306-44f2-b575-1eb954913595
+24088_3_149,T cell,blood,6efe2019-3184-42fc-bcb6-30baf12ec501
+24088_6_296,T cell,blood,56da42ee-5cac-4019-9781-9afb3a2a5fa9
+24088_6_368,T cell,blood,fa6ff48a-c698-4059-b7ab-3cddf4480113
+24088_3_374,T cell,blood,3ea70145-8783-4b94-a8df-5b0e20cb03f4
+24088_5_132,CD16-negative natural killer cell (NK CD16-),blood,37387f67-a234-4c1c-912b-bd135a7c12f6
+24088_5_263,monocyte,blood,9f952d65-e75c-478f-9114-962a8a195428
+24088_3_223,T cell,blood,868f4b02-653c-47ec-b460-11b424697c28
+24088_4_20,T cell,blood,2692c12a-0ba4-459a-bf2d-20939640ba42
+24088_3_238,CD16-negative natural killer cell (NK CD16-),blood,55aa1253-550c-445f-a278-39d98f9f429b
+24088_5_148,T cell,blood,eaf41370-e388-46cd-8034-3dd607c6fdb1
+24088_4_120,T cell,blood,92c361f0-da0f-423f-b440-717a84940bd1
+24088_6_258,monocyte,blood,fc99fec3-dc23-4c25-bf12-b2f62cfa2d79
+24088_3_39,monocyte,blood,49bb24e3-9f99-43b8-8077-84b805dbb2ec
+24088_4_128,CD16-negative natural killer cell (NK CD16-),blood,ec3552c4-934f-4f1c-95ae-275aa46f2c6a
+24088_6_110,monocyte,blood,2c2d716d-5475-4121-8dae-49b01c1c4392
+24088_5_153,T cell,blood,e6f9c85c-eda4-4be3-befb-5a8320ff6639
+24088_4_55,T cell,blood,7efe8aa3-d659-4d19-8ca8-1c3443720b5c
+24088_3_146,T cell,blood,8133e934-ea96-49ab-bb37-a2b8b8d17c8f
+24088_6_317,T cell,blood,47dd7b3c-07b1-42d4-9b45-39f73bfb31d4
+24088_5_197,monocyte,blood,a87587a0-475b-417b-9eca-94774972ad5d
+24088_4_131,T cell,blood,83b03cad-d0a4-48ea-a674-30859d5dedb0
+24088_6_65,monocyte,blood,3af5df59-7c66-485b-8735-1b73b5fceebb
+24088_6_63,monocyte,blood,b8b6cb9d-2cca-415e-b77b-052f6874540c
+24088_3_207,T cell,blood,4bfad364-a6b7-4419-aa5f-489ffce4a10d
+24088_5_319,monocyte,blood,8a3fc095-9e30-42a8-8eaf-65180cd93c1b
+24088_6_138,monocyte,blood,dccaa99e-7560-4e12-acbd-b538c2d2868a
+24088_3_250,NA,blood,022426f5-5944-4d88-8eb0-82e03c01654e
+24088_6_344,T cell,blood,a926edce-8d91-4341-806d-5a9ba1667ef2
+24088_4_111,T cell,blood,541b505e-933c-47aa-b325-5762df1dc466
+24088_3_24,T cell,blood,266813b7-a7f5-4e43-a205-06c16a7d8d0e
+24088_5_315,monocyte,blood,fcf883e1-5a03-429a-9006-0f62c6ba2c87
+24088_5_308,T cell,blood,dc89e956-2060-4802-adde-6c269c7df532
+24088_3_80,T cell,blood,61b1fc8f-adc7-4322-ba42-36f387a10d82
+24088_5_185,CD16-positive natural killer cell (NK CD16+),blood,162a3689-0421-4327-9b3f-51e642a094a7
+24088_4_98,NA,blood,4455a967-eb9a-4b0a-8128-39935121fb2a
+24088_5_128,T cell,blood,10d49cb6-d5e3-4778-9158-f4cf5532b8f8
+24088_6_184,plasmacytoid dendritic cell (DC2),blood,f96cdba3-70db-4628-9ebb-404d7aef07b6
+24088_5_55,T cell,blood,b8ce3002-d4b8-4de7-83c2-8cb6bf6f6cd3
+24088_4_49,T cell,blood,ed4fae34-b2c1-4f84-9c97-ce6af7c0123a
+24088_5_253,T cell,blood,11c6ea48-92fb-4e34-ae8f-28efc04ed920
+24088_6_94,monocyte,blood,04f6fc76-f67a-4531-9a2f-06a2cc79f293
+24088_6_39,monocyte,blood,226671e9-b9dd-4ea3-ad4d-8c9eb7c2ee36
+24088_6_160,plasma cell,blood,5febc548-058d-4e69-9b24-c0b6cdb5af55
+24088_6_255,monocyte,blood,719206ff-ea58-4783-9b79-2dd16bf7f967
+24088_5_4,T cell,blood,47a30ea8-b42c-416d-a1f0-685188e28ac2
+24088_3_103,T cell,blood,02e86683-4d63-4fda-98a7-326826b96a7a
+24088_6_17,monocyte,blood,01343709-238a-4481-bbbb-975169408d24
+24088_5_281,T cell,blood,5bc8caf9-d3f1-42d5-8759-1adafb8b8116
+24088_4_180,T cell,blood,88d12050-7985-4918-9461-11c787010461
+24088_3_44,monocyte,blood,092a37e0-43c5-46a2-838d-848151cf51f1
+24088_3_95,T cell,blood,9df63f5d-0d19-47e1-b2c8-262f64ae0748
+24088_5_355,T cell,blood,63fd0e82-c93d-4d3a-8abc-6f744c4fc0a8
+24088_4_181,T cell,blood,183cde23-7433-48d9-8b8a-1bb19630acf2
+24088_3_358,T cell,blood,32d3313f-c827-4654-afd7-84149338ce88
+24088_3_298,T cell,blood,92256b67-010a-4645-9c47-12d40a1fa9da
+24088_6_159,monocyte,blood,b5933649-b8ff-4f22-8966-c7492f130b3c
+24088_4_57,T cell,blood,597974e5-cc56-4f54-a1f9-2a53f1c9c27f
+24088_3_31,T cell,blood,1bf38642-18e5-4f40-b2f5-9396ad4989b9
+24088_6_230,monocyte,blood,cf1d6b7d-43c5-429a-adaa-d8d834035dec
+24088_5_348,T cell,blood,f9de7972-2316-4ecf-ac66-a32dc5fae465
+24088_6_360,CD16-positive natural killer cell (NK CD16+),blood,eb26b42b-320e-4928-b35f-7aac6fea4422
+24088_3_136,monocyte,blood,80ca86c1-ed9f-4d91-b2fa-de427f18dfac
+24088_6_308,monocyte,blood,1e972163-41cb-4948-9eed-1e8bd9fdb3a8
+24088_5_167,T cell,blood,851f2f96-77ff-40c3-8dd2-1ca4964146af
+24088_3_55,T cell,blood,ad608ea6-a780-4bab-8322-9377ddb48882
+24088_3_36,monocyte,blood,5decef9e-ae70-46c0-b222-14bdbd4a342b
+24088_5_250,T cell,blood,d1858cf7-536b-490a-8dd9-0248de72456a
+24088_5_123,T cell,blood,7f988e44-ad4d-48d6-8226-3f719911a322
+24088_4_103,NA,blood,aa919b04-76b1-4c31-b7d0-87fc42cb96f6
+24088_3_119,T cell,blood,15275e3d-c728-4941-bb06-d62901b7b8ff
+24088_3_32,T cell,blood,17cc37b0-ee94-4651-b7b3-7a4e752c007f
+24088_3_302,T cell,blood,528076bc-0f88-4fee-8a97-77886de4237f
+24088_5_256,T cell,blood,6769af97-4c93-406c-aec6-59f61bdee128
+24088_3_360,T cell,blood,9e7e7f03-25c2-4b8b-9d66-f832031f44c0
+24088_6_332,monocyte,blood,899bb126-2539-4836-b93b-3f51ea8c6f02
+24088_3_336,T cell,blood,f719d75f-8604-4ef2-8c5f-ac83bd73341a
+24088_4_52,CD16-positive natural killer cell (NK CD16+),blood,817d334e-e800-4862-b7fa-f7d913509f69
+24088_4_80,monocyte,blood,3a2b8eb1-e747-4861-8acc-deb4030b7cf6
+24088_6_36,monocyte,blood,3159eb83-17ad-42df-b4ae-53c1872c832d
+24088_3_12,monocyte,blood,ca5d927e-2f9d-49e0-8fd8-665b1d0f3e34
+24088_3_210,T cell,blood,dec12779-9ce2-44e3-b985-9a167d2fc252
+24088_6_97,CD16-positive natural killer cell (NK CD16+),blood,30d6a680-c10f-460a-ad50-62b8d9479eec
+24088_3_335,T cell,blood,98600681-ea0f-475a-b3e9-3c5946102f79
+24088_5_32,T cell,blood,7316c355-5d95-4fc6-b98e-3768a34adc96
+24088_4_19,T cell,blood,e5fe1f1a-592c-43f8-996e-62f757eaab6a
+24088_4_51,T cell,blood,042065ed-1816-4b61-ba29-7b162ec572d0
+24088_5_332,T cell,blood,42651029-c197-4dab-bdcb-2460279300a4
+24088_6_224,T cell,blood,e92e52a5-478b-4d99-a7c6-2328aa86e223
+24088_5_96,T cell,blood,456f504b-facc-4a11-a9f4-13e8ef069028
+24088_4_143,CD16-negative natural killer cell (NK CD16-),blood,30e61795-8b08-4589-ad68-9196f55de790
+24088_3_73,T cell,blood,2779182e-e77f-45d8-a2b2-c95b0b11b335
+24088_5_237,monocyte,blood,c9bee217-2869-4d2f-97df-6820b6b8dff5
+24088_3_152,T cell,blood,22460639-7aac-4ac5-b266-ab76265f0ba5
+24088_6_349,plasmacytoid dendritic cell (DC2),blood,40bc0f2d-60b2-4857-b8a3-a909811d2439
+24088_5_170,T cell,blood,07e2d1d9-4fec-47a0-bdb7-35f3cc236932
+24088_3_115,monocyte,blood,4bd9a30a-ea1c-4d4e-93fd-dd0bf0d166cb
+24088_5_369,CD16-positive natural killer cell (NK CD16+),blood,db75593d-02e7-4677-963b-57522e3df1ef
+24088_3_350,NA,blood,ec305b95-bca9-4504-a5e2-5ebf1c4133b1
+24088_3_306,T cell,blood,378ef23c-062b-45c2-954a-4fe88fa7cc05
+24088_5_353,T cell,blood,bf1289de-52df-40d8-b805-409115a391d9
+24088_5_380,T cell,blood,762ff9ba-7366-48fb-a760-25c67884995c
+24088_5_56,T cell,blood,a4c4c103-bb82-4929-a53b-276c6520789f
+24088_3_142,monocyte,blood,f6938711-0757-482d-a11e-8ef3e6e46300
+24088_3_141,monocyte,blood,08e58d73-3c4d-4f4e-b9a5-2bd4e2d686a9
+24088_4_172,T cell,blood,1029f992-ae57-4132-8644-2c01d4a2e8ff
+24088_6_112,monocyte,blood,13d2feb9-9910-42fd-bec0-26799a0b4a48
+24088_3_192,T cell,blood,4aa56e79-1d6f-45c1-941f-882d6f2e5832
+24088_4_118,T cell,blood,66562a97-92b7-447b-97db-d523bfa6b87b
+24088_5_78,T cell,blood,be5cc8f6-59ba-47db-9fbb-a20c91a32fbd
+24088_6_7,CD16-positive natural killer cell (NK CD16+),blood,07d66e3c-2c8b-4b51-93c4-662699378d67
+24088_3_232,T cell,blood,bb0a4f9f-ec1c-4e9e-a4e1-0314d3dec987
+24088_5_294,monocyte,blood,e1d6a6ba-a4c0-40f8-a5b8-dbea6404e1c3
+24088_5_304,T cell,blood,a143d887-26bf-469c-8a1a-07fb4b6c680f
+24088_5_338,T cell,blood,3f8b4f89-9e16-478a-ab42-74e1dbaeced5
+24088_3_198,T cell,blood,75266367-0fa2-44ec-9c0f-db14bbebd420
+24088_6_203,monocyte,blood,ee33809f-e7c2-43e7-8a04-61656f64bd3f
+24088_6_137,monocyte,blood,29783d41-9665-4705-b922-e7ddba8b1752
+24088_6_175,T cell,blood,37bd6218-a520-425a-a8bd-504272e1eebd
+24088_5_64,CD16-positive natural killer cell (NK CD16+),blood,ffc5f762-0b20-43ee-a26f-c1fcbeca3296
+24088_4_145,CD16-negative natural killer cell (NK CD16-),blood,305005ed-8870-4379-956e-aabc9a700e8a
+24088_5_330,T cell,blood,efb708bc-fec3-4d61-8073-00927203389d
+24088_3_179,plasmacytoid dendritic cell (DC2),blood,042c36b0-037a-4999-99b2-1f8f99a14c8e
+24088_5_251,T cell,blood,0a767cdc-d1c0-4987-8696-bc2df402d798
+24088_6_294,T cell,blood,f838cb2b-a560-4402-8893-0f5c6d2455a5
+24088_5_296,monocyte,blood,1ae0c549-34e2-4125-a6be-bb34494ecdc6
+24088_6_335,T cell,blood,62bf6436-8813-4ee6-a8be-a3fed1e19cfe
+24088_5_26,T cell,blood,0228935e-1856-472a-b912-a6bb845a5bf5
+24088_5_303,T cell,blood,2570bf4c-751c-404d-86dc-5ff05a7ff87f
+24088_4_106,NA,blood,cbf1251a-aad7-4379-888e-5d3c9a55a2fe
+24088_4_88,T cell,blood,9900b143-6059-4e3d-baa1-72537960eac2
+24088_6_109,monocyte,blood,26b622fc-ecbf-40f1-a8eb-dd2cc77a5f13
+24088_3_9,T cell,blood,7a131586-7842-465b-bc3d-6b02b37698c9
+24088_5_235,T cell,blood,4a0ed6b3-b6db-4d74-a9eb-2f47fd45196b
+24088_5_83,T cell,blood,91eb6324-6f9d-4707-9caa-b59c73d67578
+24088_3_269,NA,blood,15c184b9-03af-4d64-8a78-cc3032690cb9
+24088_5_299,T cell,blood,2fea98d5-920f-441b-8ed8-5d2927bd3162
+24088_6_241,T cell,blood,efd0fbe6-f303-48b6-877b-1d6d8f8c2384
+24088_3_228,T cell,blood,d57a2e6c-4f74-42e2-940f-1aa05f46d501
+24088_3_166,monocyte,blood,37bcd929-bcb9-4a49-8f63-b3389e7c1575
+24088_3_235,T cell,blood,0582ff5e-61ed-4de3-9f71-9d4f1a55c9ce
+24088_5_17,CD16-positive natural killer cell (NK CD16+),blood,9c4a903f-8900-4c10-8d25-cdf9181c879f
+24088_4_63,T cell,blood,1d69bb7e-3dd2-4cda-b4ea-7208b120527f
+24088_5_98,T cell,blood,6a4c75df-25a8-4a79-afa7-5e283e0e63ba
+24088_6_341,T cell,blood,7ac9b443-bc1b-4f40-acc4-10910ed5e558
+24088_4_17,T cell,blood,64da7873-9e8f-4b9e-8f36-5382c8bd5cfc
+24088_6_220,T cell,blood,cf366023-80ac-4d37-a84e-f662f7c929a8
+24088_5_52,T cell,blood,56bfc558-5550-4ed0-b03f-f16148ff7b0d
+24088_5_63,CD16-positive natural killer cell (NK CD16+),blood,d2e0aa5c-6a13-495a-bec1-561b546584a1
+24088_5_275,T cell,blood,6c9dd558-1fd4-4b47-aac0-b8ff747c59ff
+24088_6_84,monocyte,blood,f2dec4d0-35f5-4faf-a181-249f7cc5374c
+24088_3_10,T cell,blood,eaade371-5d37-4892-847e-1a3280bf0782
+24088_3_341,T cell,blood,7cd9ec7b-7f26-4c87-a20d-516b25c36c93
+24088_3_209,T cell,blood,d837ee4d-18b0-4067-a11b-c59dce310f96
+24088_5_66,T cell,blood,53c3a407-aa96-4f70-b841-2beb933270a5
+24088_6_27,T cell,blood,0887561a-81ae-4dc6-b8e7-9340d71d9d0a
+24088_5_282,T cell,blood,6cc66eae-f96c-4f9e-9253-183e56199268
+24088_4_155,T cell,blood,2601e4bf-ed28-4e98-9dbf-6859ce195048
+24088_4_171,T cell,blood,7120e9cc-9388-4e08-830c-027fbb5df690
+24088_3_16,monocyte,blood,cd074861-489e-4866-a432-37a966faeffd
+24088_5_238,monocyte,blood,4dbb2316-a113-47ef-bcec-99ca6340cf3e
+24088_4_127,CD16-negative natural killer cell (NK CD16-),blood,3bc70083-478c-4651-bc31-cf1250b7b2f4
+24088_6_32,CD16-positive natural killer cell (NK CD16+),blood,c4581a0f-48d1-4c6a-9c39-34efcebd3a09
+24088_3_282,T cell,blood,e434a6ec-f260-4234-8d60-a47700881e16
+24088_3_262,monocyte,blood,3f45152d-c819-47aa-96ab-dcc989ac9a72
+24088_5_311,monocyte,blood,f0af5e57-340a-424d-9df2-ec50f5184f54
+24088_3_308,T cell,blood,9dfe2058-b1dc-40e1-9d32-01e5a26c84c4
+24088_6_379,T cell,blood,550fe970-8704-4466-83e3-63935097bd34
+24088_5_115,granulocyte,blood,c13f2061-0886-4f2f-b61f-882d463c82f8
+24088_5_264,monocyte,blood,31ca7279-84c4-4d69-850a-8cff8a7a9671
+24088_3_243,T cell,blood,57b0c6c4-7d01-47f3-9c8d-2b402f17c395
+24088_3_15,monocyte,blood,b4e442b2-50a0-48cc-ae5b-cea602c68506
+24088_6_118,monocyte,blood,c615f91f-d56c-46bb-99b6-af5ea8b18d64
+24088_5_114,T cell,blood,cf1aaa5b-aab6-449b-bd28-2cdf55742b2e
+24088_5_88,plasma cell,blood,6f83cfd1-97e5-45fd-8e8b-94438098c14a
+24088_5_359,plasmacytoid dendritic cell (DC2),blood,7939e76e-bcc6-4169-acc7-f70b677c090c
+24088_5_112,NA,blood,0489acaf-cf16-4438-b1ab-ebbf066d13ff
+24088_5_11,T cell,blood,1170f6fc-b339-483a-9dfc-fbdb9e4c6f94
+24088_5_368,monocyte,blood,29b05bd1-101d-4cd1-9097-c3304cc0c281
+24088_5_272,monocyte,blood,e54799a2-8de8-42ee-b127-68c0a0f555c3
+24088_3_297,T cell,blood,9ec22e1b-d142-42c6-8662-2a6c493d87f9
+24088_3_321,T cell,blood,e076841f-211f-4b95-af08-9beb818633ae
+24088_4_158,T cell,blood,285984a0-002c-4e20-a613-ece4489a20a6
+24088_3_174,T cell,blood,022e3fb1-99e1-49a3-9be9-6e70dbe4bb0e
+24088_5_198,monocyte,blood,b0913935-f534-434c-90e4-6ad6d55318e4
+24088_3_266,NA,blood,9f50e585-992d-437d-94e2-e3a15012949e
+24088_4_136,T cell,blood,8e4594f6-8d69-4ae6-af34-4142fd72ff7d
+24088_5_45,T cell,blood,765699cc-6ed9-4e2d-b688-6d63970894f9
+24088_5_58,T cell,blood,264d6253-4b33-443e-bc1f-5373433c9e74
+24088_5_71,T cell,blood,f0f505bd-e581-4ba7-87c4-cdfd263e548f
+24088_3_208,T cell,blood,a0acc87b-ce57-46e5-8609-aabdc659ca12
+24088_6_186,plasma cell,blood,b1d14e5a-7c05-4ec3-b83f-dd29c3d73485
+24088_5_129,T cell,blood,0e4af7cc-115d-4850-a2d2-71d8df1e68b9
+24088_5_41,T cell,blood,6fec06b0-9bd5-4c66-b3ba-9b3641361a6f
+24088_6_279,monocyte,blood,007a2a62-14e8-4965-b78b-4345658395b4
+24088_4_101,granulocyte,blood,27452e36-58a3-4a29-9e09-e273b62705d7
+24088_4_24,T cell,blood,a813e62e-27f5-4161-851c-2de54b9762f4
+24088_3_311,T cell,blood,f33a5b7f-c5e8-450e-9588-58360629f57d
+24088_3_244,T cell,blood,cfbb7b5a-169f-41d9-b252-a7a45b389dac
+24088_3_280,villous cytotrophoblast (VCT),blood,7419daea-a5d9-46d4-8c04-628d68d7aa14
+24088_6_85,monocyte,blood,ced704ba-8f43-4680-9360-bb15226e6b5c
+24088_5_178,T cell,blood,caf2502b-753d-4135-bdb9-86931d6a715a
+24088_3_249,T cell,blood,6463b03a-4e6c-423e-b461-b74ce86cd7b9
+24088_5_145,T cell,blood,08eaf02a-e2c4-4185-9d3f-671b82adfe97
+24088_5_152,T cell,blood,1f6f3612-6f1f-409d-b753-cce26a0ab81f
+24088_5_82,proliferating decidual natural killer cell (dNK p),blood,a3639fc3-9aa0-4449-aaeb-aab04d914c48
+24088_3_212,T cell,blood,df6c672a-14d5-4986-987d-caa34537bd6b
+24088_3_316,T cell,blood,d47d7a98-578e-4d38-9a61-e2fcd6cc865c
+24088_5_314,monocyte,blood,16499cfc-bc61-4771-9b7c-8acf97c42019
+24088_5_158,T cell,blood,abe266d6-fc6e-4032-8948-cc272855bbd2
+24088_3_268,T cell,blood,0597a0d6-46b4-4471-bd97-31f112cb3a12
+24088_6_321,monocyte,blood,0f83dee9-c5d3-4a0d-a91f-9a8161e4090d
+24088_5_242,monocyte,blood,54afa7e6-fdc4-4691-b9fc-797a6ab6b9b6
+24088_6_213,T cell,blood,1563761b-422b-4564-ba16-327bd3c8a604
+24088_5_27,T cell,blood,15bf5dde-afd8-4549-8ecc-627ee54bedc3
+24088_5_174,T cell,blood,4d9a81d2-0172-49e9-9529-7824725a9b46
+24088_5_121,T cell,blood,ab9b579c-ea13-49a0-b302-46f8b1a4a6b6
+24088_5_318,monocyte,blood,66fcc471-98f3-4b65-8c72-68a816b18498
+24088_3_294,NA,blood,0d474533-c065-4074-a7ed-b65338c63040
+24088_5_307,CD16-positive natural killer cell (NK CD16+),blood,08667ce2-4cce-42ab-babf-79f80749cdde
+24088_5_147,T cell,blood,7e4e0a33-8a1b-4216-8cac-2019f2909608
+24088_4_168,CD16-negative natural killer cell (NK CD16-),blood,71d00070-7765-498b-aa27-ee4d9991dd6e
+24088_5_290,monocyte,blood,fae7ed68-b62f-4ec2-a09d-59698df1f105
+24088_3_22,monocyte,blood,267c563a-f7a0-4a8a-8ede-fe6f100e12bd
+24088_5_29,CD16-positive natural killer cell (NK CD16+),blood,9c4a2a4d-4eff-4605-9f56-9fd86808a105
+24088_5_168,T cell,blood,460efc5e-60a1-4dc3-81fd-5c41e989759f
+24088_3_48,T cell,blood,98a5fd69-af5a-4834-8a95-e431227c3d5f
+24088_3_151,T cell,blood,55cf2b11-96d4-4d21-b158-96a83c0104c3
+24088_5_188,T cell,blood,a7a804da-8410-47f6-8bc4-3dc739f8fe50
+24088_6_20,monocyte,blood,7a8f9551-543e-4c17-b8d8-fe635ef27c39
+24088_4_122,T cell,blood,eba152e0-d765-44b8-a759-d81ade30e806
+24088_3_320,T cell,blood,b91b13a9-267c-4135-8763-dd44d0c3e74d
+24088_6_270,T cell,blood,53d39560-0052-4ae0-b165-cb719bf26008
+24088_6_217,T cell,blood,8b3ca0d6-fcf9-4547-84e5-d9b674e0330e
+24088_5_69,T cell,blood,d4ea4299-6b02-493f-a4ab-732290f73e80
+24088_5_313,monocyte,blood,38ecfb42-81a6-4a7b-8c91-4c5d7bb63be1
+24088_3_291,T cell,blood,9b2a1e42-8349-4d91-949a-bcf65d813d59
+24088_5_360,monocyte,blood,aab7b7bc-c3d7-4a02-bb4c-899ec443a90c
+24088_4_71,monocyte,blood,9f2bdd6a-3a6f-4b29-b6d7-096c3c4e85e7
+24088_6_309,T cell,blood,9ff1153c-033d-4e53-b820-86dc90f748ae
+24088_6_202,monocyte,blood,20e8d1d7-b740-4596-8b1f-6524338512c2
+24088_5_271,monocyte,blood,058561ef-6408-4dab-bc0f-f675bf82974c
+24088_3_379,T cell,blood,e26926de-4761-4607-9a31-ef17999bd87d
+24088_3_333,NA,blood,235e755a-3de2-413e-af53-5c437166f47d
+24088_5_260,T cell,blood,723e7e1d-8ece-4829-b288-81a896f00e73
+24088_3_254,T cell,blood,98bf686b-a851-4bcf-abb6-60e6a5214e28
+24088_6_350,T cell,blood,a8bc13e3-d39a-474f-a4f6-d65cf8842471
+24088_6_181,plasmacytoid dendritic cell (DC2),blood,7d44f820-1f5f-472d-b86b-e89e799a8867
+24088_5_140,CD16-negative natural killer cell (NK CD16-),blood,a2c62730-21ec-4dc4-a282-cae89a92a860
+24088_5_49,T cell,blood,8d292e39-c820-4250-9a9e-8af6080af97a
+24088_6_87,monocyte,blood,e87f50fe-f55d-4723-bedb-4b2f48bf11a6
+24088_6_5,CD16-positive natural killer cell (NK CD16+),blood,3194b6d2-37c9-40d4-b552-b6c8162fcdcb
+24088_6_232,monocyte,blood,d5c34020-6f6c-49ff-b3a8-6b84c4ae7c02
+24088_5_24,T cell,blood,796cadfa-841a-4316-8e64-bcb495b92336
+24088_5_200,monocyte,blood,4d5c3675-dc6a-4867-bb56-ffbcd19e3476
+24088_5_289,monocyte,blood,f632cf9c-2f44-4e03-9099-5f2f2fd87414
+24088_4_169,monocyte,blood,f031ba20-be49-4002-b514-a372c0801960
+24088_5_347,T cell,blood,ff768eaf-5103-4b0a-b5a2-d13e488bd5df
+24088_3_130,T cell,blood,6e39b021-582f-47c1-ba70-6a0d2f7ad3fc
+24088_4_6,CD16-positive natural killer cell (NK CD16+),blood,3fea4977-1a6d-4465-9a23-1bb1cebe5f44
+24088_3_337,T cell,blood,1771e9fb-bb7f-49aa-af56-a1c6348f6074
+24088_3_133,monocyte,blood,e9beaded-e7c2-4f51-8748-100e603a0949
+24088_6_29,T cell,blood,b7c5192d-8edc-4686-938d-00c2080e0a9e
+24088_5_219,monocyte,blood,1d312eeb-7b85-4783-aa06-9dcd7c04b841
+24088_5_51,T cell,blood,d4dcec5a-ab93-4537-b71b-c5a713bea6d0
+24088_4_151,T cell,blood,b7029e68-404a-4272-bf25-42f2fff88c57
+24088_5_201,monocyte,blood,808ffbf1-99e6-434e-98a7-dd0d56165eda
+24088_3_129,T cell,blood,c798435a-3ac4-4650-a391-9f4cf8785b1d
+24088_5_166,T cell,blood,5f654334-6ca2-4642-af77-b6b30b75658b
+24088_3_49,T cell,blood,efb38f76-3bcb-4535-9e64-04b2a924ba66
+24088_6_197,T cell,blood,5148edcb-13c3-4a43-bf08-c4517c589f02
+24088_6_130,T cell,blood,26a9092c-5ed5-43eb-9926-30f4a267005f
+24088_3_71,T cell,blood,b817dabc-9a31-4d30-902e-a75eeeeda69c
+24088_3_170,T cell,blood,1c6c92da-62b3-4990-86b9-24425f7eb7c4
+24088_6_336,T cell,blood,effa7f02-996e-4841-a6df-aadc13adfb10
+24088_6_356,plasmacytoid dendritic cell (DC2),blood,77d0e169-dc85-443a-bfef-8f12bdf3c54e
+24088_3_231,T cell,blood,0c3084be-ad3d-4aee-9f3d-fb3e940891a7
+24088_5_245,monocyte,blood,9da86c14-ade9-45bc-8fe7-658bdb2daea5
+24088_5_266,monocyte,blood,676faf9c-a1cb-444f-b578-0615fdf40ebf
+24088_4_72,NA,blood,c8cbb731-6725-4f44-bd8a-f3491f2256b0
+24088_5_92,T cell,blood,4e3bb5e9-1cf5-41af-9489-b9010fc078c9
+24088_3_226,T cell,blood,02e141ad-71a0-4c18-9452-b383fe8004cb
+24088_6_304,monocyte,blood,14b57fac-a898-4155-84c3-10818a7d938b
+24088_6_194,T cell,blood,a077851a-9aa3-474b-aa61-a3c3d016ba8f
+24088_3_376,T cell,blood,a82ba93a-6684-4fc8-b3d4-7fa12fda705b
+24088_3_307,T cell,blood,7de64a3f-b759-43b7-a98a-c0b61ee47cd5
+24088_5_34,NA,blood,fee9c42e-fc2e-4e29-818d-ed007caaae0d
+24088_5_164,CD16-positive natural killer cell (NK CD16+),blood,c48a64eb-8fea-477b-a5df-c90271a36e74
+24088_6_261,T cell,blood,fd7fde8d-91dc-41bc-bf92-329acd5b0538
+24088_3_93,monocyte,blood,e12f5921-8090-4acd-b588-68b3dcd2627a
+24088_6_111,monocyte,blood,1656c595-216a-4648-9e79-a8d08623bf1d
+24088_4_175,T cell,blood,b9e44634-9cd9-4880-a821-2a31b26d216e
+24088_5_241,monocyte,blood,b7192ef2-4c69-41cd-bf15-da54a1ae7387
+24088_5_130,T cell,blood,0f4b4851-7419-42c0-851c-be9960562b4b
+24088_6_45,monocyte,blood,435cbfb5-7ef2-456e-943c-799573197ced
+24088_3_90,monocyte,blood,71fe2a15-a5be-438c-b79b-e54d531298c1
+24088_6_13,monocyte,blood,839c7177-ce9a-4a0e-8cb2-8ccd19f515b9
+24088_4_139,T cell,blood,388a63f7-eabc-4313-a4ed-15c02a26dfce
+24088_4_85,T cell,blood,e4f830ed-bbf6-40c7-922b-72fa47ee6aad
+24088_6_254,monocyte,blood,d520957f-f69a-4669-ba1b-ef4af3c9d131
+24088_3_284,T cell,blood,76d05450-9971-411c-9e8b-c3962e1b93c9
+24088_3_144,T cell,blood,7848592c-546b-42e5-ba69-8d5484792881
+24088_6_257,monocyte,blood,b72d4762-e1b7-439b-ae89-6a623ed12a30
+24088_6_99,T cell,blood,cd0a9ec1-8a1c-42a1-aa34-ecb6b86c3500
+24088_3_131,monocyte,blood,e03cfec6-2592-4b46-ac38-629811b4087f
+24088_3_30,T cell,blood,03908d2a-a750-4031-8b32-c8fcc6f23e02
+24088_4_174,CD16-negative natural killer cell (NK CD16-),blood,2436da86-5eea-4157-85ed-eb3b3ae512ae
+24088_3_68,monocyte,blood,994d1316-4514-4dde-9e7c-200051f08255
+24088_3_100,T cell,blood,6bad837a-6152-4750-b0ed-119bc93fc575
+24088_4_76,granulocyte,blood,708febd1-59be-4205-ae12-59a63a38d966
+24088_6_189,plasmacytoid dendritic cell (DC2),blood,d30fe6b5-1fb9-4130-b0ec-9aea1bcee760
+24088_6_69,monocyte,blood,04c9cf5a-82e5-445e-94f3-066061c2a49a
+24088_5_53,T cell,blood,9e074da0-e32b-45f4-bb49-7ba8020c1fa0
+24088_4_67,T cell,blood,28af7aad-5833-45e5-8bea-9479aa1e4734
+24088_3_319,T cell,blood,ff8ca9f3-cf3b-4e64-8f2d-2cb09515da7e
+24088_6_14,monocyte,blood,7ec05b6a-c465-482f-8d64-2e14dfc1234b
+24088_3_114,monocyte,blood,a20892b9-b48d-4044-ac89-b45069def84e
+24088_4_68,T cell,blood,ddaf3a99-8fc4-4c7f-902d-ebba68e52436
+24088_5_126,T cell,blood,dcfa3c96-f66d-4289-8126-d3d8cb363a0f
+24088_4_70,T cell,blood,7771bddb-7c73-40d4-9683-9649355beab0
+24088_3_370,T cell,blood,936e735e-e638-4b1e-805e-6a5211bf6675
+24088_3_236,T cell,blood,4cd1174d-26da-4006-91ae-5a00add3e3e8
+24088_5_335,monocyte,blood,a9888bf1-8e68-42d9-8385-9963cb66c71d
+24088_3_353,T cell,blood,f292aac2-5a21-4489-a43d-b530f0a61247
+24088_3_176,T cell,blood,a7766c3b-2b2d-4f8d-ac12-76bd58e75b31
+24088_5_46,CD16-positive natural killer cell (NK CD16+),blood,fd6b6b6e-303b-42c2-81cd-d0330aab1459
+24088_5_248,monocyte,blood,54c194c6-a878-4e39-b5d1-5e5fe265feca
+24088_3_139,monocyte,blood,21cadb52-bd9b-46fd-98f0-856f48e38edd
+24088_5_297,T cell,blood,2a68002d-8312-4e4c-96fe-8d65b00e0460
+24088_5_172,T cell,blood,d691982d-99cc-4d27-b270-e31e14a1681d
+24088_5_239,monocyte,blood,24646d24-3150-4264-ad1f-f750b8545956
+24088_6_117,monocyte,blood,afcff4fb-cd45-4633-b7f0-22641a5998cb
+24088_3_234,T cell,blood,76c6318b-f517-4f4e-a389-e19a969b4c5d
+24088_3_256,T cell,blood,b5713ef4-d9e8-47d7-b7af-585fab158532
+24088_5_94,monocyte,blood,0d39c0c8-5800-4d9c-8e02-058660a2017b
+24088_3_19,monocyte,blood,fd8b9371-5739-4fb6-b000-04f85b7d8425
+24088_4_47,T cell,blood,2284938e-de53-4527-b3f9-43460fe08bd0
+24088_5_159,T cell,blood,e633100f-ac61-486d-a679-33c36e180255
+24088_3_112,monocyte,blood,d900ff6d-8072-4a24-ad8f-809096cf2e81
+24088_6_195,T cell,blood,6ffef316-000b-4263-8070-e4a5b248eb5c
+24088_3_178,T cell,blood,328089cc-e825-476c-a406-ac4718c98838
+24088_5_216,monocyte,blood,fa9f8a8b-a367-4553-968f-828e20fdbed0
+24088_3_109,monocyte,blood,b74be91f-9254-434c-a916-b862141953bc
+24088_4_10,T cell,blood,a1a603c0-ad4b-4eb2-8cce-991e94df88e2
+24088_6_4,T cell,blood,1bc8c0f7-8d43-4c02-9f97-a3e00970f102
+24088_5_320,monocyte,blood,42e9a0d3-b946-4dbd-89cd-78375de2bfa7
+24088_6_116,monocyte,blood,08440894-37eb-4611-8efb-9984579ce749
+24088_4_188,T cell,blood,f3a8c227-b06b-49b7-b38e-8a39ff81987e
+24088_4_94,T cell,blood,e0c82d6b-4c76-4754-8830-b0b703caf2c6
+24088_3_72,T cell,blood,4c3c0a10-fcbd-49f6-ade7-15eaa749fee5
+24088_4_89,T cell,blood,f14cb62a-378f-4a39-ba71-f181f00851f1
+24088_4_142,T cell,blood,66c9c888-02e5-4a94-b438-628fbaa93e46
+24088_3_317,T cell,blood,5c04945d-d545-40a8-906d-f22e46cb3cdd
+24088_6_126,T cell,blood,d612785f-75f8-426a-9642-3517efdc4b3c
+24088_6_297,monocyte,blood,0e13b5bf-515d-4f3e-93c8-587fa25f3b64
+24088_5_181,T cell,blood,910377c5-59da-4ca8-af3a-0d9930aaa026
+24088_3_365,T cell,blood,a047b73c-a4e9-4e44-9f0b-cdf9e7f487a1
+24088_5_124,T cell,blood,f324ad1c-7a1f-400a-9bf2-7f682f3ff63d
+24088_6_144,T cell,blood,700931af-62d0-40cf-8bd7-29a5d9067454
+24088_4_112,T cell,blood,e3e3dea7-a000-4431-a726-c226dee4d9c1
+24088_4_83,T cell,blood,0dca0c52-89e5-406f-9d5e-ee7bcb1f19bb
+24088_5_339,T cell,blood,7fa11b4b-cca5-4ab3-b520-432fd7aed971
+24088_3_104,T cell,blood,48d3cd6e-b7a6-40b9-9bdb-5de54b8f90ef
+24088_6_53,T cell,blood,c506cc1a-0a03-4934-adf3-92546c3ee392
+24088_6_364,T cell,blood,dd1c970f-7d16-42c5-ae10-46f76db9a9ba
+24088_5_77,NA,blood,d9b88cbd-5cc0-4b20-9ab2-2ef26fc72200
+24088_6_127,NA,blood,a27458b6-321e-4de8-bfb1-e19ce5ae58c0
+24088_3_185,conventional dendritic cell (DC1),blood,197765f8-be23-4f13-a474-b947d8bfaed7
+24088_6_322,monocyte,blood,b9152834-58a8-41b2-bb97-4328db13a0d8
+24088_6_168,T cell,blood,c686086f-f1d8-4d5a-8d83-e2f10955911d
+24088_4_108,T cell,blood,ac317284-d9e7-4314-b2b7-ab97fe91d8f2
+24088_6_151,T cell,blood,c6313eae-7a0c-4ee5-b9e9-f37bda6e71c5
+24088_4_12,T cell,blood,59515a43-10db-4197-8745-34d730ab8d31
+24088_4_86,T cell,blood,43f5ebed-2547-4c61-9100-5f06f20a9c33
+24088_5_193,monocyte,blood,1a59d057-1c07-4adb-afab-23abe4a95aa3
+24088_6_35,monocyte,blood,8d832e00-630b-4231-b7d7-cc3dc9534160
+24088_3_18,monocyte,blood,3e7acf99-d317-4964-80c6-551533b9cf55
+24088_5_102,T cell,blood,911b09b1-d01e-4a4e-954e-a810b0a9a7aa
+24088_3_27,T cell,blood,caebba81-060e-41be-873d-a99964d0e6a8
+24088_6_60,monocyte,blood,325e4f13-6f98-49d3-9ec1-612486f4e88c
+24088_5_103,T cell,blood,06163a4a-cbea-4750-aee4-cb74fe27819e
+24088_6_264,T cell,blood,824d18f3-9cf3-4e93-bfc6-73d15e47e3c3
+24088_4_144,T cell,blood,35fc3b30-3ca3-4cd3-8622-2911f2addf25
+24088_3_211,T cell,blood,15421c3f-e0e7-4218-a1f1-fd70a5b84353
+24088_4_40,T cell,blood,39841fc2-82d0-4163-9a2b-f82839f6b478
+24088_4_30,T cell,blood,863cd55d-a1db-448b-9996-9390811da9f8
+24088_3_54,T cell,blood,dd7a46be-0706-4388-8819-124d0a560b0a
+24088_4_56,CD16-positive natural killer cell (NK CD16+),blood,8ff64dc1-e234-457a-bb07-82839683b34d
+24088_3_313,T cell,blood,faed90f4-506c-4772-a8bb-1297276adc19
+24088_3_274,T cell,blood,94a3d1bc-bacb-43c9-9ca4-c7df57d0ab2c
+24088_5_288,monocyte,blood,b75af4ed-d34c-4ef4-9243-f77c61743e66
+24088_3_218,T cell,blood,ef077254-3570-4f83-8745-d14330dc9061
+24088_3_342,CD16-negative natural killer cell (NK CD16-),blood,fce189f4-a7b2-4a4f-949d-9803a8f334b8
+24088_6_298,monocyte,blood,52003bab-29f5-49f6-a8e1-78b07c84b182
+24088_3_182,plasmacytoid dendritic cell (DC2),blood,ab262338-22bb-4b45-8902-34d52825b1e7
+24088_6_267,T cell,blood,529bc73e-dc1e-49aa-8f6b-df3f120c74e3
+24088_5_100,T cell,blood,a967f256-5aba-4faf-ba67-ad49beb0e068
+24088_5_366,NA,blood,f6d6346c-4cc4-4b09-83fa-15efd8f9015c
+24088_6_49,CD16-positive natural killer cell (NK CD16+),blood,c0eedb9e-15ee-40ad-bd17-ff3622b3fff8
+24088_6_219,T cell,blood,09fedf19-bd4c-4b52-aadd-77ebf137f27e
+24088_6_233,monocyte,blood,38f386d9-3de5-47da-ae6e-7dd72da02a45
+24088_6_338,T cell,blood,70512f37-758c-45a7-8fb5-42486cd16e8b
+24088_5_358,plasmacytoid dendritic cell (DC2),blood,a4bec017-8284-4952-bf7d-ba3ad1b9b34f
+24088_6_318,T cell,blood,4b33e885-ec22-4970-addd-2a0066cdf21f
+24088_3_357,NA,blood,5118e507-2114-4ecb-8e31-55efe9e190c9
+24088_5_182,CD16-negative natural killer cell (NK CD16-),blood,5a8e29e6-5d6e-4846-bbbd-2d10a4759a37
+24088_6_314,T cell,blood,b4d0717e-5b29-40ef-9362-e0d47c792785
+24088_6_330,monocyte,blood,2920eac4-51b3-40e2-86eb-21eab747a032
+24088_5_118,granulocyte,blood,497092c1-d1ac-4f19-9a19-54c84792565d
+24088_4_146,T cell,blood,347fa01c-0183-4941-befe-db985b0e61b1
+24088_6_28,CD16-positive natural killer cell (NK CD16+),blood,4bdd376d-0262-408c-8d6c-79c0337c25b5
+24088_6_315,T cell,blood,1a3bf101-b999-408b-a85b-3d3cf2a6ef43
+24088_6_246,T cell,blood,82129eb3-2c11-4a8a-a845-a3896d4d528b
+24088_5_370,T cell,blood,35abce7c-5fc0-4987-a606-920531c2fde9
+24088_6_114,monocyte,blood,6700540b-cfc2-4550-b5a1-88eafcde0c35
+24088_3_213,T cell,blood,8684d826-fa49-455f-ae1a-f51f1a1ea02d
+24088_5_113,monocyte,blood,294f69c0-8ef0-4d9b-bcde-9cf0abc096f9
+24088_3_285,NA,blood,f5723fa0-016d-4407-af6a-3ff0019b1ca9
+24088_5_199,monocyte,blood,f8ab9f45-5348-4fdc-b593-da4cf1c36262
+24088_3_354,T cell,blood,cd68b2eb-f0ae-4e5a-b7cc-68544416e523
+24088_6_139,monocyte,blood,6882ef78-9ef6-444f-8cc6-c9efd2937da7
+24088_6_154,T cell,blood,611cac09-e4c8-41fc-a572-8367e935bf8a
+24088_3_260,T cell,blood,2c03d098-8921-4b4b-90fe-bbf1e9ddf7cd
+24088_6_82,NA,blood,62cf7b83-f1a1-426f-ab60-340c3f0bde9f
+24088_4_104,villous cytotrophoblast (VCT),blood,8f65cc31-67e7-4e8a-937c-ef59af0d0f9f
+24088_6_54,CD16-positive natural killer cell (NK CD16+),blood,cd6e4417-5767-407a-80f6-665cb100fd80
+24088_4_164,T cell,blood,fad81ede-6a41-427c-91cc-239763e1f533
+24088_6_90,monocyte,blood,bd96958b-b6c5-41e0-9bc5-2e8e66e286fc
+24088_3_53,T cell,blood,df68598c-1de2-4bd3-b6a8-b84415032d9e
+24088_6_312,T cell,blood,cc86bc4a-dcf4-45e5-8e6e-d2c65d13bfa1
+24088_5_328,T cell,blood,26d637c7-bbf8-44ab-9cc7-fb4e861744aa
+24088_6_286,T cell,blood,e2c3f617-17c1-489c-b49b-4b16e38190d2
+24088_4_121,T cell,blood,3583b6f5-9987-4715-a1a8-fd73bb35c6ad
+24088_6_66,monocyte,blood,646b13bb-2afe-4380-91fc-9a6ec7652901
+24088_3_41,monocyte,blood,b8984db8-0c93-434d-8476-89fa205d8f98
+24088_6_142,monocyte,blood,76097e08-bcab-46e9-9e43-eed3c35a8e09
+24088_6_372,plasmacytoid dendritic cell (DC2),blood,35e26f13-df89-44cc-b365-d1b7aa772f93
+24088_5_207,T cell,blood,90737127-0671-421e-b4e4-a2096afbfd27
+24088_3_159,plasmacytoid dendritic cell (DC2),blood,92764199-f471-44af-9915-d558fc4936a9
+24088_5_141,T cell,blood,da424c27-0dbc-4cc1-b410-0d6b9465c816
+24088_3_3,T cell,blood,e19ce6dd-e339-4dc1-a6b4-bdeb7b563c22
+24088_5_138,T cell,blood,f420683f-9527-42bb-aea6-2f3151a9bcf3
+24088_3_344,CD16-negative natural killer cell (NK CD16-),blood,b01f6e67-0a5a-4dcd-8d2f-9f568808317c
+24088_6_324,monocyte,blood,ff3409c4-e4df-4abb-b492-52908d7845bd
+24088_5_160,T cell,blood,0ef69fa1-b257-4807-8d1f-4437c84caba5
+24088_6_141,monocyte,blood,f965db83-bccc-4a16-9b49-72c1cea62f9e
+24088_6_319,T cell,blood,87bc8d45-c918-4d0c-b765-3a379c527734
+24088_4_176,CD16-negative natural killer cell (NK CD16-),blood,40523fbb-67b3-4a3a-97d1-5056db266507
+24088_5_20,T cell,blood,e85e547d-e4f8-4414-9943-ff710c874fa0
+24088_3_43,monocyte,blood,67c47431-027e-475c-af0f-6639277c21a5
+24088_3_324,T cell,blood,bc0c9a77-9f12-426c-912a-3bcb105ba767
+24088_3_51,T cell,blood,fa6089a0-5c49-4eef-aa1b-dda15b1da73e
+24088_5_267,monocyte,blood,f9666c45-6d90-48e7-8e6b-894e5e66da03
+24088_5_36,CD16-positive natural killer cell (NK CD16+),blood,ab63f882-e0a9-430d-9234-0d8da5b5a7f4
+24088_5_374,T cell,blood,0b331340-b511-411b-88e5-1c4334858666
+24088_5_187,T cell,blood,feb29835-2a97-4084-8f35-8ff98912b3e9
+24088_4_21,T cell,blood,92793de8-053a-48a0-96af-efcdaba99a66
+24088_5_340,plasmacytoid dendritic cell (DC2),blood,116baeb4-4d03-47c1-a7d7-91b49ea92372
+24088_3_162,monocyte,blood,43ea9ec8-05b8-44bc-a2d0-15379144a7e8
+24088_3_134,monocyte,blood,9cb073f8-18b5-4147-99d3-eb413d7615fc
+24088_3_45,monocyte,blood,48d2c876-d071-43ef-9414-0ce537652722
+24088_3_252,T cell,blood,d6079334-8013-4fab-b6a9-8dfe40cb0484
+24088_6_323,monocyte,blood,5c5caabd-bfb8-4967-a9ae-9060170113a5
+24088_3_66,monocyte,blood,cfd3ad72-14d7-4d3c-b345-6f9ca9fa84bc
+24088_5_305,T cell,blood,6d569918-5710-4b39-ad2e-791f397870fd
+24088_3_154,T cell,blood,26b93469-f36a-42f1-a2c1-fbb2a5fe3e88
+24088_6_380,plasmacytoid dendritic cell (DC2),blood,d8bf225f-dded-4ddb-a2c0-fc768efd1008
+24088_5_343,plasmacytoid dendritic cell (DC2),blood,e9d21d95-c05f-4a8f-a530-0943142dbb51
+24088_3_33,T cell,blood,1bd0c057-7ecd-459a-808e-c48751fcd6bd
+24088_6_25,T cell,blood,ad2388b2-266d-443a-a4db-e517d6417be7
+24088_5_345,T cell,blood,9730306c-2f87-4c31-b4df-56ec9f3a25ab
+24088_4_31,T cell,blood,0f0f95db-3d5f-476b-9180-44e787fc5315
+24088_6_222,T cell,blood,d4ade373-e7a7-4fe5-bea7-8b62d32a3d44
+24088_5_70,CD16-positive natural killer cell (NK CD16+),blood,da135808-c9b0-4174-a235-634de1c1dde1
+24088_5_364,monocyte,blood,f4fdb659-97b2-47e8-a7e9-8356d205d122
+24088_3_187,plasma cell,blood,71af3403-744b-45df-8e1d-00442cffd939
+24088_5_86,CD16-positive natural killer cell (NK CD16+),blood,f4e4b6b9-fe82-4e03-aca7-fe565d322649
+24088_4_58,CD16-positive natural killer cell (NK CD16+),blood,78a76182-695a-47a1-aaca-8dead8bc3093
+24088_6_245,T cell,blood,204ca363-1a77-4cde-9e17-35eff2fdd77a
+24088_3_286,NA,blood,4f0d0e98-189e-4e9e-9624-29fb15919ef5
+24088_4_148,T cell,blood,9a91eb45-aef5-4fc7-be5b-4daaff972b4a
+24088_6_96,NA,blood,a38b25bf-4ec5-4919-b01c-2f422e2e20cc
+24088_4_60,T cell,blood,371e9d9f-d84c-436e-aab9-e9861d227cab
+24088_6_176,CD16-positive natural killer cell (NK CD16+),blood,e26807f0-da22-4d52-b62d-dee0176c89dc
+24088_4_116,T cell,blood,589cfc2a-a7af-4f7c-94aa-8bc95bb6a2d1
+24088_6_208,monocyte,blood,4525aa61-a826-4903-8de3-a943c1476c0f
+24088_3_331,T cell,blood,27fafcd3-04cc-4b7c-9bf4-3534e7aa0a4b
+24088_6_158,T cell,blood,0c8fbacd-bcfc-4348-9876-94bac4c3c900
+24088_6_281,monocyte,blood,b56bf63a-6b44-464d-92b4-ac968e975bfc
+24088_5_277,T cell,blood,b7520e01-3782-4f63-ab3a-03557aec1b28
+24088_6_88,monocyte,blood,974b0033-f27a-4bd1-ab59-0e581f089dac
+24088_6_237,T cell,blood,5ed8db44-a5c9-4e8d-ab02-903ea6f5bb16
+24088_3_194,T cell,blood,e8f0017b-a3fe-42fa-bc81-10a73b6bb966
+24088_4_102,monocyte,blood,1a40e506-0f00-4dd9-a7a5-ab169dbabda4
+24088_3_42,monocyte,blood,1f6c9806-04b2-496a-a9ee-09977a430d53
+24088_4_92,T cell,blood,73390074-e5f1-4daa-9b16-01e7f597ca16
+24088_4_134,T cell,blood,3443a76a-531e-480a-a4c4-92f228d95ff1
+24088_3_91,monocyte,blood,808f43e2-76fc-496e-97ab-61b7181164e2
+24088_6_371,T cell,blood,ff239ed2-afd7-4612-8da5-642577e178cb
+24088_3_132,monocyte,blood,3c0e47e6-ff66-4f25-947d-2f097a6c6823
+24088_3_147,T cell,blood,cfe87e95-80d4-4fff-a108-be5e7a9c914b
+24088_3_245,T cell,blood,6f686102-3782-46ad-85c1-3a52c8eee597
+24088_3_277,T cell,blood,2b1731ae-f8d7-429d-a5fe-fe4da138fb0b
+24088_3_113,monocyte,blood,c24de527-2d7d-4ec6-bcc4-984368d92b70
+24088_5_74,T cell,blood,70f0643f-74bb-4c7f-8b7b-945b1c1caf02
+24088_5_310,monocyte,blood,a1be7433-b711-41b0-9d0e-fcaddc61921d
+24088_5_68,T cell,blood,e4862a2a-bdef-4a59-88a6-e3b5ac9279b6
+24088_6_177,CD16-negative natural killer cell (NK CD16-),blood,2988f836-e40c-4300-ae4e-60a8c380fe47
+24088_6_295,T cell,blood,bd98898a-d6db-484c-815e-68b08ed06ccf
+24088_6_250,monocyte,blood,a4f0fb56-6684-4629-963d-c4b4d716889b
+24088_3_155,conventional dendritic cell (DC1),blood,8409347f-5f57-4f2f-a1a8-c8c037fc3ad7
+24088_5_209,T cell,blood,b5cb30d1-a2ae-43c6-ad5a-eefd6fe33dd2
+24088_3_56,T cell,blood,95fdaa3a-57c2-4287-8180-0c7bf7930d52
+24088_6_290,T cell,blood,c86e955c-758f-4491-8964-7ce19ad52ca9
+24088_3_301,T cell,blood,da91f767-d6ae-4e6a-a0c3-773764529939
+24088_5_108,granulocyte,blood,809f3a70-bc32-4584-8788-f7e0e9a2f609
+24088_3_368,T cell,blood,639bf56e-2e2f-48f9-accc-f4b2ca5e2117
+24088_3_8,T cell,blood,a1f7a7ab-de3a-4ab9-bfe3-30b3716306c4
+24088_6_228,monocyte,blood,80844689-7d1c-42b8-9a36-06375e6eebc0
+24088_6_243,T cell,blood,2442bfcb-5696-4ebb-a8eb-7f71bbc0b000
+24088_3_89,monocyte,blood,0fb47935-d797-4aec-9d71-19f3f3d19d76
+24088_6_205,monocyte,blood,326c868b-b373-4501-b51c-c05a9e42e708
+24088_5_321,T cell,blood,19ffff1c-63ae-4f58-945c-44d294885f3a
+24088_6_235,monocyte,blood,ee3dc2c5-1f3e-41bd-9870-1b6347660524
+24088_5_291,monocyte,blood,550429e0-2249-4261-9f47-d31e16c25733
+24088_3_65,monocyte,blood,4443773f-88d2-4030-a395-4abcb1b244bf
+24088_6_55,T cell,blood,c2c09de7-afc8-4e0b-8b98-151381d26d76
+24088_3_2,T cell,blood,0748a7ef-874e-4e29-b4b1-0e94d1eff9ce
+24088_3_219,T cell,blood,c3707d15-cc6b-4fee-8d58-56db4d68957b
+24088_5_184,CD16-positive natural killer cell (NK CD16+),blood,7f6477fb-a6e7-4d79-8be5-b282a17c7c45
+24088_4_140,T cell,blood,8474d4fc-90b9-438b-99e2-1b94b4ac6be7
+24088_5_246,monocyte,blood,5715709c-526f-4a72-8547-b5372168a31c
+24088_6_193,T cell,blood,5a6eb909-9900-41db-8bcf-0d9776190212
+24088_6_173,T cell,blood,3c1a6bc0-5bf0-4e5b-ad00-88f3df030a6e
+24088_6_201,T cell,blood,eea167af-630d-4594-8e4a-8cdada8ece27
+24088_6_34,T cell,blood,501bdd89-6cf1-4346-bd5c-0e19ff45183f
+24088_6_206,monocyte,blood,5d88f9d5-92e2-468b-a443-060d1d0ea92c
+24088_5_3,T cell,blood,de454876-d041-4984-ad94-d0177d0c322a
+24088_3_375,CD16-positive natural killer cell (NK CD16+),blood,1c34f0b9-ee44-434e-822c-4d4fa6ec94bd
+24088_4_115,T cell,blood,840432cf-7075-4777-8996-d5438be90416
+24088_3_85,monocyte,blood,7b001ddb-f04e-4911-87fd-aa53356e73a6
+24088_5_372,CD16-positive natural killer cell (NK CD16+),blood,9123278e-fc1a-4dae-909e-d1cec96e5134
+24088_3_343,T cell,blood,c8b15621-8f79-4f12-8d49-773332541e23
+24088_4_96,NA,blood,a0d4ce42-4d30-4e1d-9e50-5ba727732842
+24088_4_1,CD16-positive natural killer cell (NK CD16+),blood,a7bd2034-c999-44f2-87e2-864a2d22bf7a
+24088_6_152,T cell,blood,2d29c286-f0f2-474f-8316-1218fa623487
+24088_5_295,monocyte,blood,a3d2bc0f-1dcb-4ba4-a13d-cae463e45bc5
+24088_5_131,CD16-positive natural killer cell (NK CD16+),blood,d02d2c39-5ac2-4b43-a693-071ab0ef0b60
+24088_3_334,T cell,blood,5d09d2c2-1eb9-4ed8-bd99-cef314561e77
+24088_3_377,CD16-positive natural killer cell (NK CD16+),blood,ed9bfaf9-86f5-4983-8814-5ed2950fd9ad
+24088_3_6,T cell,blood,bf776b0e-a8e8-41fa-8286-815755cf1591
+24088_5_218,monocyte,blood,d2e6850d-fbc5-4d11-8332-4a3df13c481a
+24088_5_189,NA,blood,f9e4955c-e5b3-4f9d-99ad-3b0e3321fc2a
+24088_3_35,monocyte,blood,5627409f-04a7-477f-bb66-19785d8b13b0
+24088_6_198,T cell,blood,c41209b3-307e-40de-9f0b-18eb70d3cc41
+24088_4_187,T cell,blood,2203a599-d0b9-4200-9ba7-f19aaf9b9b4f
+24088_5_224,monocyte,blood,d451cf70-7077-44f6-88d8-7cfa0c06cb40
+24088_6_366,T cell,blood,3e2de46a-ca0f-49fd-85e6-6b3ec8e8ab7e
+24088_6_59,monocyte,blood,96d8ca97-5cb2-4480-8bdd-ac078b2c2cb6
+24088_6_179,plasma cell,blood,466379b3-d0cf-4804-bc95-43600daf8147
+24088_5_19,CD16-positive natural killer cell (NK CD16+),blood,200912d1-0d7e-4d0f-bc32-9444258d9dde
+24088_3_290,NA,blood,86d1f806-1fc2-403b-b007-fd6b2aef5feb
+24088_4_132,T cell,blood,8947f06f-3221-4a6a-ad7e-20697fffb5d3
+24088_4_99,T cell,blood,3808bb7c-92e2-4db1-b1e4-cc5e5a9a364d
+24088_6_211,monocyte,blood,e431933b-e86c-42b9-9fec-dfedee6fad79
+24088_3_4,T cell,blood,55018bf1-3836-4770-9fe4-8d2c2091aad9
+24088_5_309,monocyte,blood,2e53fb9d-bbfb-4947-9430-c8743dbec5f2
+24088_6_6,NA,blood,9105f288-74eb-4def-ad6a-e5437b1344c1
+24088_3_241,T cell,blood,6842c5c1-1ab0-4eba-ab5e-c217ede5fbb6
+24088_3_122,T cell,blood,4f9f5bc0-139f-47c2-bdb1-a02ac550a61b
+24088_5_67,T cell,blood,c6201d83-f266-462c-826a-1f0a9650a8a4
+24088_4_125,T cell,blood,11b1ad30-326d-4083-a6bc-369a1f520f8a
+24088_3_204,T cell,blood,03bb7137-b0d0-4130-9df4-12ca7f8a3dc6
+24088_3_264,decidual macrophage (dM2),blood,7adc7296-433b-4bde-b65e-edfb5f618083
+24088_5_61,CD16-positive natural killer cell (NK CD16+),blood,eed0016e-bd73-429f-8865-a513807ed3ae
+24088_4_100,granulocyte,blood,219ab734-fb8b-4ecb-8390-4c46435b5182
+24088_3_206,NA,blood,96494a3f-14b8-474c-b58b-19b30b840cc8
+24088_3_217,T cell,blood,68d6b3d6-07ba-401e-9535-0e8c997ac511
+24088_5_93,monocyte,blood,545ad847-1903-4c18-82e2-bce59a953955
+24088_6_361,T cell,blood,da45ff0e-a3b7-4397-b05d-37687f2105cd
+24088_5_99,NA,blood,0faea936-0964-4821-b085-2b3df72191ac
+24088_6_132,monocyte,blood,39d94994-a381-4330-bbef-0e856173dbcc
+24088_3_26,T cell,blood,5428201c-1918-4da0-bdf5-2f023be3ca4f
+24088_3_172,T cell,blood,ca297871-7e77-4e34-bdbc-8747dcb847f6
+24088_3_173,T cell,blood,07b8f403-c563-44b1-b81a-d8e5ebc32bcf
+24088_5_377,T cell,blood,801846d1-34eb-4f74-8d9a-8044d9636ee3
+24088_6_103,T cell,blood,149240c3-76cc-4308-bce2-91b016251140
+24088_6_207,monocyte,blood,1d6cefc7-c8c6-4bf6-941f-12a920a50aaa
+24088_5_249,T cell,blood,064ea4bf-4482-4eaa-92d6-e698a7b4484f
+24088_4_54,T cell,blood,49dbde6b-f93f-4d4a-8020-b5101996fc0c
+24088_3_34,T cell,blood,1d7f8c07-8d0c-49a4-80a6-28048ef2f285
+24088_6_92,monocyte,blood,636819c2-71f7-4971-a7a2-e1de7a428a5f
+24088_4_46,T cell,blood,d83c6739-7d73-4d88-820c-99a920b68eb7
+24088_4_156,T cell,blood,b870c99c-138d-434b-94e2-68d5c3a2c530
+24088_6_105,T cell,blood,00f3cb21-b681-45ef-8888-ef3335dee704
+24088_4_123,T cell,blood,93467c7f-a838-4622-b67f-fda753f18086
+24088_3_355,T cell,blood,b5640b92-7a3c-4e27-83d0-08e9017f0024
+24088_5_243,monocyte,blood,8aec4475-8b85-4414-9b30-eeac58028817
+24088_6_329,monocyte,blood,fe7c4c62-4705-4e33-9a5f-62efdfed5c14
+24088_5_80,T cell,blood,d51d55bd-b923-41e7-a895-9e4d53b59d96
+24088_5_287,monocyte,blood,9064dd14-ff9a-4324-81f6-059f2d03b62b
+24088_5_273,T cell,blood,8b3deb19-3376-44fb-842b-4386dc97e4c5
