@@ -1,6 +1,6 @@
 NAME
-annotated_cell_type.text
-annotated_cell_type.ontology_label
+annotated_cell_identity.text
+annotated_cell_identity.ontology_label
 cell_suspension.genus_species.ontology_label
 cell_suspension.provenance.document_id
 cell_suspension.biomaterial_core.biomaterial_id
