@@ -47,12 +47,19 @@ def main():
     # Make input dictionaries
     local_id_dict = make_local_id_dict(biomaterial_id_type, cell_type_df)
     this_ct_dict = create_cell_type_dictionary(cell_type_df, id_column, biomaterial_id_type, args.lib_prep)
+    ct_dict_df = pd.DataFrame.from_dict(this_ct_dict, orient="index")
+    ct_dict_df.to_csv("~/Desktop/test_ct_dict.csv")
 
     # Update the files
-    update_loom_file(args.input_loom, this_ct_dict, id_column, biomaterial_id_type, local_id_dict, args.lib_prep)
+    update_loom_file(args.input_loom, this_ct_dict, id_column, biomaterial_id_type, local_id_dict, args.lib_prep,
+                     args.project_uuid)
     update_metadata_txt(args.input_metadata, cell_type_df, biomaterial_id_type, local_id_dict, args.lib_prep)
-    update_h5ad_file(args.input_h5ad, cell_type_df, biomaterial_id_type, local_id_dict, args.lib_prep)
+    update_h5ad_file(args.input_h5ad, cell_type_df, biomaterial_id_type, local_id_dict, args.lib_prep,
+                     args.project_uuid)
 
+
+# TODO: work out how to upload original files to s3 bucket after creating annotated versions
+# TODO: work out how to upload to portal automatically?
 
 def define_parser():
     """defines the parser to parse command line arguments"""
@@ -68,6 +75,9 @@ def define_parser():
     parser.add_argument("--lib-prep", "-lp", action="store", dest="lib_prep", type=str,
                         choices=["10x", "10X", "ss2", "SS2"],
                         help="Library prep type, either '10x' or 'SS2'")
+    parser.add_argument("--project-uuid", "-u", action="store", dest="project_uuid", type=str,
+                        help="Optional: The project uuid a.k.a. 'project.provenance.document_id'",
+                        nargs='?')
     return parser
 
 
@@ -89,6 +99,9 @@ def create_cell_type_dictionary(cell_type_df, id_field, id_type, library_prep):
     biomaterial_id = id_type + ".biomaterial_core.biomaterial_id"
     if library_prep.lower() == "10x":
         for index, row in cell_type_df.iterrows():
+            if (row['barcode'], row[id_field]) in cell_type_dict:
+                print("Cell in Dictionary")
+                print(row['barcode'] + " " + row[id_field])
             cell_type_dict[(row['barcode'], row[id_field])] = [row[biomaterial_id], row['annotated_cell_identity.text'],
                                                                row['annotated_cell_identity.ontology'],
                                                                row['annotated_cell_identity.ontology_label']]
@@ -150,13 +163,15 @@ def update_metadata_txt(metadata_path, annotation_df, id_type, local_id_dict, li
     # read in the existing metadata file and merge with new annotations
     metadata_txt = pd.read_table(metadata_path)
     if library_prep.lower() == "10x":
-        annotated_metadata_txt = pd.merge(metadata_txt, annotation_df, on=["barcode", id_field], how="left")
+        annotated_metadata_txt = pd.merge(metadata_txt, annotation_df, on=["barcode", id_field], how="left",
+                                          validate="one_to_one")
         with open("config_files/10x_column_whitelist.txt") as whitelist:
             contents = whitelist.read()
             white_list = contents.splitlines()
             numeric_fields = ["total_umis", "genes_detected"]
     elif library_prep.lower() == "ss2":
-        annotated_metadata_txt = pd.merge(metadata_txt, annotation_df, on=[id_field], how="left")
+        annotated_metadata_txt = pd.merge(metadata_txt, annotation_df, on=[id_field], how="left",
+                                          validate="one_to_one")
         with open("config_files/ss2_column_whitelist.txt") as whitelist:
             contents = whitelist.read()
             white_list = contents.splitlines()
@@ -195,7 +210,7 @@ def update_metadata_txt(metadata_path, annotation_df, id_type, local_id_dict, li
     print("Updated metadata txt file saved to " + output_txt)
 
 
-def update_loom_file(loom_path, ct_dict, id_field, id_type, local_id_dict, library_prep):
+def update_loom_file(loom_path, ct_dict, id_field, id_type, local_id_dict, library_prep, project_uuid=None):
     """
     Takes as input the cell type annotation file and the loom path. The script copies the loom before updating the loom
     file with the cell type annotation.
@@ -233,7 +248,11 @@ def update_loom_file(loom_path, ct_dict, id_field, id_type, local_id_dict, libra
         ds.ca["annotated_cell_identity.ontology"] = celltype_ontology_list
         ds.ca["annotated_cell_identity.ontology_label"] = celltype_ontology_label_list
         ds.ca[biomaterial_id] = biomaterial_id_list
-        this_project_uuid = ds.ca["project.provenance.document_id"][0]
+        try:
+            this_project_uuid = ds.ca["project.provenance.document_id"][0]
+        except AttributeError:
+            print("Project uuid not found, using " + project_uuid)
+            this_project_uuid = project_uuid
         project_info = get_project_info(this_project_uuid)
         print(project_info)
         ds.ca["project.project_core.project_title"] = [project_info[1]] * ds.shape[1]
@@ -241,7 +260,7 @@ def update_loom_file(loom_path, ct_dict, id_field, id_type, local_id_dict, libra
     print("Updated loom file saved to " + annotated_loom)
 
 
-def update_h5ad_file(h5ad_path, annotation_df, id_type, local_id_dict, library_prep):
+def update_h5ad_file(h5ad_path, annotation_df, id_type, local_id_dict, library_prep, project_uuid=None):
     """
     Takes as input the cell type annotation file and the h5ad path. The function saves a new copy of the h5ad file.
 
@@ -249,21 +268,28 @@ def update_h5ad_file(h5ad_path, annotation_df, id_type, local_id_dict, library_p
     :param annotation_df: The dataframe that contains ontologised cell type annotations
     :param id_type: The type of biomaterial
     :param local_id_dict: the dictionary that links the biomaterial uuid to it's local id
-    :return:
+
     """
     id_field = id_type + ".provenance.document_id"
     local_id_field = id_type + ".biomaterial_core.biomaterial_id"
     h5_object = sc.read(h5ad_path)
     output_h5 = h5ad_path.split(".")[0] + "_annotated_v1.seurat.h5ad"
     original_indices = h5_object.obs.index
+    print(len(original_indices))
 
     # join the annData obs dataframe to the annotated cell type
     if library_prep.lower() == "10x":
+        print(id_field)
         annotated_obs = pd.merge(h5_object.obs, annotation_df, on=[id_field, 'barcode'],
-                                 how="left", left_index=True)
+                                 how="left", left_index=True, validate="one_to_one")
     elif library_prep.lower() == "ss2":
         annotated_obs = pd.merge(h5_object.obs, annotation_df, on=[id_field],
-                                 how="left", left_index=True)
+                                 how="left", left_index=True, validate="one_to_one")
+    annotated_obs.to_csv("~/Desktop/adult_kidney_merged_obs.csv")
+    print(annotated_obs.head)
+    print(annotated_obs.shape)
+    print(annotated_obs.groupby(['barcode', 'cell_suspension.provenance.document_id']).count())
+    print(len(annotated_obs.index))
 
     annotated_obs.index = original_indices # double check order remains the same after the merge
 
@@ -279,8 +305,11 @@ def update_h5ad_file(h5ad_path, annotation_df, id_type, local_id_dict, library_p
                                    ["annotated_cell_identity.text",
                                     "annotated_cell_identity.ontology_label",
                                     "annotated_cell_identity.ontology"]] = "unannotated"
-
-    this_project_uuid = annotated_obs["project.provenance.document_id"][0]
+    try:
+        this_project_uuid = annotated_obs["project.provenance.document_id"][0]
+    except AttributeError:
+        print("Project uuid not found, using " + project_uuid)
+        this_project_uuid = project_uuid
     project_info = get_project_info(this_project_uuid)
     annotated_obs["project.project_core.project_short_name"] = project_info[0]
     annotated_obs["project.project_core.project_title"] = project_info[1]
