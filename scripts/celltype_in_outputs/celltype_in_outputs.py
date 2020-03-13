@@ -31,6 +31,7 @@ import pandas as pd
 import argparse
 import subprocess
 import sys
+import requests as rq
 
 
 def main():
@@ -41,21 +42,23 @@ def main():
         loom_cols = set(ds.ca.keys())
     # Figure out which biomaterial type used as identifier
     shared_columns = list(loom_cols.intersection(set(cell_type_df.columns)))
+    # print(shared_columns)
     id_column = [i for i in shared_columns if "id" in i][0]
     biomaterial_id_type = id_column.split(".")[0]
-
+    with lp.connect(args.input_loom) as ds:
+        biomaterial_uuids = set(ds.ca[f"{biomaterial_id_type}.provenance.document_id"])
     # Make input dictionaries
-    local_id_dict = make_local_id_dict(biomaterial_id_type, cell_type_df)
+    local_id_dict = make_local_id_dict(biomaterial_id_type, cell_type_df, biomaterial_uuids)
     this_ct_dict = create_cell_type_dictionary(cell_type_df, id_column, biomaterial_id_type, args.lib_prep)
-    ct_dict_df = pd.DataFrame.from_dict(this_ct_dict, orient="index")
-    ct_dict_df.to_csv("~/Desktop/test_ct_dict.csv")
+    # ct_dict_df = pd.DataFrame.from_dict(this_ct_dict, orient="index")
+    # ct_dict_df.to_csv("~/Desktop/test_ct_dict.csv")
 
     # Update the files
     update_loom_file(args.input_loom, this_ct_dict, id_column, biomaterial_id_type, local_id_dict, args.lib_prep,
                      args.project_uuid)
-    update_metadata_txt(args.input_metadata, cell_type_df, biomaterial_id_type, local_id_dict, args.lib_prep)
-    update_h5ad_file(args.input_h5ad, cell_type_df, biomaterial_id_type, local_id_dict, args.lib_prep,
-                     args.project_uuid)
+    # update_metadata_txt(args.input_metadata, cell_type_df, biomaterial_id_type, local_id_dict, args.lib_prep)
+    # update_h5ad_file(args.input_h5ad, cell_type_df, biomaterial_id_type, local_id_dict, args.lib_prep,
+    #                  args.project_uuid)
 
 
 # TODO: work out how to upload original files to s3 bucket after creating annotated versions
@@ -101,8 +104,11 @@ def create_cell_type_dictionary(cell_type_df, id_field, id_type, library_prep):
         for index, row in cell_type_df.iterrows():
             if (row['barcode'], row[id_field]) in cell_type_dict:
                 print("Cell in Dictionary")
+                print(row['barcode'])
+                print(row[id_field])
                 print(row['barcode'] + " " + row[id_field])
-            cell_type_dict[(row['barcode'], row[id_field])] = [row[biomaterial_id], row['annotated_cell_identity.text'],
+            cell_id = row["barcode"] + "-" + row[id_field]
+            cell_type_dict[cell_id] = [row[biomaterial_id], row['annotated_cell_identity.text'],
                                                                row['annotated_cell_identity.ontology'],
                                                                row['annotated_cell_identity.ontology_label']]
     elif library_prep.lower() == "ss2":
@@ -120,13 +126,13 @@ def get_cell_type(cell_identifier, biomaterial_uuid, ct_dict, local_id_dict):
     the <biomaterial_type>.provenance.document_id for 10x experiments.
     """
     try:
-        cell_type = ct_dict[(cell_identifier, biomaterial_uuid)]
+        cell_type = ct_dict[cell_identifier]
     except KeyError:
         cell_type = [local_id_dict[biomaterial_uuid], "unannotated", "unannotated", "unannotated"]
     return cell_type
 
 
-def make_local_id_dict(biomaterial_type, cell_type_df):
+def make_local_id_dict(biomaterial_type, cell_type_df, uuids):
     """Makes a dictionary to match biomaterial uuids to local ids."""
     local_id_field = biomaterial_type + ".biomaterial_core.biomaterial_id"
     uuid_field = biomaterial_type + ".provenance.document_id"
@@ -134,6 +140,16 @@ def make_local_id_dict(biomaterial_type, cell_type_df):
     local_id_dict = {}
     for item in group_dict.groups.keys():
         local_id_dict[item[0]] = item[1]
+    # check all biomaterial uuids in the loom file are also in the local_id_dict
+    missing_uuids = uuids.difference(set(local_id_dict.keys()))
+    if len(missing_uuids) > 0:
+        print(missing_uuids)
+        for uuid in missing_uuids:
+            api_url = f"https://dss.data.humancellatlas.org/v1/files/{uuid}?replica=aws"
+            print(f"Biomaterial not found in annotations, Getting biomaterial id from DSS API: {api_url}")
+            response = rq.get(api_url)
+            response_json = response.json()
+            local_id_dict[uuid] = response_json['biomaterial_core']['biomaterial_id']
     return local_id_dict
 
 
@@ -233,8 +249,10 @@ def update_loom_file(loom_path, ct_dict, id_field, id_type, local_id_dict, libra
     with lp.connect(annotated_loom) as ds:
         for i in range(ds.shape[1]):
             if library_prep.lower() == "10x":
-                annotation_row = get_cell_type((ds.ca["barcode"][i], ds.ca[id_field][i]),
-                                               ds.ca[id_field][i], ct_dict, local_id_dict)
+                cell_id = ds.ca["barcode"][i] + "-" + ds.ca[id_field][i]
+                # print(cell_id)
+                annotation_row = get_cell_type(cell_id, ds.ca[id_field][i], ct_dict, local_id_dict)
+                # print(annotation_row)
             elif library_prep.lower() == "ss2":
                 annotation_row = get_cell_type(ds.ca[id_field][i], ds.ca[id_field][i], ct_dict, local_id_dict)
             else:
@@ -258,6 +276,13 @@ def update_loom_file(loom_path, ct_dict, id_field, id_type, local_id_dict, libra
         ds.ca["project.project_core.project_title"] = [project_info[1]] * ds.shape[1]
         ds.ca["project.project_core.project_short_name"] = [project_info[0]] * ds.shape[1]
     print("Updated loom file saved to " + annotated_loom)
+    with lp.connect(annotated_loom) as ds:
+        annotated_cell_types = set(ds.ca["annotated_cell_identity.text"])
+        annotated_cell_labels = set(ds.ca["annotated_cell_identity.ontology_label"])
+        annotated_cell_ontologies = set(ds.ca["annotated_cell_identity.ontology"])
+    print("annotated cell type set: " + str(annotated_cell_types))
+    print("annotated cell labels set: " + str(annotated_cell_labels))
+    print("annotated cell ontologies set: " + str(annotated_cell_ontologies))
 
 
 def update_h5ad_file(h5ad_path, annotation_df, id_type, local_id_dict, library_prep, project_uuid=None):
@@ -275,21 +300,14 @@ def update_h5ad_file(h5ad_path, annotation_df, id_type, local_id_dict, library_p
     h5_object = sc.read(h5ad_path)
     output_h5 = h5ad_path.split(".")[0] + "_annotated_v1.seurat.h5ad"
     original_indices = h5_object.obs.index
-    print(len(original_indices))
 
     # join the annData obs dataframe to the annotated cell type
     if library_prep.lower() == "10x":
-        print(id_field)
         annotated_obs = pd.merge(h5_object.obs, annotation_df, on=[id_field, 'barcode'],
                                  how="left", left_index=True, validate="one_to_one")
     elif library_prep.lower() == "ss2":
         annotated_obs = pd.merge(h5_object.obs, annotation_df, on=[id_field],
                                  how="left", left_index=True, validate="one_to_one")
-    annotated_obs.to_csv("~/Desktop/adult_kidney_merged_obs.csv")
-    print(annotated_obs.head)
-    print(annotated_obs.shape)
-    print(annotated_obs.groupby(['barcode', 'cell_suspension.provenance.document_id']).count())
-    print(len(annotated_obs.index))
 
     annotated_obs.index = original_indices # double check order remains the same after the merge
 
@@ -307,7 +325,7 @@ def update_h5ad_file(h5ad_path, annotation_df, id_type, local_id_dict, library_p
                                     "annotated_cell_identity.ontology"]] = "unannotated"
     try:
         this_project_uuid = annotated_obs["project.provenance.document_id"][0]
-    except AttributeError:
+    except KeyError:
         print("Project uuid not found, using " + project_uuid)
         this_project_uuid = project_uuid
     project_info = get_project_info(this_project_uuid)
