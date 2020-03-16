@@ -20,7 +20,7 @@ The script also requires a whitelist text file that identifies the columns that 
 file and thus will be shown to users as options for annotation in the 'explore' part of the SCP.
 
 Author: Marion Shadbolt, mshadbolt@ebi.ac.uk
-Last updated: 2020-03-02
+Last updated: 2020-03-14
 
 """
 
@@ -56,9 +56,9 @@ def main():
     # Update the files
     update_loom_file(args.input_loom, this_ct_dict, id_column, biomaterial_id_type, local_id_dict, args.lib_prep,
                      args.project_uuid)
-    # update_metadata_txt(args.input_metadata, cell_type_df, biomaterial_id_type, local_id_dict, args.lib_prep)
-    # update_h5ad_file(args.input_h5ad, cell_type_df, biomaterial_id_type, local_id_dict, args.lib_prep,
-    #                  args.project_uuid)
+    update_metadata_txt(args.input_metadata, cell_type_df, biomaterial_id_type, local_id_dict, args.lib_prep)
+    update_h5ad_file(args.input_h5ad, cell_type_df, biomaterial_id_type, local_id_dict, args.lib_prep,
+                     args.project_uuid)
 
 
 # TODO: work out how to upload original files to s3 bucket after creating annotated versions
@@ -259,9 +259,14 @@ def update_loom_file(loom_path, ct_dict, id_field, id_type, local_id_dict, libra
                 print("lib prep not found")
                 sys.exit()
             biomaterial_id_list.append(annotation_row[0])
-            celltype_text_list.append(annotation_row[1])
-            celltype_ontology_list.append(annotation_row[2])
-            celltype_ontology_label_list.append(annotation_row[3])
+            if annotation_row[1] != annotation_row[1]: # check for nan value
+                celltype_text_list.append("unannotated")
+                celltype_ontology_list.append("unannotated")
+                celltype_ontology_label_list.append("unannotated")
+            else:
+                celltype_text_list.append(annotation_row[1])
+                celltype_ontology_list.append(annotation_row[2])
+                celltype_ontology_label_list.append(annotation_row[3])
         ds.ca["annotated_cell_identity.text"] = celltype_text_list
         ds.ca["annotated_cell_identity.ontology"] = celltype_ontology_list
         ds.ca["annotated_cell_identity.ontology_label"] = celltype_ontology_label_list
