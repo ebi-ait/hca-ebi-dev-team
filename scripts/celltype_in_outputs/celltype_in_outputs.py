@@ -178,6 +178,10 @@ def update_metadata_txt(metadata_path, annotation_df, id_type, local_id_dict, li
 
     # read in the existing metadata file and merge with new annotations
     metadata_txt = pd.read_table(metadata_path)
+
+    print(len(metadata_txt["barcode"]))
+    print(len(annotation_df["barcode"]))
+
     if library_prep.lower() == "10x":
         annotated_metadata_txt = pd.merge(metadata_txt, annotation_df, on=["barcode", id_field], how="left",
                                           validate="one_to_one")

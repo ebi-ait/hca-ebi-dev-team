@@ -11,7 +11,7 @@ library(dplyr)
 library(stringr)
 library(readxl)
 
-cell_types <- read_csv("~/Google Drive File Stream/Shared drives/AIT/HCA - Wrangler tasks/r-Release/Cell type annotations/celltypes_annotated_harmonized_v3.csv")
+cell_types <- read_csv("~/Google Drive File Stream/Shared drives/AIT/HCA - Wrangler tasks/r-Release/Cell type annotations/celltypes_annotated_harmonized_v4.csv")
 celltype_csv_output <- "celltype_csvs/"
 
 create_celltype_csv <- function(harmonised_cell_terms_df,
