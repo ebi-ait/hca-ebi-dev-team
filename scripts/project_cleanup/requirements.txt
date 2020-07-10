@@ -1,0 +1,1 @@
+-e "git+https://github.com/ebi-ait/ingest-client.git@744720373d40b6b3870aee3953cfd39d0f7b2c72#egg=hca_ingest"
