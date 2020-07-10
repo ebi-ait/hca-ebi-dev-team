@@ -3,6 +3,7 @@ from ingest.api.ingestapi import IngestApi
 from functools import reduce
 from itertools import chain
 from typing import Dict, Iterable
+import json
 
 
 class ProjectCleanup:
@@ -84,4 +85,6 @@ class ProjectCleanup:
         projects = [self.ingest_client.get_project_by_uuid(p_uuid) for p_uuid in project_uuids_to_keep]
         project_urls = [ProjectCleanup.self_url(p) for p in projects]
         submissions_to_delete = self.find_all_submissions_to_delete(project_urls)
-        x = 1
+
+        with open("submissions_to_delete.json") as delete_file:
+            json.dump(dict(submissions=submissions_to_delete), delete_file)
