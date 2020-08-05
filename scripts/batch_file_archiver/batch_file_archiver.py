@@ -38,7 +38,7 @@ class BatchFileArchiver:
 
     @staticmethod
     def split_archive_jobs(archive_jobs: Dict) -> List[ArchiveJob]:
-        return [ArchiveJob({"jobs": job}, f'job{i}.json', f'stdout_job{i}.txt') for (i, job) in enumerate(archive_jobs["jobs"])]
+        return [ArchiveJob({"jobs": [job]}, f'job{i}.json', f'stdout_job{i}.txt') for (i, job) in enumerate(archive_jobs["jobs"])]
 
     @staticmethod
     def write_job_json(archive_job: ArchiveJob) -> str:
