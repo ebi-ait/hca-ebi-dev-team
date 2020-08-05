@@ -42,7 +42,7 @@ class BatchFileArchiver:
 
     @staticmethod
     def write_job_json(archive_job: ArchiveJob) -> str:
-        with open(archive_job.job_file_path, "r") as job_dict_file:
+        with open(archive_job.job_file_path, "w") as job_dict_file:
             json.dump(archive_job.job_dict, job_dict_file)
             return job_dict_file.name
 
