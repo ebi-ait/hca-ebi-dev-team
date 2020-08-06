@@ -6,6 +6,8 @@ import subprocess
 from typing import Dict
 from dataclasses import dataclass
 
+import boto3
+
 
 @dataclass
 class ArchiveJob:
@@ -43,11 +45,24 @@ class BatchFileArchiver:
     @staticmethod
     def write_job_json(archive_job: ArchiveJob) -> str:
         with open(archive_job.job_file_path, "w") as job_dict_file:
-            json.dump(archive_job.job_dict, job_dict_file)
+            json.dump(archive_job.job_dict, job_dict_file, indent=4, separators=(',', ': '))
             return job_dict_file.name
 
     def bsub_command(self, archive_job: ArchiveJob) -> str:
-        return f' bsub -M 64000 "{self.singularity_command(archive_job)}"'
+        job_memory = self.get_job_memory(archive_job)
+        return f' bsub -M {str(job_memory)} "{self.singularity_command(archive_job)}"'
+
+    def get_job_memory(self, archive_job: ArchiveJob) -> int:
+        s3 = boto3.client('s3',
+                          aws_access_key_id=self.aws_access_key,
+                          aws_secret_access_key=self.aws_key_secret
+                          )
+        job_urls = [file_input['cloud_url'] for file_input in
+                    archive_job.job_dict.get('jobs')[0]['conversion']['inputs']]
+        file_sizes = [
+            s3.head_object(Bucket=job_url.split('/')[2], Key="/".join(job_url.split('/')[3:]))['ContentLength']
+            for job_url in job_urls]
+        return int(max(file_sizes) / 1000 ** 2 + 10000)
 
     def singularity_command(self, archive_job: ArchiveJob) -> str:
         creds = f'-u={self.aap_username} -p={self.aap_password} -a={self.aws_access_key} -s={self.aws_key_secret}'
@@ -63,5 +78,5 @@ if __name__ == "__main__":
 
     with open(jobs_json_filepath, "r") as jobs_json_file:
         jobs_json_dict = json.load(jobs_json_file)
-        batch_file_archiver = BatchFileArchiver(aap_password, aap_password, aws_access_key, aws_access_key_secret)
+        batch_file_archiver = BatchFileArchiver(aap_username, aap_password, aws_access_key, aws_access_key_secret)
         batch_file_archiver.run(jobs_json_dict)
