@@ -53,16 +53,19 @@ class BatchFileArchiver:
         return f' bsub -M {str(job_memory)} "{self.singularity_command(archive_job)}"'
 
     def get_job_memory(self, archive_job: ArchiveJob) -> int:
-        s3 = boto3.client('s3',
-                          aws_access_key_id=self.aws_access_key,
-                          aws_secret_access_key=self.aws_key_secret
-                          )
-        job_urls = [file_input['cloud_url'] for file_input in
-                    archive_job.job_dict.get('jobs')[0]['conversion']['inputs']]
-        file_sizes = [
-            s3.head_object(Bucket=job_url.split('/')[2], Key="/".join(job_url.split('/')[3:]))['ContentLength']
-            for job_url in job_urls]
-        return int(max(file_sizes) / 1000 ** 2 + 10000)
+        if 'conversion' not in archive_job.job_dict["jobs"][0]:
+            return 1000
+        else:
+            s3 = boto3.client('s3',
+                              aws_access_key_id=self.aws_access_key,
+                              aws_secret_access_key=self.aws_key_secret
+                              )
+            job_urls = [file_input['cloud_url'] for file_input in
+                        archive_job.job_dict.get('jobs')[0]['conversion']['inputs']]
+            file_sizes = [
+                s3.head_object(Bucket=job_url.split('/')[2], Key="/".join(job_url.split('/')[3:]))['ContentLength']
+                for job_url in job_urls]
+            return int(max(file_sizes) / 1000 ** 2 + 10000)
 
     def singularity_command(self, archive_job: ArchiveJob) -> str:
         creds = f'-u={self.aap_username} -p={self.aap_password} -a={self.aws_access_key} -s={self.aws_key_secret}'
