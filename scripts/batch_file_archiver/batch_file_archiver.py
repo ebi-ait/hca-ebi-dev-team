@@ -60,7 +60,7 @@ class BatchFileArchiver:
 
     def bsub_command(self, archive_job: ArchiveJob) -> str:
         job_memory = self.get_job_memory(archive_job)
-        return f' bsub -M {str(job_memory)} "{self.singularity_command(archive_job)}'
+        return f' bsub -M {str(job_memory)} "{self.singularity_command(archive_job)}"'
 
     def get_job_memory(self, archive_job: ArchiveJob) -> int:
         if 'conversion' not in archive_job.job_dict["jobs"][0]:
