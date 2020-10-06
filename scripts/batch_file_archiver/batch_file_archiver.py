@@ -9,7 +9,7 @@ from dataclasses import dataclass
 import boto3
 
 FILE_IMAGE_LOCATION = 'docker://quay.io/ebi-ait/ingest-file-archiver'
-FILE_ARCHIVER_VERSION = 'd2020-07-09.1'
+FILE_ARCHIVER_VERSION = 'd2020-30-09.1'
 AAP_URL = 'https://api.aai.ebi.ac.uk/auth'
 
 
