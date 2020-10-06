@@ -1,4 +1,4 @@
-**Manual Steps for Unpublishing schemas:**
+# Manual Steps for Unpublishing schemas
 1. Remove the schema from the schema bucket `schema.dev.archive.data.humancellatlas.org`
 2. Delete the schema entry from Ingest database 
 ```

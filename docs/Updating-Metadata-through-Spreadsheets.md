@@ -1,3 +1,4 @@
+# Updating Metadata through Spreadsheets
 Note that getting the spreadsheet via the mechanism below will only work for the very first update you do. For all subsequent updates you need to keep hold of the updated spreadsheet you submit and change that again. This is a temporary measure.
 
 1) Select the submission on which the updates will be based. This can be achieved in either of the following ways:

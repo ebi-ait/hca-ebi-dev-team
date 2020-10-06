@@ -1,3 +1,5 @@
+# Git Secrets Setup
+
 Git secrets - Prevents you from committing secrets and credentials into git repositories.
 
 This guides was initially for the HCA team at the EBI but applies across the AIT group.
