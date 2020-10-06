@@ -1,3 +1,5 @@
+# Granting WRANGLER access to Ingest UI
+
 To give a registered user (via Ingest UI) a WRANGLER access in Ingest:
 
 1. SSH into mongo pod 
