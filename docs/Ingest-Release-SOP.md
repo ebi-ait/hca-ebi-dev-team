@@ -47,14 +47,17 @@ Quay.IO will automatically build images for tagged commits, so they can be deplo
 ### Releasing to staging and prod
 1. Coordinate with wranglers who may be using the server
     - Give a heads up during stand up meeting.
-2. Update changelog.
+2. Copy the `staging` deployment to `production` by copying respective staging environment image tags to production.
+3. Update changelog.
+    - Copy the staging changelog from since the last production release date and merge changelog entries for the various components
     - If we have some extra instructions for deployment, we could note it in the changelog (not really sure where to put this).
-3. Deploy tagged master branch
-4. Check for failed end-to-end tests
-5. Wrangler acceptance testing
-6. For production release, add version tag dYYYY-MM-DD.<release-count> (e.g. d2020-03-08.1).
+4. Deploy the new production deployment configuration
+5. Check for failed end-to-end tests
+6. Wrangler acceptance testing
+7. For production release, add version tag dYYYY-MM-DD.<release-count> (e.g. d2020-03-08.1) in quay.io.
     - If there were 2 releases for that day, the second tag will be d2020-03-08.2
-7. Send message to AIT channel #hca when
+    - (Optional) Comment inline these version tag in the production deployment configuration
+8. Send message to AIT channel #hca when
     - release is starting
     - release is completed + release notes
 
