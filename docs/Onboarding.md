@@ -55,64 +55,64 @@ docker-compose up mongo rabbitmq
     1. Create the following folder in IntelliJ under ingest-core project: `.idea/runConfigurations`.
     2. Create `.idea/runConfigurations/Ingest_Core_Dependencies.xml`
 
-```
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Ingest-Core Dependencies" type="docker-deploy" factoryName="docker-compose.yml" activateToolWindowBeforeRun="false" server-name="Docker">
-    <deployment type="docker-compose.yml">
-      <settings>
-        <option name="envVars">
-          <list>
-            <DockerEnvVarImpl>
-              <option name="name" value="MONGO_URI" />
-              <option name="value" value="mongodb://localhost:27017/admin" />
-            </DockerEnvVarImpl>
-            <DockerEnvVarImpl>
-              <option name="name" value="RABBIT_HOST" />
-              <option name="value" value="localhost" />
-            </DockerEnvVarImpl>
-            <DockerEnvVarImpl>
-              <option name="name" value="RABBIT_PORT" />
-              <option name="value" value="5672" />
-            </DockerEnvVarImpl>
-            <DockerEnvVarImpl>
-              <option name="name" value="SCHEMA_BASE_URI" />
-              <option name="value" value="https://schema.humancellatlas.org" />
-            </DockerEnvVarImpl>
-          </list>
-        </option>
-        <option name="services">
-          <list>
-            <option value="mongo" />
-            <option value="rabbitmq" />
-          </list>
-        </option>
-        <option name="sourceFilePath" value="docker-compose.yml" />
-      </settings>
-    </deployment>
-    <method v="2" />
-  </configuration>
-</component>
-```
+        ```
+        <component name="ProjectRunConfigurationManager">
+          <configuration default="false" name="Ingest-Core Dependencies" type="docker-deploy" factoryName="docker-compose.yml" activateToolWindowBeforeRun="false" server-name="Docker">
+            <deployment type="docker-compose.yml">
+              <settings>
+                <option name="envVars">
+                  <list>
+                    <DockerEnvVarImpl>
+                      <option name="name" value="MONGO_URI" />
+                      <option name="value" value="mongodb://localhost:27017/admin" />
+                    </DockerEnvVarImpl>
+                    <DockerEnvVarImpl>
+                      <option name="name" value="RABBIT_HOST" />
+                      <option name="value" value="localhost" />
+                    </DockerEnvVarImpl>
+                    <DockerEnvVarImpl>
+                      <option name="name" value="RABBIT_PORT" />
+                      <option name="value" value="5672" />
+                    </DockerEnvVarImpl>
+                    <DockerEnvVarImpl>
+                      <option name="name" value="SCHEMA_BASE_URI" />
+                      <option name="value" value="https://schema.humancellatlas.org" />
+                    </DockerEnvVarImpl>
+                  </list>
+                </option>
+                <option name="services">
+                  <list>
+                    <option value="mongo" />
+                    <option value="rabbitmq" />
+                  </list>
+                </option>
+                <option name="sourceFilePath" value="docker-compose.yml" />
+              </settings>
+            </deployment>
+            <method v="2" />
+          </configuration>
+        </component>
+        ```
 
     3. Create `.idea/runConfigurations/Ingest_Core_Application.xml`
 
-```
-<component name="ProjectRunConfigurationManager">
-<configuration default="false" name="Ingest-Core Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-  <module name="ingest-core.main" />
-  <option name="SPRING_BOOT_MAIN_CLASS" value="org.humancellatlas.ingest.IngestCoreApplication" />
-  <option name="VM_PARAMETERS" value="-XX:+UseG1GC" />
-  <option name="PROGRAM_PARAMETERS" value="--spring.data.mongodb.uri=mongodb://localhost:27017/admin" />
-  <option name="ALTERNATIVE_JRE_PATH" />
-  <envs>
-    <env name="SCHEMA_BASE_URI" value="https://schema.humancellatlas.org" />
-  </envs>
-  <method v="2">
-    <option name="Make" enabled="true" />
-  </method>
-</configuration>
-</component>
-```
+      ```
+      <component name="ProjectRunConfigurationManager">
+        <configuration default="false" name="Ingest-Core Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+          <module name="ingest-core.main" />
+          <option name="SPRING_BOOT_MAIN_CLASS" value="org.humancellatlas.ingest.IngestCoreApplication" />
+          <option name="VM_PARAMETERS" value="-XX:+UseG1GC" />
+          <option name="PROGRAM_PARAMETERS" value="--spring.data.mongodb.uri=mongodb://localhost:27017/admin" />
+          <option name="ALTERNATIVE_JRE_PATH" />
+          <envs>
+            <env name="SCHEMA_BASE_URI" value="https://schema.humancellatlas.org" />
+          </envs>
+          <method v="2">
+            <option name="Make" enabled="true" />
+          </method>
+        </configuration>
+      </component>
+      ```
 
     4. This will set the following environment variables:
       - SCHEMA_BASE_URI=https://schema.humancellatlas.org/
