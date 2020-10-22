@@ -97,21 +97,26 @@ docker-compose up mongo rabbitmq
     3. Create `.idea/runConfigurations/Ingest_Core_Application.xml`
 
       ```
-      <component name="ProjectRunConfigurationManager">
-        <configuration default="false" name="Ingest-Core Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-          <module name="ingest-core.main" />
-          <option name="SPRING_BOOT_MAIN_CLASS" value="org.humancellatlas.ingest.IngestCoreApplication" />
-          <option name="VM_PARAMETERS" value="-XX:+UseG1GC" />
-          <option name="PROGRAM_PARAMETERS" value="--spring.data.mongodb.uri=mongodb://localhost:27017/admin" />
-          <option name="ALTERNATIVE_JRE_PATH" />
-          <envs>
+<component name="ProjectRunConfigurationManager">
+    <configuration default="false" name="Ingest-Core Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+        <module name="ingest-core.main" />
+        <option name="SPRING_BOOT_MAIN_CLASS" value="org.humancellatlas.ingest.IngestCoreApplication" />
+        <option name="VM_PARAMETERS" value="-XX:+UseG1GC" />
+        <option name="PROGRAM_PARAMETERS" value="--spring.data.mongodb.uri=mongodb://localhost:27017/admin" />
+        <option name="ALTERNATIVE_JRE_PATH" />
+        <envs>
             <env name="SCHEMA_BASE_URI" value="https://schema.humancellatlas.org" />
-          </envs>
-          <method v="2">
+            <env name="AUTH_ISSUER" value="https://login.elixir-czech.org/oidc/" />
+            <env name="SVC_AUTH_AUDIENCE" value="https://dev.data.humancellatlas.org/" />
+            <env name="USR_AUTH_AUDIENCE" value="https://dev.data.humancellatlas.org/" />
+            <env name="GCP_JWK_PROVIDER_BASE_URL" value="https://www.googleapis.com/service_accounts/v1/jwk/" />
+            <env name="GCP_PROJECT_WHITELIST" value="hca-dcp-production.iam.gserviceaccount.com,human-cell-atlas-travis-test.iam.gserviceaccount.com,broad-dsde-mint-dev.iam.gserviceaccount.com,broad-dsde-mint-test.iam.gserviceaccount.com,broad-dsde-mint-staging.iam.gserviceaccount.com" />
+        </envs>
+        <method v="2">
             <option name="Make" enabled="true" />
-          </method>
-        </configuration>
-      </component>
+        </method>
+    </configuration>
+</component>
       ```
 
     4. This will set the following environment variables:
