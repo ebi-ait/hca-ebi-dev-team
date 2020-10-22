@@ -183,6 +183,11 @@ npm install
 ```
 npm install
 ```
+9. Set up WebStorm for starting Angular
+    1. Edit Preferences:  Run/Debug configurations | Add new configuration (npm)
+    2. Create for dev and local environments that run dev and local npm scripts
+    3. *optional* create for other environments too (listed in package.json scripts)
+
 
 #### Ingest-Client
 Preferences | Project: ingest-client | Project Interpreter
