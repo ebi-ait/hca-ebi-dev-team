@@ -196,7 +196,7 @@ Preferences | Project: ingest-client | Project Interpreter
 ### DevOps
 
 1. Provision an AWS account. Ask another developer to do this for you.
-2. Setup our Infrastructure-as-Code tools following the readme in [ingest-kube-deployment](https://github.com/HumanCellAtlas/ingest-kube-deployment)
+2. Setup our Infrastructure-as-Code tools following the readme in [ingest-kube-deployment](https://github.com/ebi-ait/ingest-kube-deployment)
 3. If necessary, read up on [Docker](https://www.docker.com/resources/what-container) and containerisation, [get familiar with Kubernetes basics](https://github.com/HumanCellAtlas/ingest-kube-deployment), and [Helm for application management in Kubernetes](https://github.com/helm/helm).
 
 ## Some main docs
