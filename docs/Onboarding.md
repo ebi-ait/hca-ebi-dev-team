@@ -40,6 +40,12 @@ sudo chown root:wheel /usr/local/opt/docker-machine-driver-hyperkit/bin/docker-m
 sudo chmod u+s /usr/local/opt/docker-machine-driver-hyperkit/bin/docker-machine-driver-hyperkit
 ```
 
+## MongoDB
+Follow the [MongoDB installation guide](https://docs.mongodb.com/manual/installation/) for your platform.
+
+## RabbitMQ
+Follow the [RabbitMQ installation guide](https://www.rabbitmq.com/download.html) for your platform.
+
 ## Repositories
 ### Ingest-Core (InteliJ)
 #### Run Dependencies in Docker
