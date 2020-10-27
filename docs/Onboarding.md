@@ -82,7 +82,7 @@ docker-compose up mongo rabbitmq
                     </DockerEnvVarImpl>
                     <DockerEnvVarImpl>
                       <option name="name" value="SCHEMA_BASE_URI" />
-                      <option name="value" value="https://schema.humancellatlas.org" />
+                      <option name="value" value="https://schema.humancellatlas.org/" />
                     </DockerEnvVarImpl>
                   </list>
                 </option>
@@ -111,7 +111,7 @@ docker-compose up mongo rabbitmq
         <option name="PROGRAM_PARAMETERS" value="--spring.data.mongodb.uri=mongodb://localhost:27017/admin" />
         <option name="ALTERNATIVE_JRE_PATH" />
         <envs>
-            <env name="SCHEMA_BASE_URI" value="https://schema.humancellatlas.org" />
+            <env name="SCHEMA_BASE_URI" value="https://schema.humancellatlas.org/" />
             <env name="AUTH_ISSUER" value="https://login.elixir-czech.org/oidc/" />
             <env name="SVC_AUTH_AUDIENCE" value="https://dev.data.humancellatlas.org/" />
             <env name="USR_AUTH_AUDIENCE" value="https://dev.data.humancellatlas.org/" />
