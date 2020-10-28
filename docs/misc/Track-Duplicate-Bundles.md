@@ -1,3 +1,11 @@
+---
+layout: default
+title: Track Duplicate Bundles
+parent: Misc
+has_children: false
+nav_order: 1
+---
+
 # Track Duplicate Bundles
 
 This guide is based on the procedures used to [track the missing bundles for the Tabula Muris (TM) dataset in production](https://github.com/HumanCellAtlas/ingest-central/issues/343). Other datasets might have slightly different structures, some of the points here might not apply. However, the hope is that the general guidelines remain useful.

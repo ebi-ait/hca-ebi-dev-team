@@ -1,3 +1,11 @@
+---
+layout: default
+title: Release Manager Runbook
+parent: Operations tasks
+has_children: false
+nav_order: 1
+---
+
 # Release Manager Runbook
 
 Pointers for the release manager

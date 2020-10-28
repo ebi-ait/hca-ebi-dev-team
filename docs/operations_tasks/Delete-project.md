@@ -1,3 +1,11 @@
+---
+layout: default
+title: Delete project
+parent: Operations tasks
+has_children: false
+nav_order: 1
+---
+
 # Delete project
 This procedure is to delete a project from the Ingest database. This will not delete referenced entities that belong to other projects. It will not delete data from the Datastore - please ask the datastore directly if you also need this done.
 

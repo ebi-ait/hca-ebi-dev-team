@@ -1,3 +1,11 @@
+---
+layout: default
+title: Wrangler UI access
+parent: Operations tasks
+has_children: false
+nav_order: 1
+---
+
 # Granting WRANGLER access to Ingest UI
 
 To give a registered user (via Ingest UI) a WRANGLER access in Ingest:
