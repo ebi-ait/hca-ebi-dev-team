@@ -2,7 +2,7 @@
 layout: default
 title: HCA Data submission summary
 parent: User documentation
-has_children: true
+has_children: false
 nav_order: 1
 ---
 

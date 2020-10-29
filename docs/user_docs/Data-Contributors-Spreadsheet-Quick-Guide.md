@@ -1,39 +1,32 @@
-
 ---
 layout: default
 title: Spreadsheet quick guide
 parent: User documentation
-has_children: false
+has_childre: false
 nav_order: 1
 ---
 
-# Data Contributors Spreadsheet Quick Guide
+# Data Contibutors Spreadsheet Quick Guide
 
+Google Sheets and Excel spreadsheets are used to gather metadata about your project. Ths document is a brief walkthrough to help you get started filling out an HCA metadata spreadsheet.
 
-Google Sheets and Excel spreadsheets are used to gather metadata about your project. This document is a brief walkthrough to help you get started filling out an HCA metadata spreadsheet.
-​
 If you have any questions, please contact the data wrangling team at: \
 `wrangler-team@data.humancellatlas.org`.
-​
-​
+
+
 ## Before you start
-​
-​
+
+
 Metadata is represented in a spreadsheet with tabs that relate to the experimental design. For example, an 'Organoid' tab would be included if a project includes organoid samples. If you think your spreadsheet is missing fields or tabs to properly describe your experiment, please contact a data wrangler.
-​
-​
+
 ## Spreadsheet tab organization
-​
-​
+
 Metadata is collected at multiple levels, for example: project, donor, sequence file, and dissociation protocol. Each of these levels or **entities** has a separate tab in the spreadsheet.
-​
-​
+
 Each row in every tab corresponds to one entity described by the tab name. For example, in the 'Donor organism' tab, each row describes one donor. In the 'Sequence file' tab, each row describes one sequence file. Only one row in the 'Project' tab should be filled in to describe the whole project.
-​
-​
+
 ### All tabs share some common properties
-​
-​
+
 * The first row is the metadata field name.
 * The second row is the field description.
 * The third row contains one or two example values and guidelines, when appropriate.
