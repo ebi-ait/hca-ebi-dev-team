@@ -1,3 +1,13 @@
+---
+layout: default
+title: Upload a new submission
+parent: User documentation
+has_children: false
+nav_order: 1
+---
+
+# Upload a new submission to a project
+
 You can add data and metadata to an existing project by making further submissions to it. Let's start off with the situation where you want to add a new experiment that doesn't reference any existing entities in the project. That is, it will add everything from a new donor down to the FASTQ files. You can also add metadata that references existing entities such as donor that was added in a previous submission. For more information on this, see the section that follows the steps below.
 
 # Steps 

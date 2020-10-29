@@ -1,6 +1,15 @@
+
+---
+layout: default
+title: Spreadsheet quick guide
+parent: User documentation
+has_children: false
+nav_order: 1
+---
+
 # Data Contributors Spreadsheet Quick Guide
-​
-​
+
+
 Google Sheets and Excel spreadsheets are used to gather metadata about your project. This document is a brief walkthrough to help you get started filling out an HCA metadata spreadsheet.
 ​
 If you have any questions, please contact the data wrangling team at: \

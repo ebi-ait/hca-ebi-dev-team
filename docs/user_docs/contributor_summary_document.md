@@ -1,3 +1,11 @@
+---
+layout: default
+title: HCA Data submission summary
+parent: User documentation
+has_children: true
+nav_order: 1
+---
+
 # Human Cell Atlas Data Submission Summary
 
 Congratulations! Your project has been successfully submitted to the Human Cell Atlas. Please find below some useful information about your project and what you can expect moving forward. If anything looks incorrect, please contact us (data-help@humancellatlas.org) as soon as possible. Thanks for contributing to the future of science!

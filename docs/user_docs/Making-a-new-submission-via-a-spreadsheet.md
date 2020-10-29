@@ -1,3 +1,11 @@
+---
+layout: default
+title: New submission via spreadsheet
+parent: User documentation
+has_children: false
+nav_order: 1
+---
+
 # Making a new submission via a spreadsheet
 
 For instructions on how to create the spreadsheet see the [[Data Contributors Spreadsheet Quick Guide]].
