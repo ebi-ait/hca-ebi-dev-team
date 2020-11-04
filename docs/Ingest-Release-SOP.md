@@ -57,6 +57,10 @@ Quay.IO will automatically build images for tagged commits, so they can be deplo
 7. Send message to AIT channel #hca when
     - release is starting
     - release is completed + release notes
+8. Ensure correct tags have been released with:
+```
+kc get deployments -o yaml | grep image
+```
 
 #### Release schedule
 - Staging Release : 10am every tues before sprint demo
