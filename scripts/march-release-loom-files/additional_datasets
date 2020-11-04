@@ -1,0 +1,17 @@
+{
+    "FetalMaternalPlacenta10x":
+        [
+            "https://s3.amazonaws.com/dcp-matrix-service-results-prod/1/63757276628b4e157df26074e37abc1c/39bc98fe-9c61-4015-96e7-e90e4795e532.loom"],
+    "FetalMaternalDecidua10x":
+        [
+            "https://s3.amazonaws.com/dcp-matrix-service-results-prod/1/c81d7f1c92d72b088b1b5ecf9e8f3a89/3334acc5-6a3b-42b9-a938-f6824df4452b.loom"],
+    "FetalMaternalDeciduaSS2":
+        [
+            "https://s3.amazonaws.com/dcp-matrix-service-results-prod/1/454557e3746c1b8d80f5d28eb66cb32f/c49572c3-9804-469e-80a1-cd7d5895a2ee.loom"],
+    "FetalMaternalBlood10x":
+        [
+            "https://s3.amazonaws.com/dcp-matrix-service-results-prod/1/dc9e67fa997e4325a90d9ac62aec25d4/97890e6b-fc41-46d9-a81b-7038596e4461.loom"],
+    "FetalMaternalBloodSS2":
+        [
+            "https://s3.amazonaws.com/dcp-matrix-service-results-prod/1/298b3a243efe721962cfda13152cf305/0a43b683-036b-4571-bc68-01adb9043a9b.loom"]
+}
