@@ -47,14 +47,17 @@ Quay.IO will automatically build images for tagged commits, so they can be deplo
 ### Releasing to staging and prod
 1. Coordinate with wranglers who may be using the server
     - Give a heads up during stand up meeting.
-2. Update changelog.
+1. Copy the `staging` deployment to `production` by copying respective staging environment image tags to production.
+1. Update changelog.
+    - Copy the staging changelog from since the last production release date and merge changelog entries for the various components
     - If we have some extra instructions for deployment, we could note it in the changelog (not really sure where to put this).
-3. Deploy tagged master branch
-4. Check for failed end-to-end tests
-5. Wrangler acceptance testing
-6. For production release, add version tag dYYYY-MM-DD.<release-count> (e.g. d2020-03-08.1).
+1. Deploy the new production deployment configuration
+1. Check for failed end-to-end tests
+1. Wrangler acceptance testing
+1. For production release, add version tag dYYYY-MM-DD.<release-count> (e.g. d2020-03-08.1) in quay.io.
     - If there were 2 releases for that day, the second tag will be d2020-03-08.2
-7. Send message to AIT channel #hca when
+    - (Optional) Comment inline these version tag in the production deployment configuration
+1. Send message to AIT channel #hca when
     - release is starting
     - release is completed + release notes
 8. Ensure correct tags have been released with:
@@ -70,10 +73,10 @@ kc get deployments -o yaml | grep image
 
 ### Releasing hotfixes
 1. Inform the team of the hotfix. Team will decide if hotfix is needed and safe.
-2. Branch from the commit hash currently deployed in staging.
-3. Tag the commit. Deploy to staging. All tests must passed (DCP tests in staging, ingest tests, unit tests)
-5. Make a hotfix release notes
-7. Deploy to prod. Make sure all tests passed after hotfix release.
+1. Branch from the commit hash currently deployed in staging.
+1. Tag the commit. Deploy to staging. All tests must passed (DCP tests in staging, ingest tests, unit tests)
+1. Make a hotfix release notes
+1. Deploy to prod. Make sure all tests passed after hotfix release.
 
 ### Links
 - [Ingest Integration Tests](https://gitlab.ebi.ac.uk/hca/ingest-integration-tests)
