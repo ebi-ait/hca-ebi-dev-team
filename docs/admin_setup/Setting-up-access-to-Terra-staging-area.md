@@ -15,7 +15,7 @@ Ingest submits HCA data to [Terra](https://terra.bio/) staging area which is a b
 
 1. Install gsutil and login using your google account. You could follow instructions from https://cloud.google.com/storage/docs/gsutil_install
 
-## Use Ingest Exporter's GCP service account
+## Using Ingest Exporter's GCP service account
 1. Install gsutil https://cloud.google.com/storage/docs/gsutil_install
 
 1. Download the Ingest Exporter's GCP service account credentials from AWS Secrets
