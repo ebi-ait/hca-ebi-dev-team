@@ -2,7 +2,7 @@
 
 Ingest submits HCA data to [Terra](https://terra.bio/) staging area which is a bucket in Google Cloud Platform (GCP). The GCP buckets locations are configured in `<env>.yaml` files in [ingest-kube-deployment/apps](https://github.com/ebi-ait/ingest-kube-deployment/tree/master/apps)  
    
-## Using your google account
+## Using your Google account
 1. Request in [`#dcp-2`](https://humancellatlas.slack.com/archives/C01360XN04S) channel from the Data Import team (contact person is `rarshad@broadinstitute.org`) for your google account to have access to the GCP buckets used for staging area
 
 1. Install gsutil and login using your google account. You could follow instructions from https://cloud.google.com/storage/docs/gsutil_install
