@@ -28,7 +28,7 @@ GitHub Issue: ebi-ait/dcp-ingest-central#61
 
 1. Get all list of files in prod staging area
    ```
-   gsutil ls -lr gs://broad-dsp-monster-hca-prod-ebi-storage/prod/ | awk '{if($3 != "")print $3}' > ls_staging_area.txt
+   $ gsutil ls -lr gs://broad-dsp-monster-hca-prod-ebi-storage/prod/ | awk '{if($3 != "")print $3}' > ls_staging_area.txt
    
    // remove last line (summary info)
    ```
@@ -38,7 +38,6 @@ GitHub Issue: ebi-ait/dcp-ingest-central#61
    $ python map_uuids_to_staging_area.py <directory-of-mapping-files-from-step1> ls_staging_area.txt
    ```
     This will output `all_files_by_project.json` file.
-
      
 1. Use the `all_files_by_project.json` as input to `scripts/project-sub-dir/move_files_to_project_dir.py`. 
 
