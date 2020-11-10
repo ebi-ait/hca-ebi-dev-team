@@ -35,7 +35,7 @@ GitHub Issue: ebi-ait/dcp-ingest-central#61
 
 1. Use the `scripts/map_ingest_uuid_to_staging_area/map_uuids_to_staging_area.py`  to get all the filepaths per project in staging area
    ```
-   $ python map_uuids_to_staging_area.py <mapping-files-directory> ls_staging_area.txt
+   $ python map_uuids_to_staging_area.py <directory-of-mapping-files-from-step1> ls_staging_area.txt
    ```
     This will output `all_files_by_project.json` file.
 
