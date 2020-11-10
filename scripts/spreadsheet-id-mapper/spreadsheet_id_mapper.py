@@ -69,26 +69,58 @@ def uuid_entity_id_map(submission_resource: Dict, ingest_api: IngestApi) -> Dict
     files = ingest_api.get_related_entities("files", submission_resource, "files")
     processes = ingest_api.get_related_entities("processes", submission_resource, "processes")
     protocols = ingest_api.get_related_entities("protocols", submission_resource, "protocols")
-    projects = ingest_api.get_related_entities("projects", submission_resource, "projects")
+    submission_url = submission_resource['_links']['self']['href']
+    projects = ingest_api.get_all(f'{submission_url}/relatedProjects', 'projects')
 
     return _uuid_entity_id_map(chain(biomaterials, files, processes, protocols, projects))
 
 
-def main(ingest_api_url: str, submission_uuid: str):
+def main(ingest_api_url: str, project_uuid: str):
     ingest_api = IngestApi(url=ingest_api_url)
-    submission_resource = ingest_api.get_submission_by_uuid(submission_uuid)
-    print(f'Generating mapping for submission at {submission_resource["_links"]["self"]["href"]}')
-    mapping = uuid_entity_id_map(submission_resource, ingest_api)
+    project_resource = ingest_api.get_project_by_uuid(project_uuid)
+    submission_resources = ingest_api.get_related_entities('submissionEnvelopes', project_resource,
+                                                           'submissionEnvelopes')
 
-    mapping_filename = f'mapping_{submission_uuid}.json'
-    with open(mapping_filename, 'w') as f:
-        print(f'Writing mapping JSON to {mapping_filename}')
-        json.dump(mapping, f, indent=4, sort_keys=True)
+    summary = {}
+    for submission_resource in submission_resources:
+        print(f'Generating mapping for submission at {submission_resource["_links"]["self"]["href"]}')
+        mapping = uuid_entity_id_map(submission_resource, ingest_api)
+        submission_uuid = submission_resource['uuid']['uuid']
+        summary[submission_uuid] = {}
+
+        submission_content_count = 0
+        for concrete_type, value in mapping.items():
+            summary[submission_uuid][concrete_type] = len(value.keys())
+            submission_content_count = submission_content_count + summary[submission_uuid][concrete_type]
+
+        mapping_filename = f'mapping_{project_uuid}_{submission_uuid}.json'
+        with open(mapping_filename, 'w') as f:
+            print(f'Writing mapping JSON to {mapping_filename}')
+            json.dump(mapping, f, indent=4, sort_keys=True)
+
+    return summary, submission_content_count
 
 
 if __name__ == "__main__":
     ingest_api_url = sys.argv[1]
-    submission_uuids = sys.argv[2].split(",")
+    projects_file = sys.argv[2]
 
-    for submission_uuid in submission_uuids:
-        main(ingest_api_url, submission_uuid)
+    with open(projects_file, 'r') as f:
+        project_uuids = json.load(f)
+
+    all_summary = {}
+    all_count = 0
+    for project_uuid in project_uuids:
+        summary, count = main(ingest_api_url, project_uuid)
+        all_summary[project_uuid] = summary
+        all_count = all_count + count
+
+    print(f'Total count: {all_count}')
+
+    summary_file = f'summary.json'
+    with open(summary_file, 'w') as f:
+        print(f'Writing summary to {summary_file}')
+        json.dump({
+            'total_count': all_count,
+            'summary': all_summary
+        }, f, indent=4, sort_keys=True)
