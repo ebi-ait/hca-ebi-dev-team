@@ -21,10 +21,33 @@ GitHub Issue: ebi-ait/dcp-ingest-central#61
 
 ## Steps:
 1. Use `scripts/spreadsheet-id-mapper/spreadsheet_id_mapper.py` to get the uuids of all contents of the projects
+   ```
+   $ python spreadsheet_id_mapper.py https://api.ingest.archive.data.humancellatlas.org/ dcp2_project_uuids.json
+   ```
+    This will output `mapping_<project_uuid>_<submission_uuid>` files.
+
+1. Get all list of files in prod staging area
+   ```
+   gsutil ls -lr gs://broad-dsp-monster-hca-prod-ebi-storage/prod/ | awk '{if($3 != "")print $3}' > ls_staging_area.txt
+   
+   // remove last line (summary info)
+   ```
 
 1. Use the `scripts/map_ingest_uuid_to_staging_area/map_uuids_to_staging_area.py`  to get all the filepaths per project in staging area
+   ```
+   $ python spreadsheet_id_mapper.py https://api.ingest.archive.data.humancellatlas.org/ dcp2_project_uuids.json
+   ```
+    This will output `mapping_<project_uuid>_<submission_uuid>` files.
 
-1. Use the `all_files_by_project.json` as input to `scripts/project-sub-dir/move_files_to_project_dir.py`. This will copy all the files to project subdirectories to a `prod2` directory in the staging area
+     
+1. Use the `all_files_by_project.json` as input to `scripts/project-sub-dir/move_files_to_project_dir.py`. 
+
+   ```
+   $ python move_files_to_project_dir.py all_files_by_project.json
+   ```
+   This will copy all the files to project subdirectories to a `prod2` directory in the staging area   
+   
+   This will also output `output.json` file, check for any errors. If there are any errors, fix it then just rerun if not successful.
 
 1. Verify files in `prod2` directory
 
@@ -35,3 +58,7 @@ GitHub Issue: ebi-ait/dcp-ingest-central#61
 1. Request for snapshot
 
 1. Delete the `bak` after successful snapshot 
+
+## Artifacts
+
+All output files are found in AIT shared drive [AIT/HCA Ingest/Documentation/Operations/project-sub-dir](https://drive.google.com/drive/u/1/folders/1faEc9hwIYJCPPyL6d1DejP-Eegbq0XoW)   
