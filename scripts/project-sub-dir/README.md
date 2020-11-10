@@ -17,16 +17,22 @@ Example paths for ingest areas:
 
 ```
 
-GitHub Issue: ebi-ait/dcp-ingest-central#61
+GitHub Issue: [ebi-ait/dcp-ingest-central#61](https://github.com/ebi-ait/dcp-ingest-central/issues/61)
 
-## Steps:
+
+## Goal
+Group the existing files in the staging area to be in their own project directory
+
+## Steps
 1. Use `scripts/spreadsheet-id-mapper/spreadsheet_id_mapper.py` to get the uuids of all contents of the projects
+
    ```
    $ python spreadsheet_id_mapper.py https://api.ingest.archive.data.humancellatlas.org/ dcp2_project_uuids.json
    ```
     This will output `mapping_<project_uuid>_<submission_uuid>` files.
 
 1. Get all list of files in prod staging area
+
    ```
    $ gsutil ls -lr gs://broad-dsp-monster-hca-prod-ebi-storage/prod/ | awk '{if($3 != "")print $3}' > ls_staging_area.txt
    
@@ -34,6 +40,7 @@ GitHub Issue: ebi-ait/dcp-ingest-central#61
    ```
 
 1. Use the `scripts/map_ingest_uuid_to_staging_area/map_uuids_to_staging_area.py`  to get all the filepaths per project in staging area
+
    ```
    $ python map_uuids_to_staging_area.py <directory-of-mapping-files-from-step1> ls_staging_area.txt
    ```
@@ -52,12 +59,24 @@ GitHub Issue: ebi-ait/dcp-ingest-central#61
 
 1. Rename staging area `prod` to `bak`
 
+    ```
+    $ gsutil mv gs://broad-dsp-monster-hca-prod-ebi-storage/prod gs://broad-dsp-monster-hca-prod-ebi-storage/bak
+    ```
+
 1. Rename staging area `prod2` to `prod`
+
+    ```
+    $ gsutil mv gs://broad-dsp-monster-hca-prod-ebi-storage/prod2 gs://broad-dsp-monster-hca-prod-ebi-storage/prod
+    ```
 
 1. Request for snapshot
 
 1. Delete the `bak` after successful snapshot 
 
+    ```
+    $ gsutil rm -r gs://broad-dsp-monster-hca-prod-ebi-storage/bak
+    ```
+
 ## Artifacts
 
-All output files are found in AIT shared drive [AIT/HCA Ingest/Documentation/Operations/project-sub-dir](https://drive.google.com/drive/u/1/folders/1faEc9hwIYJCPPyL6d1DejP-Eegbq0XoW)   
+All output files are saved in the AIT shared drive [AIT/HCA Ingest/Documentation/Operations/project-sub-dir](https://drive.google.com/drive/u/1/folders/1faEc9hwIYJCPPyL6d1DejP-Eegbq0XoW)   
