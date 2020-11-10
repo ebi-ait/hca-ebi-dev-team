@@ -19,7 +19,7 @@ Example paths for ingest areas:
 
 GitHub Issue: ebi-ait/dcp-ingest-central#61
 
-##Steps:
+## Steps:
 1. Use `scripts/spreadsheet-id-mapper/spreadsheet_id_mapper.py` to get the uuids of all contents of the projects
 
 1. Use the `scripts/map_ingest_uuid_to_staging_area/map_uuids_to_staging_area.py`  to get all the filepaths per project in staging area
