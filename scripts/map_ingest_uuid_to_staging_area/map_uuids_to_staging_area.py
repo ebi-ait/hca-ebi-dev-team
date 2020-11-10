@@ -5,7 +5,7 @@ from copy import deepcopy
 
 OUTPUT_DIR = 'outdir'
 ALL_FILES_FILENAME = f'all_files.json'
-ALL_FILES_BY_PROJECT_FILENAME = f'outdir/all_files_by_project.json'
+ALL_FILES_BY_PROJECT_FILENAME = f'all_files_by_project.json'
 SUMMARY_FILENAME = f'staging_summary.json'
 
 
@@ -89,6 +89,7 @@ def main(project_uuid, uuid_dict, filenames_staging):
 
     new_filename = f"{OUTPUT_DIR}/staging_{uuid_mapping_filename.split('/')[-1]}"
     with open(new_filename, 'w') as f:
+        print(f'Writing {new_filename}')
         json.dump(file_mapping, f, indent=4, separators=(',', ': '))
 
     return file_mapping, summary, count
