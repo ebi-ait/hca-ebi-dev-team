@@ -23,6 +23,10 @@ GitHub Issue: [ebi-ait/dcp-ingest-central#61](https://github.com/ebi-ait/dcp-ing
 ## Goal
 Group the existing files in the staging area to be in their own project directory
 
+## Prerequisites
+* [Setup access to Terra staging area](https://ebi-ait.github.io/hca-ebi-dev-team/admin_setup/Setting-up-access-to-Terra-staging-area.html#using-ingest-exporters-gcp-service-account) 
+
+
 ## Steps
 1. Use `scripts/spreadsheet-id-mapper/spreadsheet_id_mapper.py` to get the uuids of all contents of the projects
 
@@ -57,24 +61,42 @@ Group the existing files in the staging area to be in their own project director
 
 1. Verify files in `prod2` directory
 
-1. Rename staging area `prod` to `bak`
+1. Rename staging area `prod` to `bk`
 
     ```
-    $ gsutil mv gs://broad-dsp-monster-hca-prod-ebi-storage/prod gs://broad-dsp-monster-hca-prod-ebi-storage/bak
+    $ gsutil -m mv gs://broad-dsp-monster-hca-prod-ebi-storage/prod gs://broad-dsp-monster-hca-prod-ebi-storage/bk
     ```
 
 1. Rename staging area `prod2` to `prod`
 
     ```
-    $ gsutil mv gs://broad-dsp-monster-hca-prod-ebi-storage/prod2 gs://broad-dsp-monster-hca-prod-ebi-storage/prod
+    $ gsutil -m mv gs://broad-dsp-monster-hca-prod-ebi-storage/prod2 gs://broad-dsp-monster-hca-prod-ebi-storage/prod
     ```
 
-1. Request for snapshot
-
-1. Delete the `bak` after successful snapshot 
+1. Verify files in the new `prod` directory (by doing step 2). Could verify if it it has same no. of files.
+    ```
+    $ gsutil ls -lr gs://broad-dsp-monster-hca-prod-ebi-storage/prod/ | awk '{if($3 != "")print $3}' > ls_staging_area_new.txt
+    
+    // remove last line (summary info)
+    ```
 
     ```
-    $ gsutil rm -r gs://broad-dsp-monster-hca-prod-ebi-storage/bak
+    $ gsutil du -s gs://broad-dsp-monster-hca-prod-ebi-storage/prod/
+    
+    13454161483018  gs://broad-dsp-monster-hca-prod-ebi-storage/prod
+
+    $ gsutil du -s gs://broad-dsp-monster-hca-prod-ebi-storage/bk/
+        
+    13454161483018  gs://broad-dsp-monster-hca-prod-ebi-storage/bk
+   ```
+
+
+1. Request for snapshot from Data Import team
+
+1. Delete the `bk` after successful snapshot 
+
+    ```
+    $ gsutil -m rm -r gs://broad-dsp-monster-hca-prod-ebi-storage/bk
     ```
 
 ## Artifacts
