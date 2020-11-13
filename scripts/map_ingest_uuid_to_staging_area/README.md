@@ -27,9 +27,23 @@ Given a list of files from the staging area and the output from another tool fro
 
 1. Run the following command:
     ```
-    python3 map_uuids_to_staging_area <path_to_uuid_mapping> <path_to_staging_area_file_list>
+    python3 map_uuids_to_staging_area <directory_to_uuid_mapping_files> <path_to_staging_area_file_list>
     ```
-1. You will get an output with a similar layout as the output from the spreadsheet ID mapper, but with the IDs replaced with the staging area path.
-   
-   <span style="color: red">**NOTE**</span>: If there is no match in the staging area, the ID will be preserved. This can be used to check if a project is indeed in the staging area!
+1. You will get the following output files:
+    * `staging_mapping_<project UUID>_<submission UUID>.json` 
+        
+        An output with a similar layout as the output from the spreadsheet ID mapper, but with the IDs replaced with the staging area path.
+        
+        <span style="color: red">**NOTE**</span>: If there is no match in the staging area, the ID will be preserved. This can be used to check if a project is indeed in the staging area!
+    * `all_files.json` 
+
+        An output file containing array of staging area files.
+    
+    * `all_files_by_project.json`
+    
+        An output file containing a dictionary with project uuid as and list of its files in the staging area as value.
+    
+    * `staging_summary.json`
+    
+        An output file containing summary of entities in from spreadsheet ID mapper
    
