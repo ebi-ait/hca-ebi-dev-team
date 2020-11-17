@@ -44,6 +44,7 @@ Possible tasks:
 - Regular clean up of allocated resources that aren’t being used
 - Checking of backup storage
 - Checks for the EC2 instance used for wrangling data
+- Cleanup dev and staging upload areas and mongodbs
 
 # Upload Service
 The Upload Service is now in the legacy software territory and it’s good to anticipate for its code to rot either by itself or through its external dependencies. We can either choose to learn it so we can maintain, or replace it with something else. However, in the meantime, it’s necessary for the team to at least be able to set it up and/or tear it down in its current state.
