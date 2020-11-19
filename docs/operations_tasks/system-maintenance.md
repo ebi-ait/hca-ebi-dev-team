@@ -1,9 +1,9 @@
 ---
 layout: default
 title: System Maintanance
-parent: Admin and Setup
+parent: Operations tasks
 has_children: false
-nav_order: 9
+nav_order: 1
 ---
 
 # System Maintenance
