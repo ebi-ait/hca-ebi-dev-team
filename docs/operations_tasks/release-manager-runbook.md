@@ -43,7 +43,8 @@ These are the errors to expect if services are unavailable.
 
 Below is a flowchart that helps debug errors.
 
-![Debig Flowchart](debug-flowchart.png)
+[[/images/debug-flowchart.png]]
+
 
 ### Ingest Accessioner Unavailable
 
