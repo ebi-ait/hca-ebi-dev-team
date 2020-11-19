@@ -3,7 +3,7 @@ layout: default
 title: Upload service
 parent: Admin and Setup
 has_children: false
-nav_order: 5
+nav_order: 6
 ---
 
 # Upload Service

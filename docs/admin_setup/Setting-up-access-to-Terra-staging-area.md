@@ -1,6 +1,12 @@
 ---
+layout: default
+title: Terra staging area access
 parent: Admin and Setup
+has_children: false
+nav_order: 5
 ---
+
+
 # Setting up access to Terra staging area
 
 Ingest submits HCA data to [Terra](https://terra.bio/) staging area which is a bucket in Google Cloud Platform (GCP). The GCP buckets locations are configured in `<env>.yaml` files in [ingest-kube-deployment/apps](https://github.com/ebi-ait/ingest-kube-deployment/tree/master/apps)  
