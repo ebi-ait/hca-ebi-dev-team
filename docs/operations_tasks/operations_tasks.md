@@ -1,11 +1,7 @@
 ---
 layout: default
 title: Operations tasks
+parent: HCA Ingest Developer Documentation
 has_children: true
-nav_order: 1
+nav_order: 3
 ---
-
-## SOPs for dev operations tasks
-
-## Schedule for tasks
-

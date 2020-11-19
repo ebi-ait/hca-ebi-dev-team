@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Admin and Setup
+parent: HCA Ingest Developer Documentation
 has_children: true
 nav_order: 1
 ---
