@@ -2,8 +2,6 @@
 layout: default
 title: Update via spreadsheet
 parent: User documentation
-has_children: false
-nav_order: 1
 ---
 
 # Updating Metadata through Spreadsheets

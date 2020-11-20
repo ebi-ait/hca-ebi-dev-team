@@ -2,8 +2,6 @@
 layout: default
 title: Upload a new submission
 parent: User documentation
-has_children: false
-nav_order: 1
 ---
 
 # Upload a new submission to a project

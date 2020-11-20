@@ -2,8 +2,6 @@
 layout: default
 title: Spreadsheet quick guide
 parent: User documentation
-has_childre: false
-nav_order: 1
 ---
 
 # Data Contibutors Spreadsheet Quick Guide

@@ -2,8 +2,6 @@
 layout: default
 title: Sprint planning
 parent: Admin and Setup
-has_children: false
-nav_order: 4
 ---
 
 NEEDS UPDATING

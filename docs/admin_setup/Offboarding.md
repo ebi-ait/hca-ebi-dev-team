@@ -2,8 +2,6 @@
 layout: default
 title: Offboarding
 parent: Admin and Setup
-has_children: false
-nav_order: 7
 ---
 
 # Offboarding

@@ -2,8 +2,6 @@
 layout: default
 title: Update OLS
 parent: Operations tasks
-has_children: false
-nav_order: 1
 ---
 
 # Update OLS

@@ -2,8 +2,6 @@
 layout: default
 title: Git secrets setup
 parent: Admin and Setup
-has_children: false
-nav_order: 3
 ---
 
 # Git Secrets Setup

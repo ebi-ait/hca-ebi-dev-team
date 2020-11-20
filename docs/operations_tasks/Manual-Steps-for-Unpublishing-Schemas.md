@@ -2,8 +2,6 @@
 layout: default
 title: Manual Steps for Unpublishing schemas
 parent: Operations tasks
-has_children: false
-nav_order: 1
 ---
 
 # Manual Steps for Unpublishing schemas

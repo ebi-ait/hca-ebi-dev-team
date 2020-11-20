@@ -2,8 +2,6 @@
 layout: default
 title: Terra staging area access
 parent: Admin and Setup
-has_children: false
-nav_order: 5
 ---
 
 

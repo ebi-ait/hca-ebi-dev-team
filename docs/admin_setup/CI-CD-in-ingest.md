@@ -2,8 +2,6 @@
 layout: default
 title: Ingest CI/CD
 parent: Admin and Setup
-has_children: false
-nav_order: 2
 ---
 
 # Ingest CI/CD

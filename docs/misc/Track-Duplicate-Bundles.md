@@ -2,8 +2,6 @@
 layout: default
 title: Track Duplicate Bundles
 parent: Misc
-has_children: false
-nav_order: 1
 ---
 
 # Track Duplicate Bundles

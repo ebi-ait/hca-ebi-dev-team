@@ -2,8 +2,6 @@
 layout: default
 title: HCA Data submission summary
 parent: User documentation
-has_children: false
-nav_order: 1
 ---
 
 # Human Cell Atlas Data Submission Summary

@@ -2,8 +2,6 @@
 layout: default
 title: Retry failed ingest exporter
 parent: Operations tasks
-has_children: false
-nav_order: 1
 ---
 
 # How to retry failed bundles in the Ingest Exporter

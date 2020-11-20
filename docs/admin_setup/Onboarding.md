@@ -2,8 +2,6 @@
 layout: default
 title: Onboarding
 parent: Admin and Setup
-has_children: false
-nav_order: 1
 ---
 
 # Ingest Developer Getting Started

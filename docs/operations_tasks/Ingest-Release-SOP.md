@@ -2,8 +2,6 @@
 layout: default
 title: Ingest release process
 parent: Operations tasks
-has_children: false
-nav_order: 1
 ---
 
 ## Ingest release process 

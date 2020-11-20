@@ -2,8 +2,6 @@
 layout: default
 title: Delete project
 parent: Operations tasks
-has_children: false
-nav_order: 1
 ---
 
 # Delete project
