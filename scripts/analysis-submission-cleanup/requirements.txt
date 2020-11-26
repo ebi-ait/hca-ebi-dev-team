@@ -1,1 +1,2 @@
 requests
+-e git+https://github.com/ebi-ait/ingest-client.git@a7b6e4b#egg=hca_ingest
