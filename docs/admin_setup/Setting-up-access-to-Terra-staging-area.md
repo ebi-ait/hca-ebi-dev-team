@@ -8,7 +8,22 @@ parent: Admin and Setup
 # Setting up access to Terra staging area
 
 Ingest submits HCA data to [Terra](https://terra.bio/) staging area which is a bucket in Google Cloud Platform (GCP). The GCP buckets locations are configured in `<env>.yaml` files in [ingest-kube-deployment/apps](https://github.com/ebi-ait/ingest-kube-deployment/tree/master/apps)  
-   
+
+```
+e.g.
+
+For dev environment, find the value of terraBucketName and terraBucketPrefix in the dev.yaml
+
+The Terra staging area GCP bucket location should be in: 
+
+gs://<terraBucketName>/<terraBucketPrefix>
+
+so the actual bucket location is:
+
+gs://broad-dsp-monster-hca-dev-ebi-staging/dev 
+
+```
+
 ## Using your Google account
 1. Request in [`#dcp-2`](https://humancellatlas.slack.com/archives/C01360XN04S) channel from the Data Import team (contact person is `rarshad@broadinstitute.org`) for your google account to have access to the GCP buckets used for staging area
 
