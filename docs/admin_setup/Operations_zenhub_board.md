@@ -6,6 +6,8 @@ Tickets with the operations label appear in this zenhub board.
 
 The operations board is to track tasks in operations which are not data wrangling that need to be completed in the near future. This may include things like bug fixes and system optimizations, documentation or stakeholder conversations which aren't data wrangling.  
 
+This board is not meant to be a place holder for tasks that we might do at some point in the future
+
 The operations board follows a [kanban style](https://en.wikipedia.org/wiki/Kanban_(development)) with no sprint specific to do list.  
 
 The pipeline is:
