@@ -1,4 +1,10 @@
-# Operations Zenhub Board pipeline
+---
+layout: default
+title: Operations Zenhub Board Pipeline and Process
+parent: Admin and Setup
+---
+
+# Operations Zenhub Board Pipeline and Process
 
 This page summarizes the pipeline used on the [Operations Zenhub board pipeline](https://app.zenhub.com/workspaces/operations-5fa2d8f2df78bb000f7fb2b5/board?repos=232300832,261790554) 
 
