@@ -10,4 +10,4 @@ parent: Operations tasks
 1. [Select the cluster on your command line](https://github.com/HumanCellAtlas/ingest-kube-deployment#accesscreatemodifydestroy-eks-clusters)
 1. `cd apps/`
 1. `make deploy-app-ontology`
-1. `make deploy-app-ingest-validator` Note: The validator is caching some ontology values and should be redeployed even when there is no version update to pick up the updates from new version of HCA Ontology Service
+1. `make deploy-app-ingest-validator` Note: The validator is caching some ontology values and should be redeployed with no version update to pick up the updates from the new version of HCA Ontology Service
