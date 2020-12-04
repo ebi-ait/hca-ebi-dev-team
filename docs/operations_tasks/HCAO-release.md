@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Update OLS
+title: Releasing HCA Ontology Service
 parent: Operations tasks
 ---
 
