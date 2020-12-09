@@ -27,10 +27,8 @@ The pipeline is:
 
 During [Wednesday morning operation meetings](https://www.google.com/url?q=https://docs.google.com/document/d/1O2nCBtnFY-AWh_1_s188xLTyvaZpwbUUp3Pvs_aV_jc/edit?ts%3D5f1816b8%23&sa=D&source=calendar&ust=1607435802282000&usg=AOvVaw0uFk9fs3hHHBusLGQwFE_u) there should be a review of the tasks in each column with unfinished tasks, starting with Review/QA and a prioritization discussion for the to do list, identifying 2-3 tasks in that list which should be done next as tasks in progress are completed.
 
-The majority of tasks in the operations board should be able to be completed in <1 week. Some tasks such as stakeholder communication might take longer if that conversation needs to have several exchanges to reach a conclusion.
+Where possible, we should aim to define tasks which are 1-5 days to complete because this improves our efficiency. However, sometimes there are exceptions where tasks can end up taking longer than two weeks because,for example,they involve a high level of external dependencies such as stakeholder engagement or refining SOPs for interactions with other teams.
 
 To help with tracking productivity, tickets should be moved to the **DONE** column when they are finished and then on every Wednesday a new product development sprint starts, done tasks are closed.
-
-Where possible, we should aim to define tasks which are 1-5 days to complete because this improves our efficiency. However, sometimes there are exceptions where tasks can end up taking longer than two weeks because,for example,they involve a high level of external dependencies such as stakeholder engagement or refining SOPs for interactions with other teams.
 
 Every sprint review, a summary of the highlights from the last two weeks of operations and the number of tickets closed is presented in this slide deck
