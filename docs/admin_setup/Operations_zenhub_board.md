@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Operations Zenhub Board Pipeline and Process
-parent: Admin and Setup
+parent: Operations tasks
 ---
 
 # Operations Zenhub Board Pipeline and Process
