@@ -29,7 +29,8 @@ During [Wednesday morning operation meetings](https://www.google.com/url?q=https
 
 The majority of tasks in the operations board should be able to be completed in <1 week. Some tasks such as stakeholder communication might take longer if that conversation needs to have several exchanges to reach a conclusion.
 
-To help with tracking productivity, tickets should be moved to the **DONE** column when they are finished and then on every Wednesday a new product development sprint starts, done tasks are closed. This is because we can't is
-Where ever possible make sure a task is broken down into the smallest units that can be completed rapidly to help us remain agile in our operational tasks as well as our product development tasks
+To help with tracking productivity, tickets should be moved to the **DONE** column when they are finished and then on every Wednesday a new product development sprint starts, done tasks are closed.
+
+Where possible, we should aim to define tasks which are 1-5 days to complete because this improves our efficiency. However, sometimes there are exceptions where tasks can end up taking longer than two weeks because,for example,they involve a high level of external dependencies such as stakeholder engagement or refining SOPs for interactions with other teams.
 
 Every sprint review, a summary of the highlights from the last two weeks of operations and the number of tickets closed is presented in this slide deck
