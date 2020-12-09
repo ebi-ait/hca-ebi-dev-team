@@ -10,7 +10,7 @@ assignees: ''
 **In which piece of software is this bug present?**
 E.g. hca-util or HCA data contribution service.
 
-**Describe the bug**
+**Bug description/actual behaviour**
 A clear and concise description of what the bug is.
 
 **To Reproduce**
