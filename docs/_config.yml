@@ -5,7 +5,7 @@ search_enabled: true
 aux_links:
   "Edit these Docs on GitHub":
     - "//github.com/ebi-ait/hca-ebi-dev-team/tree/master/docs"
-theme: jekyll-theme-minimal
+theme: "just-the-docs"
 
 markdown: kramdown
 

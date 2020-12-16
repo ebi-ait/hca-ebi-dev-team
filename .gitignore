@@ -1,3 +1,5 @@
 .idea/
 venv/
 _local/
+docs/_site/
+docs/.jekyll-cache/
