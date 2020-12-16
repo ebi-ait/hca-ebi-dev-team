@@ -4,7 +4,7 @@ title: Regular Tasks Checklist
 parent: Operations tasks
 ---
 
-Please see the [google sheet](https://docs.google.com/spreadsheets/d/1KtY7_N9vj5hChdSzM3wY6zOn2hhwTI7Xbkx5__5wLsc/edit#gid=0) to view/record when each task was performed.
+Please see the [google sheet](https://docs.google.com/spreadsheets/d/1uUOWdthsXutBLhiax_mRs8mQ6UA3Zkr07jWdlqBrB1Q/edit#gid=0) to view/record when each task was performed.
 
 
 ## Backups
