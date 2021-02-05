@@ -1,4 +1,3 @@
-
 '''
 load/create the following
 api_object
@@ -29,6 +28,7 @@ from ingest.api.ingestapi import IngestApi
 import pprint
 import re
 
+
 class Project:
     def __init__(self, uuid, ingest_api, organs={}, technologies={}):
         self.existing_organs = organs
@@ -40,12 +40,12 @@ class Project:
         self.mongo_id = self.current_json['_links']['self']['href'].rsplit('/', 1)[-1]
         self.submission_count = self.count_submissions()
 
-        if 'organ' in self.current_json.keys():
-            self.existing_organs = {self.current_json['organ']['ontology']: {'text': self.current_json['organ']['text'],
-                                                                             'ontology': self.current_json['organ']['ontology'],
-                                                                             'ontology_label': self.current_json['organ']['ontology_label']}}
-        if 'technology' in self.current_json.keys():
-            self.existing_technologies = self.current_json['technology']
+        if 'organ' in self.current_json.keys() and self.current_json['organ']:
+            for organ in self.current_json['organ']['ontologies']:
+                self.existing_organs[organ['ontology']] = organ
+        if 'technology' in self.current_json.keys() and self.current_json['technology']:
+            for tech in self.current_json['technology']['ontologies']:
+                self.existing_technologies[tech['ontology']] = tech
 
     def __str__(self):
         return "Project with uuid {}\nmongo id: {}\nSubmission count:{}\nexisting organs: {}\nexisting techs: " \
@@ -61,6 +61,7 @@ class Project:
             return 0
 
     def _set_update_organs(self, biomaterial_json):
+        """add an organ to the update_organs dictionary"""
         if re.search('specimen_from_organism', biomaterial_json['content']['describedBy']):
             self.update_organs[biomaterial_json['content']['organ']['ontology']] = biomaterial_json['content']['organ']
         elif re.search('cell_line', biomaterial_json['content']['describedBy']):
@@ -71,13 +72,13 @@ class Project:
                 'model_organ']
 
     def _set_update_technologies(self, protocol_json):
+        """Add a technology to the update_technologies dictionary"""
         if re.search('library_preparation_protocol', protocol_json['content']['describedBy']):
-            self.update_technologies[protocol_json['content']['library_construction_method']['ontology']] = protocol_json['content']['library_construction_method']
-
+            self.update_technologies[protocol_json['content']['library_construction_method']['ontology']] = \
+            protocol_json['content']['library_construction_method']
 
     def get_from_metadata(self, ingest_api):
-        # traverse the metadata graph to get the organs from specimens, organoids, cell lines and technologies from
-        # library prep protocol method
+        """ get the organ and technology metadata from an ingest submission """
         project_json = ingest_api.get_project_by_uuid(uuid=self.uuid)
         submission_json = ingest_api.get_submission(project_json['_links']['submissionEnvelopes']['href'])
         for sub_env in submission_json['_embedded']['submissionEnvelopes']:
@@ -100,6 +101,7 @@ class Project:
         print("project {} updated from ingest".format(self.uuid))
 
     def get_from_tracker(self, tracker, tech_dict):
+        """Get organ and tech metadata from the tracking sheet"""
         tracker_row = tracker[tracker['ingest_project_uuid'] == self.uuid].to_dict()
         if len(tracker_row['dcp_id']) == 0:
             print("No information found in tracker for this uuid")
@@ -115,15 +117,27 @@ class Project:
                 ontologised_tech = tech_dict[tech]
                 self.update_technologies[ontologised_tech['ontology']] = ontologised_tech
 
-
     def merge_properties(self):
-         # merge existing properties with existing properties (how? non-unique list, don't delete things)
-        if self.existing_organs:
-            print("j")
+        """merges the update properties with the existing properties so each ontology only occurs once"""
+        self.update_organs = {**self.update_organs, **self.existing_organs}
+        self.update_technologies = {**self.update_technologies, **self.existing_technologies}
 
-
-    # def update_project(self):
-    #     # get existing project, replace existing with merged properties, submit an update patch request
+    def update_project(self, ingest_api_url, auth_token):
+        """Submit patch request to update the technology and organ fields of the project with the update properties."""
+        api_url = '{}/projects/{}?partial=true'.format(ingest_api_url, self.mongo_id)
+        print(api_url)
+        payload = {}
+        organ_list = list(self.update_organs.values())
+        tech_list = list(self.update_technologies.values())
+        payload['technology'] = {"ontologies": tech_list}
+        payload['organ'] = {"ontologies": organ_list}
+        pprint.pprint(payload)
+        submission_headers = {'Authorization': 'Bearer {}'.format(auth_token),
+                              'Content-Type': 'application/json'}
+        response = requests.patch(api_url,
+                                  data=json.dumps(payload),
+                                  headers=submission_headers)
+        return response
 
 
 def ontologise_term(allowed_ontology, graph_restriction, term):
@@ -155,12 +169,11 @@ def define_parser():
     return parser
 
 
-# def load_projects(uuid_list)
-
 def load_dataset_tracker():
     download_link = "https://docs.google.com/spreadsheets/d/1rm5NZQjE-9rZ2YmK_HwjW-LgvFTTLs7Q6MzHbhPftRE/export?gid=0&format=tsv"
     tracker_df = pd.read_csv(download_link, sep="\t")
     return tracker_df
+
 
 def load_tech_dict(path_to_csv):
     tech_csv = pd.read_csv(path_to_csv)
@@ -195,12 +208,15 @@ def main(args):
         else:
             project.get_from_tracker(tracker, tech_dict)
         project.merge_properties()
-
-    [ print(project) for project in project_list ]
+        response = project.update_project(ingest_api_url, args.auth_token)
+        if response['status_code'] is 200:
+            print("Project {} successfully updated in ingest database".format(project.uuid))
+        else:
+            print("There was a problem with updating project {} in ingest database".format(project.uuid))
+            print(response['status_code'])
 
 
 if __name__ == "__main__":
     parser = define_parser()
     args = parser.parse_args()
     main(args)
-
