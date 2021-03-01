@@ -1,2 +1,2 @@
-google-cloud-storage
-google-api-python-client
+google-cloud-storage==1.36.1
+google-api-python-client==1.12.8

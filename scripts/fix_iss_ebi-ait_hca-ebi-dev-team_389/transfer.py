@@ -125,11 +125,11 @@ if __name__ == '__main__':
     project_id = 'mystical-slate-284720'
 
     source_s3_bucket = 'org-hca-data-archive-upload-prod'
-    source_s3_path = '3f3baa51-6577-41ce-b71c-18cf8917e459'
+    source_s3_path = '3f3baa51-6577-41ce-b71c-18cf8917e459/'
     source_s3_file = 'SRR8448146_1.fastq.gz'
 
     dest_gs_bucket = 'broad-dsp-monster-hca-prod-ebi-storage'
-    dest_gs_path = '3f3baa51-6577-41ce-b71c-18cf8917e459'
+    dest_gs_path = '3f3baa51-6577-41ce-b71c-18cf8917e459/'
 
     client = GCP(args.service_account_credentials_path, args.access_key_id, args.secret_access_key)
     transfer_spec = client.create_transfer_spec(description, project_id, source_s3_bucket, source_s3_path,
@@ -147,3 +147,4 @@ if __name__ == '__main__':
     dest_gs_path = 'gs://broad-dsp-monster-hca-prod-ebi-storage/prod/559bb888-7829-41f2-ace5-2c05c7eb81e9/data/e40c9e4c-92a9-4a38-a85a-09fe3369f0f3_2020-12-14T11:35:30.864000Z_SRR8448146_1.fastq.gz'
 
     run(f'gsutil cp {source_gs_path} {dest_gs_path}', verbose=True)
+
