@@ -1,0 +1,38 @@
+text,ontology,ontology_label
+10X v1 3',EFO:0009901,10X 3' v1 sequencing
+10X v1 ATAC-seq,EFO:0010891,scATAC-seq
+10X v2 3',EFO:0009899,10X 3' v2 sequencing
+10X v2 5',EFO:0009900,10X 5' v2 sequencing
+10X v2 VDJ,EFO:0010713,10X Immune profiling
+10X v3 3',EFO:0009922,10x 3' v3 sequencing
+Bulk RNA,EFO:0003738,RNA-seq of coding RNA
+bulk,EFO:0003738,RNA-seq of coding RNA
+Cel-seq2,EFO:0010010,CEL-seq2
+ChiP-seq,EFO:0002692,ChIP-seq
+CITE-seq,EFO:0009294,CITE-seq
+CITE-Seq,EFO:0009294,CITE-seq
+DroNc-seq,EFO:0008720,DroNc-seq
+Drop-seq,EFO:0008722,Drop-seq
+imaging,OBI:0001686,in-situ hybridization assay
+inDrop,EFO:0008780,inDrop
+MARS-seq,EFO:0008796,MARS-seq
+RNAScope,EFO:0009918,smFISH
+scChIC-seq,EFO:0009979,single cell Hi-C
+scChiP-seq,EFO:0008906,scChIP-seq
+sci-RNA-seq,EFO:0010550,sci-RNA-seq
+Seq-Well,EFO:0008919,Seq-Well
+Smart-seq2,EFO:0008931,Smart-seq2
+SMARTer(C1),EFO:0010058,Fluidigm C1-based library preparation
+smFISH,EFO:0009918,smFISH
+Visium,EFO:0008994,spatial transcriptomics
+WGS,EFO:0003744,whole genome shotgun sequencing
+Smart-seq,EFO:0008930,Smart-seq
+Fluidigm C1-based library preparation,EFO:0010058,Fluidigm C1-based library preparation
+10X v1 5',EFO:0009897,10x v1 sequencing
+RAISIN,EFO:0008891,Ribo-seq
+RAISIN RNA-Seq,EFO:0008891,Ribo-seq
+MIRACL-Seq,EFO:0009899,10X 3' v2 sequencing
+sci-RNA-seq3,EFO:0010550,sci-RNA-seq
+sci-ATAC-seq3,EFO:0008925,Single cell ATAC-seq (cell index)
+plate scATAC-seq,EFO:0010891,scATAC-seq
+RNA-FISH,OBI:0001686,in-situ hybridization assay
