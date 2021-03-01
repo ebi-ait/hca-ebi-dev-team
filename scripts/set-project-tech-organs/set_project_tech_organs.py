@@ -29,6 +29,7 @@ import argparse, json, requests, re, pprint, sys
 from distutils.util import strtobool
 import pandas as pd
 from ingest.api.ingestapi import IngestApi
+from datetime import datetime
 
 
 class Project:
@@ -120,7 +121,7 @@ class Project:
                 protocols_json = requests.get(paged_api_link).json()
                 for protocol in protocols_json['_embedded']['protocols']:
                     self._set_update_technologies(protocol, tech_dict)
-        print("project {} updated from ingest".format(self.uuid))
+        print("project {} metadata fetched from ingest".format(self.uuid))
 
     def get_from_tracker(self, tracker, tech_dict, organ_dict):
         """Get organ and tech metadata from the tracking sheet"""
@@ -243,28 +244,35 @@ def main(args):
         env = "dev."
     ingest_api_url = "http://api.ingest.{}archive.data.humancellatlas.org".format(env)
     ingest_api = IngestApi(ingest_api_url)
+
+    start_time = datetime.now()
+    formatted_time = start_time.strftime("%Y-%m-%d-%H.%M")
+    updated_project_log = "{}_updated_projects.txt".format(formatted_time)
+
     for uuid in uuid_list:
         this_project = Project(uuid, ingest_api)
         print("Fetching metadata for project {}".format(this_project.uuid))
         if this_project.submission_count > 0:
-            continue
-            # project.get_from_metadata(ingest_api, tech_dict)
+            this_project.get_from_metadata(ingest_api, tech_dict)
+            print(this_project)
         else:
             this_project.get_from_tracker(tracker, tech_dict, organ_dict)
             this_project.merge_properties()
-            if not strtobool(args.dry_run):
-                response = this_project.update_project(ingest_api_url, args.auth_token)
-                if response.status_code is 200:
-                    print("Project {} successfully updated in ingest database".format(this_project.uuid))
-                elif response.status_code is 401:
-                    print("Your auth token is probably expired or wrong, please try again with a fresh token.")
-                    sys.exit()
-                else:
-                    print("There was a problem with updating project {} in ingest database".format(this_project.uuid))
-                    print("Response code: ".format(response.status_code))
-                    sys.exit()
+        if not strtobool(args.dry_run):
+            response = this_project.update_project(ingest_api_url, args.auth_token)
+            if response.status_code is 200:
+                with open(updated_project_log, 'a') as output_file:
+                    output_file.write('{}\n'.format(this_project.uuid))
+                print("Project {} successfully updated in ingest database".format(this_project.uuid))
+            elif response.status_code == 401:
+                print("Your auth token is probably expired or wrong, please try again with a fresh token.")
+                sys.exit()
             else:
-                print(this_project)
+                print("There was a problem with updating project {} in ingest database".format(this_project.uuid))
+                print("Response code: ".format(response.status_code))
+                sys.exit()
+        else:
+            print(this_project)
 
 
 if __name__ == "__main__":

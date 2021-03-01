@@ -1,0 +1,7 @@
+hca-ingest==0.6.11
+pandas
+argparse
+json
+requests
+re
+pprint
