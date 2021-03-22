@@ -55,6 +55,10 @@ brew install docker-machine-driver-hyperkit
 sudo chown root:wheel /usr/local/opt/docker-machine-driver-hyperkit/bin/docker-machine-driver-hyperkit
 sudo chmod u+s /usr/local/opt/docker-machine-driver-hyperkit/bin/docker-machine-driver-hyperkit
 ```
+5. JDK
+```
+brew install openjdk@11
+```
 
 ## MongoDB
 Follow the [MongoDB installation guide](https://docs.mongodb.com/manual/installation/) for your platform.
@@ -162,7 +166,9 @@ Install Python 3.6 or higher
 ```
 brew install pyenv
 pyenv install --list
-pyenv install 3.7.4 
+pyenv install 3.7.4
+brew install pyenv-virtualenv
+
 ```
 Will return something like:
 ```
@@ -196,6 +202,7 @@ export PATH="$PATH:/usr/local/Cellar/yarn/1.17.3/bin"
 ```
 npm install -g typescript@"<3.3.0"
 npm install -g node-sass@4.12.0
+npm install -g angular-cli@9.1.1
 ```
 7. Install Local Packages (ingest-ui/client):
 ```

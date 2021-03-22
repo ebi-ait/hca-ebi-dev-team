@@ -15,6 +15,10 @@ Backups are located in the [`ingest-db-backup`](https://s3.console.aws.amazon.co
 ### Tasks
 - Ensure backups are up to date (**once per fortnight**)
     - Check that there is an object (`*.tar.gz`) file for today's backup in `dev`, `staging`, and `prod`.
+  
+```bash
+aws s3  ls --recursive ingest-db-backup | grep `date +%Y-%m-%d`
+```
 - Random sampling of backup to see if verification works correctly and test it can be restored (**once per month**)
     1. Download a randomly selected backup from one of the environments (check it's not the same one listed in **extra notes** in the spreadsheet)
     2. untar it: `tar -xzvf 2020-12-15T00_00.tar`
