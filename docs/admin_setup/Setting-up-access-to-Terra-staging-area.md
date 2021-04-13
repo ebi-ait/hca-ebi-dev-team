@@ -25,9 +25,15 @@ gs://broad-dsp-monster-hca-dev-ebi-staging/dev
 ```
 
 ## Using your Google account
-1. Request in [`#dcp-2`](https://humancellatlas.slack.com/archives/C01360XN04S) channel from the Data Import team (contact person is `rarshad@broadinstitute.org`) for your google account to have access to the GCP buckets used for staging area
 
-1. Install gsutil and login using your google account. You could follow instructions from https://cloud.google.com/storage/docs/gsutil_install
+1. Ensure you are in the [dcp-ingest-team google group](https://groups.google.com/a/data.humancellatlas.org/g/ingest-team)
+* Everyone in the dcp-ingest-team google group should have read access to the staging bucket
+* New members can be added to this group by group owners, currently:
+    * Amnon, Tony, Claire, Oihane
+  
+_It is the group owners' responsibility to ensure this list is kept up to date and that no one who shouldn't have access is in the group. If you notice someone who should no longer have access, please let the group owners know_
+
+2. Install gsutil and login using your google account. You could follow instructions from https://cloud.google.com/storage/docs/gsutil_install
 
 ## Using Ingest Exporter's GCP service account
 1. Install gsutil https://cloud.google.com/storage/docs/gsutil_install
