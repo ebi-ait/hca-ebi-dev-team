@@ -53,7 +53,9 @@ class GoogleCloudStorage(object):
         blob.upload_from_file(data)
 
     def rename_file(self, path:str, new_key: str):
-        blob: storage.Blob = storage.Blob.from_string(path, client=self.client)
+        bucket: storage.Bucket = self.client.bucket(BUCKET_NAME)
+        key = path.replace(f'gs://{BUCKET_NAME}/', '')
+        blob: storage.Blob = bucket.blob(key)
         new_blob = blob.bucket.rename_blob(blob, new_key)
         print(f'Blob {blob.name} has been renamed to {new_blob.name}')
 
