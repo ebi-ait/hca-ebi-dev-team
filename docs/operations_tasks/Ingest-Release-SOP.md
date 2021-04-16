@@ -12,11 +12,11 @@ dev
 
 staging
 ---o---o---o--->
-           5ddba2b
+           staging-5ddba2b-16-04-2021.1618562812
 
 production
 ---o---o---o---o
-               5ddba2b, d2020-03-08.1
+               prod-5ddba2b-18-04-2021.1618562812
 ```
 
 
