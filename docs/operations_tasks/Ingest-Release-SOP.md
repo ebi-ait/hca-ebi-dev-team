@@ -45,7 +45,7 @@ production
     - You may used the `kubectl get pods` command to check this
     - Consult with [these docs](https://github.com/ebi-ait/ingest-kube-deployment) for further information on setting up `kubectl`
 
-### Manually deploying without GitLa
+### Manually deploying without GitLab
 You can manually deploy using the `ingest-kube-deployment` repo if GitLab is down and the deployment is urgent. 
 
 **Deploying manually will disable all of the GitLab tracking features so that the Operations > Environments page is no longer functional**
