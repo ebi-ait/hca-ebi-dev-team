@@ -45,10 +45,17 @@ production
     - You may used the `kubectl get pods` command to check this
     - Consult with [these docs](https://github.com/ebi-ait/ingest-kube-deployment) for further information on setting up `kubectl`
 
-### Manually deploying without GitLab
-You can manually deploy using the `ingest-kube-deployment` repo if GitLab is down and the deployment is urgent. You can follow the steps [here](https://github.com/ebi-ait/ingest-kube-deployment#manually-deploy-one-kubernetes-dockerized-applications-to-an-environment-aws) to do so.
+### Manually deploying without GitLa
+You can manually deploy using the `ingest-kube-deployment` repo if GitLab is down and the deployment is urgent. 
 
 **Deploying manually will disable all of the GitLab tracking features so that the Operations > Environments page is no longer functional**
+
+1. Tag the commit you want to deploy with the [git release tool](https://github.com/rdgoite/hca-developer-tools/blob/master/gitconfig).
+    - [quay.io](quay.io) will automatically build tagged commits
+2. Find the tag of the built image.
+    - You will need the full URL e.g. `quay.io/ebi-ait/ingest-core:123abc`
+    - Use this in the next step
+3. Follow the steps [here](https://github.com/ebi-ait/ingest-kube-deployment#manually-deploy-one-kubernetes-dockerized-applications-to-an-environment-aws) to deploy the built image.
 
 ### Details on GitLab pipeline
 #### Shared config
