@@ -15,7 +15,7 @@ Go [here](https://gitlab.ebi.ac.uk/hca/ingest-exporter/-/environments) and click
 ## Via `ingest-kube-deployment` (not recommended)
 If GitLab is down and it is urgent to redeploy, you can do this manually. 
 
-**Doing this will disable GitLab environment tracking features**
+**Doing this will disable GitLab environment tracking features. This should not be done without approval from a consortium of devs.**
 
 1. Go to [quay.io](https://quay.io/repository/ebi-ait/ingest-exporter?tab=tags)
 2. Find the tag that is currently deployed to the environment of concern

@@ -33,6 +33,7 @@ production
     - `git checkout dev && git pull && git checkout master && git pull && git merge dev && git push`
 9. Ensure deploy and integration tests in `staging` environment are passed in GitLab for the project
 10. Check deployment in [staging](https://staging.contribute.data.humancellatlas.org/) and consult with wranglers for feedback if neccesary
+    - You can use the [#hca slack channel](https://join.slack.com/share/zt-pn5hl6a8-xWvSYSaW7i~qymWTLWmP_g) for consulting with wranglers.
 11. Check with the team if it is okay to deploy this feature to production.
 12. Deploy what's on `staging` to `prod` via the operations panel in GitLab
     1. Navigate to [GitLab](https://gitlab.ebi.ac.uk/) > `project your're working on` > operations > environments
@@ -46,9 +47,9 @@ production
     - Consult with [these docs](https://github.com/ebi-ait/ingest-kube-deployment) for further information on setting up `kubectl`
 
 ### Manually deploying without GitLab
-You can manually deploy using the `ingest-kube-deployment` repo if GitLab is down and the deployment is urgent. 
+You can manually deploy using the `ingest-kube-deployment` repo if GitLab is down and the deployment is urgent. This should only be done in an emergency and GitLab should be fixed preferentially.
 
-**Deploying manually will disable all of the GitLab tracking features so that the Operations > Environments page is no longer functional**
+**Deploying manually will disable all of the GitLab tracking features so that the Operations > Environments page is no longer functional. A subsequent deployment via GitLab will return things to the normal state.**
 
 1. Tag the commit you want to deploy with the [git release tool](https://github.com/rdgoite/hca-developer-tools/blob/master/gitconfig).
     - [quay.io](quay.io) will automatically build tagged commits
