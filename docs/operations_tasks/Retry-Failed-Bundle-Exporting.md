@@ -4,10 +4,10 @@ title: Retry failed ingest exporter
 parent: Operations tasks
 ---
 
-# How to retry failed bundles in the Ingest Exporter
+# How to retry failed experiments in the Ingest Exporter
 
-If a submission got stuck in `Processing` state, it's possible that there are some bundles that failed to export.
-Determine the cause of failure. After fixing it, the bundle exporting can be triggered again by redeploying exporter.
+If a submission got stuck in `Processing` state, it's possible that there are some experiments that failed to export.
+Determine the cause of failure. After fixing it, exporting can be triggered again by redeploying exporter.
 
 ## Via the GitLab UI (recommended)
 Go [here](https://gitlab.ebi.ac.uk/hca/ingest-exporter/-/environments) and click the "re-deploy to environment" button next to the environment that has stuck submissions.
