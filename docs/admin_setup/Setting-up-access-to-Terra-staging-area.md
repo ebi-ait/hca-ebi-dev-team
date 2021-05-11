@@ -35,7 +35,9 @@ _It is the group owners' responsibility to ensure this list is kept up to date a
 
 2. Install gsutil and login using your google account. You could follow instructions from https://cloud.google.com/storage/docs/gsutil_install
 
-You can also access the bucket via a browser interface at: https://console.cloud.google.com/storage/browser/broad-dsp-monster-hca-dev-ebi-staging/
+You can also access the bucket via a browser interface at: 
+- Staging bucket: https://console.cloud.google.com/storage/browser/broad-dsp-monster-hca-dev-ebi-staging/
+- Prod bucket: https://console.cloud.google.com/storage/browser/broad-dsp-monster-hca-prod-ebi-storage/prod/
 
 ## Using Ingest Exporter's GCP service account
 1. Install gsutil https://cloud.google.com/storage/docs/gsutil_install
