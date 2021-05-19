@@ -14,8 +14,13 @@ parent: Operations tasks
 7. `make deploy-ontology`
 8. Get the current image of the ingest-validator and redeploy it: `kubectl get deployment ingest-validator -o yaml | grep image`
 9. Get the image from the previous line and deploy the ingest-validator using that image: `make deploy-app-ingest-validator image=quay.io/ebi-ait/ingest-validator:<IMAGE-TAG>`
+10. Make sure the correct image has been deployed: `kubectl get deployment ontology -o yaml | grep image`
 
 Note: The validator is caching some ontology values and should be redeployed (even with no version update) to pick up the updates from the new version of HCA Ontology Service
 
-10. Run the integration-tests and make sure they all pass
-11. Repeat all the above steps for the staging and prod environments
+Run the integration-tests on the dev environment and make sure they all pass:
+11. Go to `https://gitlab.ebi.ac.uk/hca/ingest-integration-tests/-/pipelines` and click on the `Run Pipeline` button
+12. Select the environment from the `Run for` dropdown list and click on the `Run Pipeline` button.
+13. Make sure all tests has passed.
+14. Repeat all the above steps for the staging and prod environments
+
