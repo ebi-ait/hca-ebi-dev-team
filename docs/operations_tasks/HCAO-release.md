@@ -19,6 +19,7 @@ parent: Operations tasks
 Note: The validator is caching some ontology values and should be redeployed (even with no version update) to pick up the updates from the new version of HCA Ontology Service
 
 Run the integration-tests on the dev environment and make sure they all pass:
+
 11. Go to `https://gitlab.ebi.ac.uk/hca/ingest-integration-tests/-/pipelines` and click on the `Run Pipeline` button
 12. Select the environment from the `Run for` dropdown list and click on the `Run Pipeline` button.
 13. Make sure all tests has passed.
