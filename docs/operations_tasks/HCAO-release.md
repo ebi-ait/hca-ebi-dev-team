@@ -5,9 +5,25 @@ parent: Operations tasks
 ---
 
 # Releasing new version of HCA Ontology Service
-1. Check if tagged version image is in Quay.io https://quay.io/repository/humancellatlas/ontology?tab=tags
-1. Update the ONTOLOGY_REF with the new version in the config of the environment you want to update, such as https://github.com/ebi-ait/ingest-kube-deployment/blob/master/config/environment_dev
-1. [Select the cluster on your command line](https://github.com/HumanCellAtlas/ingest-kube-deployment#accesscreatemodifydestroy-eks-clusters)
-1. `cd apps/`
-1. `make deploy-app-ontology`
-1. `make deploy-app-ingest-validator` Note: The validator is caching some ontology values and should be redeployed (even with no version update) to pick up the updates from the new version of HCA Ontology Service
+1. Check if tagged version image is in Quay.io https://quay.io/repository/ebi-ait/ontology?tab=tags
+2. Go to your ingest-kube-deployment local repository
+3. Update the ONTOLOGY_REF with the new version in the config of the environment you want to update, e.g: `vi config/environment_<dev|staging|prod>`
+4. Source the updated environment config: `source config/environment_<dev|staging|prod>`
+5. Select the cluster on your command line: `kubectx ingest-eks-<dev|staging|prod>`
+6. `cd apps/`
+7. `make deploy-ontology`
+8. Get the current image of the ingest-validator and redeploy it: `kubectl get deployment ingest-validator -o yaml | grep image`
+9. Get the image from the previous line and deploy the ingest-validator using that image: `make deploy-app-ingest-validator image=quay.io/ebi-ait/ingest-validator:<IMAGE-TAG>`
+10. Make sure the correct image has been deployed: `kubectl get deployment ontology -o yaml | grep image`
+11. Update the release notes if you are doing the release on staging (/staging/changelog.md) or production (/production/changelog.md)
+12. Commit and push your config and release notes changes into the github repository
+
+Note: The validator is caching some ontology values and should be redeployed (even with no version update) to pick up the updates from the new version of HCA Ontology Service
+
+Run the integration-tests on the dev environment and make sure they all pass:
+
+11. Go to `https://gitlab.ebi.ac.uk/hca/ingest-integration-tests/-/pipelines` and click on the `Run Pipeline` button
+12. Select the environment from the `Run for` dropdown list and click on the `Run Pipeline` button.
+13. Make sure all tests has passed.
+14. Repeat all the above steps for the staging and prod environments
+
