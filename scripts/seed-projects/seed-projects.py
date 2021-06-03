@@ -71,7 +71,7 @@ def create_project(fake, catalogued, ingest_url, token):
         uuid = r.json()["uuid"]["uuid"]
         print(f"Created project with uuid: {uuid}")
     except Exception as e:
-        print(f'Error creating project {uuid}: {e}')
+        print(f'Error creating project: {e}')
 
 def get_token(input_file):
     with open(input_file, "r") as file:
