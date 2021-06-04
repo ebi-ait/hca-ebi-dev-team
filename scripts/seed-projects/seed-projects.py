@@ -64,9 +64,9 @@ def create_project(fake, catalogued, ingest_url, token):
 
     try:
         url = f'{ingest_url}/projects'
-        headers={'Authorization': token, 'Content-Type': 'application/json'}
+        headers={'Authorization': token}
         data = json.dumps(project)
-        r = requests.post(url, data=data, headers=headers)
+        r = requests.post(url, json=data, headers=headers)
         r.raise_for_status()
         uuid = r.json()["uuid"]["uuid"]
         print(f"Created project with uuid: {uuid}")
