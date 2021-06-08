@@ -16,7 +16,7 @@ class EntityType(Enum):
 
 Criteria = namedtuple('Criteria', ['field', 'operator', 'value'])
 
-
+# ToDo: These methods should be added into the Ingest Client IngestApi class
 class QuickIngest(IngestApi):
     def __init__(self, url=None, token_manager=None, token=None):
         super().__init__(url, token_manager)
