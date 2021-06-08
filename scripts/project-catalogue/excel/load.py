@@ -2,7 +2,7 @@ from contextlib import closing
 from typing import Tuple
 from openpyxl import load_workbook
 
-from excel_submission_broker.submission import ExcelSubmission
+from excel_submission_broker.submission import ExcelSubmission, Entity
 
 
 class SheetLoader:
