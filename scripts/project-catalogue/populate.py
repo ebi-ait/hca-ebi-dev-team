@@ -1,6 +1,7 @@
 import argparse
 import json
 import os
+from services.ontology import QuickOntology
 from typing import List, Tuple
 
 from requests.models import HTTPError
@@ -24,10 +25,11 @@ class Populate:
         loader = SheetLoader(self.path, self.sheet)
         self.submission = loader.data
         self.europe_pmc = EuropePmc()
-        self.sheet_converter = DatasetTrackerConverter()
+        self.sheet_converter = DatasetTrackerConverter(lookup=QuickOntology())
         self.publication_converter = EuropePmcConverter()
 
     def sort_projects(self) -> Tuple[List[Entity], List[Entity]]:
+        return self.submission.get_entities(self.sheet), []
         new_projects = []
         existing_projects = []
         for project in self.submission.get_entities(self.sheet):
@@ -45,7 +47,7 @@ class Populate:
     def post_projects(self, projects: List[Entity]):
         for project in projects:
             conversion = self.convert_project(project)
-            self.post_project(project, conversion)
+            # self.post_project(project, conversion)
 
     def convert_project(self, project: Entity):
         conversion = self.sheet_converter.convert(project.attributes)
@@ -61,12 +63,6 @@ class Populate:
                 publications, info = self.publication_converter.convert(publication_info)
                 conversion.setdefault('content', {}).update(publications)
                 conversion['publicationsInfo'] = info
-
-    @staticmethod
-    def set_defaults(conversion: dict, project: Entity):
-        default_title = project.attributes.get('pub_title', '')
-        conversion.setdefault('content', {}).setdefault('project_core', {}).setdefault('project_title', default_title)
-        conversion.setdefault('content', {}).setdefault('project_core', {}).setdefault('project_short_name', project.identifier.index)
 
     def post_project(self, project: Entity, conversion: dict):
         try:
@@ -89,6 +85,12 @@ class Populate:
         }
         file_path = os.path.splitext(self.path)[0] + ".json"
         self.write_dict(file_path, document)
+
+    @staticmethod
+    def set_defaults(conversion: dict, project: Entity):
+        default_title = project.attributes.get('pub_title', '')
+        conversion.setdefault('content', {}).setdefault('project_core', {}).setdefault('project_title', default_title)
+        conversion.setdefault('content', {}).setdefault('project_core', {}).setdefault('project_short_name', project.identifier.index)
 
     @staticmethod
     def make_inserted_errored_lists(projects: List[Entity]):

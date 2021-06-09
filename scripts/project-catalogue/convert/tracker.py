@@ -1,6 +1,6 @@
 import re
-
 from json_converter.json_mapper import JsonMapper
+from services.ontology import QuickOntology
 from .conversion_utils import map_value, append
 
 ACCESSION_PATTERNS = {
@@ -37,16 +37,24 @@ FIXED_VALUES = {
 
 
 class DatasetTrackerConverter:
-    def __init__(self) -> None:
+    def __init__(self, lookup: QuickOntology) -> None:
         self.spec = PROJECT_SPEC
+        self.lookup = lookup
 
     def convert(self, project: dict):
         converted_project = JsonMapper(project).map(self.spec)
         converted_project.update(FIXED_VALUES)
+        
+        technologies = self.get_ontologies(project.get('assay_type', ''), self.lookup.get_technology)
+        if technologies:
+            converted_project.setdefault('technology', {})['ontologies'] = technologies
+        
+        organ_ontologies = self.get_ontologies(project.get('organ', ''), self.lookup.get_organ)
+        if organ_ontologies:
+            converted_project.setdefault('organ', {})['ontologies'] = organ_ontologies
 
         accessions = self.get_accessions(project.get('data_accession', ''))
         converted_project.setdefault('content', {}).update(accessions)
-        # ToDo: Map for technology, organ?
         return converted_project
     
     @staticmethod
@@ -61,5 +69,12 @@ class DatasetTrackerConverter:
         return accessions
 
     @staticmethod
-    def get_publication_info():
-        pass
+    def get_ontologies(terms: str, lookup_method):
+        ontologies = []
+        for term in terms.split(','):
+            term = term.strip()
+            if term:
+                ontology = lookup_method(term)
+                if ontology:
+                    ontologies.append(ontology)
+        return ontologies
