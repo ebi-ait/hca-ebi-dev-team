@@ -50,7 +50,7 @@ class Populate:
     def convert_project(self, project: Entity):
         conversion = self.sheet_converter.convert(project.attributes)
         self.add_publication_info(conversion, project)
-        conversion.setdefault('content', {}).setdefault('project_core', {})['project_short_name'] = project.identifier.index
+        self.set_defaults(conversion, project)
         return conversion
 
     def add_publication_info(self, conversion: dict, project: Entity):
@@ -61,6 +61,12 @@ class Populate:
                 publications, info = self.publication_converter.convert(publication_info)
                 conversion.setdefault('content', {}).update(publications)
                 conversion['publicationsInfo'] = info
+
+    @staticmethod
+    def set_defaults(conversion: dict, project: Entity):
+        default_title = project.attributes.get('pub_title', '')
+        conversion.setdefault('content', {}).setdefault('project_core', {}).setdefault('project_title', default_title)
+        conversion.setdefault('content', {}).setdefault('project_core', {}).setdefault('project_short_name', project.identifier.index)
 
     def post_project(self, project: Entity, conversion: dict):
         try:
