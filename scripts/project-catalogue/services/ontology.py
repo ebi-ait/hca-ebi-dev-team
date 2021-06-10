@@ -44,8 +44,8 @@ class QuickOntology:
         organ = self.ontology_search(search, params, project)
         if organ:
             return organ
-        project.add_error('organ.ontologies', f'No ontology found for organ: {search}')
-        
+        project.add_error('organ.ontologies', f'No exact ontology found for organ: {search}')
+
     def get_technology(self, search: str, project: Entity):
         params = {
             'groupField': 'iri',
@@ -55,7 +55,7 @@ class QuickOntology:
         technology = self.ontology_search(search, params, project)
         if technology:
             return technology
-        project.add_error('technology.ontologies', f'No ontology found for technology: {search}')
+        project.add_error('technology.ontologies', f'No exact ontology found for technology: {search}')
 
     def ontology_search(self, search: str, params: dict, project: Entity):
         if search in KNOWN_DISCREPANCIES:
@@ -80,10 +80,6 @@ class QuickOntology:
             index = self.index_of_matching_label(search, results)
             if index > 1:
                 return results[index]
-            first_result = results[0]
-            error_field = 'technology' if isinstance(params.get('ontology'), str) else 'organ'
-            project.add_error(f'{error_field}.ontologies', f'No exact match for {search}, using: {first_result.get("label")}({first_result.get("obo_id")})')
-            return first_result
 
     def perform_lookup(self, term: str, params: dict):
         url = f'{self.url}/select'
