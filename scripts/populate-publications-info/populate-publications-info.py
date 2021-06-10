@@ -48,9 +48,9 @@ def patch_project(uuid, project, token):
         project_patch["isInCatalogue"] = True
     
     if "publications" in project["content"]:
-        project_patch["publicationsInfo"] = get_publications_journal(project["content"]["publications"])
+        if not project["publicationsInfo"]:
+            project_patch["publicationsInfo"] = get_publications_journal(project["content"]["publications"])
     
-
     if project["wranglingState"] != "Published in DCP" and is_in_dcp(uuid):
         project_patch["wranglingState"] = "Published in DCP"
 
