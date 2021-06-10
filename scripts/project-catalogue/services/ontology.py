@@ -78,7 +78,7 @@ class QuickOntology:
         results = self.perform_lookup(search, params)
         if results:
             index = self.index_of_matching_label(search, results)
-            if index > 1:
+            if index > -1:
                 return results[index]
 
     def perform_lookup(self, term: str, params: dict):
