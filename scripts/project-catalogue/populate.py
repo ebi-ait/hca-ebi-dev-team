@@ -1,7 +1,6 @@
 import argparse
 import json
 import os
-from services.ontology import QuickOntology
 from typing import List, Tuple
 
 from requests.models import HTTPError
@@ -11,6 +10,7 @@ from convert.tracker import DatasetTrackerConverter
 from convert.europe_pmc import EuropePmcConverter
 from services.europe_pmc import EuropePmc
 from services.ingest import QuickIngest
+from services.ontology import QuickOntology
 
 SHEET = "Group 1"
 URL = "https://api.ingest.dev.archive.data.humancellatlas.org"
@@ -84,7 +84,9 @@ class Populate:
         }
         file_path = os.path.splitext(self.path)[0] + ".json"
         self.write_dict(file_path, document)
-
+        full_file_path = os.path.splitext(self.path)[0] + "_full.json"
+        self.write_dict(full_file_path, self.submission.as_dict(string_lists=True))
+        
     @staticmethod
     def set_defaults(conversion: dict, project: Entity):
         default_title = project.attributes.get('pub_title', '')
