@@ -29,7 +29,6 @@ class Populate:
         self.publication_converter = EuropePmcConverter()
 
     def sort_projects(self) -> Tuple[List[Entity], List[Entity]]:
-        return self.submission.get_entities(self.sheet), []
         new_projects = []
         existing_projects = []
         for project in self.submission.get_entities(self.sheet):
