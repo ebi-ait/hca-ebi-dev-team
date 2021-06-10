@@ -31,7 +31,8 @@ class SheetLoader:
 
     def map_row_entity(self, submission: ExcelSubmission, row_index: int, attributes: dict):
         index = self.get_index(attributes, row_index)
-        return submission.map_row(row_index, self.sheet, index, attributes)
+        if index:
+            return submission.map_row(row_index, self.sheet, index, attributes)
     
     @staticmethod
     def map_header_row(column_map: dict, row):
@@ -58,5 +59,3 @@ class SheetLoader:
     def get_index(attributes: dict, row: int) -> str:
         if 'dcp_id' in attributes:
             return attributes['dcp_id']
-        else:
-            return f'row_{row}'
