@@ -97,9 +97,10 @@ class Populate:
         errored = {}
         for project in projects:
             if project.has_errors():
-                errored[project.identifier.index] = project.get_errors().get('ingest_project_uuid', ['Unknown Error'])
-            else:
-                inserted[project.identifier.index] = project.get_accession('ingest_project')
+                errored[project.identifier.index] = project.get_errors()
+            uuid = project.get_accession('ingest_project')
+            if uuid:
+                inserted[project.identifier.index] = uuid
         return inserted, errored
 
     @staticmethod
