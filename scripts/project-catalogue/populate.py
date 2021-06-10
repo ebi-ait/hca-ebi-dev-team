@@ -47,10 +47,10 @@ class Populate:
     def post_projects(self, projects: List[Entity]):
         for project in projects:
             conversion = self.convert_project(project)
-            # self.post_project(project, conversion)
+            self.post_project(project, conversion)
 
     def convert_project(self, project: Entity):
-        conversion = self.sheet_converter.convert(project.attributes)
+        conversion = self.sheet_converter.convert(project)
         self.add_publication_info(conversion, project)
         self.set_defaults(conversion, project)
         return conversion

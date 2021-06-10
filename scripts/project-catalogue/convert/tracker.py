@@ -1,5 +1,6 @@
 import re
 from json_converter.json_mapper import JsonMapper
+from submission_broker.submission.entity import Entity
 from services.ontology import QuickOntology
 from .conversion_utils import map_value, append
 
@@ -41,19 +42,20 @@ class DatasetTrackerConverter:
         self.spec = PROJECT_SPEC
         self.lookup = lookup
 
-    def convert(self, project: dict):
-        converted_project = JsonMapper(project).map(self.spec)
+    def convert(self, project: Entity):
+        input_project = project.attributes
+        converted_project = JsonMapper(input_project).map(self.spec)
         converted_project.update(FIXED_VALUES)
         
-        technologies = self.get_ontologies(project.get('assay_type', ''), self.lookup.get_technology)
+        technologies = self.get_ontologies(project, 'assay_type', self.lookup.get_technology)
         if technologies:
             converted_project.setdefault('technology', {})['ontologies'] = technologies
         
-        organ_ontologies = self.get_ontologies(project.get('organ', ''), self.lookup.get_organ)
+        organ_ontologies = self.get_ontologies(project, 'organ', self.lookup.get_organ)
         if organ_ontologies:
             converted_project.setdefault('organ', {})['ontologies'] = organ_ontologies
 
-        accessions = self.get_accessions(project.get('data_accession', ''))
+        accessions = self.get_accessions(input_project.get('data_accession', ''))
         converted_project.setdefault('content', {}).update(accessions)
         return converted_project
     
@@ -69,12 +71,13 @@ class DatasetTrackerConverter:
         return accessions
 
     @staticmethod
-    def get_ontologies(terms: str, lookup_method):
+    def get_ontologies(project: Entity, key: str, lookup_method):
         ontologies = []
-        for term in terms.split(','):
-            term = term.strip()
-            if term:
-                ontology = lookup_method(term)
-                if ontology:
-                    ontologies.append(ontology)
+        if key in project.attributes:
+            for term in project.attributes.get(key).split(','):
+                term = term.strip()
+                if term:
+                    ontology = lookup_method(term, project)
+                    if ontology:
+                        ontologies.append(ontology)
         return ontologies
