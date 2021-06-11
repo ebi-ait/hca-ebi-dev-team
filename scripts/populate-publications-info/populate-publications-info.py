@@ -11,6 +11,7 @@ def get_publications_journal(publications):
             if len(crossref['container-title']) > 0:
                 journal_title = crossref['container-title'][0]
             elif "name" in crossref['institution']:
+                # BioRxiv is listed under institution
                 journal_title = crossref['institution']['name']
             else:
                 journal_title = crossref['publisher']
