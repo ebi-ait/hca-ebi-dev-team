@@ -19,8 +19,8 @@ PUBLICATION_SPEC = {
 PUBLICATION_INFO_SPEC = {
     "doi": ['doi'],
     "url": ['fullTextUrlList'],
-    "journalTitle": ['journalInfo.journal.title'],
-    "url": ['fullTextUrl.url']
+    "journalTitle": ['journalTitle'],
+    "url": ['fullTextUrl.url'],
     "title": ['title'],
 }
 CONTRIBUTOR_SPEC = {
@@ -63,6 +63,13 @@ class EuropePmcConverter:
     @staticmethod
     def convert_publications_info(publication_info: dict, authors: list):
         publications = []
+
+        if 'journalInfo' in publication_info:
+            publication_info['journalTitle'] = publication_info['journalInfo']['journal']['title']
+        elif 'bookOrReportDetails' in publication_info:
+            # Cater for the edge case of BioRxiv. BioRxiv is pre-print so not listed under journalInfo
+            publication_info['journalTitle'] = publication_info['bookOrReportDetails']['publisher']
+        
         publications_info = JsonMapper(publication_info).map(PUBLICATION_INFO_SPEC)
         if authors:
             publications_info['authors'] = authors
