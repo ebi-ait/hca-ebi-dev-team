@@ -14,12 +14,13 @@ PUBLICATION_SPEC = {
     'pmid': ['pmid'],
     'title': ['title'],
     'authors': ['authorString'],
-    'url': ['url']
+    'url': ['fullTextUrl.url']
 }
 PUBLICATION_INFO_SPEC = {
     "doi": ['doi'],
-    "url": ['url'],
+    "url": ['fullTextUrlList'],
     "journalTitle": ['journalInfo.journal.title'],
+    "url": ['fullTextUrl.url']
     "title": ['title'],
 }
 CONTRIBUTOR_SPEC = {
@@ -37,6 +38,10 @@ FUNDER_SPEC = {
 class EuropePmcConverter:
     @staticmethod
     def convert(publication: dict):
+        # Only want one url from the list
+        if 'fullTextUrlList' in publication and 'fullTextUrl' in publication['fullTextUrlList'] and len(publication['fullTextUrlList']['fullTextUrl']) > 0:
+            publication['fullTextUrl'] = publication['fullTextUrlList']['fullTextUrl'][0]
+
         converted_project = JsonMapper(publication).map(CONTENT_SPEC)
         converted_project['contributors'] = EuropePmcConverter.convert_contributors(publication.get('authorList', {}).get('author', []))
         converted_project['funders'] = EuropePmcConverter.convert_funders(publication.get('grantsList', {}).get('grant', []))
