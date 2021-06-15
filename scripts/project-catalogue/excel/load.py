@@ -30,7 +30,7 @@ class SheetLoader:
         return column_map, data
 
     def map_row_entity(self, submission: ExcelSubmission, row_index: int, attributes: dict):
-        index = self.get_index(attributes, row_index)
+        index = self.get_index(attributes)
         if index:
             return submission.map_row(row_index, self.sheet, index, attributes)
     
@@ -56,6 +56,6 @@ class SheetLoader:
         return row_data
 
     @staticmethod
-    def get_index(attributes: dict, row: int) -> str:
+    def get_index(attributes: dict) -> str:
         if 'dcp_id' in attributes:
             return attributes['dcp_id']
