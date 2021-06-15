@@ -89,7 +89,7 @@ class QuickOntology:
             'allChildrenOf': 'http://purl.obolibrary.org/obo/UBERON_0000465',
             'ontology': ['hcao', 'uberon']
         }
-        organ = self.ontology_search(search, params, project)
+        organ = self.ontology_search(search, params)
         if organ:
             return organ
         project.add_error('organ.ontologies', f'No exact ontology found for organ: {search}')
@@ -101,18 +101,18 @@ class QuickOntology:
                               'http://purl.obolibrary.org/obo/OBI_0001686'],
             'ontology': 'efo',
         }
-        technology = self.ontology_search(search, params, project)
+        technology = self.ontology_search(search, params)
         if technology:
             return technology
         project.add_error('technology.ontologies', f'No exact ontology found for technology: {search}')
 
-    def ontology_search(self, search: str, params: dict, project: Entity):
+    def ontology_search(self, search: str, params: dict):
         if search in KNOWN_DISCREPANCIES:
             search = KNOWN_DISCREPANCIES[search]
         exact_result = self.search_exact_ontology(search, params)
         if exact_result:
             return self.map_to_hca(exact_result)
-        nearest_result = self.search_nearest_ontology(search, params, project)
+        nearest_result = self.search_nearest_ontology(search, params)
         if nearest_result:
             return self.map_to_hca(nearest_result)
 
@@ -122,7 +122,7 @@ class QuickOntology:
         index = self.index_of_matching_label(search, results)
         return results[index] if index > -1 else None
 
-    def search_nearest_ontology(self, search: str, params: dict, project: Entity):
+    def search_nearest_ontology(self, search: str, params: dict):
         params['exact'] = False
         results = self.perform_lookup(search, params)
         if results:
