@@ -1,21 +1,23 @@
 import re
 
+
 # ToDo: Move this to json-converter
 def fixed_attribute(*args):
     value = args[1]
     return value
 
+
 def map_value(*args):
     key = args[0]
-    map = args[1]
-    if isinstance(map, dict):
-        return map.get(key, '')
+    if isinstance(args[1], dict):
+        return args[1].get(key, '')
 
-def removeHTMLTags(*args):
+
+def remove_tags(*args):
     regex = re.compile(r'<([^>]+)>')
-    input = args[0]
-    if isinstance(input, str):
-        return regex.sub('', input)
+    if isinstance(args[0], str):
+        return regex.sub('', args[0])
+
 
 def first_map(*args):
     array = args[0]
@@ -23,8 +25,9 @@ def first_map(*args):
     if isinstance(array, list) and len(array) > 0 and isinstance(array[0], dict):
         return array[0].get(key, None)
 
+
 def append(*args):
-    input = args[0]
+    pre = args[0]
     post_script = args[1]
-    if input and post_script:
-        return input + post_script
+    if pre and post_script:
+        return pre + post_script

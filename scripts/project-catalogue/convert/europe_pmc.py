@@ -1,12 +1,12 @@
 from typing import List
 from json_converter.json_mapper import JsonMapper
-from .conversion_utils import removeHTMLTags, first_map
+from .conversion_utils import remove_tags, first_map
 
 
 CONTENT_SPEC = {
     'project_core': {
         'project_title': ['title'],
-        'project_description': ['abstractText', removeHTMLTags, '']
+        'project_description': ['abstractText', remove_tags, '']
     }
 }
 PUBLICATION_SPEC = {
