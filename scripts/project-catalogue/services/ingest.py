@@ -45,6 +45,16 @@ class QuickIngest(IngestApi):
         return response
 
     def doi_exists(self, doi: str) -> bool:
+        results = self.__project_doi_query(doi)
+        count = results.get('page', {}).get('totalElements', 0)
+        return count > 0
+
+    def get_projects_by_doi(self, doi: str):
+        results = self.__project_doi_query(doi)
+        projects = results.get('_embedded', {}).get('projects', [])
+        return projects
+
+    def __project_doi_query(self, doi: str):
         query = []
         criteria = {
             'field': 'content.publications.doi',
@@ -52,9 +62,7 @@ class QuickIngest(IngestApi):
             'value': doi
         }
         query.append(criteria)
-        results = self.query_entity(EntityType.PROJECTS, query)
-        count = results.get('page', {}).get('totalElements', 0)
-        return count > 0
+        return self.query_entity(EntityType.PROJECTS, query)
 
     def project_exists(self, uuid: str) -> bool:
         url = f'{self.url}/projects/search/findAllByUuid?uuid={uuid}'
