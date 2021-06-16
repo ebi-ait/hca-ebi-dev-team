@@ -70,7 +70,6 @@ KNOWN_DISCREPANCIES = {
     "tumour/skin": "UBERON_0002097",
     "umbilical cord blood": "UBERON_0012168",
     "vaculature": "UBERON_0007798",
-
     "mucosa of oral region": "UBERON_0003343",
     "nasal cavity mucosa ": "UBERON_0001826",
     "oral epithelium": "UBERON_0002424"
@@ -109,24 +108,18 @@ class QuickOntology:
     def ontology_search(self, search: str, params: dict):
         if search in KNOWN_DISCREPANCIES:
             search = KNOWN_DISCREPANCIES[search]
-        exact_result = self.search_exact_ontology(search, params)
+        exact_result = self.match_ontology(search, params, exact=True)
         if exact_result:
             return self.map_to_hca(exact_result)
-        nearest_result = self.search_nearest_ontology(search, params)
+        nearest_result = self.match_ontology(search, params, exact=False)
         if nearest_result:
             return self.map_to_hca(nearest_result)
 
-    def search_exact_ontology(self, search: str, params: dict):
-        params['exact'] = True
-        results = self.perform_lookup(search, params)
-        index = self.index_of_matching_label(search, results)
-        return results[index] if index > -1 else None
-
-    def search_nearest_ontology(self, search: str, params: dict):
-        params['exact'] = False
+    def match_ontology(self, search: str, params: dict, exact:bool = True):
+        params['exact'] = exact
         results = self.perform_lookup(search, params)
         if results:
-            index = self.index_of_matching_label(search, results)
+            index = self.matching_index(search, results)
             if index > -1:
                 return results[index]
 
@@ -138,11 +131,13 @@ class QuickOntology:
         return response.json().get('response', {}).get('docs', [])
 
     @staticmethod
-    def index_of_matching_label(search: str, results: list) -> int:
+    def matching_index(search: str, results: list) -> int:
         if len(results) == 1:
             return 0
         for index, result in enumerate(results):
             if result.get('label', '').lower() == search.lower():
+                return index
+            if result.get('short_form') == search:
                 return index
         return -1
 
