@@ -28,6 +28,7 @@ PROJECT_SPEC = {
     'dataAccess': {
         'type': ['access_permission', map_value, ACCESS_MAP]
     },
+    'cellCount': ['cell_count_estimate'],
     'wranglingNotes': ['comments', append, f'; AutoImported Snapshot 2021-06-03'],
 }
 FIXED_VALUES = {
