@@ -1,4 +1,5 @@
 import json
+import logging
 
 import requests as rq
 
@@ -28,10 +29,10 @@ class IngestQuery:
 
     @staticmethod
     def patch_project(project_update_url, patch_data):
-        print(f'Updating project (project url: {project_update_url}) with {patch_data}')
+        logging.info(f'Updating project (project url: {project_update_url}) with {patch_data}')
         response = rq.patch(project_update_url, data=json.dumps(patch_data), headers={'Authorization': IngestQuery.TOKEN, 'Content-Type': 'application/json'})
         if response.status_code != 200:
-            print(f'Project with url:{project_update_url} failed with patching this payload: {patch_data}')
+            logging.info(f'Project with url:{project_update_url} failed with patching this payload: {patch_data}')
 
     @staticmethod
     def get_projects_from_dts_from_sheet(sheet_path):
