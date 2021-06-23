@@ -1,13 +1,22 @@
 import argparse, json, requests
 
-def get_publications_journal(publications):
+
+def get_publications_journal(project):
     # Use crossref API to get extra meta info
     # This should be replicated in ingest API endpoint when we have an endpoint
     # Not done on client side for speed
+    publications = project["content"]["publications"]
     results = []
     for publication in publications:
         try:
-            crossref = requests.get(f"https://api.crossref.org/works/{publication['doi']}").json()['message']
+            if not publication.get('doi'):
+                print(f"Project {project['uuid']['uuid']} has no doi")
+                continue
+
+            r = requests.get(f"https://api.crossref.org/works/{publication['doi']}")
+            r.raise_for_status()
+            crossref = r.json()['message']
+
             if len(crossref['container-title']) > 0:
                 journal_title = crossref['container-title'][0]
             elif "name" in crossref['institution']:
@@ -24,14 +33,16 @@ def get_publications_journal(publications):
                 "authors": publication['authors']
             })
         except:
-            print(f"Something went wrong retrieving metainformation for publication {publication['doi']}")
+            print(f"Something went wrong retrieving metainformation for publication {publication['doi']} for project {project['uuid']['uuid']}")
     return results
+
 
 def is_in_dcp(uuid):
     azul_proj_url = f'https://service.azul.data.humancellatlas.org/index/projects/{uuid}'
     if requests.get(azul_proj_url):
         return True
     return False
+
 
 def get_project(uuid, base_url):
     project_url = f'{base_url}/projects/search/findByUuid?uuid={uuid}'
@@ -50,7 +61,7 @@ def patch_project(uuid, project, token):
     
     if "publications" in project["content"]:
         if not project["publicationsInfo"]:
-            project_patch["publicationsInfo"] = get_publications_journal(project["content"]["publications"])
+            project_patch["publicationsInfo"] = get_publications_journal(project)
     
     if project["wranglingState"] != "Published in DCP" and is_in_dcp(uuid):
         project_patch["wranglingState"] = "Published in DCP"
@@ -68,6 +79,7 @@ def patch_project(uuid, project, token):
         r.raise_for_status()
     except Exception as e:
         print(f'Error patching project {uuid}: {e}')
+
 
 def get_uuids_from_catalogue(base_url):
     catalogue_url = f'{base_url}/projects/search/catalogue?page=0&size=500'
@@ -98,7 +110,7 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    if(args.use_catalogued):
+    if args.use_catalogued:
         uuids = get_uuids_from_catalogue(args.url)
     else:
         uuids = get_uuids(args.input)
