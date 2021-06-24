@@ -13,29 +13,37 @@ def __set_logging_level(log_level):
     logging.basicConfig(level=numeric_level)
 
 
-class OrganFixer:
+class DataFixer:
     MISSING_ORGAN_DATA_PATH = 'resources/missing_organ.tsv'
+    MISSING_TECHNOLOGY_DATA_PATH = 'resources/missing_tech.tsv'
     HCA_ONTOLOGY_API_URL = 'https://ontology.archive.data.humancellatlas.org/api/select?q='
 
     def __init__(self):
         self.iq = IngestQuery()
-        self.dts_projects = self.iq.get_projects_from_dts_from_sheet(OrganFixer.MISSING_ORGAN_DATA_PATH)
+        self.dts_projects = {
+            'organ': self.iq.get_projects_from_dts_from_sheet(DataFixer.MISSING_ORGAN_DATA_PATH),
+            'technology': self.iq.get_projects_from_dts_from_sheet(DataFixer.MISSING_TECHNOLOGY_DATA_PATH)
+        }
 
-    def update_projects(self):
-        logging.info("Update started")
-        for uuid, project in self.dts_projects.items():
+    def update_projects(self, data_type):
+        logging.info(f"Update for {data_type} started")
+        update_count = 0
+        if report_only:
+            logging.info("Report only, no real update is happening")
+        projects = self.dts_projects.get(data_type)
+        for uuid, project in projects.items():
             project_update_url = self.iq.get_project_update_url_by_uuid(uuid)
             if project_update_url:
-                ontology = project.get('organ ontology term').replace('_', ':')
-                organ_label = self.__get_organ_label_by_term(ontology)
-                if organ_label:
+                ontology = project.get(f'{data_type} ontology term').replace('_', ':')
+                ontology_label = self.__get_ontology_label_by_term(ontology)
+                if ontology_label:
                     payload = {
-                        'organ': {
+                        data_type: {
                             'ontologies': [
                                 {
-                                    'text': organ_label,
+                                    'text': ontology_label,
                                     'ontology': ontology,
-                                    'ontology_label': organ_label
+                                    'ontology_label': ontology_label
                                 }
                             ]
                         }
@@ -43,13 +51,17 @@ class OrganFixer:
 
                     if not report_only:
                         self.iq.patch_project(project_update_url, payload)
+                    else:
+                        logging.info(f'[Simulate] Updating project (project url: {project_update_url}) with {payload}')
+                    update_count += 1
                 else:
                     logging.info(f'In project (uuid:{uuid} the ontology lookup: {ontology} failed.')
             else:
                 logging.info(f'Project can not be found in ingest: {uuid}')
         logging.info("Update finished")
+        logging.info(f'{update_count} project has been updated with new {data_type}')
 
-    def __get_organ_label_by_term(self, ontology):
+    def __get_ontology_label_by_term(self, ontology):
         response = requests.get(self.HCA_ONTOLOGY_API_URL + ontology).json()
         ontology_docs = response['response']['docs']
         ontology_count = len(ontology_docs)
@@ -72,12 +84,26 @@ if __name__ == '__main__':
         choices=['CRITICAL', 'ERROR', 'WARNING', 'INFO', 'DEBUG']
     )
     parser.add_argument(
+        '--organ', action='store_true',
+        help='Fix missing organs'
+    )
+    parser.add_argument(
+        '--technology', action='store_true',
+        help='Fix missing technologies'
+    )
+    parser.add_argument(
         '--simulate', action='store_true', help='Create report only'
     )
     args = parser.parse_args()
     __set_logging_level(args.log_level)
 
-    report_only = args.simulate = True
+    report_only = args.simulate
+    data_types = []
+    if args.organ:
+        data_types.append('organ')
+    if args.technology:
+        data_types.append('technology')
 
-    fixer = OrganFixer()
-    fixer.update_projects()
+    fixer = DataFixer()
+    for data_type in data_types:
+        fixer.update_projects(data_type)
