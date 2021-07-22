@@ -172,6 +172,7 @@ Preferences | Project: ingest-broker | Project Interpreter
 [[/images/image1.png]]
 
 ### Ingest-UI
+
 1. Install NVM
 ```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
@@ -199,11 +200,11 @@ npm install -g node-sass@4.12.0
 ```
 7. Install Local Packages (ingest-ui/client):
 ```
-npm install
+yarn install
 ```
 8. Install Local Packages (ingest-ui):
 ```
-npm install
+yarn install
 ```
 9. Set up WebStorm for starting Angular
     1. Edit Preferences:  Run/Debug configurations | Add new configuration (npm)
