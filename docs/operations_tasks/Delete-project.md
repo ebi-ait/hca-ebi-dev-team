@@ -26,7 +26,7 @@ gsutil -m rm -r gs://broad-dsp-monster-hca-prod-ebi-storage/prod/<project-uuid>
    ```
    kubectl get pods | grep broker # get broker pod name
    kubectl exec -it <broker-pod-name>
-   cd to /data/spreadsheets/<submission-uuid>
+   cd /data/spreadsheets/<submission-uuid>
    rm -r /data/spreadsheets/<submission-uuid>
    ```
 
