@@ -2,7 +2,7 @@ import re
 from json_converter.json_mapper import JsonMapper
 from submission_broker.submission.entity import Entity
 from services.ontology import QuickOntology
-from .conversion_utils import map_value, append
+from .conversion_utils import map_value, append, get_accessions
 
 ACCESSION_PATTERNS = {
     "insdc_project_accessions": "^[D|E|S]RP[0-9]+$",
@@ -56,20 +56,9 @@ class DatasetTrackerConverter:
         if organ_ontologies:
             converted_project.setdefault('organ', {})['ontologies'] = organ_ontologies
 
-        accessions = self.get_accessions(input_project.get('data_accession', ''))
+        accessions = get_accessions(input_project.get('data_accession', ''))
         converted_project.setdefault('content', {}).update(accessions)
         return converted_project
-    
-    @staticmethod
-    def get_accessions(data_accessions: str):
-        accessions = {}
-        for accession in data_accessions.split(','):
-            accession = accession.strip()
-            for key, pattern in ACCESSION_PATTERNS.items():
-                regex = re.compile(pattern)
-                if regex.match(accession):
-                    accessions.setdefault(key, []).append(accession)
-        return accessions
 
     @staticmethod
     def get_ontologies(project: Entity, key: str, lookup_method):

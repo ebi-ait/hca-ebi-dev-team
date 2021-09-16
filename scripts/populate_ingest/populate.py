@@ -8,7 +8,7 @@ from requests.models import HTTPError
 from assertpy import assert_that
 from mergedeep import merge
 
-from excel.load import SheetLoader, Entity
+from data_entities.load import SheetLoader, Entity
 from convert.tracker import DatasetTrackerConverter
 from convert.europe_pmc import EuropePmcConverter
 from services.europe_pmc import EuropePmc
