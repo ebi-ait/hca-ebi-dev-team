@@ -146,10 +146,13 @@ class Populate:
             logging.info(f'Converted nxn data row: {nxn_data_row} to \n'
                          f'ingest project: {pprint.pformat(project)}' )
             if self.write:
-                response = self.ingest_api.new_project(project)
-                uuid = response.get('uuid', {}).get('uuid')
-                added_projects.append(uuid)
-                logging.info(f'added to ingest with uuid {uuid}')
+                try:
+                    response = self.ingest_api.new_project(project)
+                    uuid = response.get('uuid', {}).get('uuid')
+                    added_projects.append(uuid)
+                    logging.info(f'added to ingest with uuid {uuid}')
+                except:
+                    logging.exception("")
         return added_projects
 
 
