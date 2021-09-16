@@ -1,24 +1,26 @@
+# --- core imports
 import argparse
-import itertools
-import Levenshtein
-import re
 from datetime import datetime
+import itertools
+import logging
+import pprint
+import re
+import sys
 
+# --- third party library imports
+import Levenshtein
 
-from services.ingest import QuickIngest
-from services.nxn_db import NxnDatabaseService
-from services.europe_pmc import EuropePmc
+# --- application imports
+from convert.conversion_utils import get_accessions
 from convert.europe_pmc import EuropePmcConverter
 from data_entities.nxn_db import NxnDatabase
-from convert.conversion_utils import get_accessions
+from services.europe_pmc import EuropePmc
+from services.nxn_db import NxnDatabaseService
+from services.ingest import QuickIngest
 
-# todo:
-#  add logging
-#  clean up / organize imports
-#  add support for different ingest environments
 
-INGEST_URL = "https://api.ingest.archive.data.humancellatlas.org"
-# INGEST_URL = "http://localhost:8080"
+# INGEST_URL = "https://api.ingest.archive.data.humancellatlas.org"
+INGEST_URL = "http://localhost:8080"
 
 # utility functions
 def reformat_title(title: str) -> str:
@@ -34,6 +36,18 @@ def get_distance_metric(title1: str,title2: str):
 def get_file_content(file_path):
     with open(file_path, "r") as file_path:
         return file_path.read()
+
+def prepare_logging():
+    logging.basicConfig(filename='nxn_db.log', format='%(asctime)s - %(levelname)s - %(message)s', level=logging.INFO)
+
+    def handle_exception(exc_type, exc_value, exc_traceback):
+        if issubclass(exc_type, KeyboardInterrupt):
+            sys.__excepthook__(exc_type, exc_value, exc_traceback)
+            return
+
+        logging.error("Exception", exc_info=(exc_type, exc_value, exc_traceback))
+
+    sys.excepthook = handle_exception
 
 class Populate:
     def __init__(self, url, token, write):
@@ -53,10 +67,8 @@ class Populate:
 
         filter_doi = (self.nxn_data.get_values('DOI') | self.nxn_data.get_values('bioRxiv DOI')) - (
                     ingest_data_pub_doi | ingest_data_pre_doi)
-        print("new doi: ", len(filter_doi))
         self.nxn_data.data = [row for row in self.nxn_data.data if self.nxn_data.get_value(row, 'DOI') in filter_doi or
                               self.nxn_data.get_value(row, 'bioRxiv DOI') in filter_doi]
-        print("unregistered doi: ", len(self.nxn_data.data))
 
     def __compare_on_accession__(self):
         ingest_data_accessions = set(itertools.chain.from_iterable(
@@ -71,10 +83,8 @@ class Populate:
             [data.get("insdc_study_accessions") for data in self.ingest_data if data.get("insdc_study_accessions")]))
 
         filter_accessions = self.nxn_data.get_values('Data location') - ingest_data_accessions
-        print("new accessions: ", len(filter_accessions))
         self.nxn_data.data = [row for row in self.nxn_data.data if self.nxn_data.get_value(row, 'Data location') in filter_accessions
                               or not self.nxn_data.get_value(row, 'Data location')]
-        print("unregistered accessions: ", len(self.nxn_data.data))
 
     def __compare_on_title__(self):
         ingest_data_pubs = list(itertools.chain.from_iterable([data.get("publications") for data in self.ingest_data if data.get("publications")]))
@@ -83,9 +93,7 @@ class Populate:
         filter_titles = {reformat_title(title) for title in self.nxn_data.get_values('Title')} - ingest_data_titles
         filter_titles = {title for title in filter_titles if not any([get_distance_metric(title, tracking_title)
                                                                 >= 97 for tracking_title in ingest_data_titles])}
-        print("new titles: ", len(filter_titles))
         self.nxn_data.data = [row for row in self.nxn_data.data if reformat_title(self.nxn_data.get_value(row, 'Title')) in filter_titles]
-        print("unregistered titles: ", len(self.nxn_data.data))
 
     def compare(self):
         self.__compare_on_doi__()
@@ -100,8 +108,6 @@ class Populate:
                                                "smarter (C1)"] for tech in
                               self.nxn_data.get_value(row, 'Technique').lower().split("&")])]
         self.nxn_data.data = [row for row in self.nxn_data.data if self.nxn_data.get_value(row, 'Measurement').lower() == 'rna-seq']
-
-        print("filtered data: ", len(self.nxn_data.data))
 
     def __convert__(self, nxn_data_row) -> dict:
         #  wb schema? does it get set via ingest api?
@@ -131,10 +137,12 @@ class Populate:
     def add_projects(self):
         for nxn_data_row in self.nxn_data.data:
             project = self.__convert__(nxn_data_row)
+            logging.info(f'Converted nxn data row: {nxn_data_row} to \n'
+                         f'ingest project: {pprint.pformat(project)}' )
             if self.write:
                 response = self.ingest_api.new_project(project)
                 uuid = response.get('uuid', {}).get('uuid')
-                print(f'added ingest project with uuid {uuid}')
+                print(f'added to ingest with uuid {uuid}')
 
 
 if __name__ == "__main__":
@@ -145,8 +153,14 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
+    prepare_logging()
+
+    logging.info(f"Running program in {'write' if args.write else 'dry run'} mode")
     populate = Populate(args.url, args.token_path, args.write)
+    logging.info('Finding and filtering entries in nxn db, to add to ingest')
     populate.compare()
     populate.filter()
+    logging.info(f'found {len(populate.nxn_data.data)} nxn entries to add to ingest')
+
     populate.add_projects()
 
