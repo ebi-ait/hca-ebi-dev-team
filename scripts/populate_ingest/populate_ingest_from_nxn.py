@@ -110,9 +110,13 @@ class Populate:
         self.nxn_data.data = [row for row in self.nxn_data.data if self.nxn_data.get_value(row, 'Measurement').lower() == 'rna-seq']
 
     def __convert__(self, nxn_data_row) -> dict:
-        #  wb schema? does it get set via ingest api?
         ingest_project = {
-            'content': {},
+            'content': {
+                "schema_type": "project",
+                "describedBy": self.ingest_api.get_ingest_schema(high_level_entity="type",
+                                                   domain_entity="project",
+                                                   concrete_entity="project")[0]['_links']['json-schema']['href']
+            },
             'cellCount': self.nxn_data.get_value(nxn_data_row, 'Reported cells total'),
             'identifyingOrganisms': [organism.strip() for organism in
                                      self.nxn_data.get_value(nxn_data_row, 'Organism').split(',')],
@@ -135,6 +139,7 @@ class Populate:
         return ingest_project
 
     def add_projects(self):
+        added_projects = []
         for nxn_data_row in self.nxn_data.data:
             project = self.__convert__(nxn_data_row)
             logging.info(f'Converted nxn data row: {nxn_data_row} to \n'
@@ -142,7 +147,9 @@ class Populate:
             if self.write:
                 response = self.ingest_api.new_project(project)
                 uuid = response.get('uuid', {}).get('uuid')
-                print(f'added to ingest with uuid {uuid}')
+                added_projects.append(uuid)
+                logging.info(f'added to ingest with uuid {uuid}')
+        return added_projects
 
 
 if __name__ == "__main__":
@@ -154,13 +161,17 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     prepare_logging()
-
+    logging.info(f'Running script to populate ingest with data from nxn db')
     logging.info(f"Running program in {'write' if args.write else 'dry run'} mode")
     populate = Populate(args.url, args.token_path, args.write)
     logging.info('Finding and filtering entries in nxn db, to add to ingest')
     populate.compare()
     populate.filter()
     logging.info(f'found {len(populate.nxn_data.data)} nxn entries to add to ingest')
+    added_projects = populate.add_projects()
 
-    populate.add_projects()
+    if added_projects:
+        with open('added_uuids.txt', mode='wt', encoding='utf-8') as f:
+            f.write('\n'.join(added_projects))
+
 
