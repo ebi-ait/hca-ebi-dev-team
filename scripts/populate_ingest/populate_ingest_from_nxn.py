@@ -113,7 +113,7 @@ class Populate:
         ingest_project = {
             'content': {
                 "schema_type": "project",
-                "describedBy": self.ingest_api.get_ingest_schema(high_level_entity="type",
+                "describedBy": self.ingest_api.get_schemas(high_level_entity="type",
                                                    domain_entity="project",
                                                    concrete_entity="project")[0]['_links']['json-schema']['href']
             },
