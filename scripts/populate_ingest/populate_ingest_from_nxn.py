@@ -19,8 +19,7 @@ from services.nxn_db import NxnDatabaseService
 from services.ingest import QuickIngest
 
 
-# INGEST_URL = "https://api.ingest.archive.data.humancellatlas.org"
-INGEST_URL = "http://localhost:8080"
+INGEST_URL = "https://api.ingest.archive.data.humancellatlas.org"
 
 # utility functions
 def reformat_title(title: str) -> str:
