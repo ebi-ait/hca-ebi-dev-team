@@ -57,6 +57,9 @@ class Populate:
         self.nxn_data = NxnDatabase(NxnDatabaseService.get_data())
         self.europe_pmc = EuropePmc()
         self.publication_converter = EuropePmcConverter()
+        self.ingest_schema = self.ingest_api.get_schemas(high_level_entity="type",
+                                                   domain_entity="project",
+                                                   concrete_entity="project")[0]['_links']['json-schema']['href']
 
     def __compare_on_doi__(self):
         ingest_data_pubs = list(itertools.chain.from_iterable(
@@ -113,9 +116,7 @@ class Populate:
         ingest_project = {
             'content': {
                 "schema_type": "project",
-                "describedBy": self.ingest_api.get_schemas(high_level_entity="type",
-                                                   domain_entity="project",
-                                                   concrete_entity="project")[0]['_links']['json-schema']['href']
+                "describedBy": self.ingest_schema
             },
             'cellCount': self.nxn_data.get_value(nxn_data_row, 'Reported cells total'),
             'identifyingOrganisms': [organism.strip() for organism in
