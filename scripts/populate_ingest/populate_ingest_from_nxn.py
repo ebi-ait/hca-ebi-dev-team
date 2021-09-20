@@ -19,7 +19,10 @@ from services.nxn_db import NxnDatabaseService
 from services.ingest import QuickIngest
 
 
-INGEST_URL = "https://api.ingest.archive.data.humancellatlas.org"
+INGEST_URL = 'https://api.ingest.archive.data.humancellatlas.org'
+ORGANISMS = ['human', 'human, mouse', 'mouse, human']
+TECHNOLOGY = ['chromium', 'drop-seq', 'dronc-seq', 'smart-seq2', 'smarter', 'smarter (C1)']
+
 
 # utility functions
 def reformat_title(title: str) -> str:
@@ -104,10 +107,9 @@ class Populate:
 
     def filter(self):
         self.nxn_data.data = [row for row in self.nxn_data.data if
-                         self.nxn_data.get_value(row, 'Organism').lower() in ['human', 'human, mouse', 'mouse, human']]
+                         self.nxn_data.get_value(row, 'Organism').lower() in ORGANISMS]
         self.nxn_data.data = [row for row in self.nxn_data.data if
-                         any([tech.strip() in ['chromium', 'drop-seq', 'dronc-seq', 'smart-seq2', 'smarter',
-                                               'smarter (C1)'] for tech in
+                         any([tech.strip() in TECHNOLOGY for tech in
                               self.nxn_data.get_value(row, 'Technique').lower().split('&')])]
         self.nxn_data.data = [row for row in self.nxn_data.data if self.nxn_data.get_value(row, 'Measurement').lower() == 'rna-seq']
 
