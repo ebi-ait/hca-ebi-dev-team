@@ -141,7 +141,7 @@ class Populate:
         ingest_project['content'].setdefault('project_core', {}).setdefault('project_short_name', 'tba')
         return ingest_project
 
-    def __add_publication_info__(self, doi: string, ingest_project: dict):
+    def __add_publication_info__(self, doi: str, ingest_project: dict):
         publication_info = self.europe_pmc.query_doi(doi)
         if publication_info:
             publications, info = self.publication_converter.convert(publication_info)
