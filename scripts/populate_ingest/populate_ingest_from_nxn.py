@@ -115,6 +115,18 @@ class Populate:
         self.nxn_data.data = [row for row in self.nxn_data.data if self.nxn_data.get_value(row, 'Measurement').lower() == 'rna-seq']
 
     def __convert__(self, nxn_data_row) -> dict:
+        ingest_project = {}
+
+        self.__create_ingest_project__(ingest_project)
+
+        # setting project title, project description, funders, contributors and publication and publicationsInfo
+        self.__add_publication_info__(self.nxn_data.get_value(nxn_data_row, 'DOI'), ingest_project)
+
+        # setting accessions
+        self.__add_accessions_info__(self.nxn_data.get_value(nxn_data_row, 'Data location'), ingest_project)
+        return ingest_project
+
+    def __create_ingest_project__(self, ingest_project: dict):
         ingest_project = {
             'content': {
                 'schema_type': 'project',
@@ -127,19 +139,19 @@ class Populate:
             'wranglingNotes': f"Auto imported from nxn db {datetime.today().strftime('%Y-%m-%d')}"
         }
 
-        # setting project title, project description, funders, contributors and publication and publicationsInfo
-        publication_info = self.europe_pmc.query_doi(self.nxn_data.get_value(nxn_data_row, 'DOI'))
+        # setting project short name
+        ingest_project['content'].setdefault('project_core', {}).setdefault('project_short_name', 'tba')
+
+    def __add_publication_info__(self, doi: string, ingest_project: dict):
+        publication_info = self.europe_pmc.query_doi(doi)
         if publication_info:
             publications, info = self.publication_converter.convert(publication_info)
             ingest_project['content'].update(publications)
             ingest_project['publicationsInfo'] = info
 
-        # setting project short name
-        ingest_project['content'].setdefault('project_core', {}).setdefault('project_short_name', 'tba')
+    def __add_accessions_info__(self, accessions: str ,ingest_project: dict):
+        ingest_project['content'].update(get_accessions(accessions))
 
-        # setting accessions
-        ingest_project['content'].update(get_accessions(self.nxn_data.get_value(nxn_data_row, 'DOI')))
-        return ingest_project
 
     def add_projects(self):
         added_projects = []
