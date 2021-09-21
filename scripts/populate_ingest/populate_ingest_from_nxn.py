@@ -12,7 +12,7 @@ import Levenshtein
 
 # --- application imports
 import config
-from convert.conversion_utils import get_accessions
+from convert.conversion_utils import get_accessions, ACCESSION_PATTERNS
 from convert.europe_pmc import EuropePmcConverter
 from data_entities.nxn_db import NxnDatabase
 from services.europe_pmc import EuropePmc
@@ -76,16 +76,12 @@ class Populate:
                               self.nxn_data.get_value(row, 'bioRxiv DOI') in filter_doi]
 
     def __compare_on_accession__(self):
-        ingest_data_accessions = set(itertools.chain.from_iterable(
-            [data.get('insdc_project_accessions') for data in self.ingest_data if
-             data.get('insdc_project_accessions')] +
-            [data.get('geo_series_accessions') for data in self.ingest_data if data.get('geo_series_accessions')] +
-            [data.get('ega_accessions') for data in self.ingest_data if data.get('ega_accessions')] +
-            [data.get('dbgap_accessions') for data in self.ingest_data if data.get('dbgap_accessions')] +
-            [data.get('array_express_accessions') for data in self.ingest_data if
-             data.get('array_express_accessions')] +
-            [data.get('biostudies_accessions') for data in self.ingest_data if data.get('biostudies_accessions')] +
-            [data.get('insdc_study_accessions') for data in self.ingest_data if data.get('insdc_study_accessions')]))
+        ingest_data_accessions = []
+
+        for data in self.ingest_data:
+            for accession_type in ACCESSION_PATTERNS:
+                if data.get(accession_type):
+                    ingest_data_accessions.append(data.get(accession_type))
 
         filter_accessions = self.nxn_data.get_values('Data location') - ingest_data_accessions
         self.nxn_data.data = [row for row in self.nxn_data.data if self.nxn_data.get_value(row, 'Data location') in filter_accessions
