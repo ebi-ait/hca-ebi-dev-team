@@ -115,7 +115,7 @@ class Populate:
         self.nxn_data.data = [row for row in self.nxn_data.data if self.nxn_data.get_value(row, 'Measurement').lower() == 'rna-seq']
 
     def __convert__(self, nxn_data_row) -> dict:
-        ingest_project = self.__create_ingest_project__(ingest_project)
+        ingest_project = self.__create_ingest_project__()
 
         # setting project title, project description, funders, contributors and publication and publicationsInfo
         self.__add_publication_info__(self.nxn_data.get_value(nxn_data_row, 'DOI'), ingest_project)
