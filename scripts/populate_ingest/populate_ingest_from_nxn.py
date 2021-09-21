@@ -40,14 +40,19 @@ def get_file_content(file_path):
         return file_path.read()
 
 def prepare_logging():
-    logging.basicConfig(filename='nxn_db.log', format='%(asctime)s - %(levelname)s - %(message)s', level=logging.INFO)
+    logging.basicConfig(filename='nxn_db.log', format='%(asctime)s - %(levelname)s - %(message)s', level=logging.DEBUG)
+
+    console = logging.StreamHandler()
+    console.setLevel(logging.INFO)
+    console.setFormatter(logging.Formatter('%(levelname)s - %(message)s'))
+    logging.getLogger('').addHandler(console)
 
     def handle_exception(exc_type, exc_value, exc_traceback):
         if issubclass(exc_type, KeyboardInterrupt):
             sys.__excepthook__(exc_type, exc_value, exc_traceback)
             return
 
-        logging.error("Exception", exc_info=(exc_type, exc_value, exc_traceback))
+        logging.error('Exception', exc_info=(exc_type, exc_value, exc_traceback))
 
     sys.excepthook = handle_exception
 
@@ -83,7 +88,7 @@ class Populate:
                 if data.get(accession_type):
                     ingest_data_accessions.append(data.get(accession_type))
 
-        filter_accessions = self.nxn_data.get_values('Data location') - ingest_data_accessions
+        filter_accessions = self.nxn_data.get_values('Data location') - set(ingest_data_accessions)
         self.nxn_data.data = [row for row in self.nxn_data.data if self.nxn_data.get_value(row, 'Data location') in filter_accessions
                               or not self.nxn_data.get_value(row, 'Data location')]
 
@@ -140,14 +145,14 @@ class Populate:
         added_projects = []
         for nxn_data_row in self.nxn_data.data:
             project = self.__convert__(nxn_data_row)
-            logging.info(f'Converted nxn data row: {nxn_data_row} to \n'
+            logging.debug(f'Converted nxn data row: {nxn_data_row} to \n'
                          f'ingest project: {pprint.pformat(project)}' )
             if self.write:
                 try:
                     response = self.ingest_api.new_project(project)
                     uuid = response.get('uuid', {}).get('uuid')
                     added_projects.append(uuid)
-                    logging.info(f'added to ingest with uuid {uuid}')
+                    logging.debug(f'added to ingest with uuid {uuid}')
                 except:
                     logging.exception('')
         return added_projects
@@ -169,6 +174,7 @@ if __name__ == '__main__':
     populate.filter()
     logging.info(f'found {len(populate.nxn_data.data)} nxn entries to add to ingest')
     added_projects = populate.add_projects()
+    logging.info(f'Successfully added {len(added_projects)} project(s) to ingest')
 
     if added_projects:
         with open('added_uuids.txt', mode='wt', encoding='utf-8') as f:
