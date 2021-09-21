@@ -55,12 +55,12 @@ class Populate:
     def __init__(self, url, token, write):
         self.write = write
         self.ingest_api = QuickIngest(url, token=get_file_content(token))
-        self.ingest_data = [data.get("content") for data in self.ingest_api.get_all_projects()]
+        self.ingest_data = [data.get('content') for data in self.ingest_api.get_all(url=INGEST_URL, entity_type='project')]
         self.nxn_data = NxnDatabase(NxnDatabaseService.get_data())
         self.europe_pmc = EuropePmc()
         self.publication_converter = EuropePmcConverter()
-        self.ingest_schema = self.ingest_api.get_schemas(high_level_entity="type",
-                                                   domain_entity="project",
+        self.ingest_schema = self.ingest_api.get_schemas(high_level_entity='type',
+                                                   domain_entity='project',
                                                    concrete_entity="project")[0]['_links']['json-schema']['href']
 
     def __compare_on_doi__(self):
