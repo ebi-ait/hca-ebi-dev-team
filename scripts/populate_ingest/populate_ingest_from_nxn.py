@@ -115,9 +115,7 @@ class Populate:
         self.nxn_data.data = [row for row in self.nxn_data.data if self.nxn_data.get_value(row, 'Measurement').lower() == 'rna-seq']
 
     def __convert__(self, nxn_data_row) -> dict:
-        ingest_project = {}
-
-        self.__create_ingest_project__(ingest_project)
+        ingest_project = self.__create_ingest_project__(ingest_project)
 
         # setting project title, project description, funders, contributors and publication and publicationsInfo
         self.__add_publication_info__(self.nxn_data.get_value(nxn_data_row, 'DOI'), ingest_project)
@@ -126,7 +124,7 @@ class Populate:
         self.__add_accessions_info__(self.nxn_data.get_value(nxn_data_row, 'Data location'), ingest_project)
         return ingest_project
 
-    def __create_ingest_project__(self, ingest_project: dict):
+    def __create_ingest_project__(self):
         ingest_project = {
             'content': {
                 'schema_type': 'project',
@@ -141,6 +139,7 @@ class Populate:
 
         # setting project short name
         ingest_project['content'].setdefault('project_core', {}).setdefault('project_short_name', 'tba')
+        return ingest_project
 
     def __add_publication_info__(self, doi: string, ingest_project: dict):
         publication_info = self.europe_pmc.query_doi(doi)
@@ -151,7 +150,6 @@ class Populate:
 
     def __add_accessions_info__(self, accessions: str ,ingest_project: dict):
         ingest_project['content'].update(get_accessions(accessions))
-
 
     def add_projects(self):
         added_projects = []
