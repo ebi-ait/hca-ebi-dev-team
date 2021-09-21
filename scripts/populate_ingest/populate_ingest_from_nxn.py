@@ -115,7 +115,7 @@ class Populate:
         self.nxn_data.data = [row for row in self.nxn_data.data if self.nxn_data.get_value(row, 'Measurement').lower() == 'rna-seq']
 
     def __convert__(self, nxn_data_row) -> dict:
-        ingest_project = self.__create_ingest_project__()
+        ingest_project = self.__create_ingest_project__(nxn_data_row)
 
         # setting project title, project description, funders, contributors and publication and publicationsInfo
         self.__add_publication_info__(self.nxn_data.get_value(nxn_data_row, 'DOI'), ingest_project)
@@ -124,15 +124,15 @@ class Populate:
         self.__add_accessions_info__(self.nxn_data.get_value(nxn_data_row, 'Data location'), ingest_project)
         return ingest_project
 
-    def __create_ingest_project__(self):
+    def __create_ingest_project__(self, data_row):
         ingest_project = {
             'content': {
                 'schema_type': 'project',
                 "describedBy": self.ingest_schema
             },
-            'cellCount': self.nxn_data.get_value(nxn_data_row, 'Reported cells total'),
+            'cellCount': self.nxn_data.get_value(data_row, 'Reported cells total').replace(",", ""),
             'identifyingOrganisms': [organism.strip() for organism in
-                                     self.nxn_data.get_value(nxn_data_row, 'Organism').split(',')],
+                                     self.nxn_data.get_value(data_row, 'Organism').split(',')],
             'isInCatalogue': True,
             'wranglingNotes': f"Auto imported from nxn db {datetime.today().strftime('%Y-%m-%d')}"
         }
