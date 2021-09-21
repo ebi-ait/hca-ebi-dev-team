@@ -11,6 +11,7 @@ import sys
 import Levenshtein
 
 # --- application imports
+import config
 from convert.conversion_utils import get_accessions
 from convert.europe_pmc import EuropePmcConverter
 from data_entities.nxn_db import NxnDatabase
@@ -19,7 +20,6 @@ from services.nxn_db import NxnDatabaseService
 from services.ingest import QuickIngest
 
 
-INGEST_URL = 'https://api.ingest.archive.data.humancellatlas.org'
 ORGANISMS = ['human', 'human, mouse', 'mouse, human']
 TECHNOLOGY = ['chromium', 'drop-seq', 'dronc-seq', 'smart-seq2', 'smarter', 'smarter (C1)']
 
@@ -55,7 +55,7 @@ class Populate:
     def __init__(self, url, token, write):
         self.write = write
         self.ingest_api = QuickIngest(url, token=get_file_content(token))
-        self.ingest_data = [data.get('content') for data in self.ingest_api.get_all(url=INGEST_URL, entity_type='project')]
+        self.ingest_data = [data.get('content') for data in self.ingest_api.get_all(url=url, entity_type='project')]
         self.nxn_data = NxnDatabase(NxnDatabaseService.get_data())
         self.europe_pmc = EuropePmc()
         self.publication_converter = EuropePmcConverter()
@@ -65,9 +65,9 @@ class Populate:
 
     def __compare_on_doi__(self):
         ingest_data_pubs = list(itertools.chain.from_iterable(
-            [data.get("publications") for data in self.ingest_data if data.get("publications")]))
-        ingest_data_pub_doi = {pub.get("doi") for pub in ingest_data_pubs if pub.get("doi")}
-        ingest_data_pub_urls = {pub.get("url") for pub in ingest_data_pubs if pub.get("url")}
+            [data.get('publications') for data in self.ingest_data if data.get('publications')]))
+        ingest_data_pub_doi = {pub.get('doi') for pub in ingest_data_pubs if pub.get('doi')}
+        ingest_data_pub_urls = {pub.get('url') for pub in ingest_data_pubs if pub.get('url')}
         ingest_data_pre_doi = {url.split('doi.org/')[1] for url in ingest_data_pub_urls if 'doi.org/' in url}
 
         filter_doi = (self.nxn_data.get_values('DOI') | self.nxn_data.get_values('bioRxiv DOI')) - (
@@ -159,7 +159,6 @@ class Populate:
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Add projects to ingest from Valentine's / NXN database")
-    parser.add_argument('-u', '--url', type=str, help='Base URL for Ingest API', default=INGEST_URL)
     parser.add_argument('-tp', '--token-path', type=str, help='Text file containing an ingest token', required=True)
     parser.add_argument('-w', '--write', action='store_true', help='Write to ingest')
 
@@ -168,7 +167,7 @@ if __name__ == '__main__':
     prepare_logging()
     logging.info(f'Running script to populate ingest with data from nxn db')
     logging.info(f"Running program in {'write' if args.write else 'dry run'} mode")
-    populate = Populate(args.url, args.token_path, args.write)
+    populate = Populate(config.INGEST_API_URL, args.token_path, args.write)
     logging.info('Finding and filtering entries in nxn db, to add to ingest')
     populate.compare()
     populate.filter()
