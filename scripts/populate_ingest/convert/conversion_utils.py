@@ -21,7 +21,6 @@ def get_accessions(data_accessions: str):
                 accessions.setdefault(key, []).append(accession)
     return accessions
 
-# ToDo: Move this to json-converter
 def fixed_attribute(*args):
     value = args[1]
     return value
