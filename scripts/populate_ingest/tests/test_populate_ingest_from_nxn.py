@@ -21,7 +21,5 @@ class TestPopulateIngestFromNxn(unittest.TestCase):
 
                 assert mock_ingest_api.new_project.call_count == 5
 
-
-
 if __name__ == '__main__':
         unittest.main()
