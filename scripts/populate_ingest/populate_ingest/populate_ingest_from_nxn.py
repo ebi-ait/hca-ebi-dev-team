@@ -11,13 +11,13 @@ import sys
 import Levenshtein
 
 # --- application imports
-import config
-from convert.conversion_utils import get_accessions, ACCESSION_PATTERNS
-from convert.europe_pmc import EuropePmcConverter
-from data_entities.nxn_db import NxnDatabase
-from services.europe_pmc import EuropePmc
-from services.nxn_db import NxnDatabaseService
-from services.ingest import QuickIngest
+from . import config
+from .convert.conversion_utils import get_accessions, ACCESSION_PATTERNS
+from .convert.europe_pmc import EuropePmcConverter
+from .data_entities.nxn_db import NxnDatabase
+from .services.europe_pmc import EuropePmc
+from .services.nxn_db import NxnDatabaseService
+from .services.ingest import QuickIngest
 
 
 ORGANISMS = ['human', 'human, mouse', 'mouse, human']
@@ -68,7 +68,7 @@ class Populate:
                                                    domain_entity='project',
                                                    concrete_entity="project")[0]['_links']['json-schema']['href']
 
-    def __compare_on_doi__(self):
+    def __compare_on_doi(self):
         ingest_data_pubs = list(itertools.chain.from_iterable(
             [data.get('publications') for data in self.ingest_data if data.get('publications')]))
         ingest_data_pub_doi = {pub.get('doi') for pub in ingest_data_pubs if pub.get('doi')}
@@ -80,7 +80,7 @@ class Populate:
         self.nxn_data.data = [row for row in self.nxn_data.data if self.nxn_data.get_value(row, 'DOI') in filter_doi or
                               self.nxn_data.get_value(row, 'bioRxiv DOI') in filter_doi]
 
-    def __compare_on_accession__(self):
+    def __compare_on_accession(self):
         ingest_data_accessions = []
 
         for data in self.ingest_data:
@@ -92,7 +92,7 @@ class Populate:
         self.nxn_data.data = [row for row in self.nxn_data.data if self.nxn_data.get_value(row, 'Data location') in filter_accessions
                               or not self.nxn_data.get_value(row, 'Data location')]
 
-    def __compare_on_title__(self):
+    def __compare_on_title(self):
         ingest_data_pubs = list(itertools.chain.from_iterable([data.get('publications') for data in self.ingest_data if data.get('publications')]))
         ingest_data_titles = set([reformat_title(pub.get('title')) for pub in ingest_data_pubs if pub.get('title')])
 
@@ -102,9 +102,9 @@ class Populate:
         self.nxn_data.data = [row for row in self.nxn_data.data if reformat_title(self.nxn_data.get_value(row, 'Title')) in filter_titles]
 
     def compare(self):
-        self.__compare_on_doi__()
-        self.__compare_on_accession__()
-        self.__compare_on_title__()
+        self.__compare_on_doi()
+        self.__compare_on_accession()
+        self.__compare_on_title()
 
     def filter(self):
         self.nxn_data.data = [row for row in self.nxn_data.data if
@@ -114,7 +114,7 @@ class Populate:
                               self.nxn_data.get_value(row, 'Technique').lower().split('&')])]
         self.nxn_data.data = [row for row in self.nxn_data.data if self.nxn_data.get_value(row, 'Measurement').lower() == 'rna-seq']
 
-    def __convert__(self, nxn_data_row) -> dict:
+    def __convert(self, nxn_data_row) -> dict:
         ingest_project = self.__create_ingest_project__(nxn_data_row)
 
         # setting project title, project description, funders, contributors and publication and publicationsInfo
@@ -124,7 +124,7 @@ class Populate:
         self.__add_accessions_info__(self.nxn_data.get_value(nxn_data_row, 'Data location'), ingest_project)
         return ingest_project
 
-    def __create_ingest_project__(self, data_row):
+    def __create_ingest_project(self, data_row):
         ingest_project = {
             'content': {
                 'schema_type': 'project',
@@ -141,14 +141,14 @@ class Populate:
         ingest_project['content'].setdefault('project_core', {}).setdefault('project_short_name', 'tba')
         return ingest_project
 
-    def __add_publication_info__(self, doi: str, ingest_project: dict):
+    def __add_publication_info(self, doi: str, ingest_project: dict):
         publication_info = self.europe_pmc.query_doi(doi)
         if publication_info:
             publications, info = self.publication_converter.convert(publication_info)
             ingest_project['content'].update(publications)
             ingest_project['publicationsInfo'] = info
 
-    def __add_accessions_info__(self, accessions: str ,ingest_project: dict):
+    def __add_accessions_info(self, accessions: str ,ingest_project: dict):
         ingest_project['content'].update(get_accessions(accessions))
 
     def add_projects(self):
@@ -168,26 +168,30 @@ class Populate:
         return added_projects
 
 
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="Add projects to ingest from Valentine's / NXN database")
-    parser.add_argument('-tp', '--token-path', type=str, help='Text file containing an ingest token', required=True)
-    parser.add_argument('-w', '--write', action='store_true', help='Write to ingest')
-
-    args = parser.parse_args()
-
+def main(path, write):
     prepare_logging()
     logging.info(f'Running script to populate ingest with data from nxn db')
-    logging.info(f"Running program in {'write' if args.write else 'dry run'} mode")
-    populate = Populate(config.INGEST_API_URL, args.token_path, args.write)
+    logging.info(f"Running program in {'write' if write else 'dry run'} mode")
+    populate = Populate(config.INGEST_API_URL, path, write)
     logging.info('Finding and filtering entries in nxn db, to add to ingest')
     populate.compare()
     populate.filter()
     logging.info(f'found {len(populate.nxn_data.data)} nxn entries to add to ingest')
     added_projects = populate.add_projects()
     logging.info(f'Successfully added {len(added_projects)} project(s) to ingest')
-
     if added_projects:
         with open('added_uuids.txt', mode='wt', encoding='utf-8') as f:
             f.write('\n'.join(added_projects))
 
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description="Add projects to ingest from Valentine's / NXN database")
+    parser.add_argument('-tp', '--token-path', type=str, help='Text file containing an ingest token', required=True)
+    parser.add_argument('-w', '--write', action='store_true', help='Write to ingest')
+
+    args = parser.parse_args()
+    path = args.token_path
+    write = args.write
+
+    main(path, write)
 
