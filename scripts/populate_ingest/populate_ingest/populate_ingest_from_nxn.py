@@ -1,11 +1,11 @@
 # --- core imports
 import argparse
-from datetime import datetime
 import itertools
 import logging
 import pprint
 import re
 import sys
+from datetime import datetime
 
 # --- third party library imports
 import Levenshtein
@@ -16,9 +16,8 @@ from .convert.conversion_utils import get_accessions, ACCESSION_PATTERNS
 from .convert.europe_pmc import EuropePmcConverter
 from .data_entities.nxn_db import NxnDatabase
 from .services.europe_pmc import EuropePmc
-from .services.nxn_db import NxnDatabaseService
 from .services.ingest import QuickIngest
-
+from .services.nxn_db import NxnDatabaseService
 
 ORGANISMS = ['human', 'human, mouse', 'mouse, human']
 TECHNOLOGY = ['chromium', 'drop-seq', 'dronc-seq', 'smart-seq2', 'smarter', 'smarter (C1)']
@@ -28,16 +27,19 @@ TECHNOLOGY = ['chromium', 'drop-seq', 'dronc-seq', 'smart-seq2', 'smarter', 'sma
 def reformat_title(title: str) -> str:
     return re.sub("\W", "", title).lower().strip()
 
-def get_distance_metric(title1: str,title2: str):
+
+def get_distance_metric(title1: str, title2: str):
     if not all([title1, title2]):
         return 0
     max_len = max(len(title1), len(title2))
-    dist_metric = 100-(Levenshtein.distance(title1, title2)/max_len)*100
+    dist_metric = 100 - (Levenshtein.distance(title1, title2) / max_len) * 100
     return dist_metric
+
 
 def get_file_content(file_path):
     with open(file_path, "r") as file_path:
         return file_path.read()
+
 
 def prepare_logging():
     logging.basicConfig(filename='nxn_db.log', format='%(asctime)s - %(levelname)s - %(message)s', level=logging.DEBUG)
@@ -56,6 +58,7 @@ def prepare_logging():
 
     sys.excepthook = handle_exception
 
+
 class Populate:
     def __init__(self, url, token, write):
         self.write = write
@@ -65,8 +68,8 @@ class Populate:
         self.europe_pmc = EuropePmc()
         self.publication_converter = EuropePmcConverter()
         self.ingest_schema = self.ingest_api.get_schemas(high_level_entity='type',
-                                                   domain_entity='project',
-                                                   concrete_entity="project")[0]['_links']['json-schema']['href']
+                                                         domain_entity='project',
+                                                         concrete_entity="project")[0]['_links']['json-schema']['href']
 
     def __compare_on_doi(self):
 
@@ -101,17 +104,20 @@ class Populate:
                     ingest_data_accessions.extend(data.get(accession_type))
 
         filter_accessions = self.nxn_data.get_column('Data location') - set(ingest_data_accessions)
-        self.nxn_data.data = [row for row in self.nxn_data.data if self.nxn_data.get_value(row, 'Data location') in filter_accessions
+        self.nxn_data.data = [row for row in self.nxn_data.data if
+                              self.nxn_data.get_value(row, 'Data location') in filter_accessions
                               or not self.nxn_data.get_value(row, 'Data location')]
 
     def __compare_on_title(self):
-        ingest_data_pubs = list(itertools.chain.from_iterable([data.get('publications') for data in self.ingest_data if data.get('publications')]))
+        ingest_data_pubs = list(itertools.chain.from_iterable(
+            [data.get('publications') for data in self.ingest_data if data.get('publications')]))
         ingest_data_titles = set([reformat_title(pub.get('title')) for pub in ingest_data_pubs if pub.get('title')])
 
         filter_titles = {reformat_title(title) for title in self.nxn_data.get_column('Title')} - ingest_data_titles
         filter_titles = {title for title in filter_titles if not any([get_distance_metric(title, tracking_title)
-                                                                >= 97 for tracking_title in ingest_data_titles])}
-        self.nxn_data.data = [row for row in self.nxn_data.data if reformat_title(self.nxn_data.get_value(row, 'Title')) in filter_titles]
+                                                                      >= 97 for tracking_title in ingest_data_titles])}
+        self.nxn_data.data = [row for row in self.nxn_data.data if
+                              reformat_title(self.nxn_data.get_value(row, 'Title')) in filter_titles]
 
     def compare(self):
         self.__compare_on_doi()
@@ -121,23 +127,24 @@ class Populate:
     def filter(self):
         logging.info(f'project count before filtering {len(self.nxn_data.data)}')
         self.nxn_data.data = [row for row in self.nxn_data.data if
-                         self.nxn_data.get_value(row, 'Organism').lower() in ORGANISMS]
+                              self.nxn_data.get_value(row, 'Organism').lower() in ORGANISMS]
         logging.info(f'project count after filtering by organism {len(self.nxn_data.data)}')
         self.nxn_data.data = [row for row in self.nxn_data.data if
-                         any([tech.strip() in TECHNOLOGY for tech in
-                              self.nxn_data.get_value(row, 'Technique').lower().split('&')])]
+                              any([tech.strip() in TECHNOLOGY for tech in
+                                   self.nxn_data.get_value(row, 'Technique').lower().split('&')])]
         logging.info(f'project count after filtering by technology {len(self.nxn_data.data)}')
-        self.nxn_data.data = [row for row in self.nxn_data.data if self.nxn_data.get_value(row, 'Measurement').lower() == 'rna-seq']
+        self.nxn_data.data = [row for row in self.nxn_data.data if
+                              self.nxn_data.get_value(row, 'Measurement').lower() == 'rna-seq']
         logging.info(f'project count after filtering by measurement {len(self.nxn_data.data)}')
 
     def __convert(self, nxn_data_row) -> dict:
-        ingest_project = self.__create_ingest_project__(nxn_data_row)
+        ingest_project = self.__create_ingest_project(nxn_data_row)
 
         # setting project title, project description, funders, contributors and publication and publicationsInfo
-        self.__add_publication_info__(self.nxn_data.get_value(nxn_data_row, 'DOI'), ingest_project)
+        self.__add_publication_info(self.nxn_data.get_value(nxn_data_row, 'DOI'), ingest_project)
 
         # setting accessions
-        self.__add_accessions_info__(self.nxn_data.get_value(nxn_data_row, 'Data location'), ingest_project)
+        self.__add_accessions_info(self.nxn_data.get_value(nxn_data_row, 'Data location'), ingest_project)
         return ingest_project
 
     def __create_ingest_project(self, data_row):
@@ -164,15 +171,15 @@ class Populate:
             ingest_project['content'].update(publications)
             ingest_project['publicationsInfo'] = info
 
-    def __add_accessions_info(self, accessions: str ,ingest_project: dict):
+    def __add_accessions_info(self, accessions: str, ingest_project: dict):
         ingest_project['content'].update(get_accessions(accessions))
 
     def add_projects(self):
         added_projects = []
         for nxn_data_row in self.nxn_data.data:
-            project = self.__convert__(nxn_data_row)
+            project = self.__convert(nxn_data_row)
             logging.debug(f'Converted nxn data row: {nxn_data_row} to \n'
-                         f'ingest project: {pprint.pformat(project)}' )
+                          f'ingest project: {pprint.pformat(project)}')
             if self.write:
                 try:
                     response = self.ingest_api.new_project(project)
@@ -210,4 +217,3 @@ if __name__ == '__main__':
     write = args.write
 
     main(path, write)
-
