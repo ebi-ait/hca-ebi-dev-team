@@ -10,5 +10,5 @@ class NxnDatabase:
    def get_value(self, data_row: list, key: str):
       return data_row[self.__key_to_index[key]]
 
-   def get_values(self, key: str) -> set:
+   def get_column(self, key: str) -> set:
       return set(self.get_value(data_row, key) for data_row in self.data if self.get_value(data_row, key))
