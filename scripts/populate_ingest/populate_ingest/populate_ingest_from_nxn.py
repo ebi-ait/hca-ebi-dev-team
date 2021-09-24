@@ -69,16 +69,28 @@ class Populate:
                                                    concrete_entity="project")[0]['_links']['json-schema']['href']
 
     def __compare_on_doi(self):
+
         ingest_data_pubs = list(itertools.chain.from_iterable(
             [data.get('publications') for data in self.ingest_data if data.get('publications')]))
+        logging.info(f'publication count in ingest: {len(ingest_data_pubs)}')
         ingest_data_pub_doi = {pub.get('doi') for pub in ingest_data_pubs if pub.get('doi')}
+        logging.info(f'publication with doi count from ingest: {len(ingest_data_pub_doi)}')
         ingest_data_pub_urls = {pub.get('url') for pub in ingest_data_pubs if pub.get('url')}
+        logging.info(f'publication with url count from ingest: {len(ingest_data_pub_urls)}')
         ingest_data_pre_doi = {url.split('doi.org/')[1] for url in ingest_data_pub_urls if 'doi.org/' in url}
+        logging.info(f'pre publication with doi count from ingest: {len(ingest_data_pre_doi)}')
 
-        filter_doi = (self.nxn_data.get_values('DOI') | self.nxn_data.get_values('bioRxiv DOI')) - (
-                    ingest_data_pub_doi | ingest_data_pre_doi)
+        filter_doi = self.filter_from_nxn_by_doi(ingest_data_pre_doi, ingest_data_pub_doi)
         self.nxn_data.data = [row for row in self.nxn_data.data if self.nxn_data.get_value(row, 'DOI') in filter_doi or
                               self.nxn_data.get_value(row, 'bioRxiv DOI') in filter_doi]
+
+    def filter_from_nxn_by_doi(self, ingest_data_pre_doi, ingest_data_pub_doi):
+        doi_list = self.nxn_data.get_column('DOI')
+        logging.info(f'records with doi: {len(doi_list)}')
+        biorxiv_doi_list = self.nxn_data.get_column('bioRxiv DOI')
+        logging.info(f'records with bioRxiv doi: {len(biorxiv_doi_list)}')
+        return (doi_list | biorxiv_doi_list) - (
+                ingest_data_pub_doi | ingest_data_pre_doi)
 
     def __compare_on_accession(self):
         ingest_data_accessions = []
@@ -86,9 +98,9 @@ class Populate:
         for data in self.ingest_data:
             for accession_type in ACCESSION_PATTERNS:
                 if data.get(accession_type):
-                    ingest_data_accessions.append(data.get(accession_type))
+                    ingest_data_accessions.extend(data.get(accession_type))
 
-        filter_accessions = self.nxn_data.get_values('Data location') - set(ingest_data_accessions)
+        filter_accessions = self.nxn_data.get_column('Data location') - set(ingest_data_accessions)
         self.nxn_data.data = [row for row in self.nxn_data.data if self.nxn_data.get_value(row, 'Data location') in filter_accessions
                               or not self.nxn_data.get_value(row, 'Data location')]
 
@@ -96,7 +108,7 @@ class Populate:
         ingest_data_pubs = list(itertools.chain.from_iterable([data.get('publications') for data in self.ingest_data if data.get('publications')]))
         ingest_data_titles = set([reformat_title(pub.get('title')) for pub in ingest_data_pubs if pub.get('title')])
 
-        filter_titles = {reformat_title(title) for title in self.nxn_data.get_values('Title')} - ingest_data_titles
+        filter_titles = {reformat_title(title) for title in self.nxn_data.get_column('Title')} - ingest_data_titles
         filter_titles = {title for title in filter_titles if not any([get_distance_metric(title, tracking_title)
                                                                 >= 97 for tracking_title in ingest_data_titles])}
         self.nxn_data.data = [row for row in self.nxn_data.data if reformat_title(self.nxn_data.get_value(row, 'Title')) in filter_titles]
@@ -107,12 +119,16 @@ class Populate:
         self.__compare_on_title()
 
     def filter(self):
+        logging.info(f'project count before filtering {len(self.nxn_data.data)}')
         self.nxn_data.data = [row for row in self.nxn_data.data if
                          self.nxn_data.get_value(row, 'Organism').lower() in ORGANISMS]
+        logging.info(f'project count after filtering by organism {len(self.nxn_data.data)}')
         self.nxn_data.data = [row for row in self.nxn_data.data if
                          any([tech.strip() in TECHNOLOGY for tech in
                               self.nxn_data.get_value(row, 'Technique').lower().split('&')])]
+        logging.info(f'project count after filtering by technology {len(self.nxn_data.data)}')
         self.nxn_data.data = [row for row in self.nxn_data.data if self.nxn_data.get_value(row, 'Measurement').lower() == 'rna-seq']
+        logging.info(f'project count after filtering by measurement {len(self.nxn_data.data)}')
 
     def __convert(self, nxn_data_row) -> dict:
         ingest_project = self.__create_ingest_project__(nxn_data_row)
