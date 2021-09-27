@@ -19,7 +19,7 @@ from .services.europe_pmc import EuropePmc
 from .services.ingest import QuickIngest
 from .services.nxn_db import NxnDatabaseService
 
-ORGANISMS = ['human', 'human, mouse', 'mouse, human']
+ORGANISMS = ['human', 'human, mouse', 'mouse, human', 'mouse']
 TECHNOLOGY = ['chromium', 'drop-seq', 'dronc-seq', 'smart-seq2', 'smarter', 'smarter (C1)']
 
 
@@ -75,13 +75,9 @@ class Populate:
 
         ingest_data_pubs = list(itertools.chain.from_iterable(
             [data.get('publications') for data in self.ingest_data if data.get('publications')]))
-        logging.info(f'publication count in ingest: {len(ingest_data_pubs)}')
         ingest_data_pub_doi = {pub.get('doi') for pub in ingest_data_pubs if pub.get('doi')}
-        logging.info(f'publication with doi count from ingest: {len(ingest_data_pub_doi)}')
         ingest_data_pub_urls = {pub.get('url') for pub in ingest_data_pubs if pub.get('url')}
-        logging.info(f'publication with url count from ingest: {len(ingest_data_pub_urls)}')
         ingest_data_pre_doi = {url.split('doi.org/')[1] for url in ingest_data_pub_urls if 'doi.org/' in url}
-        logging.info(f'pre publication with doi count from ingest: {len(ingest_data_pre_doi)}')
 
         filter_doi = self.filter_from_nxn_by_doi(ingest_data_pre_doi, ingest_data_pub_doi)
         self.nxn_data.data = [row for row in self.nxn_data.data if self.nxn_data.get_value(row, 'DOI') in filter_doi or
@@ -89,9 +85,7 @@ class Populate:
 
     def filter_from_nxn_by_doi(self, ingest_data_pre_doi, ingest_data_pub_doi):
         doi_list = self.nxn_data.get_column('DOI')
-        logging.info(f'records with doi: {len(doi_list)}')
         biorxiv_doi_list = self.nxn_data.get_column('bioRxiv DOI')
-        logging.info(f'records with bioRxiv doi: {len(biorxiv_doi_list)}')
         return (doi_list | biorxiv_doi_list) - (
                 ingest_data_pub_doi | ingest_data_pre_doi)
 
