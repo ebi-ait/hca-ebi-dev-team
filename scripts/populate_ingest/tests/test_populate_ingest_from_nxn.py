@@ -3,9 +3,6 @@ import unittest
 from unittest.mock import MagicMock, patch
 from populate_ingest import populate_ingest_from_nxn
 from assertpy import assert_that
-mock_ingest_api_url = "http://mockingestapi.com"
-mock_token_path = "tests/mock_token.txt"
-
 
 # test data taken from
 # https://docs.google.com/spreadsheets/d/1En7-UV0k0laDiIfjFkdn7dggyR7jIk3WH8QgXaMOZF0/edit#gid=0
@@ -19,9 +16,9 @@ class TestPopulateIngestFromNxn(unittest.TestCase):
                 mock_ingest_api.return_value._get_ingest_links = MagicMock()
                 with open('tests/project_list.json') as f:
                         mock_ingest_api.return_value.get_all = MagicMock(return_value=json.load(f))
-                populate_ingest_from_nxn.main(mock_token_path, True)
+                populate_ingest_from_nxn.main("tests/mock_token.txt", True)
 
-                assert_that(mock_ingest_api.return_value.new_project.call_count).is_equal_to(5)
+                assert_that(mock_ingest_api.return_value.new_project.call_count).is_equal_to(4)
 
 
 if __name__ == '__main__':
