@@ -11,7 +11,7 @@ from datetime import datetime
 import Levenshtein
 
 # --- application imports
-from . import config
+import config
 from .convert.conversion_utils import get_accessions, ACCESSION_PATTERNS
 from .convert.europe_pmc import EuropePmcConverter
 from .data_entities.nxn_db import NxnDatabase
@@ -19,7 +19,7 @@ from .services.europe_pmc import EuropePmc
 from .services.ingest import QuickIngest
 from .services.nxn_db import NxnDatabaseService
 
-ORGANISMS = ['human', 'human, mouse', 'mouse, human', 'mouse']
+ORGANISMS = ['human', 'human, mouse', 'mouse, human']
 TECHNOLOGY = ['chromium', 'drop-seq', 'dronc-seq', 'smart-seq2', 'smarter', 'smarter (C1)']
 
 
