@@ -36,11 +36,6 @@ def get_distance_metric(title1: str, title2: str):
     return dist_metric
 
 
-def get_file_content(file_path):
-    with open(file_path, "r") as file_path:
-        return file_path.read()
-
-
 def prepare_logging():
     logging.basicConfig(filename='nxn_db.log', format='%(asctime)s - %(levelname)s - %(message)s', level=logging.DEBUG)
 
@@ -60,10 +55,10 @@ def prepare_logging():
 
 
 class Populate:
-    def __init__(self, url, token, write):
+    def __init__(self, ingest_api_url, ingest_api_token, write):
         self.write = write
-        self.ingest_api = QuickIngest(url, token=get_file_content(token))
-        self.ingest_data = [data.get('content') for data in self.ingest_api.get_all(url=url, entity_type='project')]
+        self.ingest_api = QuickIngest(url=ingest_api_url, token=ingest_api_token)
+        self.ingest_data = [data.get('content') for data in self.ingest_api.get_all(url=ingest_api_url, entity_type='project')]
         self.nxn_data = NxnDatabase(NxnDatabaseService.get_data())
         self.europe_pmc = EuropePmc()
         self.publication_converter = EuropePmcConverter()
@@ -185,11 +180,11 @@ class Populate:
         return added_projects
 
 
-def main(path, write):
+def main(write):
     prepare_logging()
     logging.info(f'Running script to populate ingest with data from nxn db')
     logging.info(f"Running program in {'write' if write else 'dry run'} mode")
-    populate = Populate(config.INGEST_API_URL, path, write)
+    populate = Populate(config.INGEST_API_URL, config.INGEST_API_TOKEN, write)
     logging.info('Finding and filtering entries in nxn db, to add to ingest')
     populate.compare()
     populate.filter()
@@ -203,11 +198,9 @@ def main(path, write):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Add projects to ingest from Valentine's / NXN database")
-    parser.add_argument('-tp', '--token-path', type=str, help='Text file containing an ingest token', required=True)
     parser.add_argument('-w', '--write', action='store_true', help='Write to ingest')
 
     args = parser.parse_args()
-    path = args.token_path
     write = args.write
 
-    main(path, write)
+    main(write)

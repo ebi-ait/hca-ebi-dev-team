@@ -8,3 +8,4 @@ assertpy
 mergedeep
 Levenshtein
 assertpy
+dotenv
