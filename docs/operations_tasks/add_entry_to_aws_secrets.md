@@ -41,7 +41,7 @@ The below steps assume that you have the correct account privileges in AWS.
     method call and after the `helm upgrade secrets secrets\` line as you can see it the script.
    
 ## Define your secret in the deployment template
-13. Modify the `deployment.yaml` file under `secrets/templates` folder and add your secret definition under the `data` key.
+13. Modify the `deployment.yaml` file under `secrets/templates` folder.
 
 ## Deploy the new secret value
 14. Go to the `apps` folder
