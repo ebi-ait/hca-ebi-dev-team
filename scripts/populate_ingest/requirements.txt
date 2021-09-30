@@ -8,4 +8,5 @@ assertpy
 mergedeep
 Levenshtein
 assertpy
-dotenv
+python-dotenv
+pandas
