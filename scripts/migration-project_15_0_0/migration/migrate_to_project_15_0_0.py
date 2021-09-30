@@ -1,32 +1,38 @@
 import copy
 import json
 import logging
+import os
 import time
 from typing import List
 
 import requests
 
-INGEST_API = 'http://localhost:8080'
-TOKEN = 'insert-token'
-HCA_PUB_PROJECT_UUIDS_FILE = 'hca_pub_project_uuids.txt'
+INGEST_API = os.environ['INGEST_API_URL']
+INGEST_API_TOKEN = os.environ['INGEST_API_TOKEN']
 
-# This is the version which introduced cell count
+HCA_PUB_PROJECT_UUIDS_FILE = 'hca-pub-project-uuids.txt'
+DCP1_PROJECT_UUIDS_FILE = 'dcp1-project-uuids.txt'
+PROJECT_UUIDS_TO_MIGRATE_FILE = 'batch1.txt'
+
 TARGET_SCHEMA_URL = 'https://schema.humancellatlas.org/type/project/15.0.0/project'
 
 DEFAULT_HEADERS = {'Content-type': 'application/json'}
 
 
-def get_hca_pub_project_uuids():
-    with open(HCA_PUB_PROJECT_UUIDS_FILE) as f:
+def get_project_uuids_from_file(file: str):
+    with open(file) as f:
         project_uuids = [line.rstrip() for line in f]
         return project_uuids
 
 
-HCA_PUB_PROJECT_UUIDS = get_hca_pub_project_uuids()
+HCA_PUB_PROJECT_UUIDS = get_project_uuids_from_file(HCA_PUB_PROJECT_UUIDS_FILE)
+DCP1_PROJECT_UUIDS = get_project_uuids_from_file(DCP1_PROJECT_UUIDS_FILE)
+PROJECT_UUIDS_TO_MIGRATE = get_project_uuids_from_file(PROJECT_UUIDS_TO_MIGRATE_FILE)
 
 
 def get_projects() -> List[dict]:
-    response = requests.get(f'{INGEST_API}/projects?size=1000', headers=DEFAULT_HEADERS)
+    auth_headers = {'Authorization': f'Bearer {INGEST_API_TOKEN}', 'Content-type': 'application/json'}
+    response = requests.get(f'{INGEST_API}/projects?size=1000', headers=auth_headers)
     response.raise_for_status()
     body = response.json()
     projects = body['_embedded']['projects'] if '_embedded' in body else []
@@ -61,28 +67,33 @@ def update_project(context: dict, project: dict):
     new_content = copy.deepcopy(content)
 
     if described_by != TARGET_SCHEMA_URL:
+        logging.info(f'Processing project {project_uuid}...')
         context['project_count'] += 1
-
-        new_content['describedBy'] = TARGET_SCHEMA_URL
-        update_cell_count(context, project, new_content)
-        update_official_hca_publication(context, new_content, project_uuid)
-
-        project_url = project['_links']['self']['href']
-        context['new_content_by_project'][project_uuid] = {'new_content': new_content, 'patched': False}
-
-        try:
-            patch_project({'content': new_content}, project_url)
-            context['new_content_by_project'][project_uuid]['patched'] = True
-            context['patched_count'] += 1
-        except Exception as e:
-            context['new_content_by_project'][project_uuid]['error'] = str(e)
 
         submission_envelopes = get_project_submissions(project)
         if len(submission_envelopes) > 0:
             context['project_submission_envelopes'][project_uuid] = [extract_submission_data(submission) for submission
                                                                      in submission_envelopes]
             context['submission_envelope_count'] += 1
-            submission_envelopes[0]
+
+        new_content['describedBy'] = TARGET_SCHEMA_URL
+        update_cell_count(context, project, new_content)
+        update_official_hca_publication(context, new_content, project_uuid)
+
+        project_url = project['_links']['self']['href']
+        context['new_content_by_project'][project_uuid] = {
+            'new_content': new_content,
+            'patched': False,
+            'submission_count': len(submission_envelopes)
+        }
+
+        try:
+            patch_project({'content': new_content}, project_url)
+            context['new_content_by_project'][project_uuid]['patched'] = True
+            context['patched_count'] += 1
+            logging.info(f'Updated project {project_uuid}...')
+        except Exception as e:
+            context['new_content_by_project'][project_uuid]['error'] = str(e)
 
 
 def update_official_hca_publication(context, new_content, project_uuid):
@@ -113,7 +124,7 @@ def update_cell_count(context, project, new_content):
 
 
 def patch_project(patch: dict, project_url: str):
-    headers = {'Authorization': f'Bearer {TOKEN}', 'Content-type': 'application/json'}
+    headers = {'Authorization': f'Bearer {INGEST_API_TOKEN}', 'Content-type': 'application/json'}
     response = requests.patch(project_url, data=json.dumps(patch), headers=headers)
     response.raise_for_status()
 
