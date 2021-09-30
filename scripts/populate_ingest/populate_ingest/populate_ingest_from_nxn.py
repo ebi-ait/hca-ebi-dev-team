@@ -1,6 +1,7 @@
 # --- core imports
 import argparse
 import itertools
+import json
 import logging
 import pprint
 import re
@@ -164,20 +165,22 @@ class Populate:
         ingest_project['content'].update(get_accessions(accessions))
 
     def add_projects(self):
-        added_projects = []
+        projects_to_be_added = []
+        added_projects_uuids = []
         for nxn_data_row in self.nxn_data.data:
             project = self.__convert(nxn_data_row)
+            projects_to_be_added.append((project))
             logging.debug(f'Converted nxn data row: {nxn_data_row} to \n'
                           f'ingest project: {pprint.pformat(project)}')
             if self.write:
                 try:
                     response = self.ingest_api.new_project(project)
                     uuid = response.get('uuid', {}).get('uuid')
-                    added_projects.append(uuid)
+                    added_projects_uuids.append(uuid)
                     logging.debug(f'added to ingest with uuid {uuid}')
                 except:
                     logging.exception('')
-        return added_projects
+        return projects_to_be_added, added_projects_uuids
 
 
 def main(write):
@@ -189,11 +192,15 @@ def main(write):
     populate.compare()
     populate.filter()
     logging.info(f'found {len(populate.nxn_data.data)} nxn entries to add to ingest')
-    added_projects = populate.add_projects()
-    logging.info(f'Successfully added {len(added_projects)} project(s) to ingest')
-    if added_projects:
+    projects_to_be_added, added_projects_uuids = populate.add_projects()
+    logging.info(f'Successfully added {len(added_projects_uuids)} project(s) to ingest')
+
+    if projects_to_be_added:
+        with open('projects_to_be_added.json', 'w') as f:
+            json.dump(projects_to_be_added, f)
+    if added_projects_uuids:
         with open('added_uuids.txt', mode='wt', encoding='utf-8') as f:
-            f.write('\n'.join(added_projects))
+            f.write('\n'.join(added_projects_uuids))
 
 
 if __name__ == '__main__':
