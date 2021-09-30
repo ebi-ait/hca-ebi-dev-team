@@ -19,8 +19,10 @@ The below steps assume that you have the correct account privileges in AWS.
    where `ENV_NAME` is a placeholder and can be the following values: `dev`, `staging` and `prod`.
 6. Click on the name of the secret, for example `ingest/dev/secrets`.
 7. Scroll down to the `Secret value` section and click on the `Retrieve secret value` button.
-8. Click omn the `Edit` button and add your secrets as key/value pairs.
+8. Click on the `Edit` button and add your secrets as key/value pairs.
 9. When you finished adding all your new secrets click on the `Save` button to store it.
+
+You can find the official AWS documentation on how to update secrets [here](https://docs.aws.amazon.com/secretsmanager/latest/userguide/manage_update-secret.html).
 
 ## Add a secret to the deployment as environment variable
 10. Modify the `deployment.yaml` file under `apps/<APPLICATION_NAME>/templates` folder,
@@ -33,7 +35,7 @@ The below steps assume that you have the correct account privileges in AWS.
      valueFrom:
        secretKeyRef:
          key: SERVICE-PASSWORD
-         name: api-keys
+         name: secret-name
    ```
 
 ## Add secret to the deployment configuration
