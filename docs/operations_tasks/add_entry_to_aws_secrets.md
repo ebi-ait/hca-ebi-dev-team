@@ -11,7 +11,7 @@ The below steps assume that you have the correct account privileges in AWS.
 2. Make sure that you are at the right AWS region otherwise you won't able to see/manage our secrets stored in the Secret Manager.
    The region should be set to: `us-east-1` (N. Virginia)
 3. Go to Secrets Manager. You can do it with any of the follong way:
-   - click `Secters Manager` on the recently visited links section if its is not your first time,
+   - click `Secrets Manager` on the recently visited links section if it is not your first time,
    - select the Services drop-down and in the Security, Identity, & Compliance section click on `Secrets Manager` link,
    - Type `Secters Manager` into the search bar and click on the appearing `Secrets Manager` link
 4. Click on the Secrets option on the left hand side menu bar
