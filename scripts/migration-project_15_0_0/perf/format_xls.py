@@ -2,7 +2,7 @@
 helper script to create csv of output from get_submissions_info.py
 """
 
-from util import load_json
+from migration.util import load_json
 
 if __name__ == '__main__':
     submissions_by_project = load_json('summary.json')

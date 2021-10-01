@@ -5,7 +5,7 @@ import logging
 
 import requests
 
-from util import load_json, write_json
+from migration.util import load_json, write_json
 
 FILENAME = 'submission-envelopes.json'
 

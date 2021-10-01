@@ -11,7 +11,7 @@ from typing import List
 
 import requests
 
-from util import write_json
+from migration.util import write_json
 
 INGEST_API = os.environ['INGEST_API_URL']
 INGEST_API_TOKEN = os.environ['INGEST_API_TOKEN']
