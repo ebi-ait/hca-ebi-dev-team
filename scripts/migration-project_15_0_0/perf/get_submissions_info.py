@@ -3,18 +3,9 @@ import logging
 
 import requests
 
+from util import load_json, write_json
+
 FILENAME = 'submission-envelopes.json'
-
-
-def write_json(data: dict, filename: str):
-    with open(filename, "w") as open_file:
-        json.dump(data, open_file, indent=2)
-
-
-def load_json(filename: str):
-    with open(filename) as json_file:
-        data = json.load(json_file)
-        return data
 
 
 class Submission:

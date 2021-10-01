@@ -7,6 +7,8 @@ from typing import List
 
 import requests
 
+from util import write_json
+
 INGEST_API = os.environ['INGEST_API_URL']
 INGEST_API_TOKEN = os.environ['INGEST_API_TOKEN']
 
@@ -144,11 +146,6 @@ def extract_submission_data(submission: dict):
         'submission_state': submission['submissionState'],
         'createdDate': submission['submissionDate']
     }
-
-
-def write_json(data: dict, filename: str):
-    with open(filename, "w") as open_file:
-        json.dump(data, open_file, indent=2)
 
 
 if __name__ == '__main__':
