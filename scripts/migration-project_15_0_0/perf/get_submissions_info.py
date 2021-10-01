@@ -1,5 +1,5 @@
 """
-This script was ran locally with modified version of core containing an endpoint to get an array assay process ids.
+This script was ran locally with modified version of ingest-core containing an endpoint to get an array assay process ids.
 """
 import logging
 

@@ -1,3 +1,7 @@
+"""
+This script iterates all projects from the ingest api and upgrade their metadata schema version to 15.0.0 .
+This outputs a report file containing the updates done to the project and submissions info.
+"""
 import copy
 import json
 import logging

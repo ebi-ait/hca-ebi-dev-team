@@ -1,4 +1,6 @@
-import json
+"""
+helper script to create csv of output from get_submissions_info.py
+"""
 
 from util import load_json
 
