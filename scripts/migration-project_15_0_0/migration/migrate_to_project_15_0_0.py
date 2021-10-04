@@ -11,7 +11,7 @@ from typing import List
 
 import requests
 
-from migration.util import write_json
+from migration.util import write_json, load_list
 
 INGEST_API = os.environ['INGEST_API_URL']
 INGEST_API_TOKEN = os.environ['INGEST_API_TOKEN']
@@ -25,15 +25,9 @@ TARGET_SCHEMA_URL = 'https://schema.humancellatlas.org/type/project/15.0.0/proje
 DEFAULT_HEADERS = {'Content-type': 'application/json'}
 
 
-def get_project_uuids_from_file(file: str):
-    with open(file) as f:
-        project_uuids = [line.rstrip() for line in f]
-        return project_uuids
-
-
-HCA_PUB_PROJECT_UUIDS = get_project_uuids_from_file(HCA_PUB_PROJECT_UUIDS_FILE)
-DCP1_PROJECT_UUIDS = get_project_uuids_from_file(DCP1_PROJECT_UUIDS_FILE)
-PROJECT_UUIDS_TO_MIGRATE = get_project_uuids_from_file(PROJECT_UUIDS_TO_MIGRATE_FILE)
+HCA_PUB_PROJECT_UUIDS = load_list(HCA_PUB_PROJECT_UUIDS_FILE)
+DCP1_PROJECT_UUIDS = load_list(DCP1_PROJECT_UUIDS_FILE)
+PROJECT_UUIDS_TO_MIGRATE = load_list(PROJECT_UUIDS_TO_MIGRATE_FILE)
 
 
 def get_projects() -> List[dict]:
