@@ -16,8 +16,7 @@ from migration.util import load_json, load_list, write_json
 cwd = os.getcwd()
 REPORT_FILE = cwd + '/_local/PROD_add_project_estimated_cell_count-20210930-184927.json'
 INGEST_API_TOKEN = os.environ['INGEST_API_TOKEN']
-# PROJECT_WHITELIST = load_list(cwd + '/migration/dcp1-project-uuids.txt')
-PROJECT_WHITELIST = load_list(cwd + '/migration/batch2.txt')
+PROJECT_WHITELIST = load_list(cwd + '/migration/dcp1-project-uuids.txt')
 
 # The submission will not be set back to Valid from Exported/Complete state if:
 # 1. the project is updated and if the project is created first before the submission,
@@ -26,7 +25,7 @@ PROJECT_WHITELIST = load_list(cwd + '/migration/batch2.txt')
 
 DO_FORCE_SET_VALID = False
 
-# After state tracker is redeployed, this can be set to True to submit and export only metadata via the API
+# After state tracker pod is recreated, this can be set to True to submit and export only metadata via the API
 DO_EXPORT = False
 
 if __name__ == '__main__':
@@ -44,8 +43,9 @@ if __name__ == '__main__':
     }
 
     if DO_FORCE_SET_VALID:
-        logger.warning("The state tracker should be redeployed after force setting the submission"
+        logger.warning("The state tracker pod should be deleted after force setting the submission"
                        " from Exported/Complete state to Valid")
+        logger.warning("Recreating the pod should initialised the state tracker and sync its state")
 
     for project_uuid, submissions in submissions_by_project.items():
         if project_uuid not in PROJECT_WHITELIST:
@@ -54,6 +54,7 @@ if __name__ == '__main__':
         patched = new_content_by_project.get(project_uuid).get('patched')
         if not patched:
             logger.warning(f'project {project_uuid} was not patched')
+            continue
 
         counts['projects'] += 1
         submissions = sorted(submissions, key=lambda s: datetime.strptime(s['createdDate'], '%Y-%m-%dT%H:%M:%S.%fZ'))
