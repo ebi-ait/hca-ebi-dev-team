@@ -1,7 +1,7 @@
 import re
 from json_converter.json_mapper import JsonMapper
 from submission_broker.submission.entity import Entity
-from services.ontology import QuickOntology
+from ..services.ontology import QuickOntology
 from .conversion_utils import map_value, append, get_accessions
 
 ACCESSION_PATTERNS = {
@@ -56,7 +56,7 @@ class DatasetTrackerConverter:
         if organ_ontologies:
             converted_project.setdefault('organ', {})['ontologies'] = organ_ontologies
 
-        accessions = get_accessions(input_project.get('data_accession', ''))
+        accessions = get_accessions(input_project.get('data_accession', ''), accession_patterns=ACCESSION_PATTERNS)
         converted_project.setdefault('content', {}).update(accessions)
         return converted_project
 

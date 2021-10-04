@@ -18,7 +18,7 @@ class TestPopulateIngestFromNxn(unittest.TestCase):
                         mock_ingest_api.return_value.get_all = MagicMock(return_value=json.load(f))
                 populate_ingest_from_nxn.main("tests/mock_token.txt", True)
 
-                assert_that(mock_ingest_api.return_value.new_project.call_count).is_equal_to(4)
+                assert_that(mock_ingest_api.return_value.new_project.call_count).is_equal_to(3)
 
 
 if __name__ == '__main__':
