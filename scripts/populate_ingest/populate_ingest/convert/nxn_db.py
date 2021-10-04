@@ -7,6 +7,9 @@ import pprint
 from ..constants import ACCESSION_PATTERNS
 from ..convert.conversion_utils import get_accessions
 
+# # --- third party library imports
+import pandas
+
 
 class NxnDatabaseConverter:
     def __init__(self, ingest_schema, publication_service, publication_converter):
@@ -18,6 +21,7 @@ class NxnDatabaseConverter:
         converted_projects = []
         for d in nxn_data.to_dict('records'):
             converted_projects.append(self.convert_row(d))
+        return converted_projects
 
     def convert_row(self, nxn_data_row) -> dict:
         ingest_project = self.__create_ingest_project(nxn_data_row)
@@ -30,8 +34,8 @@ class NxnDatabaseConverter:
             ingest_project['publicationsInfo'] = publication_info
 
         #  setting accessions
-        # todo: fix issues with the nan in accessions
-        # ingest_project['content'].update(get_accessions(nxn_data_row.get('Data location', ''), ACCESSION_PATTERNS))
+        if not pandas.isna(nxn_data_row.get('Data location', '')):
+            ingest_project['content'].update(get_accessions(nxn_data_row.get('Data location', ''), ACCESSION_PATTERNS))
 
         logging.debug(f'Converted nxn data row: {nxn_data_row} to \n'
                       f'ingest project: {pprint.pformat(ingest_project)}')

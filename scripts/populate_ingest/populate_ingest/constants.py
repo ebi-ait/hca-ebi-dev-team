@@ -9,5 +9,5 @@ ACCESSION_PATTERNS = {
 }
 
 ORGANISMS = ['human', 'human, mouse', 'mouse, human']
-TECHNIQUE = ['chromium', 'dronc-seq', 'drop-seq', 'smart-seq2', 'smarter', 'smarter (C1)']
+TECHNIQUE = ['chromium', 'dronc-seq', 'drop-seq', 'smart-seq2', 'smarter', 'smarter (c1)']
 MEASUREMENTS = ['rna-seq']

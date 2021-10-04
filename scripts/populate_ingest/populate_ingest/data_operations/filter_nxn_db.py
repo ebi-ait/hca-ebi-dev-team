@@ -1,19 +1,21 @@
 # --- core imports
+import functools
 import logging
 
 # --- application imports
 from ..constants import ORGANISMS, TECHNIQUE, MEASUREMENTS
-from ..utils import reformat_technique
+from ..utils import reformat_technique, is_technique_eligible
+
 
 class Filter:
     @staticmethod
     def filter_by_organism(nxn_data):
         return nxn_data[nxn_data['Organism'].str.casefold().isin(ORGANISMS)]
 
-    # todo: gotta fix the nan issue here
     @staticmethod
     def filter_by_technology(nxn_data):
-        return nxn_data[nxn_data['Technique'].apply(reformat_technique).isin(TECHNIQUE)]
+        is_technique_eligible_partial = functools.partial(is_technique_eligible, eligible_techniques=TECHNIQUE)
+        return nxn_data[nxn_data['Technique'].fillna('').apply(is_technique_eligible_partial)]
 
     @staticmethod
     def filter_by_measurements(nxn_data):
@@ -26,7 +28,7 @@ class Filter:
         filtered_nxn_data = Filter.filter_by_organism(nxn_data)
         logging.info(f'project count after filtering by organism {len(filtered_nxn_data)}')
 
-        # filtered_nxn_data = Filter.filter_by_technology(filtered_nxn_data)
+        filtered_nxn_data = Filter.filter_by_technology(filtered_nxn_data)
         logging.info(f'project count after filtering by technology {len(filtered_nxn_data)}')
 
         filtered_nxn_data = Filter.filter_by_measurements(filtered_nxn_data)

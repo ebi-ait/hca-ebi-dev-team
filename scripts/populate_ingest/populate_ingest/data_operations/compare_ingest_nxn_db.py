@@ -15,7 +15,7 @@ class Compare:
                                if pub.get('url') and 'doi.org/' in pub.get('url')}
 
         nxn_doi = set(nxn_data['DOI'].unique())
-        nxn_biorxiv_doi = set(nxn_data['bioRxiv DOI'].unique())
+        nxn_biorxiv_doi = set(nxn_data['bioRxiv DOI'].dropna().unique())
 
         new_doi = (nxn_doi | nxn_biorxiv_doi) - (
                 ingest_data_pub_doi | ingest_data_pre_doi)
@@ -31,7 +31,7 @@ class Compare:
                 if data.get(accession_type):
                     ingest_data_accessions.extend(data.get(accession_type))
 
-        new_accessions = set(nxn_data['Data location'].unique()) - set(ingest_data_accessions)
+        new_accessions = set(nxn_data['Data location'].dropna().unique()) - set(ingest_data_accessions)
 
         return nxn_data[nxn_data['Data location'].isin(new_accessions) | nxn_data['Data location'].isna()]
 

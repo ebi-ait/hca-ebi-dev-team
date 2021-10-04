@@ -5,9 +5,6 @@ import logging
 import pprint
 import sys
 
-# # --- third party library imports
-# import pandas
-
 # --- application imports
 import config
 from .convert.europe_pmc import EuropePmcConverter

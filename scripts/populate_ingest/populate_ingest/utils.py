@@ -5,8 +5,14 @@ import re
 # --- third party library imports
 import Levenshtein
 
+
 def reformat_technique(technique: str) -> list:
     return technique.strip().casefold().split('&')
+
+
+def is_technique_eligible(technique: str, eligible_techniques) -> bool:
+    return not set(reformat_technique(technique)).isdisjoint(eligible_techniques)
+
 
 def reformat_title(title: str) -> str:
     return re.sub("\W", "", title).lower().strip()
