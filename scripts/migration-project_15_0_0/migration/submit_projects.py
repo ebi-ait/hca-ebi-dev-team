@@ -16,9 +16,9 @@ from migration.util import load_json, load_list, write_json
 cwd = os.getcwd()
 REPORT_FILE = cwd + '/_local/PROD_add_project_estimated_cell_count-20210930-184927.json'
 INGEST_API_TOKEN = os.environ['INGEST_API_TOKEN']
-BATCH_1_PROJECTS = load_list(cwd + '/migration/batch1.txt')
-PROJECTS_NOT_TO_SUBMIT = load_list(cwd + '/migration/dcp1-project-uuids.txt')
+PROJECT_WHITELIST = load_list(cwd + '/migration/batch1.txt')
 DO_EXPORT = False
+DO_SET_VALID = False
 
 if __name__ == '__main__':
     report = load_json(REPORT_FILE)
@@ -28,14 +28,13 @@ if __name__ == '__main__':
         'already_valid': 0,
         'set_to_valid': 0,
         'do_not_set_to_valid': 0,
-        'projects': 0
+        'projects': 0,
+        'exported': 0,
+        'complete': 0
     }
 
     for project_uuid, submissions in submissions_by_project.items():
-        if project_uuid in BATCH_1_PROJECTS:
-            continue
-
-        if project_uuid in PROJECTS_NOT_TO_SUBMIT:
+        if project_uuid not in PROJECT_WHITELIST:
             continue
 
         counts['projects'] += 1
@@ -45,22 +44,27 @@ if __name__ == '__main__':
         submission = Submission(submission_url, INGEST_API_TOKEN)
         submission_state = submission.get_state().lower()
         if submission_state in ['exported', 'complete']:
-            if submission.is_valid():
-                logger.warning(f'submission {submission_url} should be set to valid')
-                try:
-                    # submission.set_to_valid()
-                    logger.warning(f'submission {submission_url} has been set to valid')
-                    counts['set_to_valid'] += 1
-                except Exception as e:
-                    logger.exception(e)
-                    logger.warning(f'submission {submission_url} failed to be set to valid')
+            if DO_SET_VALID:
+                if submission.is_valid():
+                    logger.warning(f'project {project_uuid} submission {submission_url} should be set to valid')
+                    try:
+                        # submission.set_to_valid()
+                        logger.warning(f'project {project_uuid} submission {submission_url} has been set to valid')
+                        counts['set_to_valid'] += 1
+                    except Exception as e:
+                        logger.exception(e)
+                        logger.warning(f'project {project_uuid} submission {submission_url} failed to be set to valid')
+                else:
+                    counts['do_not_set_to_valid'] += 1
+                    logger.warning(f'project {project_uuid} submission {submission_url} cannot NOT be set to valid')
             else:
-                counts['do_not_set_to_valid'] += 1
-                logger.warning(f'submission {submission_url} should NOT be set to valid')
+                counts[submission_state] += 1
+                logger.warning(f'project {project_uuid} submission {submission_url} is {submission_state}')
 
         elif submission_state == 'valid':
-            logger.warning(f'submission {submission_url} is already valid')
+            logger.warning(f'project {project_uuid} submission {submission_url} is already valid')
             counts['already_valid'] += 1
+
             if DO_EXPORT:
                 logger.warning(f'submitting')
                 try:
@@ -70,6 +74,6 @@ if __name__ == '__main__':
                     logger.exception(e)
                     logger.warning(f'submission {submission_url} was not submitted')
         else:
-            logger.warning(f'submission {submission_url} is {submission_state}')
+            logger.warning(f'project {project_uuid} submission {submission_url} is {submission_state}')
 
     write_json(counts, 'counts.txt')
