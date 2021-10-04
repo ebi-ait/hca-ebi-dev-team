@@ -16,13 +16,23 @@ from migration.util import load_json, load_list, write_json
 cwd = os.getcwd()
 REPORT_FILE = cwd + '/_local/PROD_add_project_estimated_cell_count-20210930-184927.json'
 INGEST_API_TOKEN = os.environ['INGEST_API_TOKEN']
-PROJECT_WHITELIST = load_list(cwd + '/migration/batch1.txt')
+# PROJECT_WHITELIST = load_list(cwd + '/migration/dcp1-project-uuids.txt')
+PROJECT_WHITELIST = load_list(cwd + '/migration/batch2.txt')
+
+# The submission will not be set back to Valid from Exported/Complete state if:
+# 1. the project is updated and if the project is created first before the submission,
+# the submission in Exported will not be set back to Valid
+# 2. if any metadata is updated and the submission is in Complete state, it will not be set back to Valid
+
+DO_FORCE_SET_VALID = False
+
+# After state tracker is redeployed, this can be set to True to submit and export only metadata via the API
 DO_EXPORT = False
-DO_SET_VALID = False
 
 if __name__ == '__main__':
     report = load_json(REPORT_FILE)
     submissions_by_project = report.get('project_submission_envelopes')
+    new_content_by_project = report.get('new_content_by_project')
     logger = logging.getLogger(__name__)
     counts = {
         'already_valid': 0,
@@ -33,9 +43,17 @@ if __name__ == '__main__':
         'complete': 0
     }
 
+    if DO_FORCE_SET_VALID:
+        logger.warning("The state tracker should be redeployed after force setting the submission"
+                       " from Exported/Complete state to Valid")
+
     for project_uuid, submissions in submissions_by_project.items():
         if project_uuid not in PROJECT_WHITELIST:
             continue
+
+        patched = new_content_by_project.get(project_uuid).get('patched')
+        if not patched:
+            logger.warning(f'project {project_uuid} was not patched')
 
         counts['projects'] += 1
         submissions = sorted(submissions, key=lambda s: datetime.strptime(s['createdDate'], '%Y-%m-%dT%H:%M:%S.%fZ'))
@@ -44,11 +62,11 @@ if __name__ == '__main__':
         submission = Submission(submission_url, INGEST_API_TOKEN)
         submission_state = submission.get_state().lower()
         if submission_state in ['exported', 'complete']:
-            if DO_SET_VALID:
+            if DO_FORCE_SET_VALID:
                 if submission.is_valid():
                     logger.warning(f'project {project_uuid} submission {submission_url} should be set to valid')
                     try:
-                        # submission.set_to_valid()
+                        submission.set_to_valid()
                         logger.warning(f'project {project_uuid} submission {submission_url} has been set to valid')
                         counts['set_to_valid'] += 1
                     except Exception as e:
