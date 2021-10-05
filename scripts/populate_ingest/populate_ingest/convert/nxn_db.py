@@ -19,7 +19,7 @@ class NxnDatabaseConverter:
 
     def convert(self, nxn_data):
         converted_projects = map(lambda d: self.convert_row(d), nxn_data.to_dict('records'))
-        return converted_projects
+        return list(converted_projects)
 
     def convert_row(self, nxn_data_row) -> dict:
         ingest_project = self.__create_ingest_project(nxn_data_row)
