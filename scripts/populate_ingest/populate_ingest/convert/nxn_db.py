@@ -18,9 +18,7 @@ class NxnDatabaseConverter:
         self.publication_converter = publication_converter
 
     def convert(self, nxn_data):
-        converted_projects = []
-        for d in nxn_data.to_dict('records'):
-            converted_projects.append(self.convert_row(d))
+        converted_projects = map(lambda d: self.convert_row(d), nxn_data.to_dict('records'))
         return converted_projects
 
     def convert_row(self, nxn_data_row) -> dict:
