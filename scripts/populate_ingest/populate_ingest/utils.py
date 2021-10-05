@@ -33,3 +33,27 @@ def get_ingest_data_contents(ingest_data) -> list:
 def get_ingest_data_publications(ingest_projects) -> list:
     return list(itertools.chain.from_iterable(
         [data.get('publications') for data in ingest_projects if data.get('publications')]))
+
+
+def get_accessions(data_accessions: str, accession_patterns: dict):
+    accessions = {}
+    for accession in data_accessions.split(','):
+        accession = accession.strip()
+        for key, pattern in accession_patterns.items():
+            regex = re.compile(pattern)
+            if regex.match(accession):
+                accessions.setdefault(key, []).append(accession)
+    return accessions
+
+
+def remove_tags(*args):
+    regex = re.compile(r'<([^>]+)>')
+    if isinstance(args[0], str):
+        return regex.sub('', args[0])
+
+
+def first_map(*args):
+    array = args[0]
+    key = args[1]
+    if isinstance(array, list) and len(array) > 0 and isinstance(array[0], dict):
+        return array[0].get(key, None)

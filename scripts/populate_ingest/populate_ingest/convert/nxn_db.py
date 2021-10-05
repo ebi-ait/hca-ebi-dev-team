@@ -5,7 +5,7 @@ import pprint
 
 # --- application imports
 from ..constants import ACCESSION_PATTERNS
-from ..convert.conversion_utils import get_accessions
+from ..utils import get_accessions
 
 # # --- third party library imports
 import pandas

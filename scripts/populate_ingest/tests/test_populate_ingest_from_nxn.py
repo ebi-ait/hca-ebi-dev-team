@@ -11,6 +11,7 @@ from populate_ingest.data_operations.compare_ingest_nxn_db import Compare
 from populate_ingest.data_operations.filter_nxn_db import Filter
 from populate_ingest.utils import get_ingest_data_contents
 
+
 # test data for nxn db taken from
 # https://docs.google.com/spreadsheets/d/1En7-UV0k0laDiIfjFkdn7dggyR7jIk3WH8QgXaMOZF0/edit#gid=0
 class TestPopulateIngestFromNxnSetUp(unittest.TestCase):

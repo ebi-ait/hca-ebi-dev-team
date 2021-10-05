@@ -1,6 +1,6 @@
 from typing import List
 from json_converter.json_mapper import JsonMapper
-from .conversion_utils import remove_tags, first_map
+from ..utils import remove_tags, first_map
 
 
 CONTENT_SPEC = {
