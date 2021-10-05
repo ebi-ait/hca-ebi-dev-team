@@ -9,7 +9,7 @@ from pandas.testing import assert_frame_equal
 from populate_ingest.services.nxn_db import NxnDatabaseService
 from populate_ingest.data_operations.compare_ingest_nxn_db import Compare
 from populate_ingest.data_operations.filter_nxn_db import Filter
-
+from populate_ingest.utils import get_ingest_data_contents
 
 # test data for nxn db taken from
 # https://docs.google.com/spreadsheets/d/1En7-UV0k0laDiIfjFkdn7dggyR7jIk3WH8QgXaMOZF0/edit#gid=0
@@ -22,7 +22,7 @@ class TestPopulateIngestFromNxnSetUp(unittest.TestCase):
 
         # set up test ingest data
         with open('tests/project_list.json') as f:
-            self.ingest_data_mock = [data.get('content') for data in json.load(f)]
+            self.ingest_data_mock = get_ingest_data_contents(json.load(f))
 
 
 class TestCompareIngestNxnDb(TestPopulateIngestFromNxnSetUp):

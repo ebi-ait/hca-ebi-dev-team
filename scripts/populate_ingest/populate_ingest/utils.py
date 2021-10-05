@@ -26,6 +26,10 @@ def get_distance_metric(title1: str, title2: str):
     return dist_metric
 
 
-def get_ingest_data_publications(ingest_data) -> list:
+def get_ingest_data_contents(ingest_data) -> list:
+    return [data.get('content') for data in ingest_data]
+
+
+def get_ingest_data_publications(ingest_projects) -> list:
     return list(itertools.chain.from_iterable(
-        [data.get('publications') for data in ingest_data if data.get('publications')]))
+        [data.get('publications') for data in ingest_projects if data.get('publications')]))

@@ -13,7 +13,7 @@ from .data_operations.filter_nxn_db import Filter
 from .services.europe_pmc import EuropePmc
 from .services.ingest import QuickIngest
 from .services.nxn_db import NxnDatabaseService
-
+from .utils import get_ingest_data_contents
 
 def prepare_logging():
     logging.basicConfig(filename='nxn_db.log', format='%(asctime)s - %(levelname)s - %(message)s', level=logging.DEBUG)
@@ -36,7 +36,7 @@ def prepare_logging():
 class Populate:
     def __init__(self, ingest_service, nxn_db_service: NxnDatabaseService, nxn_db_converter: NxnDatabaseConverter):
         self.ingest_service = ingest_service
-        self.ingest_data = [data.get('content') for data in self.ingest_service.get_projects()]
+        self.ingest_data = get_ingest_data_contents(self.ingest_service.get_projects())
         self.nxn_data = nxn_db_service.get_data()
         self.nxn_db_converter = nxn_db_converter
 
