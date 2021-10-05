@@ -13,8 +13,7 @@ from populate_ingest.data_operations.filter_nxn_db import Filter
 
 # test data for nxn db taken from
 # https://docs.google.com/spreadsheets/d/1En7-UV0k0laDiIfjFkdn7dggyR7jIk3WH8QgXaMOZF0/edit#gid=0
-#  todo: split classes. use inheritance
-class TestPopulateIngestFromNxn(unittest.TestCase):
+class TestPopulateIngestFromNxnSetUp(unittest.TestCase):
     def setUp(self):
         # set up test nxn db data
         nxn_db_service_mock = NxnDatabaseService
@@ -25,6 +24,8 @@ class TestPopulateIngestFromNxn(unittest.TestCase):
         with open('tests/project_list.json') as f:
             self.ingest_data_mock = [data.get('content') for data in json.load(f)]
 
+
+class TestCompareIngestNxnDb(TestPopulateIngestFromNxnSetUp):
     def test_compare_on_doi(self):
         actual = Compare.compare_on_doi(self.ingest_data_mock, self.nxn_db_data_mock)
         expected = self.nxn_db_data_mock.drop([0, 1])
@@ -40,6 +41,8 @@ class TestPopulateIngestFromNxn(unittest.TestCase):
         expected = self.nxn_db_data_mock.drop([0, 1, 2])
         assert_frame_equal(actual, expected, check_dtype=False)
 
+
+class TestFilterNxnDb(TestPopulateIngestFromNxnSetUp):
     def test_filter_by_organism(self):
         actual = Filter.filter_by_organism(self.nxn_db_data_mock)
         expected = self.nxn_db_data_mock.drop([1, 3, 4, 8])
@@ -54,6 +57,7 @@ class TestPopulateIngestFromNxn(unittest.TestCase):
         actual = Filter.filter_by_measurements(self.nxn_db_data_mock)
         expected = self.nxn_db_data_mock
         assert_frame_equal(actual, expected, check_dtype=False)
+
 
 if __name__ == '__main__':
     unittest.main()
