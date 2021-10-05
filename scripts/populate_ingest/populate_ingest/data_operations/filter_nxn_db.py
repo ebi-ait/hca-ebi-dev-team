@@ -4,7 +4,7 @@ import logging
 
 # --- application imports
 from ..constants import ORGANISMS, TECHNIQUE, MEASUREMENTS
-from ..utils import reformat_technique, is_technique_eligible
+from ..utils import is_technique_eligible
 
 
 class Filter:

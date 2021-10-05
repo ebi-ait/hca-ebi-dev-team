@@ -7,7 +7,7 @@ import Levenshtein
 
 
 def reformat_technique(technique: str) -> list:
-    return technique.strip().casefold().split('&')
+    return [t.strip() for t in technique.casefold().split('&')]
 
 
 def is_technique_eligible(technique: str, eligible_techniques) -> bool:
