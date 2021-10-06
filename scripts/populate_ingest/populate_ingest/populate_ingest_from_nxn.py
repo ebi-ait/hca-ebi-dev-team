@@ -47,21 +47,20 @@ class Populate:
         new_nxn_data = Filter.filter_by_eligibility(new_nxn_data)
         logging.info(f'Found {len(new_nxn_data)} projects in nxn database, after filtering by eligibility criteria')
         projects_to_be_added = self.nxn_db_converter.convert(new_nxn_data)
-        added_projects_uuids = self.__add_projects(projects_to_be_added, write)
+        added_projects_uuids = self.__add_projects(projects_to_be_added) if write else []
 
         return new_nxn_data, projects_to_be_added, added_projects_uuids
 
-    def __add_projects(self, project_list, write):
+    def __add_projects(self, project_list):
         added_projects_uuids = []
         for project in project_list:
-            if write:
-                try:
-                    response = self.ingest_service.new_project(project)
-                    uuid = response.get('uuid', {}).get('uuid')
-                    added_projects_uuids.append(uuid)
-                    logging.debug(f'added to ingest with uuid {uuid}')
-                except:
-                    logging.exception('')
+            try:
+                response = self.ingest_service.new_project(project)
+                uuid = response.get('uuid', {}).get('uuid')
+                added_projects_uuids.append(uuid)
+                logging.debug(f'added to ingest with uuid {uuid}')
+            except:
+                logging.exception('')
         return added_projects_uuids
 
 
