@@ -15,6 +15,7 @@ from .services.ingest import QuickIngest
 from .services.nxn_db import NxnDatabaseService
 from .utils import get_ingest_data_contents
 
+
 def prepare_logging():
     logging.basicConfig(filename='nxn_db.log', format='%(asctime)s - %(levelname)s - %(message)s', level=logging.DEBUG)
 
@@ -48,7 +49,7 @@ class Populate:
         projects_to_be_added = self.nxn_db_converter.convert(new_nxn_data)
         added_projects_uuids = self.__add_projects(projects_to_be_added, write)
 
-        return projects_to_be_added, added_projects_uuids
+        return new_nxn_data, projects_to_be_added, added_projects_uuids
 
     def __add_projects(self, project_list, write):
         added_projects_uuids = []
@@ -71,17 +72,23 @@ def run(write):
 
     ingest_service = QuickIngest(url=config.INGEST_API_URL, token=config.INGEST_API_TOKEN)
     ingest_schema = ingest_service.get_schemas(high_level_entity='type',
-                                                     domain_entity='project',
-                                                     concrete_entity="project")[0]['_links']['json-schema']['href']
-    nxn_database_converter = NxnDatabaseConverter(ingest_schema=ingest_schema, publication_service=EuropePmc(), publication_converter=EuropePmcConverter())
-    populate = Populate(ingest_service=ingest_service, nxn_db_service= NxnDatabaseService, nxn_db_converter=nxn_database_converter)
+                                               domain_entity='project',
+                                               concrete_entity="project")[0]['_links']['json-schema']['href']
+    nxn_database_converter = NxnDatabaseConverter(ingest_schema=ingest_schema, publication_service=EuropePmc(),
+                                                  publication_converter=EuropePmcConverter())
+    populate = Populate(ingest_service=ingest_service, nxn_db_service=NxnDatabaseService,
+                        nxn_db_converter=nxn_database_converter)
     logging.info('Finding entries in nxn db to add to ingest')
-    projects_to_be_added, added_projects_uuids = populate.populate(write)
+    new_nxn_data, projects_to_be_added, added_projects_uuids = populate.populate(write)
     logging.info(f'Successfully added {len(added_projects_uuids)} project(s) to ingest')
+
+    if not new_nxn_data.empty:
+        new_nxn_data.to_csv('new_nxn_data.tsv', sep="\t", index=False)
 
     if projects_to_be_added:
         with open('projects_to_be_added.json', 'w') as f:
             json.dump(projects_to_be_added, f)
+
     if added_projects_uuids:
         with open('added_uuids.txt', mode='wt', encoding='utf-8') as f:
             f.write('\n'.join(added_projects_uuids))
