@@ -5,10 +5,7 @@ import pprint
 
 # --- application imports
 from ..constants import ACCESSION_PATTERNS
-from ..utils import get_accessions
-
-# # --- third party library imports
-import pandas
+from ..utils import get_accessions, not_is_nan
 
 
 class NxnDatabaseConverter:
@@ -32,8 +29,9 @@ class NxnDatabaseConverter:
             ingest_project['publicationsInfo'] = publication_info
 
         #  setting accessions
-        if not pandas.isna(nxn_data_row.get('Data location', '')):
-            ingest_project['content'].update(get_accessions(nxn_data_row.get('Data location', ''), ACCESSION_PATTERNS))
+        accessions = nxn_data_row.get('Data location', '')
+        if not_is_nan(accessions):
+            ingest_project['content'].update(get_accessions(accessions, ACCESSION_PATTERNS))
 
         logging.debug(f'Converted nxn data row: {nxn_data_row} to \n'
                       f'ingest project: {pprint.pformat(ingest_project)}')
@@ -45,12 +43,14 @@ class NxnDatabaseConverter:
                 'schema_type': 'project',
                 "describedBy": self.ingest_schema
             },
-            'cellCount': nxn_data_row.get('Reported cells total', '').replace(",", ""),
             'identifyingOrganisms': [organism.strip() for organism in
                                      nxn_data_row.get('Organism').split(',')],
             'isInCatalogue': True,
             'wranglingNotes': f"Auto imported from nxn db {datetime.today().strftime('%Y-%m-%d')}"
         }
+
+        cell_count = nxn_data_row.get('Reported cells total', '')
+        ingest_project['cellCount'] = cell_count.replace(",", "") if not_is_nan(cell_count) else ''
 
         # setting project short name
         ingest_project['content'].setdefault('project_core', {}).setdefault('project_short_name', 'tba')

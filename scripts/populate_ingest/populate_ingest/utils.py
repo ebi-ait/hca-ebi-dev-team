@@ -4,6 +4,7 @@ import re
 
 # --- third party library imports
 import Levenshtein
+import pandas
 
 
 def reformat_technique(technique: str) -> list:
@@ -44,6 +45,10 @@ def get_accessions(data_accessions: str, accession_patterns: dict):
             if regex.match(accession):
                 accessions.setdefault(key, []).append(accession)
     return accessions
+
+
+def not_is_nan(x):
+    return not pandas.isna(x)
 
 
 def remove_tags(*args):
