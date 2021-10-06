@@ -62,3 +62,10 @@ def first_map(*args):
     key = args[1]
     if isinstance(array, list) and len(array) > 0 and isinstance(array[0], dict):
         return array[0].get(key, None)
+
+
+def convert_pmid(*args):
+    pmid = args[0]
+    if pmid and isinstance(pmid, str):
+        return int(pmid)
+    return None

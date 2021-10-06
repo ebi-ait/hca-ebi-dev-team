@@ -1,6 +1,6 @@
 from typing import List
 from json_converter.json_mapper import JsonMapper
-from ..utils import remove_tags, first_map
+from ..utils import remove_tags, first_map, convert_pmid
 
 
 CONTENT_SPEC = {
@@ -11,7 +11,7 @@ CONTENT_SPEC = {
 }
 PUBLICATION_SPEC = {
     'doi': ['doi'],
-    'pmid': ['pmid'],
+    'pmid': ['pmid', convert_pmid],
     'title': ['title'],
     'authors': ['authorString'],
     'url': ['fullTextUrl.url']

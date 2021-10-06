@@ -28,6 +28,9 @@ class NxnDatabaseConverter:
         if publication_info:
             ingest_project['publicationsInfo'] = publication_info
 
+        # setting project short name
+        ingest_project['content'].setdefault('project_core', {}).setdefault('project_short_name', 'tba')
+
         #  setting accessions
         accessions = nxn_data_row.get('Data location', '')
         if not_is_nan(accessions):
@@ -52,8 +55,6 @@ class NxnDatabaseConverter:
         cell_count = nxn_data_row.get('Reported cells total', '')
         ingest_project['cellCount'] = cell_count.replace(",", "") if not_is_nan(cell_count) else ''
 
-        # setting project short name
-        ingest_project['content'].setdefault('project_core', {}).setdefault('project_short_name', 'tba')
         return ingest_project
 
     def __get_publication_info(self, doi: str):
