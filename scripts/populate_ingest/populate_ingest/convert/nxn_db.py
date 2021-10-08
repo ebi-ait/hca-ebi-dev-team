@@ -50,7 +50,7 @@ class NxnDatabaseConverter:
                                      nxn_data_row.get('Organism').split(',')],
             'isInCatalogue': False,
             'wranglingState': 'New',
-            'wranglingNotes': f"Auto imported from nxn db {datetime.today().strftime('%Y-%m-%d')}"
+            'wranglingNotes': f"Imported from nxn db {datetime.today().strftime('%Y-%m-%d')}"
         }
 
         cell_count = nxn_data_row.get('Reported cells total', '')
