@@ -49,6 +49,7 @@ class NxnDatabaseConverter:
             'identifyingOrganisms': [organism.strip() for organism in
                                      nxn_data_row.get('Organism').split(',')],
             'isInCatalogue': False,
+            'wranglingState': 'New',
             'wranglingNotes': f"Auto imported from nxn db {datetime.today().strftime('%Y-%m-%d')}"
         }
 
