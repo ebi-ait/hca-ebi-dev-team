@@ -1,0 +1,1243 @@
+[
+  {
+      "content": {
+          "describedBy": "https://schema.humancellatlas.org/type/project/14.0.0/project",
+          "schema_type": "project",
+          "project_core": {
+              "project_short_name": "Healthy and type 2 diabetes pancreas",
+              "project_title": "Single-cell RNA-seq analysis of human pancreas from healthy individuals and type 2 diabetes patients",
+              "project_description": "We used single-cell RNA-sequencing to generate transcriptional profiles of endocrine and exocrine cell types of the human pancreas. Pancreatic tissue and islets were obtained from six healthy and four T2D cadaveric donors. Islets were cultured and dissociated into single-cell suspension. Viable individual cells were distributed via fluorescence-activated cell sorted (FACS) into 384-well plates containing lysis buffer. Single-cell cDNA libraries were generated using the Smart-seq2 protocol. Gene expression was quantified as reads per kilobase transcript and per million mapped reads (RPKM) using rpkmforgenes. Bioinformatics analysis was used to classify cells into cell types without knowledge of cell types or prior purification of cell populations. We revealed subpopulations in endocrine and exocrine cell types, identified genes with interesting correlations to body mass index (BMI) in specific cell types and found transcriptional alterations in T2D.  Complementary whole-islet RNA-seq data have also been deposited at ArrayExpress under accession number E-MTAB-5060 (http://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-5060)."
+          },
+          "insdc_project_accessions": [
+              "ERP017126"
+          ],
+          "array_express_accessions": [
+              "E-MTAB-5061"
+          ],
+          "insdc_study_accessions": [
+              "PRJEB15401"
+          ],
+          "supplementary_links": [
+              "https://www.ebi.ac.uk/gxa/sc/experiments/E-MTAB-5061/Results"
+          ],
+          "funders": [
+              {
+                  "grant_id": "648842",
+                  "organization": "European Research Council"
+              },
+              {
+                  "grant_id": "not provided",
+                  "organization": "Swedish Research Council"
+              },
+              {
+                  "grant_id": "not provided",
+                  "organization": "Swedish Foundation for Strategic Research"
+              },
+              {
+                  "grant_id": "not provided",
+                  "organization": "Swedish Cancer Society"
+              },
+              {
+                  "grant_id": "not provided",
+                  "organization": "Center for Innovative Medicine"
+              }
+          ],
+          "contributors": [
+              {
+                  "name": "Athanasia,,Palasantza",
+                  "email": "Athanasia.Palasantza@ki.se",
+                  "institution": "Karolinska Institutet",
+                  "laboratory": "Department of Cell and Molecular Biology (CMB)",
+                  "address": "Nobels vag 3, 171 77, Stockholm",
+                  "country": "Sweden",
+                  "corresponding_contributor": false
+              },
+              {
+                  "name": "Rickard,,Sandberg",
+                  "email": "Rickard.Sandberg@ki.se",
+                  "institution": "Karolinska Institutet",
+                  "laboratory": "Department of Cell and Molecular Biology (CMB)",
+                  "address": "Nobels vag 3, 171 77, Stockholm",
+                  "country": "Sweden",
+                  "orcid_id": "0000-0001-6473-1740",
+                  "corresponding_contributor": true
+              },
+              {
+                  "name": "Asa,,Segerstolpe",
+                  "email": "Asa.Segerstolpe@ki.se",
+                  "institution": "Karolinska Institutet",
+                  "laboratory": "Department of Cell and Molecular Biology (CMB)",
+                  "address": "Nobels vag 3, 171 77, Stockholm",
+                  "country": "Sweden",
+                  "corresponding_contributor": false
+              },
+              {
+                  "name": "Mallory,Ann,Freeberg",
+                  "email": "mfreeberg@ebi.ac.uk",
+                  "institution": "EMBL-EBI",
+                  "laboratory": "Human Cell Atlas Data Coordination Platform",
+                  "address": "Wellcome Trust Genome Campus, Cambridge",
+                  "country": "UK",
+                  "project_role": {
+                      "text": "Human Cell Atlas wrangler",
+                      "ontology": "EFO:0009737",
+                      "ontology_label": "data curator"
+                  },
+                  "orcid_id": "0000-0003-2949-3921",
+                  "corresponding_contributor": false
+              },
+              {
+                  "name": "Laura,,Huerta",
+                  "email": "lauhuema@ebi.ac.uk",
+                  "institution": "EMBL-EBI",
+                  "laboratory": "Molecular Atlas",
+                  "address": "Wellcome Trust Genome Campus, Cambridge UK",
+                  "country": "UK",
+                  "project_role": {
+                      "text": "external curator",
+                      "ontology": "EFO:0009737",
+                      "ontology_label": "data curator"
+                  },
+                  "orcid_id": "0000-0002-8748-599X",
+                  "corresponding_contributor": false
+              },
+              {
+                  "name": "Anja,,Fullgrabe",
+                  "email": "anjaf@ebi.ac.uk",
+                  "institution": "EMBL-EBI",
+                  "address": "Wellcome Trust Genome Campus, Cambridge UK",
+                  "country": "UK",
+                  "project_role": {
+                      "text": "external curator",
+                      "ontology": "EFO:0009737",
+                      "ontology_label": "data curator"
+                  },
+                  "orcid_id": "0000-0002-8674-0039",
+                  "corresponding_contributor": false
+              }
+          ],
+          "publications": [
+              {
+                  "authors": [
+                      "Segerstolpe A",
+                      "Palasantza A",
+                      "Eliasson P",
+                      "Andersson EM",
+                      "Andreasson AC",
+                      "Sun X",
+                      "Picelli S",
+                      "Sabirsh A",
+                      "Clausen M",
+                      "Bjursell MK",
+                      "Smith DM",
+                      "Kasper M",
+                      "Ammala C",
+                      "Sandberg R"
+                  ],
+                  "title": "Single-Cell Transcriptome Profiling of Human Pancreatic Islets in Health and Type 2 Diabetes",
+                  "doi": "10.1016/j.cmet.2016.08.020",
+                  "pmid": 27667667,
+                  "url": "https://europepmc.org/abstract/MED/27667667"
+              }
+          ]
+      },
+      "submissionDate": "2019-05-14T09:16:14.479Z",
+      "updateDate": "2019-05-14T09:25:04.555Z",
+      "user": "google-oauth2|111466450643076624860",
+      "lastModifiedUser": "anonymousUser",
+      "type": "Project",
+      "uuid": {
+          "uuid": "ae71be1d-ddd8-4feb-9bed-24c3ddb6e1ad"
+      },
+      "events": [],
+      "firstDcpVersion": null,
+      "dcpVersion": null,
+      "contentLastModified": "2021-09-22T11:30:16.344644Z",
+      "accession": null,
+      "validationState": "Valid",
+      "validationErrors": [],
+      "isUpdate": false,
+      "releaseDate": null,
+      "accessionDate": null,
+      "technology": null,
+      "organ": null,
+      "cellCount": null,
+      "dataAccess": null,
+      "identifyingOrganisms": null,
+      "primaryWrangler": null,
+      "secondaryWrangler": null,
+      "wranglingState": null,
+      "wranglingPriority": null,
+      "wranglingNotes": null,
+      "isInCatalogue": false,
+      "cataloguedDate": null,
+      "publicationsInfo": [],
+      "hasOpenSubmission": false,
+      "_links": {
+          "self": {
+              "href": "http://localhost:8080/projects/5cda875ed96dad000856d2d0"
+          },
+          "project": {
+              "href": "http://localhost:8080/projects/5cda875ed96dad000856d2d0",
+              "title": "A single project"
+          },
+          "processing": {
+              "href": "http://localhost:8080/projects/5cda875ed96dad000856d2d0/processingEvent"
+          },
+          "draft": {
+              "href": "http://localhost:8080/projects/5cda875ed96dad000856d2d0/draftEvent"
+          },
+          "bundleManifests": {
+              "href": "http://localhost:8080/projects/5cda875ed96dad000856d2d0/bundleManifests",
+              "title": "Access or create bundle manifests (describing which submitted contents went into which bundle in the datastore)"
+          },
+          "supplementaryFiles": {
+              "href": "http://localhost:8080/projects/5cda875ed96dad000856d2d0/supplementaryFiles"
+          },
+          "submissionEnvelopes": {
+              "href": "http://localhost:8080/projects/5cda875ed96dad000856d2d0/submissionEnvelopes",
+              "title": "Access or create new submission envelopes"
+          },
+          "submissionEnvelope": {
+              "href": "http://localhost:8080/projects/5cda875ed96dad000856d2d0/submissionEnvelope",
+              "title": "A single submission envelope"
+          }
+      }
+  },
+  {
+      "content": {
+          "describedBy": "https://schema.humancellatlas.org/type/project/14.0.0/project",
+          "schema_type": "project",
+          "project_core": {
+              "project_short_name": "Mouse Melanoma",
+              "project_title": "Melanoma infiltration of stromal and immune cells",
+              "project_description": "The cancer microenvironment is a complex ecosystem characterized by dynamic interactions between diverse cell types, including malignant, immune and stromal cells. Here, we performed single-cell RNA sequencing on CD45+ and CD45- cells isolated from tumour and lymph nodes during a mouse model of melanoma. The transcriptional profiles of these individual cells taken at different time points coupled with assembled T cell receptor sequences, allowed us to identify distinct immune subpopulations and delineate their developmental trajectory. Our study provides insights into the complex interplay among cells within the tumour microenvironment and presents a valuable resource for future translational applications."
+          },
+          "insdc_project_accessions": [
+              "ERP112843"
+          ],
+          "insdc_study_accessions": [
+              "PRJEB30390"
+          ],
+          "array_express_accessions": [
+              "E-MTAB-7427",
+              "E-MTAB-7417"
+          ],
+          "supplementary_links": [
+              "https://www.ebi.ac.uk/gxa/sc/experiments/E-EHCA-2/Results"
+          ],
+          "contributors": [
+              {
+                  "name": "Sarah,A,Teichmann",
+                  "email": "st9@sanger.ac.uk",
+                  "institution": "Wellcome Trust Sanger Institute",
+                  "laboratory": "Sarah Teichmann",
+                  "address": "Wellcome Trust Genome Campus, Cambridge UK",
+                  "country": "UK",
+                  "corresponding_contributor": true
+              },
+              {
+                  "name": "Mirjana,,Efremova",
+                  "email": "me5@sanger.ac.uk",
+                  "institution": "Wellcome Trust Sanger Institute",
+                  "laboratory": "Sarah Teichmann",
+                  "address": "Wellcome Trust Genome Campus, Cambridge UK",
+                  "country": "UK",
+                  "corresponding_contributor": false
+              },
+              {
+                  "name": "Bidesh,,Mahata",
+                  "email": "bm11@sanger.ac.uk",
+                  "institution": "Wellcome Trust Sanger Institute",
+                  "laboratory": "Sarah Teichmann",
+                  "address": "Wellcome Trust Genome Campus, Cambridge UK",
+                  "country": "UK",
+                  "corresponding_contributor": false
+              },
+              {
+                  "name": "Jacqueline,D,Shields",
+                  "email": "js970@mrc-cu.cam.ac.uk",
+                  "institution": "University of Cambridge",
+                  "laboratory": "MRC Cancer Unit",
+                  "address": "Box 197, Cambridge Biomedical Campus, Cambridge, CB2 0XZ",
+                  "country": "UK",
+                  "corresponding_contributor": true
+              },
+              {
+                  "name": "Sarah,,Davidson",
+                  "email": "SED49@MRCCU.cam.ac.uk",
+                  "institution": "University of Cambridge",
+                  "laboratory": "MRC Cancer Unit",
+                  "address": "Box 197, Cambridge Biomedical Campus, Cambridge, CB2 0XZ",
+                  "country": "UK",
+                  "corresponding_contributor": false
+              },
+              {
+                  "name": "Angela,,Riedel",
+                  "email": "a.riedel@dkfz-heidelberg.de",
+                  "institution": "DKFZ German Cancer Research Center",
+                  "country": "Germany",
+                  "corresponding_contributor": false
+              },
+              {
+                  "name": "Roser,,Vento-Tormo",
+                  "email": "rv4@sanger.ac.uk",
+                  "institution": "Wellcome Trust Sanger Institute",
+                  "laboratory": "Sarah Teichmann",
+                  "address": "Wellcome Trust Genome Campus, Cambridge UK",
+                  "country": "UK",
+                  "corresponding_contributor": false
+              },
+              {
+                  "name": "Jhuma,,Pramanik",
+                  "email": "jp19@sanger.ac.uk",
+                  "institution": "Wellcome Trust Sanger Institute",
+                  "laboratory": "Sarah Teichmann",
+                  "address": "Wellcome Trust Genome Campus, Cambridge UK",
+                  "country": "UK",
+                  "corresponding_contributor": false
+              },
+              {
+                  "name": "Gozde,,Kar",
+                  "email": "gkar@ebi.ac.uk",
+                  "institution": "EMBL-EBI",
+                  "laboratory": "Sarah Teichmann",
+                  "address": "Wellcome Trust Genome Campus, Cambridge UK",
+                  "country": "UK",
+                  "corresponding_contributor": false
+              },
+              {
+                  "name": "Jani,,Huuhtanen",
+                  "email": "jani.huuhtanen@helsinki.fi",
+                  "institution": "University of Helsinki",
+                  "country": "Finland",
+                  "corresponding_contributor": false
+              },
+              {
+                  "name": "Tzachi,,Hagai",
+                  "institution": "Wellcome Trust Sanger Institute",
+                  "address": "Wellcome Trust Genome Campus, Cambridge UK",
+                  "country": "UK",
+                  "corresponding_contributor": false
+              },
+              {
+                  "name": "Xi,,Chen",
+                  "institution": "Wellcome Trust Sanger Institute",
+                  "address": "Wellcome Trust Genome Campus, Cambridge UK",
+                  "country": "UK",
+                  "corresponding_contributor": false
+              },
+              {
+                  "name": "Muzlifah,A,Haniffa",
+                  "institution": "Newcastle University",
+                  "laboratory": "Institute of Cellular Medicine",
+                  "address": "Newcastle upon Tyne, NE2 4HH",
+                  "country": "UK",
+                  "corresponding_contributor": false
+              },
+              {
+                  "name": "Mallory,Ann,Freeberg",
+                  "email": "mfreeberg@ebi.ac.uk",
+                  "institution": "EMBL-EBI",
+                  "laboratory": "Human Cell Atlas Data Coordination Platform",
+                  "address": "Wellcome Trust Genome Campus, Cambridge UK",
+                  "country": "UK",
+                  "project_role": {
+                      "text": "Human Cell Atlas wrangler",
+                      "ontology": "EFO:0009737",
+                      "ontology_label": "data curator"
+                  },
+                  "orcid_id": "0000-0003-2949-3921",
+                  "corresponding_contributor": false
+              },
+              {
+                  "name": "Danielle,,Welter",
+                  "email": "dwelter@ebi.ac.uk",
+                  "institution": "EMBL-EBI",
+                  "laboratory": "Human Cell Atlas Data Coordination Platform",
+                  "address": "Wellcome Trust Genome Campus, Cambridge",
+                  "country": "UK",
+                  "project_role": {
+                      "text": "Human Cell Atlas wrangler",
+                      "ontology": "EFO:0009737",
+                      "ontology_label": "data curator"
+                  },
+                  "orcid_id": "0000-0003-1058-2668",
+                  "corresponding_contributor": false
+              }
+          ],
+          "funders": [
+              {
+                  "grant_id": "20193",
+                  "organization": "Cancer Research UK (CRUK)"
+              },
+              {
+                  "grant_title": "Decoding genetic switches in T helper cell differentiation",
+                  "grant_id": "260507",
+                  "organization": "European Research Council (ERC)"
+              },
+              {
+                  "grant_title": "Re(defining) CD4+ T Cell Identities One Cell at a Time",
+                  "grant_id": "646794",
+                  "organization": "European Research Council (ERC)"
+              },
+              {
+                  "grant_title": "Massive Reverse Genomics to Decipher Gene Regulatory Grammar",
+                  "grant_id": "664918",
+                  "organization": "Horizon 2020 (H2020)"
+              },
+              {
+                  "grant_id": "WT206194",
+                  "organization": "Wellcome Sanger Institute"
+              }
+          ],
+          "publications": [
+              {
+                  "authors": [
+                      "Davidson S",
+                      "Efremova M",
+                      "Riedel A",
+                      "Mahata B",
+                      "Pramanik J",
+                      "Huuhtanen F",
+                      "Kar G",
+                      "Vento-Tormo R",
+                      "Hagai T",
+                      "Chen X",
+                      "Haniffa MA",
+                      "Shields JD",
+                      "Teichmann SA"
+                  ],
+                  "title": "Single-cell RNA sequencing reveals a dynamic stromal niche within the evolving tumour microenvironment",
+                  "doi": "10.1101/467225",
+                  "url": "https://www.biorxiv.org/content/10.1101/467225v1"
+              }
+          ]
+      },
+      "submissionDate": "2019-05-14T10:52:33.885Z",
+      "updateDate": "2019-05-14T11:20:51.382Z",
+      "user": "google-oauth2|111466450643076624860",
+      "lastModifiedUser": "anonymousUser",
+      "type": "Project",
+      "uuid": {
+          "uuid": "8c3c290d-dfff-4553-8868-54ce45f4ba7f"
+      },
+      "events": [],
+      "firstDcpVersion": null,
+      "dcpVersion": null,
+      "contentLastModified": "2021-09-22T11:30:16.344739Z",
+      "accession": null,
+      "validationState": "Valid",
+      "validationErrors": [],
+      "isUpdate": false,
+      "releaseDate": null,
+      "accessionDate": null,
+      "technology": null,
+      "organ": null,
+      "cellCount": null,
+      "dataAccess": null,
+      "identifyingOrganisms": null,
+      "primaryWrangler": null,
+      "secondaryWrangler": null,
+      "wranglingState": null,
+      "wranglingPriority": null,
+      "wranglingNotes": null,
+      "isInCatalogue": false,
+      "cataloguedDate": null,
+      "publicationsInfo": [],
+      "hasOpenSubmission": false,
+      "_links": {
+          "self": {
+              "href": "http://localhost:8080/projects/5cda9df1d96dad0008579758"
+          },
+          "project": {
+              "href": "http://localhost:8080/projects/5cda9df1d96dad0008579758",
+              "title": "A single project"
+          },
+          "processing": {
+              "href": "http://localhost:8080/projects/5cda9df1d96dad0008579758/processingEvent"
+          },
+          "draft": {
+              "href": "http://localhost:8080/projects/5cda9df1d96dad0008579758/draftEvent"
+          },
+          "bundleManifests": {
+              "href": "http://localhost:8080/projects/5cda9df1d96dad0008579758/bundleManifests",
+              "title": "Access or create bundle manifests (describing which submitted contents went into which bundle in the datastore)"
+          },
+          "supplementaryFiles": {
+              "href": "http://localhost:8080/projects/5cda9df1d96dad0008579758/supplementaryFiles"
+          },
+          "submissionEnvelopes": {
+              "href": "http://localhost:8080/projects/5cda9df1d96dad0008579758/submissionEnvelopes",
+              "title": "Access or create new submission envelopes"
+          },
+          "submissionEnvelope": {
+              "href": "http://localhost:8080/projects/5cda9df1d96dad0008579758/submissionEnvelope",
+              "title": "A single submission envelope"
+          }
+      }
+  },
+  {
+              "content": {
+                  "describedBy": "https://schema.dev.data.humancellatlas.org/type/project/14.0.0/project",
+                  "schema_type": "project",
+                  "project_core": {
+                      "project_short_name": "Single cell RNAseq characterization of cell types produced over time in an in vitro model of human inhibitory interneuron differentiation.",
+                      "project_title": "Single-cell RNA-seq analysis  throughout a 125-day differentiation protocol that converted H1 human embryonic stem cells to a variety of ventrally-derived cell types.",
+                      "project_description": "Diverse cell types are produced from dorsal and ventral regions of the developing neural tube. In this study we describe a system for generating human inhibitory interneurons by ventralizing human embryonic stem cells in vitro and characterizing the gene expression of the cell types produced over time. We engineered a DCX-Citrine/Y hESC line to sort and characterize progenitor and neuron transcriptomics separately at both the subpopulation and single cell level. The cells generated in vitro were compared to similar populations present in human fetal brain samples by mapping gene expression data from human fetal cells onto the principal component analysis (PCA) space of in vitro-derived populations. Weighted gene co-expression network analysis (WGCNA) was used to determine the discreet cell types present at D24, D54, D100 and D125 of culture, and describe the gene expression changes that occur in progenitor and neuron populations over time. Immature lateral ganglionic eminence and medial ganglionic eminence cells are present at early timepoints, along with MGE-like and dorsal pallium-like neuronal progenitors. At later timepoints we observe the emergence of SST-expressing interneurons, as well as oligodendrocyte and astrocyte progenitors. We also identified genes that were upregulated in somatostatin-expressing interneurons as they mature. The transcriptomes of 1732 ventralized single cells were profiled by SmartSeq2 at different timepoints throughout a 125-day differentiation protocol that converted H1 human embryonic stem cells to a variety of ventrally-derived cell types."
+                  },
+                  "insdc_project_accessions": [
+                      "SRP096727"
+                  ],
+                  "geo_series_accessions": [
+                      "GSE93593"
+                  ],
+                  "insdc_study_accessions": [
+                      "PRJNA361254"
+                  ],
+                  "supplementary_links": [
+                      "https://www.ebi.ac.uk/gxa/sc/experiments/E-GEOD-93593/Results"
+                  ],
+                  "array_express_accessions": [
+                      "E-GEOD-93593"
+                  ],
+                  "contributors": [
+                      {
+                          "name": "Jennie,,Close",
+                          "email": "jenniec@alleninstitute.org",
+                          "institution": "The Allen Institute for Brain Science",
+                          "address": "615 Westlake Ave N, Seattle, WA",
+                          "country": "USA"
+                      },
+                      {
+                          "name": "Zizhen,,Yao",
+                          "institution": "The Allen Institute for Brain Science",
+                          "address": "615 Westlake Ave N, Seattle, WA",
+                          "country": "USA"
+                      },
+                      {
+                          "name": "Boaz,,Levi",
+                          "institution": "The Allen Institute for Brain Science",
+                          "address": "615 Westlake Ave N, Seattle, WA",
+                          "country": "USA"
+                      },
+                      {
+                          "name": "Jeremy,,Miller",
+                          "institution": "The Allen Institute for Brain Science",
+                          "address": "615 Westlake Ave N, Seattle, WA",
+                          "country": "USA"
+                      },
+                      {
+                          "name": "Trygve,,Bakken",
+                          "institution": "The Allen Institute for Brain Science",
+                          "address": "615 Westlake Ave N, Seattle, WA",
+                          "country": "USA"
+                      },
+                      {
+                          "name": "Vilas,,Menon",
+                          "institution": "The Allen Institute for Brain Science",
+                          "address": "615 Westlake Ave N, Seattle, WA",
+                          "country": "USA"
+                      },
+                      {
+                          "name": "Jonathan,,Ting",
+                          "institution": "The Allen Institute for Brain Science",
+                          "address": "615 Westlake Ave N, Seattle, WA",
+                          "country": "USA"
+                      },
+                      {
+                          "name": "Abigail,,Wall",
+                          "institution": "The Allen Institute for Brain Science",
+                          "address": "615 Westlake Ave N, Seattle, WA",
+                          "country": "USA"
+                      },
+                      {
+                          "name": "Anne-Rachel,,Krogstag",
+                          "institution": "The Allen Institute for Brain Science",
+                          "address": "615 Westlake Ave N, Seattle, WA",
+                          "country": "USA"
+                      },
+                      {
+                          "name": "Elliot,,Thomsen",
+                          "institution": "The Allen Institute for Brain Science",
+                          "address": "615 Westlake Ave N, Seattle, WA",
+                          "country": "USA"
+                      },
+                      {
+                          "name": "Angel,,Nelson",
+                          "institution": "The Allen Institute for Brain Science",
+                          "address": "615 Westlake Ave N, Seattle, WA",
+                          "country": "USA"
+                      },
+                      {
+                          "name": "John,,Mich",
+                          "institution": "The Allen Institute for Brain Science",
+                          "address": "615 Westlake Ave N, Seattle, WA",
+                          "country": "USA"
+                      },
+                      {
+                          "name": "Rebecca,,Hodge",
+                          "institution": "The Allen Institute for Brain Science",
+                          "address": "615 Westlake Ave N, Seattle, WA",
+                          "country": "USA"
+                      },
+                      {
+                          "name": "Soraya,,Shehata",
+                          "institution": "The Allen Institute for Brain Science",
+                          "address": "615 Westlake Ave N, Seattle, WA",
+                          "country": "USA"
+                      },
+                      {
+                          "name": "Ian,,Glass",
+                          "institution": "The Allen Institute for Brain Science",
+                          "address": "615 Westlake Ave N, Seattle, WA",
+                          "country": "USA"
+                      },
+                      {
+                          "name": "Susan,,Bort",
+                          "institution": "The Allen Institute for Brain Science",
+                          "address": "615 Westlake Ave N, Seattle, WA",
+                          "country": "USA"
+                      },
+                      {
+                          "name": "Nadiya,,Shapovalova",
+                          "institution": "The Allen Institute for Brain Science",
+                          "address": "615 Westlake Ave N, Seattle, WA",
+                          "country": "USA"
+                      },
+                      {
+                          "name": "Olivia,,Fong",
+                          "institution": "The Allen Institute for Brain Science",
+                          "address": "615 Westlake Ave N, Seattle, WA",
+                          "country": "USA"
+                      },
+                      {
+                          "name": "Kiet,,Ngo",
+                          "institution": "The Allen Institute for Brain Science",
+                          "address": "615 Westlake Ave N, Seattle, WA",
+                          "country": "USA"
+                      },
+                      {
+                          "name": "Joshua,,Grimley",
+                          "institution": "The Allen Institute for Brain Science",
+                          "address": "615 Westlake Ave N, Seattle, WA",
+                          "country": "USA"
+                      },
+                      {
+                          "name": "John,,Phillips",
+                          "institution": "The Allen Institute for Brain Science",
+                          "address": "615 Westlake Ave N, Seattle, WA",
+                          "country": "USA"
+                      },
+                      {
+                          "name": "Carol,,Thompson",
+                          "institution": "The Allen Institute for Brain Science",
+                          "address": "615 Westlake Ave N, Seattle, WA",
+                          "country": "USA"
+                      },
+                      {
+                          "name": "Sharad,,Ramanathan",
+                          "institution": "The Allen Institute for Brain Science",
+                          "address": "615 Westlake Ave N, Seattle, WA",
+                          "country": "USA"
+                      },
+                      {
+                          "name": "Ed,,Lein",
+                          "institution": "The Allen Institute for Brain Science",
+                          "address": "615 Westlake Ave N, Seattle, WA",
+                          "country": "USA"
+                      },
+                      {
+                          "name": "Laura,,Huerta",
+                          "email": "lauhuema@ebi.ac.uk",
+                          "institution": "EMBL-EBI",
+                          "laboratory": "Molecular Atlas",
+                          "address": "Wellcome Trust Genome Campus, Cambridge UK",
+                          "country": "UK",
+                          "project_role": {
+                              "text": "external curator",
+                              "ontology": "EFO:0009737",
+                              "ontology_label": "data curator"
+                          },
+                          "orcid_id": "0000-0002-8748-599X",
+                          "corresponding_contributor": false
+                      },
+                      {
+                          "name": "Matthew,,Green",
+                          "email": "hewgreen@ebi.ac.uk",
+                          "phone": "(+44) 122-349-4444",
+                          "institution": "EMBL-EBI European Bioinformatics Institute",
+                          "laboratory": "Human Cell Atlas Data Coordination Platform",
+                          "address": "Wellcome Trust Genome Campus, Hinxton, Cambridge CB10 1SD",
+                          "country": "UK",
+                          "project_role": {
+                              "text": "Human Cell Atlas wrangler",
+                              "ontology": "EFO:0009737",
+                              "ontology_label": "data curator"
+                          },
+                          "orcid_id": "0000-0003-2771-9894",
+                          "corresponding_contributor": false
+                      }
+                  ],
+                  "funders": [
+                      {
+                          "grant_title": "Directors Pioneer Award",
+                          "grant_id": "5DP1MH099906-03",
+                          "organization": "National Institute of Health"
+                      },
+                      {
+                          "grant_title": "National Science Foundation grant",
+                          "grant_id": "PHY-0952766",
+                          "organization": "National Science Foundation"
+                      }
+                  ],
+                  "publications": [
+                      {
+                          "authors": [
+                              "Close JL",
+                              "Yao Z",
+                              "Levi BP",
+                              "Miller JA",
+                              "Bakken TE",
+                              "Menon V",
+                              "Ting JT",
+                              "Wall A",
+                              "Krostag AR",
+                              "Thomsen ER",
+                              "Nelson AM",
+                              "Mich JK",
+                              "Hodge RD",
+                              "Shehata SI",
+                              "Glass IA",
+                              "Bort S",
+                              "Shapovalova NV",
+                              "Ngo NK",
+                              "Grimley JS",
+                              "Phillips JW",
+                              "Thompson CL",
+                              "Ramanathan S",
+                              "Lein E"
+                          ],
+                          "title": "Single-Cell Profiling of an In Vitro Model of Human Interneuron Development Reveals Temporal Dynamics of Cell Type Production and Maturation.",
+                          "doi": "10.1016/j.neuron.2017.02.014",
+                          "pmid": 28279351,
+                          "url": "https://europepmc.org/abstract/MED/28279351"
+                      }
+                  ]
+              },
+              "submissionDate": "2019-05-14T18:04:56.656Z",
+              "updateDate": "2019-05-14T18:07:39.856Z",
+              "user": "google-oauth2|112051666430310756380",
+              "lastModifiedUser": "anonymousUser",
+              "type": "Project",
+              "uuid": {
+                  "uuid": "2043c65a-1cf8-4828-a656-9e247d4e64f1"
+              },
+              "events": [],
+              "firstDcpVersion": null,
+              "dcpVersion": null,
+              "contentLastModified": "2021-09-22T12:26:57.960695Z",
+              "accession": null,
+              "validationState": "Valid",
+              "validationErrors": [],
+              "isUpdate": false,
+              "releaseDate": null,
+              "accessionDate": null,
+              "technology": null,
+              "organ": null,
+              "cellCount": null,
+              "dataAccess": null,
+              "identifyingOrganisms": null,
+              "primaryWrangler": null,
+              "secondaryWrangler": null,
+              "wranglingState": null,
+              "wranglingPriority": null,
+              "wranglingNotes": null,
+              "isInCatalogue": false,
+              "cataloguedDate": null,
+              "publicationsInfo": [],
+              "hasOpenSubmission": false,
+              "_links": {
+                  "self": {
+                      "href": "http://localhost:8080/projects/5cdb0348d96dad000858fff6"
+                  },
+                  "project": {
+                      "href": "http://localhost:8080/projects/5cdb0348d96dad000858fff6",
+                      "title": "A single project"
+                  },
+                  "processing": {
+                      "href": "http://localhost:8080/projects/5cdb0348d96dad000858fff6/processingEvent"
+                  },
+                  "draft": {
+                      "href": "http://localhost:8080/projects/5cdb0348d96dad000858fff6/draftEvent"
+                  },
+                  "bundleManifests": {
+                      "href": "http://localhost:8080/projects/5cdb0348d96dad000858fff6/bundleManifests",
+                      "title": "Access or create bundle manifests (describing which submitted contents went into which bundle in the datastore)"
+                  },
+                  "supplementaryFiles": {
+                      "href": "http://localhost:8080/projects/5cdb0348d96dad000858fff6/supplementaryFiles"
+                  },
+                  "submissionEnvelopes": {
+                      "href": "http://localhost:8080/projects/5cdb0348d96dad000858fff6/submissionEnvelopes",
+                      "title": "Access or create new submission envelopes"
+                  },
+                  "submissionEnvelope": {
+                      "href": "http://localhost:8080/projects/5cdb0348d96dad000858fff6/submissionEnvelope",
+                      "title": "A single submission envelope"
+                  }
+              }
+          },
+  {
+              "content": {
+                  "describedBy": "https://schema.humancellatlas.org/type/project/14.0.0/project",
+                  "schema_type": "project",
+                  "project_core": {
+                      "project_short_name": "Drop-seq, DroNc-seq, Fluidigm C1 Comparison",
+                      "project_title": "Comparison, calibration, and benchmarking of high-throughput single cell RNA-Seq techniques for unbiased cell-type classification",
+                      "project_description": "The Human Cell Atlas project seeks to identify and functionally characterize all cell types in the human body. Single-cell RNA-sequencing (scRNA-seq) methods quantify gene expression in individual cells. In principle, highly parallelized scRNA-seq approaches enable marker-free decomposition of cells from complex tissues to identify known and unknown cell types and provide direct insights into regulatory and functional states of each cell. Different scRNA-seq technologies vary in cell capture efficiency, library preparation, and throughput. Importantly, these approaches also vary in sensitivity and accuracy of mRNA quantification. The Human Cell Atlas project will collate data generated across many labs, necessitating the evaluation of experimental replicability, and comparing different experimental procedures. It is important to develop robust sequencing protocols and benchmark their performance on select cells and tissues. This project will perform a systematic comparison of three single cell RNA sequencing technologies, viz., Drop-Seq, Fluidigm C1, and DroNC-Seq and resulting datasets. Droplet-based methods facilitate high-throughput processing of tens of thousands of cells in parallel and at low costs, making them ideal for the Human Cell Atlas project. This project proposes to compare the sensitivity, accuracy, and precision with which the three methods quantify transcript levels within individual cells. In addition, this project will directly compare these methods using a ‘synthetic tissue’ created from a mixture of multiple cell types at known ratios."
+                  },
+                  "contributors": [
+                      {
+                          "name": "Anindita,, Basu",
+                          "email": "onibasu@uchicago.edu",
+                          "institution": "University of Chicago",
+                          "laboratory": "Basu",
+                          "address": "5835 S. Cottage Grove Ave., N516, Chicago, IL 60637",
+                          "country": "USA",
+                          "project_role": {
+                              "ontology": "EFO:0009736",
+                              "ontology_label": "principal investigator",
+                              "text": "principal investigator"
+                          },
+                          "corresponding_contributor": true
+                      },
+                      {
+                          "name": "Sebastian,, Pott",
+                          "email": "spott@uchicago.edu",
+                          "institution": "University of Chicago",
+                          "laboratory": "Pott",
+                          "country": "USA",
+                          "project_role": {
+                              "ontology": "EFO:0009736",
+                              "ontology_label": "principal investigator",
+                              "text": "principal investigator"
+                          },
+                          "corresponding_contributor": true
+                      },
+                      {
+                          "name": "Heather,, Eckart",
+                          "email": "heckart@uchicago.edu",
+                          "institution": "University of Chicago",
+                          "laboratory": "Basu",
+                          "address": "5835 S. Cottage Grove Ave., N516, Chicago, IL 60637",
+                          "country": "USA"
+                      },
+                      {
+                          "name": "Ryan,, Dohn",
+                          "email": "dohnr@uchicago.edu",
+                          "institution": "University of Chicago",
+                          "laboratory": "Basu",
+                          "address": "5835 S. Cottage Grove Ave., N516, Chicago, IL 60637",
+                          "country": "USA"
+                      },
+                      {
+                          "name": "Reem,, Elorbany",
+                          "email": "reemelorbany@uchicago.edu",
+                          "institution": "University of Chicago",
+                          "laboratory": "Pott",
+                          "country": "USA"
+                      },
+                      {
+                          "name": "Katie,, Rhodes",
+                          "email": "klrhodes@uchicago.edu",
+                          "institution": "University of Chicago",
+                          "laboratory": "Pott",
+                          "country": "USA"
+                      },
+                      {
+                          "name": "Eric,, Gauchat",
+                          "email": "egauchat@uchicago.edu",
+                          "institution": "University of Chicago",
+                          "laboratory": "Basu",
+                          "address": "5835 S. Cottage Grove Ave., N516, Chicago, IL 60637",
+                          "country": "USA"
+                      },
+                      {
+                          "name": "Parisa,, Nejad",
+                          "email": "pnejad@ucsc.edu",
+                          "institution": "University of California, Santa Cruz",
+                          "laboratory": "Human Cell Atlas Data Coordination Platform",
+                          "country": "USA",
+                          "project_role": {
+                              "ontology": "EFO:0009737",
+                              "ontology_label": "data curator",
+                              "text": "Human Cell Atlas wrangler"
+                          },
+                          "corresponding_contributor": false
+                      }
+                  ],
+                  "funders": [
+                      {
+                          "grant_id": "2017-174052",
+                          "organization": "Chan-Zuckerberg Initiative"
+                      },
+                      {
+                          "grant_title": "NIH MSTP Training Grant",
+                          "grant_id": "T32GM007281",
+                          "organization": "National Institutes of Health"
+                      },
+                      {
+                          "grant_id": "5T32GM007197",
+                          "organization": "National Institutes of Health"
+                      },
+                      {
+                          "grant_title": "AHA Predoctoral Fellowship",
+                          "grant_id": "18PRE34030197",
+                          "organization": "American Heart Association"
+                      },
+                      {
+                          "grant_id": "K12HL119995",
+                          "organization": "National Center for Advancing Translational Sciences of the National Institutes of Health"
+                      }
+                  ],
+                  "publications": [
+                      {
+                          "authors": [
+                              "Selewa Alan",
+                              "Dohn Ryan",
+                              "Eckart Heather",
+                              "Lozano Stephanie",
+                              "Xie Bingqing",
+                              "Gauchat Eric",
+                              "Elorbany Reem",
+                              "Rhodes Katherine",
+                              "Burnett Jonathan",
+                              "Gilad Yoav",
+                              "Pott Sebastian",
+                              "Basu Anindita"
+                          ],
+                          "title": "Systematic Comparison of High-throughput Single-Cell and  Single-Nucleus Transcriptomes during Cardiomyocyte Differentiation",
+                          "doi": "10.1101/585901",
+                          "url": "https://www.biorxiv.org/content/10.1101/585901v2"
+                      }
+                  ]
+              },
+              "submissionDate": "2019-05-15T13:54:21.507Z",
+              "updateDate": "2019-05-15T13:54:26.976Z",
+              "user": "google-oauth2|110548651158605123831",
+              "lastModifiedUser": "anonymousUser",
+              "type": "Project",
+              "uuid": {
+                  "uuid": "a9c022b4-c771-4468-b769-cabcf9738de3"
+              },
+              "events": [],
+              "firstDcpVersion": null,
+              "dcpVersion": null,
+              "contentLastModified": "2021-09-22T12:26:57.960857Z",
+              "accession": null,
+              "validationState": "Valid",
+              "validationErrors": [],
+              "isUpdate": false,
+              "releaseDate": null,
+              "accessionDate": null,
+              "technology": null,
+              "organ": null,
+              "cellCount": null,
+              "dataAccess": null,
+              "identifyingOrganisms": null,
+              "primaryWrangler": null,
+              "secondaryWrangler": null,
+              "wranglingState": null,
+              "wranglingPriority": null,
+              "wranglingNotes": null,
+              "isInCatalogue": false,
+              "cataloguedDate": null,
+              "publicationsInfo": [],
+              "hasOpenSubmission": false,
+              "_links": {
+                  "self": {
+                      "href": "http://localhost:8080/projects/5cdc1a0dd96dad0008593266"
+                  },
+                  "project": {
+                      "href": "http://localhost:8080/projects/5cdc1a0dd96dad0008593266",
+                      "title": "A single project"
+                  },
+                  "processing": {
+                      "href": "http://localhost:8080/projects/5cdc1a0dd96dad0008593266/processingEvent"
+                  },
+                  "draft": {
+                      "href": "http://localhost:8080/projects/5cdc1a0dd96dad0008593266/draftEvent"
+                  },
+                  "bundleManifests": {
+                      "href": "http://localhost:8080/projects/5cdc1a0dd96dad0008593266/bundleManifests",
+                      "title": "Access or create bundle manifests (describing which submitted contents went into which bundle in the datastore)"
+                  },
+                  "supplementaryFiles": {
+                      "href": "http://localhost:8080/projects/5cdc1a0dd96dad0008593266/supplementaryFiles"
+                  },
+                  "submissionEnvelopes": {
+                      "href": "http://localhost:8080/projects/5cdc1a0dd96dad0008593266/submissionEnvelopes",
+                      "title": "Access or create new submission envelopes"
+                  },
+                  "submissionEnvelope": {
+                      "href": "http://localhost:8080/projects/5cdc1a0dd96dad0008593266/submissionEnvelope",
+                      "title": "A single submission envelope"
+                  }
+              }
+          },
+  {
+              "content": {
+                  "contributors": [
+                      {
+                          "name": "Eyal David",
+                          "email": "eyald.david@weizmann.ac.il",
+                          "phone": "972-8-934-6975",
+                          "institution": "The Weizmann Institute of Science",
+                          "laboratory": "Prof. Ido Amit",
+                          "address": "Department of Immunology, Wolfson bldg., Rooms 252, 257, 258\nWeizmann Institute of Science\nRehovot, 76100",
+                          "country": "Israel",
+                          "corresponding_contributor": false
+                      },
+                      {
+                          "name": "Guy Ledergor",
+                          "email": "guy.ledergor@weizmann.ac.il",
+                          "phone": "972-8-934-6975",
+                          "institution": "The Weizmann Institute of Science",
+                          "laboratory": "Prof. Ido Amit",
+                          "address": "Department of Immunology, Wolfson bldg., Rooms 252, 257, 258\nWeizmann Institute of Science\nRehovot, 76100",
+                          "country": "Israel",
+                          "corresponding_contributor": false
+                      },
+                      {
+                          "name": "Assaf Weiner",
+                          "email": "assaf.weiner@weizmann.ac.il",
+                          "phone": "972-8-934-6976",
+                          "institution": "The Weizmann Institute of Science",
+                          "laboratory": "Prof. Ido Amit",
+                          "address": "Department of Immunology, Wolfson bldg., Rooms 252, 257, 258\nWeizmann Institute of Science\nRehovot, 76100",
+                          "country": "Israel",
+                          "corresponding_contributor": false
+                      },
+                      {
+                          "name": "Ido Amit",
+                          "email": "ido.amit@weizmann.ac.il",
+                          "phone": "972-8-934-6976",
+                          "institution": "The Weizmann Institute of Science",
+                          "laboratory": "Prof. Ido Amit",
+                          "address": "Department of Immunology, Wolfson bldg., Rooms 252, 257, 258\nWeizmann Institute of Science\nRehovot, 76100",
+                          "country": "Israel",
+                          "corresponding_contributor": true
+                      },
+                      {
+                          "name": "Matthew,,Green",
+                          "email": "hewgreen@ebi.ac.uk",
+                          "phone": "(+44) 122-349-4444",
+                          "institution": "EMBL-EBI European Bioinformatics Institute",
+                          "laboratory": "Human Cell Atlas Data Coordination Platform",
+                          "address": "Wellcome Trust Genome Campus, Hinxton, Cambridge CB10 1SD",
+                          "country": "UK",
+                          "corresponding_contributor": false,
+                          "project_role": {
+                              "text": "Human Cell Atlas wrangler",
+                              "ontology": "EFO:0009737",
+                              "ontology_label": "data curator"
+                          },
+                          "orcid_id": "0000-0003-2771-9894"
+                      }
+                  ],
+                  "describedBy": "https://schema.humancellatlas.org/type/project/14.0.0/project",
+                  "funders": [
+                      {
+                          "grant_id": "not provided",
+                          "organization": "Benoziyo Family Fund"
+                      },
+                      {
+                          "grant_id": "not provided",
+                          "organization": "Clalit Health Care Services"
+                      },
+                      {
+                          "grant_id": "not provided",
+                          "organization": "Mrs. and Mr. Barry Lang"
+                      },
+                      {
+                          "grant_id": "not provided",
+                          "organization": "Chan Zuckerberg Initiative"
+                      },
+                      {
+                          "grant_title": "The Howard Hughes Medical Institute International Scholar award",
+                          "grant_id": "not provided",
+                          "organization": "Howard Hughes Medical Institute"
+                      },
+                      {
+                          "grant_id": "ERC-COG",
+                          "organization": "European Research Council Consolidator Grant"
+                      },
+                      {
+                          "grant_title": "Melanoma Research Alliance",
+                          "grant_id": "509044",
+                          "organization": "Melanoma Research Alliance Established Investigator Award"
+                      },
+                      {
+                          "grant_id": "703/15",
+                          "organization": "Israel Science Foundation"
+                      },
+                      {
+                          "grant_id": "not provided",
+                          "organization": "Ernest and Bonnie Beutler Research Program of Excellence in Genomic Medicine"
+                      },
+                      {
+                          "grant_id": "not provided",
+                          "organization": "Helen and Martin Kimmel award for innovative investigation"
+                      },
+                      {
+                          "grant_id": "not provided",
+                          "organization": "Minerva Stiftung research grant"
+                      },
+                      {
+                          "grant_id": "not provided",
+                          "organization": "Israeli Ministry of Science, Technology, and Space"
+                      },
+                      {
+                          "grant_id": "not provided",
+                          "organization": "David and Fela Shapell Family Foundation"
+                      },
+                      {
+                          "grant_id": "not provided",
+                          "organization": "NeuroMac DFG/Transregional Collaborative Research Center Grant"
+                      },
+                      {
+                          "grant_id": "not provided",
+                          "organization": "Abramson Family Center for Young Scientists"
+                      },
+                      {
+                          "grant_id": "scAssembly",
+                          "organization": "European Research Council"
+                      },
+                      {
+                          "grant_title": "ERC 2015 Starting Grant",
+                          "grant_id": "MYELOMANEXT",
+                          "organization": "European Research Council"
+                      },
+                      {
+                          "grant_id": "not provided",
+                          "organization": "Flight Attendant Medical Research Institute"
+                      }
+                  ],
+                  "geo_series_accessions": [
+                      "GSE117156"
+                  ],
+                  "project_core": {
+                      "project_short_name": "BM_PC",
+                      "project_title": "Bone marrow plasma cells from hip replacement surgeries",
+                      "project_description": "Our aims are to generate a full representation of human hematopoiesis in blood and bone marrow of humans using a multi-tier and iterative collection and analysis of 200,000 cells from ten healthy human bone"
+                  },
+                  "publications": [
+                      {
+                          "authors": [
+                              "Ledergor, G",
+                              "Weiner, A",
+                              "Zada, M",
+                              "Wang, S-Y",
+                              "Cohen, YC",
+                              "Gatt, ME",
+                              "Snir, N",
+                              "Magen, H",
+                              "Koren-Michowitz, M",
+                              "Herzog-Tzarfati, K",
+                              "Keren-Shaul, H",
+                              "Bornstein, C",
+                              "Rotkopf, R",
+                              "Yofe, I",
+                              "David, E",
+                              "Yellapantula, V",
+                              "Kay, S",
+                              "Salai, M",
+                              "Ben Yehuda, D",
+                              "Nagler, A",
+                              "Shvidel, L",
+                              "Orr-Urtreger, A",
+                              "Halpern, KB",
+                              "Itzkovitz, S",
+                              "Landgren, O",
+                              "San-Miguel, J",
+                              "Paiva, B",
+                              "Keats, JJ",
+                              "Papaemmanuil, E",
+                              "Avivi, I",
+                              "Barbash, GI",
+                              "Tanay, A",
+                              "Amit, I"
+                          ],
+                          "title": "Single cell dissection of plasma cell heterogeneity in symptomatic and asymptomatic myeloma",
+                          "doi": "10.1038/s41591-018-0269-2",
+                          "pmid": 30523328,
+                          "url": "https://www.nature.com/articles/s41591-018-0269-2"
+                      }
+                  ],
+                  "schema_type": "project"
+              },
+              "submissionDate": "2019-05-16T08:31:17.431Z",
+              "updateDate": "2021-02-10T14:19:29.469Z",
+              "user": "google-oauth2|111466450643076624860",
+              "lastModifiedUser": "anonymousUser",
+              "type": "Project",
+              "uuid": {
+                  "uuid": "a29952d9-925e-40f4-8a1c-274f118f1f51"
+              },
+              "events": [],
+              "firstDcpVersion": "2021-02-10T14:19:25.043Z",
+              "dcpVersion": "2021-02-10T14:19:25.043Z",
+              "contentLastModified": "2021-02-10T14:19:25.043Z",
+              "accession": null,
+              "validationState": "Valid",
+              "validationErrors": [],
+              "isUpdate": false,
+              "releaseDate": null,
+              "accessionDate": null,
+              "technology": null,
+              "organ": null,
+              "cellCount": null,
+              "dataAccess": null,
+              "identifyingOrganisms": null,
+              "primaryWrangler": null,
+              "secondaryWrangler": null,
+              "wranglingState": null,
+              "wranglingPriority": null,
+              "wranglingNotes": null,
+              "isInCatalogue": false,
+              "cataloguedDate": null,
+              "publicationsInfo": [],
+              "hasOpenSubmission": false,
+              "_links": {
+                  "self": {
+                      "href": "http://localhost:8080/projects/5cdd1fd5d96dad00085af1b0"
+                  },
+                  "project": {
+                      "href": "http://localhost:8080/projects/5cdd1fd5d96dad00085af1b0",
+                      "title": "A single project"
+                  },
+                  "processing": {
+                      "href": "http://localhost:8080/projects/5cdd1fd5d96dad00085af1b0/processingEvent"
+                  },
+                  "draft": {
+                      "href": "http://localhost:8080/projects/5cdd1fd5d96dad00085af1b0/draftEvent"
+                  },
+                  "bundleManifests": {
+                      "href": "http://localhost:8080/projects/5cdd1fd5d96dad00085af1b0/bundleManifests",
+                      "title": "Access or create bundle manifests (describing which submitted contents went into which bundle in the datastore)"
+                  },
+                  "supplementaryFiles": {
+                      "href": "http://localhost:8080/projects/5cdd1fd5d96dad00085af1b0/supplementaryFiles"
+                  },
+                  "submissionEnvelopes": {
+                      "href": "http://localhost:8080/projects/5cdd1fd5d96dad00085af1b0/submissionEnvelopes",
+                      "title": "Access or create new submission envelopes"
+                  },
+                  "submissionEnvelope": {
+                      "href": "http://localhost:8080/projects/5cdd1fd5d96dad00085af1b0/submissionEnvelope",
+                      "title": "A single submission envelope"
+                  }
+              }
+          }
+]

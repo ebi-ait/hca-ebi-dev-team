@@ -1,0 +1,11 @@
+argparse~=1.4.0
+assertpy
+excel-submission-broker
+hca-ingest
+json-converter
+Levenshtein
+mergedeep
+openpyxl~=3.0.7
+pandas
+python-dotenv
+requests~=2.25.1

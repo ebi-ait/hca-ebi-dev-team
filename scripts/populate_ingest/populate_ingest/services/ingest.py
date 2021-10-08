@@ -71,3 +71,6 @@ class QuickIngest(IngestApi):
         results = response.json()
         count = results.get('page', {}).get('totalElements', 0)
         return count > 0
+
+    def get_projects(self):
+        return self.get_all(url=self.url + '/projects',entity_type='projects')
