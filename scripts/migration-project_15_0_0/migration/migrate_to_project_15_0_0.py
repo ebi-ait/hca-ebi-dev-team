@@ -14,20 +14,29 @@ import requests
 from migration.util import write_json, load_list
 
 INGEST_API = os.environ['INGEST_API_URL']
+INGEST_API.strip('/')
 INGEST_API_TOKEN = os.environ['INGEST_API_TOKEN']
 
-HCA_PUB_PROJECT_UUIDS_FILE = 'hca-pub-project-uuids.txt'
-DCP1_PROJECT_UUIDS_FILE = 'dcp1-project-uuids.txt'
-PROJECT_UUIDS_TO_MIGRATE_FILE = 'batch1.txt'
+PROJECTS_FILE = os.environ.get('PROJECTS_FILE')
 
 TARGET_SCHEMA_URL = 'https://schema.humancellatlas.org/type/project/15.0.0/project'
 
 DEFAULT_HEADERS = {'Content-type': 'application/json'}
 
+HCA_PUB_PROJECT_UUIDS = load_list('hca-pub-project-uuids.txt')
 
-HCA_PUB_PROJECT_UUIDS = load_list(HCA_PUB_PROJECT_UUIDS_FILE)
-DCP1_PROJECT_UUIDS = load_list(DCP1_PROJECT_UUIDS_FILE)
-PROJECT_UUIDS_TO_MIGRATE = load_list(PROJECT_UUIDS_TO_MIGRATE_FILE)
+LOGGER = logging.getLogger(__name__)
+LOGGER.setLevel(logging.INFO)
+
+
+def get_project_by_uuid(project_uuid: str):
+    r = requests.get(f'{INGEST_API}/projects/search/findByUuid?uuid={project_uuid}')
+    r.raise_for_status()
+    return r.json()
+
+
+def get_projects_from_uuids(projects: List[str]):
+    return [get_project_by_uuid(project_uuid) for project_uuid in projects]
 
 
 def get_projects() -> List[dict]:
@@ -53,8 +62,8 @@ def update_projects(projects: List[dict]):
         for project in projects:
             update_project(context, project)
     except Exception as e:
-        logging.exception(e)
-        logging.error(f'An exception occurred {str(e)}. Saving context...')
+        LOGGER.exception(e)
+        LOGGER.error(f'An exception occurred {str(e)}. Saving context...')
 
     timestamp = time.strftime("%Y%m%d-%H%M%S")
     write_json(context, f'add_project_estimated_cell_count-{timestamp}.json')
@@ -67,7 +76,7 @@ def update_project(context: dict, project: dict):
     new_content = copy.deepcopy(content)
 
     if described_by != TARGET_SCHEMA_URL:
-        logging.info(f'Processing project {project_uuid}...')
+        LOGGER.info(f'Processing project {project_uuid}...')
         context['project_count'] += 1
 
         submission_envelopes = get_project_submissions(project)
@@ -88,12 +97,14 @@ def update_project(context: dict, project: dict):
         }
 
         try:
-            patch_project({'content': new_content}, project_url)
+            response = patch_project({'content': new_content}, project_url)
+            response.raise_for_status()
             context['new_content_by_project'][project_uuid]['patched'] = True
             context['patched_count'] += 1
-            logging.info(f'Updated project {project_uuid}...')
+            LOGGER.info(f'Updated project {project_uuid}...')
         except Exception as e:
             context['new_content_by_project'][project_uuid]['error'] = str(e)
+            LOGGER.exception(f'Project {project_uuid} error: {str(e)}')
 
 
 def update_official_hca_publication(context, new_content, project_uuid):
@@ -126,7 +137,7 @@ def update_cell_count(context, project, new_content):
 def patch_project(patch: dict, project_url: str):
     headers = {'Authorization': f'Bearer {INGEST_API_TOKEN}', 'Content-type': 'application/json'}
     response = requests.patch(project_url, data=json.dumps(patch), headers=headers)
-    response.raise_for_status()
+    return response
 
 
 def get_project_submissions(project: dict) -> List[dict]:
@@ -147,5 +158,9 @@ def extract_submission_data(submission: dict):
 
 
 if __name__ == '__main__':
-    projects = get_projects()
+    if PROJECTS_FILE:
+        project_uuids = load_list(PROJECTS_FILE)
+        projects = get_projects_from_uuids(project_uuids)
+    else:
+        projects = get_projects()
     update_projects(projects)
