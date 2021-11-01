@@ -1,15 +1,20 @@
 import logging
+import os
 import uuid
 from datetime import datetime
 
 from bson import JAVA_LEGACY, CodecOptions
 from pymongo import MongoClient
 
-DB_CLIENT = MongoClient('localhost', 27017)
-DB = DB_CLIENT.get_database('admin')
-
 logging.basicConfig(level=logging.INFO)
 LOGGER = logging.getLogger(__name__)
+
+DCP1_GS_FILES_LS = os.environ.get('DCP1_GS_FILES_LS')
+DB_HOST = os.environ.get('DB_HOST', 'localhost')
+DB_PORT = os.environ.get('DB_PORT', 27017)
+
+DB_CLIENT = MongoClient(DB_HOST, 27017)
+DB = DB_CLIENT.get_database('admin')
 
 DCP_VERSION_FORMAT = "%Y-%m-%dT%H:%M:%S.%fZ"
 
@@ -106,7 +111,7 @@ def convert_dcp_version_to_date(version: str):
 
 
 if __name__ == '__main__':
-    lines = load_lines_from_file('_local/dcp1-metadata.txt')
+    lines = load_lines_from_file(DCP1_GS_FILES_LS)
     for line in lines:
         concrete_entity_type, uuid_str, version = find_type_uuid_version(line)
         collection = COLLECTION_MAP[concrete_entity_type]
