@@ -1,6 +1,7 @@
 from datetime import datetime
 from unittest import TestCase
 
+from assertpy import assert_that
 from populate_dcp_version import find_type_uuid_version, determine_updates
 
 
@@ -13,9 +14,9 @@ class PopulateDcpVersionTest(TestCase):
         type, uuid, version = find_type_uuid_version(line)
 
         # then
-        self.assertEqual(type, 'cell_line')
-        self.assertEqual(uuid, '06edf73c-a9ca-4a66-acf4-14495f2a1977')
-        self.assertEqual(version, '2019-05-15T13:54:25.988000Z')
+        assert_that(type).is_equal_to('cell_line')
+        assert_that(uuid).is_equal_to('06edf73c-a9ca-4a66-acf4-14495f2a1977')
+        assert_that(version).is_equal_to('2019-05-15T13:54:25.988000Z')
 
     def test_determine_updates(self):
         # given
@@ -28,7 +29,7 @@ class PopulateDcpVersionTest(TestCase):
         updates = determine_updates(doc, date_obj)
 
         # then
-        self.assertEqual(updates, {'dcpVersion': date_obj, 'firstDcpVersion': date_obj})
+        assert_that(updates).is_equal_to({'dcpVersion': date_obj, 'firstDcpVersion': date_obj})
 
     def test_determine_updates__only_first_dcp_version(self):
         # given
@@ -43,4 +44,4 @@ class PopulateDcpVersionTest(TestCase):
         updates = determine_updates(doc, date_obj)
 
         # then
-        self.assertEqual(updates, {'firstDcpVersion': date_obj})
+        assert_that(updates).is_equal_to({'firstDcpVersion': date_obj})
