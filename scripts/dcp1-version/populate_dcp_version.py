@@ -9,7 +9,7 @@ from pymongo import MongoClient
 logging.basicConfig(level=logging.INFO)
 LOGGER = logging.getLogger(__name__)
 
-DCP1_GS_FILES_LS = os.environ.get('DCP1_GS_FILES_LS')
+DCP1_GS_FILES_LIST = os.environ.get('DCP1_GS_FILES_LIST')
 DB_HOST = os.environ.get('DB_HOST', 'localhost')
 DB_PORT = os.environ.get('DB_PORT', 27017)
 
@@ -91,19 +91,15 @@ def determine_updates(doc: dict, date_obj: datetime):
     return update
 
 
-def update_dcp_versions(collection: str, doc: dict, date_obj: datetime):
-    update = determine_updates(doc, date_obj)
-
-    if update:
-        DB[collection].update_one(
-            {
-                '_id': doc.get('_id')
-            },
-            {
-                "$set": update
-            }
-        )
-        LOGGER.info('updated!')
+def update_dcp_versions(collection: str, doc: dict, update: dict):
+    DB[collection].update_one(
+        {
+            '_id': doc.get('_id')
+        },
+        {
+            "$set": update
+        }
+    )
 
 
 def convert_dcp_version_to_date(version: str):
@@ -111,10 +107,13 @@ def convert_dcp_version_to_date(version: str):
 
 
 if __name__ == '__main__':
-    lines = load_lines_from_file(DCP1_GS_FILES_LS)
+    lines = load_lines_from_file(DCP1_GS_FILES_LIST)
     for line in lines:
         concrete_entity_type, uuid_str, version = find_type_uuid_version(line)
         collection = COLLECTION_MAP[concrete_entity_type]
         doc = find_doc_by_uuid(collection, uuid_str)
         date_obj = convert_dcp_version_to_date(version)
-        update_dcp_versions(collection, doc, date_obj)
+        update = determine_updates(doc, date_obj)
+        if update:
+            update_dcp_versions(collection, doc, date_obj)
+            LOGGER.info('updated!')
