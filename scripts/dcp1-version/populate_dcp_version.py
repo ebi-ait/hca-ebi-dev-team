@@ -78,8 +78,6 @@ def determine_updates(doc: dict, date_obj: datetime):
     first_dcp_version = doc.get('firstDcpVersion')
 
     if dcp_version and first_dcp_version:
-        LOGGER.info(
-            f'{collection} {str(id)} already has firstDcpVersion {first_dcp_version} and dcpVersion {dcp_version}')
         return None
 
     update = {
@@ -106,19 +104,23 @@ def convert_dcp_version_to_date(version: str):
     return datetime.strptime(version, DCP_VERSION_FORMAT)
 
 
+def process_path(path: str):
+    try:
+        concrete_entity_type, uuid_str, version = find_type_uuid_version(path)
+        collection = COLLECTION_MAP[concrete_entity_type]
+        doc = find_doc_by_uuid(collection, uuid_str)
+        date_obj = convert_dcp_version_to_date(version)
+        update = determine_updates(doc, date_obj)
+        if update:
+            update_dcp_versions(collection, doc, update)
+            LOGGER.info('updated!')
+    except Exception as e:
+        LOGGER.error(f'An error happened while processing line {path}: {str(e)}')
+        LOGGER.exception(e)
+
+
 if __name__ == '__main__':
-    lines = load_lines_from_file(DCP1_GS_FILES_LIST)
-    for line in lines:
-        LOGGER.info(f'Processing {line}')
-        try:
-            concrete_entity_type, uuid_str, version = find_type_uuid_version(line)
-            collection = COLLECTION_MAP[concrete_entity_type]
-            doc = find_doc_by_uuid(collection, uuid_str)
-            date_obj = convert_dcp_version_to_date(version)
-            update = determine_updates(doc, date_obj)
-            if update:
-                update_dcp_versions(collection, doc, update)
-                LOGGER.info('updated!')
-        except Exception as e:
-            LOGGER.error(f'An error happened while processing line {line}: {str(e)}')
-            LOGGER.exception(e)
+    metadata_file_paths = load_lines_from_file(DCP1_GS_FILES_LIST)
+    for file_path in metadata_file_paths:
+        LOGGER.info(f'Processing {file_path}')
+        process_path(file_path)
