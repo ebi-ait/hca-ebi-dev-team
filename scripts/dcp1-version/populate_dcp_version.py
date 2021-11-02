@@ -85,7 +85,7 @@ def determine_updates(doc: dict, date_obj: datetime):
     update = {
         'firstDcpVersion': date_obj
     }
-    if not doc.get('dcpVersion'):
+    if not dcp_version:
         update['dcpVersion'] = date_obj
 
     return update
@@ -115,5 +115,5 @@ if __name__ == '__main__':
         date_obj = convert_dcp_version_to_date(version)
         update = determine_updates(doc, date_obj)
         if update:
-            update_dcp_versions(collection, doc, date_obj)
+            update_dcp_versions(collection, doc, update)
             LOGGER.info('updated!')
