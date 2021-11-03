@@ -10,8 +10,8 @@ logging.basicConfig(level=logging.INFO)
 LOGGER = logging.getLogger(__name__)
 
 DCP1_GS_FILES_LIST = os.environ.get('DCP1_GS_FILES_LIST')
-DB_HOST = os.environ.get('DB_HOST', 'localhost')
-DB_PORT = os.environ.get('DB_PORT', 27017)
+DB_HOST = os.environ.get('MONGO_SERVICE_SERVICE_HOST', 'localhost')
+DB_PORT = os.environ.get('MONGO_SERVICE_SERVICE_PORT', 27017)
 
 DB_CLIENT = MongoClient(DB_HOST, 27017)
 DB = DB_CLIENT.get_database('admin')
