@@ -12,4 +12,4 @@ Any one-off scripts that doesn't have a dedicated location should be maintained 
 4. `(cd docs && jekyll serve)`
 
 ## testing uml diagram
-![your-UML-diagram-name](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/ebi-ait/hca-ebi-dev-team/doc/poc-plantuml-diagrams/test.iuml)
+![ingest service](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/ebi-ait/hca-ebi-dev-team/doc/poc-plantuml-diagrams/test.iuml)
