@@ -1,10 +1,18 @@
 @startuml
-actor client
-node app
-node car
-node tshirt
 
-car -> app
-app -> client
-client -> tshirt
+actor wrangler
+node core
+node ui
+node catalogue
+node DB
+node archiver
+node exporter
+node validator
+node graph-validator
+node broker
+
+ui -> broker
+
+
+
 @enduml
