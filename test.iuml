@@ -11,7 +11,7 @@ node validator
 node graph-validator
 node broker
 
-ui -> broker
+ui -- broker
 
 
 
