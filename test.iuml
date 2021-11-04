@@ -8,11 +8,8 @@ node DB
 node archiver
 node exporter
 node validator
-node graph-validator
 node broker
 
 ui -- broker
-
-
 
 @enduml
