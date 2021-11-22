@@ -79,12 +79,6 @@ def update_project(context: dict, project: dict):
         LOGGER.info(f'Processing project {project_uuid}...')
         context['project_count'] += 1
 
-        submission_envelopes = get_project_submissions(project)
-        if len(submission_envelopes) > 0:
-            context['project_submission_envelopes'][project_uuid] = [extract_submission_data(submission) for submission
-                                                                     in submission_envelopes]
-            context['submission_envelope_count'] += 1
-
         new_content['describedBy'] = TARGET_SCHEMA_URL
         update_cell_count(context, project, new_content)
         update_official_hca_publication(context, new_content, project_uuid)
@@ -93,7 +87,6 @@ def update_project(context: dict, project: dict):
         context['new_content_by_project'][project_uuid] = {
             'new_content': new_content,
             'patched': False,
-            'submission_count': len(submission_envelopes)
         }
 
         try:
@@ -146,15 +139,6 @@ def get_project_submissions(project: dict) -> List[dict]:
     result = r.json()
     submission_envelopes = result['_embedded']['submissionEnvelopes'] if '_embedded' in result else []
     return submission_envelopes
-
-
-def extract_submission_data(submission: dict):
-    return {
-        'submission_uuid': submission['uuid']['uuid'],
-        'submission_url': submission['_links']['self']['href'],
-        'submission_state': submission['submissionState'],
-        'createdDate': submission['submissionDate']
-    }
 
 
 if __name__ == '__main__':
