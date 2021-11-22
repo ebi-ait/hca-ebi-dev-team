@@ -48,6 +48,18 @@ class Submission:
         commit_valid_url = self.submission['_links']['commitValid']['href']
         self._put(commit_valid_url)
 
+    def bypass_graph_validation(self):
+        if not self.submission:
+            self.submission = self.get_submission()
+        url = self.submission['_links']['self']['href']
+        requested_url = f'{url}/graphRequestedEvent'
+        self._put(requested_url)
+        url = self.submission['_links']['self']['href']
+        validating_url = f'{url}/graphValidatingEvent'
+        self._put(validating_url)
+        valid_url = f'{url}/graphValidEvent'
+        self._put(valid_url)
+
     def submit(self):
         submit_url = self.submission['_links']['submit']['href']
         self._put(submit_url, ["Export_Metadata"])
