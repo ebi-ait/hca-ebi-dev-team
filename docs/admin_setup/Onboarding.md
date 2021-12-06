@@ -226,8 +226,8 @@ Preferences | Project: ingest-client | Project Interpreter
       * aws_session_token=
    3. note: The CLI Keys along with browser login session are short lived and has a timeout of 4hr.
    4. Please reach to [Cloud-consultants](mailto:cloud-consultants@ebi.ac.uk) for any conection problems. 
-3. Setup our Infrastructure-as-Code tools following the readme in [ingest-kube-deployment](https://github.com/ebi-ait/ingest-kube-deployment)
-4. If necessary, read up on [Docker](https://www.docker.com/resources/what-container) and containerisation, [get familiar with Kubernetes basics](https://github.com/HumanCellAtlas/ingest-kube-deployment), and [Helm for application management in Kubernetes](https://github.com/helm/helm).
+2. Setup our Infrastructure-as-Code tools following the readme in [ingest-kube-deployment](https://github.com/ebi-ait/ingest-kube-deployment)
+3. If necessary, read up on [Docker](https://www.docker.com/resources/what-container) and containerisation, [get familiar with Kubernetes basics](https://github.com/HumanCellAtlas/ingest-kube-deployment), and [Helm for application management in Kubernetes](https://github.com/helm/helm).
 
 ## Some main docs
 In Ingestion Service/Dev folder
