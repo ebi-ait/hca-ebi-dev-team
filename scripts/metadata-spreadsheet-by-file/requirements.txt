@@ -1,2 +1,6 @@
-pandas
+erdantic
+jupyter
+matplotlib
 networkx
+openpyxl
+pandas
