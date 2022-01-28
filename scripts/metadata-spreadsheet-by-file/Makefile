@@ -4,7 +4,6 @@ install:
 start:
 	$(VENV)/jupyter notebook "HCA Project Metadata Spreadsheet.ipynb"
 
-
 # https://github.com/sio/Makefile.venv
 include Makefile.venv
 Makefile.venv:
