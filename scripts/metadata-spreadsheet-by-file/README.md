@@ -3,13 +3,12 @@ ticket 543
 
 # installation
 
-```
+```bash
 make install
-pip install -r requirements.txt
-```
+p```
 
 # Run
 
-```
+```bash
 make start
 ```
