@@ -90,7 +90,7 @@ if __name__ == '__main__':
     with open(filename, 'r') as infile:
         files_to_delete = json.load(infile)
 
-    # 2. Transition state to Validation then to Valid
+    # 2. Transition state to Validating then to Valid , this is needed because state tracker is also tracking these extra files
     for file in files_to_delete:
         url = file['_links']['validating']['href']
         print(f'transition to validating {url}')
