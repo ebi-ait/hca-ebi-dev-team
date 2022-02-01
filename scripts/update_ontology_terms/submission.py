@@ -14,7 +14,6 @@ class Submission:
         self.auth_headers = {'Authorization': token, 'Content-type': 'application/json'}
         self.submission = None
         self.project = None
-        print(self.auth_headers)
 
     def get_summary(self):
         if not self.submission:
