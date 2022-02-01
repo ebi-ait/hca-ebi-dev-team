@@ -1,14 +1,15 @@
 import json
-import time
 
 import requests
 import subprocess
 
 DRY_RUN = False
 TOKEN = 'insert-token-without-bearer-prefix'
-SUBMISSION_URL = 'https://api.ingest.archive.data.humancellatlas.org/submissionEnvelopes/insert-submission-id'
-SUBMISSION_UUID = 'insert-submission-uuid'
-FILES_TO_DELETE_FILENAME = f'{SUBMISSION_UUID}_files_to_delete.json'
+SUBMISSION_URL = 'https://api.ingest.archive.data.humancellatlas.org/submissionEnvelopes/61efed7e7701fb51a5c3ccda'
+
+
+def get_submission_id(url: str):
+    return url.split('/')[-1]
 
 
 def run(command: str, input: str = None, verbose: bool = True):
@@ -68,7 +69,9 @@ def get_draft_files_in_submission(submission_url):
     return list(draft_files)
 
 
-def generate_input_file(submission_url, filename):
+def generate_input_file(submission_url):
+    submission_id = get_submission_id(submission_url)
+    filename = f'files_to_delete_{submission_id}.json'
     files_to_delete = get_draft_files_in_submission(submission_url)
     with open(filename, 'w') as outfile:
         print(f'Saving info on files to delete to {filename}')
@@ -81,7 +84,7 @@ if __name__ == '__main__':
         'Authorization': f'Bearer {TOKEN}'
     }
     # 1. Get the list of file resources to be deleted - save them in a file
-    generate_input_file(submission_url=SUBMISSION_URL, filename=FILES_TO_DELETE_FILENAME)
+    generate_input_file(submission_url=SUBMISSION_URL)
 
     with open(FILES_TO_DELETE_FILENAME, 'r') as infile:
         files_to_delete = json.load(infile)
