@@ -30,11 +30,11 @@ if __name__ == '__main__':
             if submission_state != 'exported':
                 raise Exception(f'Submission must already be exported. State is {submission_state}')
 
-            utils.run_command(f'gsutil rm -r {GCP_BUCKET}/{uuid}/metadata/sequence_file')
-            utils.run_command(f'gsutil rm -rm {GCP_BUCKET}/{uuid}/metadata/supplementary_file')
-            utils.run_command(f'gsutil rm -rm {GCP_BUCKET}/{uuid}/descriptors')
-            utils.run_command(f'gsutil rm -rm {GCP_BUCKET}/{uuid}/links')
-            utils.run_command(f'gsutil rm -rm {GCP_BUCKET}/{uuid}/data')
+            utils.run_command(f'gsutil -m rm -r {GCP_BUCKET}/{uuid}/metadata/sequence_file')
+            utils.run_command(f'gsutil -m rm -r {GCP_BUCKET}/{uuid}/metadata/supplementary_file')
+            utils.run_command(f'gsutil -m rm -r {GCP_BUCKET}/{uuid}/descriptors')
+            utils.run_command(f'gsutil -m rm -r {GCP_BUCKET}/{uuid}/links')
+            utils.run_command(f'gsutil -m rm -r {GCP_BUCKET}/{uuid}/data')
             
         except Exception as e:
             logger.error(f'Failed on project {uuid}')
