@@ -1,4 +1,5 @@
 import json
+import time
 
 import requests
 import subprocess
@@ -77,6 +78,8 @@ def generate_input_file(submission_url):
         print(f'Saving info on files to delete to {filename}')
         json.dump(files_to_delete, outfile, indent=4)
 
+    return filename
+
 
 if __name__ == '__main__':
     headers = {
@@ -84,9 +87,9 @@ if __name__ == '__main__':
         'Authorization': f'Bearer {TOKEN}'
     }
     # 1. Get the list of file resources to be deleted - save them in a file
-    generate_input_file(submission_url=SUBMISSION_URL)
+    filename = generate_input_file(submission_url=SUBMISSION_URL)
 
-    with open(FILES_TO_DELETE_FILENAME, 'r') as infile:
+    with open(filename, 'r') as infile:
         files_to_delete = json.load(infile)
 
     # 2. Transition state to Validation then to Valid
