@@ -5,15 +5,11 @@ import logging
 RESULTS_DIR = './results/'
 UPDATED_PROJECTS_FILE = os.path.join(RESULTS_DIR, 'updated_projects.txt')
 DCP1_UUIDS_FILE = './dcp1-project-uuids.txt'
-GCP_BUCKET = ' gs://broad-dsp-monster-hca-prod-ebi-storage/prod/'
-
-# 5. If DCP1 - Remove metadata/sequence_file, /links, /descriptors, /data (anything that references data file)
+GCP_BUCKET = 'gs://broad-dsp-monster-hca-prod-ebi-storage/prod/'
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
     logger = logging.getLogger(__name__)
-
-    with open(DCP1_UUIDS_FILE, 'r') as f
 
     for uuid in utils.read_lines(UPDATED_PROJECTS_FILE):
         try:
