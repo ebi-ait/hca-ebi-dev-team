@@ -6,7 +6,7 @@ import subprocess
 
 DRY_RUN = False
 TOKEN = 'insert-token-without-bearer-prefix'
-SUBMISSION_URL = 'https://api.ingest.archive.data.humancellatlas.org/submissionEnvelopes/61efed7e7701fb51a5c3ccda'
+SUBMISSION_URL = 'https://api.ingest.archive.data.humancellatlas.org/submissionEnvelopes/<submission-id>'
 
 
 def get_submission_id(url: str):
