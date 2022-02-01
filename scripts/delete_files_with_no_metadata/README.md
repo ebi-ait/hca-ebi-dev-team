@@ -8,8 +8,6 @@
 DRY_RUN = False
 TOKEN = 'insert-token-without-bearer-prefix'
 SUBMISSION_URL = 'https://api.ingest.archive.data.humancellatlas.org/submissionEnvelopes/insert-submission-id'
-SUBMISSION_UUID = 'insert-submission-uuid'
-FILES_TO_DELETE_FILENAME = f'{SUBMISSION_UUID}_files_to_delete.json'
 ```
 
 2. Run the script:
