@@ -70,15 +70,11 @@ def get_draft_files_in_submission(submission_url):
     return list(draft_files)
 
 
-def generate_input_file(submission_url):
-    submission_id = get_submission_id(submission_url)
-    filename = f'files_to_delete_{submission_id}.json'
+def generate_input_file(submission_url: str, filename: str):
     files_to_delete = get_draft_files_in_submission(submission_url)
     with open(filename, 'w') as outfile:
         print(f'Saving info on files to delete to {filename}')
         json.dump(files_to_delete, outfile, indent=4)
-
-    return filename
 
 
 if __name__ == '__main__':
@@ -87,7 +83,9 @@ if __name__ == '__main__':
         'Authorization': f'Bearer {TOKEN}'
     }
     # 1. Get the list of file resources to be deleted - save them in a file
-    filename = generate_input_file(submission_url=SUBMISSION_URL)
+    submission_id = get_submission_id(SUBMISSION_URL)
+    filename = f'files_to_delete_{submission_id}.json'
+    generate_input_file(SUBMISSION_URL, filename)
 
     with open(filename, 'r') as infile:
         files_to_delete = json.load(infile)
