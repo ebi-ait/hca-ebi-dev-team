@@ -5,7 +5,7 @@ import logging
 RESULTS_DIR = './results/'
 UPDATED_PROJECTS_FILE = os.path.join(RESULTS_DIR, 'updated_projects.txt')
 DCP1_UUIDS_FILE = './dcp1-project-uuids.txt'
-GCP_BUCKET = 'gs://broad-dsp-monster-hca-prod-ebi-storage/prod/'
+GCP_BUCKET = 'gs://broad-dsp-monster-hca-prod-ebi-storage/prod'
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
@@ -13,7 +13,7 @@ if __name__ == '__main__':
 
     for uuid in utils.read_lines(UPDATED_PROJECTS_FILE):
         try:
-            if uuid not in list(utils.read_lines(DCP1_UUIDS_FILE)):
+            if uuid not in [l.rstrip() for l in utils.read_lines(DCP1_UUIDS_FILE)]:
                 logger.info(f'{uuid} not a DCP1 project, doing nothing.')
                 continue
             
