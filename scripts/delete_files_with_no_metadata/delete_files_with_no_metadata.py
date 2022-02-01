@@ -45,13 +45,27 @@ def remove_file(s3_file_path):
         return error
 
 
+def get_all(url: str, entity_type: str):
+    r = requests.get(url)
+    r.raise_for_status()
+    result = r.json()
+    entities = result["_embedded"][entity_type] if '_embedded' in result else []
+    yield from entities
+
+    while "next" in result["_links"]:
+        next_url = result["_links"]["next"]["href"]
+        r = requests.get(next_url)
+        r.raise_for_status()
+        result = r.json()
+        entities = result["_embedded"][entity_type]
+        yield from entities
+
+
 def get_draft_files_in_submission(submission_url):
     api_base = submission_url.split("/")[2]
     draft_url = f"https://{api_base}/files/search/findBySubmissionEnvelopeAndValidationState?envelopeUri={submission_url}&state=DRAFT&size=200"
-    r = requests.get(draft_url)
-    r.raise_for_status()
-    draft_files = r.json()["_embedded"]["files"]
-    return draft_files
+    draft_files = get_all(draft_url, 'files')
+    return list(draft_files)
 
 
 def generate_input_file(submission_url, filename):
