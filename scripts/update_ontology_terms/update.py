@@ -111,7 +111,9 @@ def export_projects():
             submission_tracker['errored'].append(submission_uuid)
             logger.error(e)
 
-    if not input(f'You should redeploy the state tracker at this point. Have you done this? (Y/n)').lower() == 'y':
+    logger.warn('You must redeploy state tracker at this point')
+    logger.info('You can use: kubectl rollout restart deployment ingest-state-tracking')
+    if not input(f'Have you re-deployed state tracker? (Y/n)').lower() == 'y':
         return
 
     for submission in submission_tracker['ready_to_submit']:
