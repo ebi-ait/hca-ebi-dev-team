@@ -4,22 +4,26 @@ import logging
 
 RESULTS_DIR = './results/'
 UPDATED_PROJECTS_FILE = os.path.join(RESULTS_DIR, 'updated_projects.txt')
+SKIPPED_TERRA_FIXES_FILE = os.path.join(RESULTS_DIR, 'skipped_terra_fixes.csv') # project uuid, reason
 DCP1_UUIDS_FILE = './dcp1-project-uuids.txt'
 GCP_BUCKET = 'gs://broad-dsp-monster-hca-prod-ebi-storage/prod'
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
     logger = logging.getLogger(__name__)
+    skipped = [] # (uuid, reason)[]
 
     for uuid in utils.read_lines(UPDATED_PROJECTS_FILE):
         try:
             if uuid not in [l.rstrip() for l in utils.read_lines(DCP1_UUIDS_FILE)]:
                 logger.info(f'{uuid} not a DCP1 project, doing nothing.')
+                skipped.append((uuid, 'Not DCP1'))
                 continue
             
             logger.info(f'{uuid} is a DCP1 project')
 
             if not input('Would you like to continue with fixing the terra area for this project? (Y/n)').lower() == 'y':
+                skipped.append((uuid, 'Manually skipped'))
                 continue
 
             project = utils.get_project_by_uuid(uuid)
@@ -39,3 +43,6 @@ if __name__ == '__main__':
         except Exception as e:
             logger.error(f'Failed on project {uuid}')
             logger.error(e)
+            skipped.append((uuid, f'Error {e}'))
+
+    utils.write_list_as_lines(SKIPPED_TERRA_FIXES_FILE, [','.join(x) for x in skipped])
