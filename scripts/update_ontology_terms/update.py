@@ -1,7 +1,7 @@
 import os
 import logging
 from copy import deepcopy
-from utils import get_submission_for_project, patch, get_submission, read_lines, get_new_ontology_for_protocol, get_protocol, get_project_for_protocol, get_project_by_uuid, write_list_as_lines
+from utils import get_submission_for_project, get_submission_for_protocol, patch, get_submission, read_lines, get_new_ontology_for_protocol, get_protocol, get_project_for_protocol, get_project_by_uuid, write_list_as_lines
 
 INGEST_API = os.environ.get('INGEST_API_URL', 'https://api.ingest.archive.data.humancellatlas.org')
 INGEST_API.strip('/')
@@ -13,6 +13,7 @@ APPLIED_PROTOCOL_PATCHES_FILE = os.path.join(RESULTS_DIR, 'applied_protocols_pat
 ERRORED_PROTOCOLS_FILE = os.path.join(RESULTS_DIR, 'errored_protocols.txt')
 SKIPPED_PROTOCOLS_FILE = os.path.join(RESULTS_DIR, 'skipped_protocols.txt')
 UPDATED_PROJECTS_FILE = os.path.join(RESULTS_DIR, 'updated_projects.txt')
+UPDATED_SUBMISSIONS_FILE = os.path.join(RESULTS_DIR, 'updated_submissions.txt')
 SUBMITTED_FILE = os.path.join(RESULTS_DIR, 'submitted.txt')
 SKIPPED_SUBMISSIONS_FILE = os.path.join(RESULTS_DIR, 'skipped_submissions.txt')
 ERRORED_SUBMISSIONS_FILE  = os.path.join(RESULTS_DIR, 'errored_submissions.txt')
@@ -28,6 +29,7 @@ def update_protocols():
 
     protocols_tracker = {
         "updated_projects": set(),
+        "updated_submissions": set(),
         "skipped": [],
         "errored": [],
         "patches": []
@@ -59,6 +61,7 @@ def update_protocols():
                 )
                 protocols_tracker['patches'].append([uuid, text, ontology, ontology_label])
                 protocols_tracker['updated_projects'].add(get_project_for_protocol(protocol)['uuid']['uuid'])
+                protocols_tracker['updated_submissions'].add(get_submission_for_protocol(protocol)['uuid']['uuid'])
             else:
                 protocols_tracker['skipped'].append(uuid)
         except Exception as e:
@@ -67,18 +70,20 @@ def update_protocols():
             protocols_tracker['errored'].append(uuid)
 
     write_list_as_lines(UPDATED_PROJECTS_FILE, list(protocols_tracker['updated_projects']))
+    write_list_as_lines(UPDATED_SUBMISSIONS_FILE, list(protocols_tracker['updated_submissions']))
     write_list_as_lines(ERRORED_PROTOCOLS_FILE, protocols_tracker['errored'])
     write_list_as_lines(APPLIED_PROTOCOL_PATCHES_FILE, [','.join(x) for x in protocols_tracker['patches']])
     write_list_as_lines(SKIPPED_PROTOCOLS_FILE, protocols_tracker['skipped'])
 
     logger.info(f'Updated projects total: { len(protocols_tracker["updated_projects"]) }')
+    logger.info(f'Updated submissions total: { len(protocols_tracker["updated_submissions"]) }')
     logger.info(f'Updated protocols total: { len(protocols_tracker["patches"]) }')
     logger.info(f'Skipped total: { len(protocols_tracker["skipped"]) }')
     logger.info(f'Errored total: { len(protocols_tracker["errored"]) }')
     logger.info('See output files for more details')
 
-def export_projects():
-    if not input(f'Would you like to continue with exporting the projects in {UPDATED_PROJECTS_FILE}? (Y/n)').lower() == 'y':
+def export_submissions():
+    if not input(f'Would you like to continue with exporting the submissions in {UPDATED_SUBMISSIONS_FILE}? (Y/n)').lower() == 'y':
         return
 
     submission_tracker = {
@@ -88,14 +93,11 @@ def export_projects():
         "errored": [] 
     }
 
-    for project_uuid in read_lines(UPDATED_PROJECTS_FILE):
+    for submission_uuid in read_lines(UPDATED_SUBMISSIONS_FILE):
         try:
-            project = get_project_by_uuid(project_uuid)
-            submission = get_submission_for_project(project)
+            submission = get_submission(submission_uuid)
 
-            submission_uuid = submission.get_uuid()
-
-            logger.info(f'project {project_uuid} submission {submission_uuid} state: {submission.get_state()}')
+            logger.info(f'submission {submission_uuid} state: {submission.get_state()}')
 
             if submission.get_state().lower() != 'graph valid':
                 if submission.get_state().lower() == 'metadata valid':
@@ -148,5 +150,5 @@ if __name__ == '__main__':
     """
     
     update_protocols()
-    export_projects()
+    export_submissions()
     

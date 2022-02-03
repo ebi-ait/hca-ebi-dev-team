@@ -12,7 +12,7 @@ DEFAULT_HEADERS = {'Content-type': 'application/json'}
 def read_lines(file: str):
     with open(file, 'r') as f:
         for l in f:
-            yield l
+            yield l.rstrip()
     
 def get_protocol(protocol_uuid: str):
     r = requests.get(f'{INGEST_API}/protocols/search/findByUuid?uuid={protocol_uuid}')
@@ -21,6 +21,11 @@ def get_protocol(protocol_uuid: str):
 
 def get_project_for_protocol(protocol: dict):
     r = requests.get(protocol['_links']['project']['href'])
+    r.raise_for_status()
+    return r.json()
+
+def get_submission_for_protocol(protocol: dict):
+    r = requests.get(protocol['_links']['submissionEnvelope']['href'])
     r.raise_for_status()
     return r.json()
 
@@ -44,7 +49,7 @@ def patch(url: str, patch: dict):
 
 def write_list_as_lines(file: str, lines):
     with open(file, 'w+') as f:
-        f.writelines(list(lines))
+        f.writelines(list([f'{l}\n' for l in lines]))
 
 def get_new_ontology_for_protocol(protocol):
     end_bias = protocol['content']['end_bias']
@@ -78,7 +83,7 @@ def get_submission_for_project(project):
     return Submission(submission_url, INGEST_API_TOKEN)
 
 def get_submission(uuid):
-    r = requests.get(f'{INGEST_API}/submissionEnvelope/search/findByUuid?uuid={uuid}')
+    r = requests.get(f'{INGEST_API}/submissionEnvelopes/search/findByUuidUuid?uuid={uuid}')
     r.raise_for_status()
     sub = r.json()
 

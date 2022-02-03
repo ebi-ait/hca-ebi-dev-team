@@ -3,7 +3,7 @@ import utils
 import logging
 
 RESULTS_DIR = './results/'
-UPDATED_PROJECTS_FILE = os.path.join(RESULTS_DIR, 'updated_projects.txt')
+UPDATED_SUBMISSIONS_FILE = os.path.join(RESULTS_DIR, 'updated_submissions.txt')
 SKIPPED_TERRA_FIXES_FILE = os.path.join(RESULTS_DIR, 'skipped_terra_fixes.csv') # project uuid, reason
 DCP1_UUIDS_FILE = './dcp1-project-uuids.txt'
 GCP_BUCKET = 'gs://broad-dsp-monster-hca-prod-ebi-storage/prod'
@@ -13,35 +13,39 @@ if __name__ == '__main__':
     logger = logging.getLogger(__name__)
     skipped = [] # (uuid, reason)[]
 
-    for uuid in utils.read_lines(UPDATED_PROJECTS_FILE):
+    for uuid in utils.read_lines(UPDATED_SUBMISSIONS_FILE):
         try:
-            if uuid not in [l.rstrip() for l in utils.read_lines(DCP1_UUIDS_FILE)]:
-                logger.info(f'{uuid} not a DCP1 project, doing nothing.')
-                skipped.append((uuid, 'Not DCP1'))
-                continue
-            
-            logger.info(f'{uuid} is a DCP1 project')
-
-            if not input('Would you like to continue with fixing the terra area for this project? (Y/n)').lower() == 'y':
-                skipped.append((uuid, 'Manually skipped'))
-                continue
-
-            project = utils.get_project_by_uuid(uuid)
-            submission = utils.get_submission_for_project(project)
-
+            logger.info(f'Working on submission {uuid}')
+            submission = utils.get_submission(uuid)
             submission_state = submission.get_state().lower()
 
             if submission_state != 'exported':
                 raise Exception(f'Submission must already be exported. State is {submission_state}')
 
-            utils.run_command(f'gsutil -m rm -r {GCP_BUCKET}/{uuid}/metadata/sequence_file')
-            utils.run_command(f'gsutil -m rm -r {GCP_BUCKET}/{uuid}/metadata/supplementary_file')
-            utils.run_command(f'gsutil -m rm -r {GCP_BUCKET}/{uuid}/descriptors')
-            utils.run_command(f'gsutil -m rm -r {GCP_BUCKET}/{uuid}/links')
-            utils.run_command(f'gsutil -m rm -r {GCP_BUCKET}/{uuid}/data')
+            project = submission.get_project()
+            project_uuid = project['uuid']['uuid']
+
+            logger.info(f'Found project {project_uuid}')
+
+            if project_uuid not in [l.rstrip() for l in utils.read_lines(DCP1_UUIDS_FILE)]:
+                logger.info(f'{project_uuid} not a DCP1 project, doing nothing.')
+                skipped.append((uuid, f'Not DCP1. Project ID {project_uuid}'))
+                continue
+            
+            logger.info(f'project {project_uuid} is a DCP1 project')
+
+            # if not input('Would you like to continue with fixing the terra area for this submission? (Y/n)').lower() == 'y':
+            #     skipped.append((uuid, 'Manually skipped'))
+            #     continue
+
+            utils.run_command(f'gsutil -m rm -r {GCP_BUCKET}/{project_uuid}/metadata/sequence_file')
+            utils.run_command(f'gsutil -m rm -r {GCP_BUCKET}/{project_uuid}/metadata/supplementary_file')
+            utils.run_command(f'gsutil -m rm -r {GCP_BUCKET}/{project_uuid}/descriptors')
+            utils.run_command(f'gsutil -m rm -r {GCP_BUCKET}/{project_uuid}/links')
+            utils.run_command(f'gsutil -m rm -r {GCP_BUCKET}/{project_uuid}/data')
             
         except Exception as e:
-            logger.error(f'Failed on project {uuid}')
+            logger.error(f'Failed on submission {uuid}')
             logger.error(e)
             skipped.append((uuid, f'Error {e}'))
 
