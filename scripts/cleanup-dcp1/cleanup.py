@@ -2,7 +2,7 @@ import os
 import utils
 import logging
 
-UPDATED_SUBMISSIONS_FILE = './submissions_uuids.txt'
+UPDATED_SUBMISSIONS_FILE = './submission_uuids.txt'
 SKIPPED_TERRA_FIXES_FILE = './skipped_terra_fixes.csv' # submission uuid, reason
 DCP1_UUIDS_FILE = './dcp1-project-uuids.txt'
 GCP_BUCKET = 'gs://broad-dsp-monster-hca-prod-ebi-storage/prod'
