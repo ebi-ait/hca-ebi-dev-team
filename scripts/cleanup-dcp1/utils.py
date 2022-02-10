@@ -7,7 +7,6 @@ import subprocess
 INGEST_API_TOKEN = os.environ['INGEST_API_TOKEN']
 INGEST_API = os.environ.get('INGEST_API_URL', 'https://api.ingest.archive.data.humancellatlas.org')
 INGEST_API.strip('/')
-DEFAULT_HEADERS = {'Content-type': 'application/json'}
 
 def read_lines(file: str):
     with open(file, 'r') as f:
