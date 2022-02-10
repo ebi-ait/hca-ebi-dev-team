@@ -1,7 +1,7 @@
 # Cleanup DCP1 projects
 This script cleans any the terra staging area of DCP1 projects so that they are ready to export again if changes have been made
 
-**You need to have gsutil setup with the correct credentials prior to running this**
+**You need to have gsutil setup with the correct credentials prior to running this. See [SOP](https://ebi-ait.github.io/hca-ebi-dev-team/admin_setup/Setting-up-access-to-Terra-staging-area.html)**
 
 ## Instructions
 1. `pip install -r requirements.txt`
