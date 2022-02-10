@@ -30,10 +30,10 @@ if __name__ == '__main__':
                 logger.info(f'{project_uuid} not a DCP1 project, doing nothing.')
                 skipped.append((uuid, f'Not DCP1. Project ID {project_uuid}'))
                 continue
-            
+
             logger.info(f'project {project_uuid} is a DCP1 project')
 
-            if not input('Would you like to continue with fixing the terra area for this submission? (Y/n)').lower() == 'y':
+            if not input('Would you like to continue with fixing the terra area for this submission? (y/N)').lower() == 'y':
                 skipped.append((uuid, 'Manually skipped'))
                 continue
 
@@ -42,7 +42,7 @@ if __name__ == '__main__':
             utils.run_command(f'gsutil -m rm -r {GCP_BUCKET}/{project_uuid}/descriptors')
             utils.run_command(f'gsutil -m rm -r {GCP_BUCKET}/{project_uuid}/links')
             utils.run_command(f'gsutil -m rm -r {GCP_BUCKET}/{project_uuid}/data')
-            
+
         except Exception as e:
             logger.error(f'Failed on submission {uuid}')
             logger.error(e)
