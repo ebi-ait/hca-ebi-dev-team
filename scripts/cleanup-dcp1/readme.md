@@ -6,6 +6,6 @@ This script cleans any the terra staging area of DCP1 projects so that they are 
 ## Instructions
 1. `pip install -r requirements.txt`
 2. Get an ingest token and add it to your env vars as `INGEST_API_TOKEN`
-3. Fill in `submissions_uuids.txt` with submission UUIDs you want to process on each line
+3. Fill in `submission_uuids.txt` with submission UUIDs you want to process on each line
 4. `python ./cleanup.py`
 5. Any skipped submissions will be put in `skipped_terra_fixes.csv`
