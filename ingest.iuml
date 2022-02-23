@@ -1,0 +1,15 @@
+@startuml
+
+actor wrangler
+node core
+node ui
+node catalogue
+node DB
+node archiver
+node exporter
+node validator
+node broker
+
+ui -- broker
+
+@enduml

@@ -10,3 +10,6 @@ Any one-off scripts that doesn't have a dedicated location should be maintained 
 2. `gem install jekyll bundler`
 3. `gem install just-the-docs`
 4. `(cd docs && jekyll serve)`
+
+## testing uml diagram
+![ingest service](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/ebi-ait/hca-ebi-dev-team/doc/poc-plantuml-diagrams/ingest.iuml)
