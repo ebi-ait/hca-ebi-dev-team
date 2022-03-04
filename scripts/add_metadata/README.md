@@ -31,7 +31,8 @@ e.g. See sample protocol.json file in this repo
 ```
 pip install -r requirements.txt
 ```
-3. Run the `add_metadata.py` script
+4. Run the `add_metadata.py` script
+
 ```
 python add_metadata.py type filename
 ```
@@ -39,4 +40,6 @@ e.g.
 ```
 python add_metadata.py protocols protocol.json
 ```
+
+Valid types are `biomaterials'`, `protocols` `processes` `files`.
 
