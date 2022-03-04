@@ -1,6 +1,6 @@
 # Add metadata to a submission
 
-This repo contains the `add_metadata.py` and a sample protocol.json file. The `add_metadata.py` script uses Ingest API and will allow user to add a metadata to an existing submission.
+This repo contains the `add_metadata.py` and a sample `protocol.json` file. The `add_metadata.py` script uses Ingest API and will allow user to add a metadata to an existing submission.
 
 ## Steps
 1. Create a file containing the metadata json
@@ -31,4 +31,12 @@ e.g. See sample protocol.json file in this repo
 3. Run the `add_metadata.py` script
 ```
 python add_metadata.py type filename
+
 ```
+
+e.g.
+
+```
+python add_metadata.py protocols protocol.json
+```
+
