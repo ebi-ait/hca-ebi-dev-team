@@ -27,15 +27,15 @@ e.g. See sample protocol.json file in this repo
 }
 ```
 2. Get `TOKEN` and `SUBMISSION_URL` from the browser UI and update the variables TOKEN and SUBMISSION_URL inside the `add_metadata.py` script
-
+3. Install dependencies of the script
+```
+pip install -r requirements.txt
+```
 3. Run the `add_metadata.py` script
 ```
 python add_metadata.py type filename
-
 ```
-
 e.g.
-
 ```
 python add_metadata.py protocols protocol.json
 ```
