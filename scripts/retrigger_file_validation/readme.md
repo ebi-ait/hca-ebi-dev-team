@@ -1,4 +1,5 @@
-# How to revalidate failed file validation in Ingest
+# [How to revalidate failed file validation in Ingest](https://app.zenhub.com/workspaces/operations-5fa2d8f2df78bb000f7fb2b5/issues/ebi-ait/hca-ebi-wrangler-central/667)
+
 
 1. Get the JWT Token from Ingest UI and place it into the `trigger_file_validation` script replacing the value of the `TOKEN` variable
 2. Get the ID of the `submissionEnvelope` you would like to work with and place it into the `trigger_file_validation` script replacing the `id` (`replace_with_id`) in the `SUBMISSION_URL` variable
