@@ -9,7 +9,6 @@ theme: "just-the-docs"
 
 markdown: kramdown
 
-footer_content: "These docs are a work in progress, help us improve by <a href=\"https://github.com/ebi-ait/hca-ebi-dev-team/issues/new/choose\">Making a ticket.</a>"
 
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
