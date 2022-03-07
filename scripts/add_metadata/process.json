@@ -1,0 +1,7 @@
+{
+  "schema_type": "process",
+  "describedBy": "https://schema.humancellatlas.org/type/process/9.2.0/process",
+  "process_core": {
+    "process_id": "new_process_id"
+  }
+}

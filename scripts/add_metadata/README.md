@@ -40,6 +40,10 @@ e.g.
 ```
 python add_metadata.py protocols protocol.json
 ```
+and
+```
+python add_metadata.py processes process.json
+```
 
 Valid types are `biomaterials'`, `protocols` `processes` `files`.
 

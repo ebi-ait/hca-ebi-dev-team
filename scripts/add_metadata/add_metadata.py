@@ -3,6 +3,10 @@ import sys
 
 import requests
 
+# TODO insert actual values
+TOKEN = 'insert-jwt-token'
+SUBMISSION_URL = 'insert-submission-url'
+
 if len(sys.argv) < 3:
     print('Please pass file arguments metadata type and filename containing json')
     exit(1)
@@ -14,9 +18,6 @@ VALID_TYPES = ['biomaterials', 'protocols', 'processes', 'files']
 if TYPE not in VALID_TYPES:
     print(f'Invalid first argument for type, valid types are: {VALID_TYPES}')
     exit(1)
-
-TOKEN = 'insert-jwt-token'
-SUBMISSION_URL = 'insert-submission-url'
 
 if not (TOKEN and SUBMISSION_URL):
     print('Please edit file to update TOKEN and SUBMISSION_URL VALUE')
