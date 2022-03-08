@@ -9,13 +9,9 @@ parent: User documentation
 You can add data and metadata to an existing project by making further submissions to it. Let's start off with the situation where you want to add a new experiment that doesn't reference any existing entities in the project. That is, it will add everything from a new donor down to the FASTQ files. You can also add metadata that references existing entities such as donor that was added in a previous submission. For more information on this, see the section that follows the steps below.
 
 # Steps 
-1. In the [Ingest submission UI](http://ui.ingest.staging.data.humancellatlas.org/login) navigate to the project to which you want to add meta/data. If necessary you can find this using keyword search.
+1. In the [Ingest UI](https://contribute.data.humancellatlas.org/) navigate to the project to which you want to add meta/data. If necessary you can find this using keyword search.
 
-[[https://github.com/HumanCellAtlas/ingest-central/blob/master/wiki/img/project-list-search.png]]
-
-* If you know the uuid of the project, you can also navigate to it by putting it in the URL (e.g. `https://ui.ingest.integration.data.humancellatlas.org/projects/detail?uuid=1b3f2f8d-c8aa-4c7e-8c7b-03d19b8494e5`).
-
-2. On the project details page there will be a create submission button as shown below. Click this to start the submission.
+2. On the project details page, in _Data Upload_ tab. There will be a button
 
 [[https://github.com/HumanCellAtlas/ingest-central/blob/master/wiki/img/project-details.png]]
 
