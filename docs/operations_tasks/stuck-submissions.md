@@ -6,13 +6,13 @@ Description:
 - see [ticket](https://app.zenhub.com/workspaces/operations-5fa2d8f2df78bb000f7fb2b5/issues/ebi-ait/hca-ebi-wrangler-central/702)
 
 
-Steps to tourbleshoot:
+Steps to troubleshoot:
 1. find which entities are in validating
     - in ingest UI, filter each of the biomaterials, processes, protocols and data tabs by "validating"
     - this should pin down which specific entities are stuck
     - in this case, one or more file entities are stuck
 
-2. the file validation job status
+2. check the file validation job status
     - the `validationJob` property will tell if the file validation has completed and successful or not
     - in this case, the `jobCompleted` remained false 
 
