@@ -1,3 +1,8 @@
+---
+layout: default
+title: Investigate Stuck Submissions
+parent: Operations tasks
+---
 Problem:
 - submission stuck in "metadata validating" state in ingest
 
