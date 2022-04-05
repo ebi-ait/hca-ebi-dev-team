@@ -6,11 +6,11 @@ from ingest.api.ingestapi import IngestApi
 from openpyxl import load_workbook
 
 # download xlsx from https://docs.google.com/spreadsheets/u/2/d/1-mNz7hkdVovp8QDgeTIZK4Yp8q3bu0101URsrSWDptY/edit#gid=0
-workbook = load_workbook(filename=f'{os.getcwd()}/AdultLungElo-Linking.xlsx')
+workbook = load_workbook(filename=f'{os.getcwd()}/_local/AdultLungElo-Linking.xlsx')
 sheet = workbook.active
 
-TOKEN = 'insert-token-without-bearer-prefix'
-INGEST_API = 'http://localhost:8080'
+TOKEN = 'insert-bearer-token-with-prefix'
+INGEST_API = 'https://api.ingest.archive.data.humancellatlas.org'
 ingest_api = IngestApi(url=INGEST_API)
 ingest_api.set_token(f'Bearer {TOKEN}')
 headers = {
@@ -33,7 +33,8 @@ def unlink_entities(from_entity, relationship, to_entity):
     to_id = to_uri.split('/')[-1]
 
     delete_url = f'{from_uri}/{to_id}'
-    r = requests.delete(delete_url, headers=headers)
+    # using ingest_api.session so that it retries
+    r = ingest_api.session.delete(delete_url, headers=headers)
     r.raise_for_status()
     print(f'removed link {delete_url}')
 
@@ -106,7 +107,11 @@ write_json(files_by_process_uuid, 'files_by_process_uuid.json')
 write_json(process_uuids_to_unlink, 'process_uuids_to_unlink.json')
 
 for process_uuid, linked_data in process_uuids_to_unlink.items():
-    process = ingest_api.get_entity_by_uuid('processes', process_uuid)
+    try:
+        process = ingest_api.get_entity_by_uuid('processes', process_uuid)
+    except Exception as e:
+        print(f'{process_uuid} already deleted')
+        continue
 
     cell_susp_uuid = linked_data['cell_suspension.uuid']
     cell_suspension = ingest_api.get_entity_by_uuid('biomaterials', cell_susp_uuid)
@@ -123,7 +128,10 @@ for process_uuid, linked_data in process_uuids_to_unlink.items():
     seq_protocol_uuid = linked_data['sequencing_protocol.uuid']
     seq_protocol = ingest_api.get_entity_by_uuid('protocols', seq_protocol_uuid)
     unlink_entities(process, 'protocols', seq_protocol)
-    delete_entity(process)
+    try:
+        delete_entity(process)
+    except Exception as e:
+        print(f'{process_uuid} already deleted')
 
 for process_uuid, linked_data in files_by_process_uuid.items():
     process = ingest_api.get_entity_by_uuid('processes', process_uuid)
