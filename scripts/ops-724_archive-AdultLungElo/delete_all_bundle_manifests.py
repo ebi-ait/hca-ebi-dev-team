@@ -17,6 +17,7 @@ def delete_entity(entity):
     print(f'removed entity {uri}')
     r.raise_for_status()
 
+
 bundle_manifest_url = f'{INGEST_API}/submissionEnvelopes/623c8ca5b06b223527d2897e/bundleManifests'
 bundle_manifests = list(ingest_api.get_all(bundle_manifest_url, 'bundleManifests'))
 
