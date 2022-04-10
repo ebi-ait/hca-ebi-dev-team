@@ -1,3 +1,9 @@
+---
+layout: default
+title:  How to update GCP credentials of Ingest Exporter to access Terra staging area
+parent: Operations tasks
+---
+
 # How to update GCP credentials of Ingest Exporter to access Terra staging area
 
 1. Go to ingest-kube-deployment local repository
