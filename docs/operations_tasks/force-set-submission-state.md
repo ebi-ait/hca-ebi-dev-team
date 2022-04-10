@@ -4,7 +4,7 @@ title:  How to force set a submission state
 parent: Operations tasks
 ---
 
-# How to force set a submission state
+# How to force set a submission state 
 
 ## From Complete to Graph Valid
 
@@ -39,6 +39,8 @@ Source environment config file
 ```bash
 source config/environment_prod
 ```
+
+Restart pod
 
 ```bash
 kubectl rollout restart deployment ingest-state-tracking
