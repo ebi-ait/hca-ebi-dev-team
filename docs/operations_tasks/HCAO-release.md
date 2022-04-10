@@ -12,10 +12,9 @@ parent: Operations tasks
 5. Select the cluster on your command line: `kubectx ingest-eks-<dev|staging|prod>`
 6. `cd apps/`
 7. `make deploy-ontology`
-8. Get the current image of the ingest-validator and redeploy it: `kubectl get deployment ingest-validator -o yaml | grep image`
-9. Get the image from the previous line and deploy the ingest-validator using that image: `make deploy-app-ingest-validator image=quay.io/ebi-ait/ingest-validator:<IMAGE-TAG>`
-10. Make sure the correct image has been deployed: `kubectl get deployment ontology -o yaml | grep image`
-11. Update the release notes if you are doing the release on staging (/staging/changelog.md) or production (/production/changelog.md)
+8. Redeploy `ingest-validator` to clear ontology cache: `kubectl rollout restart deployment ingest-validator`
+9. Make sure the correct image has been deployed: `kubectl get deployment ontology -o yaml | grep image`
+1. Update the release notes if you are doing the release on staging (/staging/changelog.md) or production (/production/changelog.md)
 12. Commit and push your config and release notes changes into the github repository
 
 Note: The validator is caching some ontology values and should be redeployed (even with no version update) to pick up the updates from the new version of HCA Ontology Service

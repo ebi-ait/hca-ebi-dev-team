@@ -14,4 +14,4 @@ To embed, go to `File > Embed > HTML...` create and copy the html and paste in t
 Follow config when creating the html to embed:
 
 * `Links`: Select `Open in New Window`
-* `Lightbox` > Select `Edit: Custom` - link to actual `draw.io`` file
+* `Lightbox` > Select `Edit: Custom` - link to actual `draw.io` file
