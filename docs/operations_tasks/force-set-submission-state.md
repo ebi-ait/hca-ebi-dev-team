@@ -11,10 +11,12 @@ parent: Operations tasks
 1. Get the token from Ingest UI in the browser via developer console network. Look for GET requests to GET/account and check the Authorization header bearer token, copy the jwt token.
 
 1. Force set submission to be in Graph Valid state, so that it can be submitted again
+   
     ``` bash
     $TOKEN=’insert-jwt-token’
     ```
 1. Get the commitGraphValid link from submission hal doc resource `_links.commitGraphValid.href`
+   
     ```
     curl -X PUT -H "Authorization: Bearer $TOKEN" https://api.ingest.archive.data.humancellatlas.org/submissionEnvelopes/<submission-id>/commitGraphValidEvent
     ```
