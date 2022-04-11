@@ -73,5 +73,3 @@ If the project was submitted to DCP or EMBL-EBI archives, you should coordinate 
    ```
    curl -X DELETE -H "Authorization: Bearer $TOKEN"  https://api.ingest.archive.data.humancellatlas.org/projects/<object-id>
    ```
-
-   The submission and project 
