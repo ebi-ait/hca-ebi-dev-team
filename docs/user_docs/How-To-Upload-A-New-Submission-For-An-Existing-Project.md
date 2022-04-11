@@ -3,6 +3,8 @@ layout: default
 title: Upload a new submission
 parent: User documentation
 ---
+NEEDS UPDATING
+{: .label .label-red }
 
 # Upload a new submission to a project
 
