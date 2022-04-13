@@ -1,10 +1,10 @@
 ---
 layout: default
-title: AWS Setup
+title: Create wrangler user in the wrangling EC2 instance
 parent: Operations tasks
 ---
 
-# Create wrangler user in ec2 instance
+# Create  Create wrangler user in the wrangling EC2 instance
 Wranglers need access to the `hca-wrangler-tools-ec2` and a developer must give them this. The below steps assume that you have the correct account privileges in AWS.
 
 1. login to [AWS console](https://embl-ebi.awsapps.com/start#/)
