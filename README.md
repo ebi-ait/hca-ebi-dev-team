@@ -9,7 +9,7 @@ The files inside  [docs](docs/) are being published at: https://ebi-ait.github.i
 1. Follow instructions [here](https://jekyllrb.com/docs/installation/) to install prerequisites
 2. `gem install jekyll bundler`
 3. `gem install just-the-docs`
-4. `(cd docs && jekyll serve)`
+4. `(cd docs && jekyll serve -c _config_local.yml)`
 
 
 ## one-off scripts
