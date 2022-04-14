@@ -1,6 +1,6 @@
 title: "HCA Ingest Documentation"
 site_url: https://ebi-ait.github.io/hca-ebi-dev-team/
-remote_theme: just-the-docs/just-the-docs
+theme: "just-the-docs"
 search_enabled: true
 aux_links:
   "Edit these Docs on GitHub":
