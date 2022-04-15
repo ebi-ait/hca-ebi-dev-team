@@ -146,4 +146,4 @@ k8logall(){
    ...
    ```
    
-   To check the GCP file transfer status, you can use the script [`get_status.py`](../scripts/get_gcp_status/get_status.py).
+   To check the GCP file transfer status, you can use the script [`get_status.py`](scripts/get_gcp_status/get_status.py).
