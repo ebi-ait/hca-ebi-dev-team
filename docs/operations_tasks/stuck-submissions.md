@@ -50,54 +50,8 @@ Further investigation needed
 ### Description: 
 - Submissions can encounter errors/issues during exporting. The submission state can get stuck in "Exporting" and there's no way for user to know what's happening.
 - see [ticket](https://app.zenhub.com/workspaces/operations-5fa2d8f2df78bb000f7fb2b5/issues/ebi-ait/hca-ebi-wrangler-central/702)
+- **Use [stern](https://github.com/stern/stern) or [graphana](https://monitoring.ingest.archive.data.humancellatlas.org/)** to monitor the logs of multiple exporter pods.
 
-### Helpful commands to set up in your bash profile
-
-Since the exporter may have multiple instances, the following commands may be handy:
-
-```bash
-
-# tail all pods
-k8tailall() {
-  if [ "$1" = "" ]
-    then
-      echo "Missing param: deployment name"
-      return
-  fi
-
-  pods_keyword="$1" # pods keyword e.g. ingest-validator
-
-  pods=($(kubectl get pods | grep $pods_keyword | awk '{print $1;}'))
-
-  for pod in "${pods[@]}"
-  do
-    echo "===============================================$pod logs"
-    kubectl logs --tail 10 "$pod"
-    echo "\n\n\n"
-  done
-}
-
-
-# log everything
-k8logall(){
-  pods_keyword="$1" # pods keyword e.g. ingest-validator
-  timestamp=$(date -u +"%FT%T.000Z")
-  filename="${pods_keyword}_${timestamp}"
-
-  pods=($(kubectl get pods | grep $pods_keyword | awk '{print $1;}'))
-  echo "-----    Saving all logs for: ${pods[@]} to ${filename}"
-
-  for pod in "${pods[@]}"
-  do
-    touch "${filename}.log"
-    echo "----- $pod (previous)" >>  "${filename}.log"
-    kubectl logs "$pod"  --previous | awk -v prefix="$pod (previous) : " '{ print prefix, $0 }' >>  "${filename}.log"
-
-    echo "----- $pod" >>  "${filename}.log"
-    kubectl logs "$pod" |  awk -v prefix="$pod : " '{ print prefix, $0 }'  >>  "${filename}.log"
-  done
-}
-```
 
 ### Steps to troubleshoot:
 1. Check the ingest-exporter logs to see if there are failed messages in the exporter.  
