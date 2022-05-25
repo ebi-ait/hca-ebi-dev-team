@@ -1,5 +1,10 @@
 @startuml
 
+left to right direction
+
+skinparam linetype polyline
+'skinparam linetype ortho
+
 !define ICONURL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master
 !includeurl ICONURL/devicons/python.puml
 !includeurl ICONURL/devicons/java.puml
@@ -31,14 +36,17 @@ sprite $rabbitmq [24x24/16] {
 0000ffffffffffffffff0000
 }
 
-actor stakeHolder
-actor Submitter
-actor systemOperator
+together {
+    actor stakeHolder
+    actor Submitter
+    actor systemOperator
+}
 
-component HCAProjectCatalogue <<$angular>> [[https://github.com/ebi-ait/projects-index]]
-component broker <<$python>> [[https://github.com/ebi-ait/ingest-broker]]
-component stagingManager <<$python>>
-component ui <<$angular>> [[https://github.com/ebi-ait/ingest-ui]]
+together {
+    component HCAProjectCatalogue <<$angular>> [[https://github.com/ebi-ait/projects-index]]
+    component ui <<$angular>> [[https://github.com/ebi-ait/ingest-ui]]
+}
+
 
 package downstream {
     package "EBIArchives" {
@@ -50,10 +58,12 @@ package downstream {
     component "terra" <<$google_cloud_platform>>
 }
 package ingestCore {
+    component broker <<$python>> [[https://github.com/ebi-ait/ingest-broker]]
     component core <<$java>> [[https://github.com/ebi-ait/ingest-core]]
     database MongoDB
     queue RabbitMQ <<$rabbitmq>>
     component stateTracking <<$java>>
+    component stagingManager <<$python>>
 }
 package submission {
     component hcaUtil
@@ -64,15 +74,16 @@ package validation {
     component validator <<$nodejs>> [[https://github.com/ebi-ait/ingest-validator]]
     database Neo4J
 }
-package uploadService {
-    component ValidationJob <<lambda>>
-    component ChecksummingJob <<lambda>>
-    component UploadAPI
-}
 package archiving {
     component exporter <<$python>> [[https://github.com/ebi-ait/ingest-exporter]]
     component archiver <<$python>> [[https://github.com/ebi-ait/ingest-archiver]]
     component sceaArchiver <<$python>>
+}
+
+package uploadService {
+    component ValidationJob <<lambda>>
+    component ChecksummingJob <<lambda>>
+    component UploadAPI
 }
 
 Submitter -r-> hcaUtil
@@ -83,14 +94,14 @@ broker --> core : creates submission envelope and metadata
 core --> MongoDB
 core --> archiver: triggers
 core --> RabbitMQ: triggers exporter
-RabbitMQ --> exporter
+RabbitMQ -r-> exporter
 core --> RabbitMQ: trigger graph validation
-RabbitMQ --> graphValidator
+RabbitMQ -r-> graphValidator
 core --> sceaArchiver
 core --> stagingManager : sends submission events
 core --> stateTracking : sendEvent
 core --> RabbitMQ: trigger metadata validation
-RabbitMQ --> validator
+RabbitMQ -r-> validator
 exporter --> terra: submits data
 graphValidator --> core : "validation status"
 graphValidator --> Neo4J
@@ -98,12 +109,15 @@ HCAProjectCatalogue --> core : fetch projects
 hcaUtil -> UploadArea : syncs files
 sceaArchiver -> SCEA
 stagingManager --> UploadAPI : requests or upload area creation or clean-up
+validator -> UploadAPI: requests file validation
+UploadAPI -> ValidationJob
 stakeHolder -r-> ui
 stakeHolder -r-> HCAProjectCatalogue
 stateTracking --> core : update submission status
 systemOperator -r-> ui
+UploadArea -> ChecksummingJob  : computes file checksum
 ui --> broker : sends spreadsheet
 validator --> core : "validation status"
-
-
+ChecksummingJob -> core: notifies file is uploaded
+ValidationJob -> core: sends validation result
 @enduml

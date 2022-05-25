@@ -10,4 +10,4 @@
 
 Edit [./ingest-architecture.puml](./ingest-architecture.puml) which is in plantuml syntax.
 
-The diagram is rendered as an svg file using the PlantUML proxy web service.
+The diagram is rendered as an svg file using the [PlantUML proxy web service](https://plantuml.com/server).
