@@ -1,10 +1,7 @@
 @startuml
+
 !theme vibrant
-
 skinparam arrowColor  #black
-
-'skinparam linetype polyline
-'skinparam linetype ortho
 
 !define ICONURL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master
 !includeurl ICONURL/devicons/python.puml
