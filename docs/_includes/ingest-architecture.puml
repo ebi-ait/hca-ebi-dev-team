@@ -1,6 +1,8 @@
 @startuml
 !theme vibrant
 
+skinparam arrowColor  #black
+
 'skinparam linetype polyline
 'skinparam linetype ortho
 
