@@ -2,6 +2,8 @@
 
 !theme vibrant
 skinparam arrowColor  #black
+skinparam PackageBackgroundColor #yellow
+
 
 !define ICONURL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master
 !includeurl ICONURL/devicons/python.puml
