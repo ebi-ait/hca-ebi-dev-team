@@ -7,4 +7,6 @@
 
 ## How to update the diagram ?
 
-edit [./ingest-architecture.puml](./ingest-architecture.puml) which is in plantuml syntax
+Edit [./ingest-architecture.puml](./ingest-architecture.puml) which is in plantuml syntax.
+
+The diagram is rendered as an svg file using the PlantUML proxy web service.
