@@ -1,0 +1,112 @@
+@startuml
+
+!define ICONURL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master
+!includeurl ICONURL/devicons/python.puml
+!includeurl ICONURL/devicons/java.puml
+!includeurl ICONURL/devicons/mongodb.puml
+!includeurl ICONURL/devicons/angular.puml
+!includeurl ICONURL/devicons/google_cloud_platform.puml
+!includeurl ICONURL/devicons/aws.puml
+!includeurl ICONURL/devicons/nodejs.puml
+
+
+sprite $rabbitmq [24x24/16] {
+000000000000000000000000
+0000ffff0000ffff00000000
+0000ffff0000ffff00000000
+0000ffff0000ffff00000000
+0000ffff0000ffff00000000
+0000ffff0000ffff00000000
+0000ffff0000ffff00000000
+0000ffffffffffffffff0000
+0000ffffffffffffffff0000
+0000ffffffffffffffff0000
+0000ffffffffffffffff0000
+0000ffffffff0000ffff0000
+0000ffffffff0000ffff0000
+0000ffffffff0000ffff0000
+0000ffffffff0000ffff0000
+0000ffffffffffffffff0000
+0000ffffffffffffffff0000
+0000ffffffffffffffff0000
+0000ffffffffffffffff0000
+}
+
+'DEV_PYTHON(broker) #Green                                                                                      }
+
+actor Submitter
+actor stakeHolder
+actor systemOperator
+
+component HCAProjectCatalogue <<$angular>> [[https://github.com/ebi-ait/projects-index]]
+component broker <<$python>> [[https://github.com/ebi-ait/ingest-broker]]
+component stagingManager <<$python>>
+component ui <<$angular>> [[https://github.com/ebi-ait/ingest-ui]]
+
+package downstream {
+        package "EBIArchives" {
+        component ENA
+        component BioSamples
+        component BioStudies
+        component SCEA
+    }
+    component "terra" <<$google_cloud_platform>>
+}
+package ingestCore {
+    component core <<$java>> [[https://github.com/ebi-ait/ingest-core]]
+    database MongoDB
+    queue RabbitMQ <<$rabbitmq>>
+    component stateTracking <<$java>>
+}
+package submission {
+    component hcaUtil
+    storage UploadArea <<$aws>>
+}
+package validation {
+    component graphValidator <<$python>> [[https://github.com/ebi-ait/ingest-graph-validator]]
+    component validator <<$nodejs>> [[https://github.com/ebi-ait/ingest-validator]]
+    database Neo4J
+}
+package uploadService {
+    component ValidationJob <<lambda>>
+    component ChecksummingJob <<lambda>>
+    component UploadAPI
+}
+package archiving {
+    component exporter <<$python>> [[https://github.com/ebi-ait/ingest-exporter]]
+    component archiver <<$python>> [[https://github.com/ebi-ait/ingest-archiver]]
+    component sceaArchiver <<$python>>
+}
+
+Submitter --> hcaUtil
+Submitter --> ui
+archiver --> EBIArchives: submits data
+archiver --> core : updates accessions
+broker --> core : creates submission envelope and metadata
+core --> MongoDB
+core --> archiver: triggers
+core --> RabbitMQ: triggers exporter
+RabbitMQ --> exporter
+core --> RabbitMQ: trigger graph validation
+RabbitMQ --> graphValidator
+core --> sceaArchiver
+core --> stagingManager : sends submission events
+core --> stateTracking : sendEvent
+core --> RabbitMQ: trigger metadata validation
+RabbitMQ --> validator
+exporter --> terra: submits data
+graphValidator --> core : "validation status"
+graphValidator --> Neo4J
+HCAProjectCatalogue --> core : fetch projects
+hcaUtil -> UploadArea : syncs files
+sceaArchiver -> SCEA
+stagingManager --> UploadAPI : requests or upload area creation or clean-up
+stakeHolder -> ui
+stakeHolder -> HCAProjectCatalogue
+stateTracking --> core : update submission status
+systemOperator -> ui
+ui --> broker : sends spreadsheet
+validator --> core : "validation status"
+
+
+@enduml
