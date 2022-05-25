@@ -4,7 +4,15 @@
 
 ![ingest service](http://www.plantuml.com/plantuml/proxy?fmt=svg&cache=no&src=https://raw.githubusercontent.com/ebi-ait/hca-ebi-dev-team/doc/ingest-architecture-diagram-in-plantuml/docs/_includes/ingest-architecture.puml)
 
+##
 
+test plantuml
+```plantuml
+@startuml
+component ValidationJob [[https://github.com/ebi-ait/ingest-ui]]
+ValidationJob -> core: sends validation result
+@enduml
+```
 
 ## How to update the diagram ?
 
