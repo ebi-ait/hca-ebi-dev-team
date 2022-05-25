@@ -6,14 +6,6 @@
 
 ##
 
-test plantuml
-```plantuml
-@startuml
-component ValidationJob [[https://github.com/ebi-ait/ingest-ui]]
-ValidationJob -> core: sends validation result
-@enduml
-```
-
 ## How to update the diagram ?
 
 Edit [./ingest-architecture.puml](./ingest-architecture.puml) which is in plantuml syntax.
