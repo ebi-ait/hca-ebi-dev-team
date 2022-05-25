@@ -1,8 +1,7 @@
 @startuml
+!theme vibrant
 
-'left to right direction
-
-skinparam linetype polyline
+'skinparam linetype polyline
 'skinparam linetype ortho
 
 !define ICONURL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master
@@ -48,15 +47,7 @@ together {
 }
 
 
-package downstream {
-    package "EBIArchives" {
-        component ENA
-        component BioSamples
-        component BioStudies
-        component SCEA
-    }
-    component "terra" <<$google_cloud_platform>>
-}
+
 package ingestCore {
     component broker <<$python>> [[https://github.com/ebi-ait/ingest-broker]]
     component core <<$java>> [[https://github.com/ebi-ait/ingest-core]]
@@ -69,17 +60,28 @@ package submission {
     component hcaUtil
     storage UploadArea <<$aws>>
 }
+
 package validation {
     component graphValidator <<$python>> [[https://github.com/ebi-ait/ingest-graph-validator]]
     component validator <<$nodejs>> [[https://github.com/ebi-ait/ingest-validator]]
     database Neo4J
 }
-package archiving {
-    component exporter <<$python>> [[https://github.com/ebi-ait/ingest-exporter]]
-    component archiver <<$python>> [[https://github.com/ebi-ait/ingest-archiver]]
-    component sceaArchiver <<$python>>
+together {
+    package archiving {
+        component exporter <<$python>> [[https://github.com/ebi-ait/ingest-exporter]]
+        component archiver <<$python>> [[https://github.com/ebi-ait/ingest-archiver]]
+        component sceaArchiver <<$python>>
+    }
+    package downstream {
+        package "EBIArchives" {
+            component ENA
+            component BioSamples
+            component BioStudies
+            component SCEA
+        }
+        component "terra" <<$google_cloud_platform>>
+    }
 }
-
 package uploadService {
     component ValidationJob <<lambda>>
     component ChecksummingJob <<lambda>>
