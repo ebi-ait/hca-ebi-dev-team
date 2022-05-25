@@ -1,6 +1,6 @@
 @startuml
 
-left to right direction
+'left to right direction
 
 skinparam linetype polyline
 'skinparam linetype ortho
@@ -86,24 +86,24 @@ package uploadService {
     component UploadAPI
 }
 
-Submitter -r-> hcaUtil
-Submitter -r-> ui
+Submitter -d-> hcaUtil
+Submitter -d-> ui
 archiver --> EBIArchives: submits data
 archiver --> core : updates accessions
 broker --> core : creates submission envelope and metadata
 core --> MongoDB
 core --> archiver: triggers
-core --> RabbitMQ: triggers exporter
-RabbitMQ -r-> exporter
+core -d-> RabbitMQ: triggers exporter
+RabbitMQ -d-> exporter
 core --> RabbitMQ: trigger graph validation
-RabbitMQ -r-> graphValidator
+RabbitMQ -d-> graphValidator
 core --> sceaArchiver
 core --> stagingManager : sends submission events
 core --> stateTracking : sendEvent
 core --> RabbitMQ: trigger metadata validation
-RabbitMQ -r-> validator
+RabbitMQ -d-> validator
 exporter --> terra: submits data
-graphValidator --> core : "validation status"
+graphValidator -u-> core : "validation status"
 graphValidator --> Neo4J
 HCAProjectCatalogue --> core : fetch projects
 hcaUtil -> UploadArea : syncs files
@@ -111,13 +111,13 @@ sceaArchiver -> SCEA
 stagingManager --> UploadAPI : requests or upload area creation or clean-up
 validator -> UploadAPI: requests file validation
 UploadAPI -> ValidationJob
-stakeHolder -r-> ui
-stakeHolder -r-> HCAProjectCatalogue
+stakeHolder -d-> ui
+stakeHolder -d-> HCAProjectCatalogue
 stateTracking --> core : update submission status
 systemOperator -r-> ui
 UploadArea -> ChecksummingJob  : computes file checksum
 ui --> broker : sends spreadsheet
-validator --> core : "validation status"
+validator -u-> core : "validation status"
 ChecksummingJob -> core: notifies file is uploaded
 ValidationJob -> core: sends validation result
 @enduml
