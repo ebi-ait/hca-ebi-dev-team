@@ -82,12 +82,15 @@ Further investigation needed
    
 ### Common Exporter Failures and how to solve them
 
-1. Error: There's a failed request to GCP file transfer status.
-   Fix: Delete pod, and let a new pod reprocess the failed message
-2. Error: A common failure is when an exporter process timed out waiting for the data transfer from GCP.
-   Fix: By design, there will always be only one to trigger and wait for the GCP File transfer job to finish. If that process failed, the job status should be checked manually and the exportJob entity `context` property must be patched to indicate that the file transfer has finished for that submission.
+#### Error: There's a failed request to GCP file transfer status.
+
+Fix: Delete pod, and let a new pod reprocess the failed message
+
+#### Error: A common failure is when an exporter process timed out waiting for the data transfer from GCP.
+
+Fix: By design, there will always be only one to trigger and wait for the GCP File transfer job to finish. If that process failed, the job status should be checked manually and the exportJob entity `context` property must be patched to indicate that the file transfer has finished for that submission.
    
-   To see the export jobs: https://api.ingest.archive.data.humancellatlas.org/submissionEnvelopes/<submission-object-id>/exportJobs
+   To see the export jobs: `https://api.ingest.archive.data.humancellatlas.org/submissionEnvelopes/<submission-object-id>/exportJobs`
       
    The export job entity must be patched:
    
