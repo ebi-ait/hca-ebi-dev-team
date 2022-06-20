@@ -10,6 +10,9 @@ NEEDS UPDATING
 # Sprint Planning and Tracking
 [Zenhub workspace](https://app.zenhub.com/workspaces/ingest-dev-5cfe1cb26482e537cf35e8d1)
 
+# Ceremony Rota
+The [ceremony rota](https://docs.google.com/spreadsheets/d/1-y7QNoIdwYdFHVxJUc5XWcQuuv6VYhvPLpt9Ls2PK7M/edit#gid=1591324846) is available.
+
 # Start of the sprint
 * Collectively decide which tickets should be in the sprint backlog for this sprint. As a rough guide, aim for a points total that matches the moving average in the planning spreadsheet.
 
