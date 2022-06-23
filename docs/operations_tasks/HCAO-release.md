@@ -20,6 +20,7 @@ cd ./infra
 cd ./infra
 ./scripts/deploy_ontology.sh -v $ONTOLOGY_VERSION -e staging -g $GITLAB_TOKEN
 ./scripts/deploy_ontology.sh -v $ONTOLOGY_VERSION -e prod -g $GITLAB_TOKEN
-7. update status of new ontology ticket on the Ops board.
 ```
+
+7. update status of new ontology ticket on the Ops board.
 
