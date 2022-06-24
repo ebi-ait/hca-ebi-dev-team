@@ -33,14 +33,14 @@ gs://broad-dsp-monster-hca-dev-ebi-staging/dev
   
 _It is the group owners' responsibility to ensure this list is kept up to date and that no one who shouldn't have access is in the group. If you notice someone who should no longer have access, please let the group owners know_
 
-2. Install gsutil and login using your google account. You could follow instructions from https://cloud.google.com/storage/docs/gsutil_install
+2. Install gsutil and login using your google account. You could follow [instructions](https://cloud.google.com/storage/docs/gsutil_install)
 
 You can also access the bucket via a browser interface at: 
-- Staging bucket: https://console.cloud.google.com/storage/browser/broad-dsp-monster-hca-dev-ebi-staging/
-- Prod bucket: https://console.cloud.google.com/storage/browser/broad-dsp-monster-hca-prod-ebi-storage/prod/
+- [Staging bucket](https://console.cloud.google.com/storage/browser/broad-dsp-monster-hca-dev-ebi-staging)
+- [Prod bucket](https://console.cloud.google.com/storage/browser/broad-dsp-monster-hca-prod-ebi-storage/prod)
 
 ## Using Ingest Exporter's GCP service account
-1. Install gsutil https://cloud.google.com/storage/docs/gsutil_install
+1. Install [gsutil](https://cloud.google.com/storage/docs/gsutil_install)
 
 1. Download the Ingest Exporter's GCP service account credentials from AWS Secrets. Currently, only Ingest Developers have access to this secret.
    ```

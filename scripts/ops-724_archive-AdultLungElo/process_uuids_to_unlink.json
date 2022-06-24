@@ -1,0 +1,2340 @@
+{
+  "d490ae8d-e449-4368-9000-beaf0478d7cf": {
+    "process.uuid": "d490ae8d-e449-4368-9000-beaf0478d7cf",
+    "sequence_file.uuid": "0ced4315-399b-4cb4-aabd-191b35a80f79",
+    "cell_suspension.uuid": "27db2627-b3c5-4ea1-85bd-d99374994f8a",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "e8d7ede0-83a9-4ff9-ae43-7283437ba3db": {
+    "process.uuid": "e8d7ede0-83a9-4ff9-ae43-7283437ba3db",
+    "sequence_file.uuid": "9670651c-ae3d-48cc-9e09-443307581bd5",
+    "cell_suspension.uuid": "27db2627-b3c5-4ea1-85bd-d99374994f8a",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "6fe0eb28-548e-44bf-a97a-37e2baaf1905": {
+    "process.uuid": "6fe0eb28-548e-44bf-a97a-37e2baaf1905",
+    "sequence_file.uuid": "70d28d2f-c3ba-4e39-a80a-0a6c593e2985",
+    "cell_suspension.uuid": "5c622cf8-97cd-4257-a4b3-c25aeffad4c7",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "1e55bf4f-a6d5-46d7-9145-1412e8a6ab81": {
+    "process.uuid": "1e55bf4f-a6d5-46d7-9145-1412e8a6ab81",
+    "sequence_file.uuid": "3091ed72-6f7d-4fee-8c60-b15dec75b5be",
+    "cell_suspension.uuid": "5c622cf8-97cd-4257-a4b3-c25aeffad4c7",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "e9f63c3f-9f30-4fc6-ac1d-1a115a839042": {
+    "process.uuid": "e9f63c3f-9f30-4fc6-ac1d-1a115a839042",
+    "sequence_file.uuid": "83a29cda-bc96-483f-9fc1-07adf5fb0bc3",
+    "cell_suspension.uuid": "2d4d7b82-d2bd-44c6-b30c-e39a8ebcd758",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "ad8368cb-8bf8-45b0-bed0-e8c78219ebda": {
+    "process.uuid": "ad8368cb-8bf8-45b0-bed0-e8c78219ebda",
+    "sequence_file.uuid": "0215b825-0145-4738-9a25-860bc6dc2edf",
+    "cell_suspension.uuid": "2d4d7b82-d2bd-44c6-b30c-e39a8ebcd758",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "4b98dca8-ea68-40ff-8e7b-555a2a306258": {
+    "process.uuid": "4b98dca8-ea68-40ff-8e7b-555a2a306258",
+    "sequence_file.uuid": "e32af63c-90a6-42a3-a638-0611c20c6139",
+    "cell_suspension.uuid": "dcc28f09-9045-477f-b5e4-1a4c09527d91",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "e8704ad6-4095-409d-b441-420a9e8b08c7": {
+    "process.uuid": "e8704ad6-4095-409d-b441-420a9e8b08c7",
+    "sequence_file.uuid": "cc08dab5-d19d-44e1-b684-9bdc4966a4ce",
+    "cell_suspension.uuid": "dcc28f09-9045-477f-b5e4-1a4c09527d91",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "7c704804-c280-4062-9219-0ccfddcf0974": {
+    "process.uuid": "7c704804-c280-4062-9219-0ccfddcf0974",
+    "sequence_file.uuid": "636390a5-98ce-46b3-b663-21242144598b",
+    "cell_suspension.uuid": "de5bce9b-f14f-401c-8eb8-d67762619cd4",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "5421171f-f579-4fb2-b0e5-652452f5b64f": {
+    "process.uuid": "5421171f-f579-4fb2-b0e5-652452f5b64f",
+    "sequence_file.uuid": "d4b2d158-9309-4442-a6af-ef80cc10f49c",
+    "cell_suspension.uuid": "de5bce9b-f14f-401c-8eb8-d67762619cd4",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "f3ce02e8-99fc-4ccc-a5a1-be1fbe550019": {
+    "process.uuid": "f3ce02e8-99fc-4ccc-a5a1-be1fbe550019",
+    "sequence_file.uuid": "75a659a9-4503-485e-b4db-42d845610083",
+    "cell_suspension.uuid": "c0b7cafc-2b24-4b35-b809-3bf9942bb942",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "8ee673ad-7173-4873-be76-93c51d2276bd": {
+    "process.uuid": "8ee673ad-7173-4873-be76-93c51d2276bd",
+    "sequence_file.uuid": "ce56c250-1885-4289-b9a6-886cd53771e6",
+    "cell_suspension.uuid": "c0b7cafc-2b24-4b35-b809-3bf9942bb942",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "f3f249b9-5c70-4285-84f5-dba1a4edf2a0": {
+    "process.uuid": "f3f249b9-5c70-4285-84f5-dba1a4edf2a0",
+    "sequence_file.uuid": "d7dc6ecf-ddf5-4a0d-9e4d-c30af8f30ef6",
+    "cell_suspension.uuid": "8a1fcd94-b2cc-483d-8aee-bce4b30cbf6b",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "0cd24e4a-78a2-433a-aaa6-ff7a9829917e": {
+    "process.uuid": "0cd24e4a-78a2-433a-aaa6-ff7a9829917e",
+    "sequence_file.uuid": "e57a3299-7673-4c63-b564-d6aed14bb4b0",
+    "cell_suspension.uuid": "8a1fcd94-b2cc-483d-8aee-bce4b30cbf6b",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "1af9e44f-fe18-47cf-aba5-578134917b98": {
+    "process.uuid": "1af9e44f-fe18-47cf-aba5-578134917b98",
+    "sequence_file.uuid": "173471cf-f8de-49ab-b50a-bc06154cf94f",
+    "cell_suspension.uuid": "61ef2836-4b17-4e31-a84b-3bda94daa064",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "a83ca69e-0123-4861-959a-4a75a84c4b67": {
+    "process.uuid": "a83ca69e-0123-4861-959a-4a75a84c4b67",
+    "sequence_file.uuid": "12c13f85-9b9b-477f-aba8-db595aba1fca",
+    "cell_suspension.uuid": "61ef2836-4b17-4e31-a84b-3bda94daa064",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "d36948e4-9e46-41cb-9d4d-1c93d0d565c4": {
+    "process.uuid": "d36948e4-9e46-41cb-9d4d-1c93d0d565c4",
+    "sequence_file.uuid": "5e2fa536-3a6a-4a82-af76-f14aa32024b5",
+    "cell_suspension.uuid": "fdcdc4b8-ae22-48c0-aa85-53066ff5148e",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "21a35b8b-53fa-4d3b-97f0-04addd698e34": {
+    "process.uuid": "21a35b8b-53fa-4d3b-97f0-04addd698e34",
+    "sequence_file.uuid": "9134448b-b7f1-478e-9ca5-535f097bbca6",
+    "cell_suspension.uuid": "fdcdc4b8-ae22-48c0-aa85-53066ff5148e",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "3a876f63-7047-4118-beee-04d5731aaf3c": {
+    "process.uuid": "3a876f63-7047-4118-beee-04d5731aaf3c",
+    "sequence_file.uuid": "6cce6b3f-c626-4532-9d71-504a5078e12a",
+    "cell_suspension.uuid": "39d19527-773d-4374-972b-96ecc157a69e",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "b687b9fd-7125-4c09-afe9-ff8f3395ca24": {
+    "process.uuid": "b687b9fd-7125-4c09-afe9-ff8f3395ca24",
+    "sequence_file.uuid": "60bad94b-3cb9-44bb-9a79-70aea0e6fc85",
+    "cell_suspension.uuid": "39d19527-773d-4374-972b-96ecc157a69e",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "e5e41d5d-4593-443a-b04c-dbbe9aa861c0": {
+    "process.uuid": "e5e41d5d-4593-443a-b04c-dbbe9aa861c0",
+    "sequence_file.uuid": "bd843b7f-5512-483e-bdcd-df8f31f69ba4",
+    "cell_suspension.uuid": "48d75325-62cb-425d-9f35-b0cd8dadd252",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "9d5dfb9a-0cc4-4a1d-9a83-fbc09378147e": {
+    "process.uuid": "9d5dfb9a-0cc4-4a1d-9a83-fbc09378147e",
+    "sequence_file.uuid": "dc5ff864-e37f-4105-8ff1-e6afeae933e8",
+    "cell_suspension.uuid": "48d75325-62cb-425d-9f35-b0cd8dadd252",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "f910214c-9a27-4c98-8a7e-c01225b074e5": {
+    "process.uuid": "f910214c-9a27-4c98-8a7e-c01225b074e5",
+    "sequence_file.uuid": "adf16a40-0e1d-4204-be33-f142ad7022e6",
+    "cell_suspension.uuid": "27db2627-b3c5-4ea1-85bd-d99374994f8a",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "03e94217-52ff-4c1d-ae89-adca5bb7821b": {
+    "process.uuid": "03e94217-52ff-4c1d-ae89-adca5bb7821b",
+    "sequence_file.uuid": "8e92ffbb-98eb-4ded-bebe-0cdc67591501",
+    "cell_suspension.uuid": "27db2627-b3c5-4ea1-85bd-d99374994f8a",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "36dbd2a3-913e-4638-b7cf-15b1dc3e01d1": {
+    "process.uuid": "36dbd2a3-913e-4638-b7cf-15b1dc3e01d1",
+    "sequence_file.uuid": "60340a44-7b57-462d-b60f-043eaa2f750d",
+    "cell_suspension.uuid": "5c622cf8-97cd-4257-a4b3-c25aeffad4c7",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "7ff700a3-41a8-45c3-b37a-916b79b42536": {
+    "process.uuid": "7ff700a3-41a8-45c3-b37a-916b79b42536",
+    "sequence_file.uuid": "a5c083da-b4bb-4b7b-8170-b93db459fad3",
+    "cell_suspension.uuid": "5c622cf8-97cd-4257-a4b3-c25aeffad4c7",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "3d2a1cf5-0c54-4763-aed3-ded8816bf4e8": {
+    "process.uuid": "3d2a1cf5-0c54-4763-aed3-ded8816bf4e8",
+    "sequence_file.uuid": "3ff2836f-0db8-4042-b4bc-c51eaaa13e68",
+    "cell_suspension.uuid": "2d4d7b82-d2bd-44c6-b30c-e39a8ebcd758",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "8f92a4ea-228f-4f72-988a-9006c2799334": {
+    "process.uuid": "8f92a4ea-228f-4f72-988a-9006c2799334",
+    "sequence_file.uuid": "725f8c4b-ca44-472b-bc25-296dc9dd09f0",
+    "cell_suspension.uuid": "2d4d7b82-d2bd-44c6-b30c-e39a8ebcd758",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "0aaed446-7d4e-4672-9e85-3b1538ba9517": {
+    "process.uuid": "0aaed446-7d4e-4672-9e85-3b1538ba9517",
+    "sequence_file.uuid": "7bb57973-ce44-4e64-9267-2bf228a67e62",
+    "cell_suspension.uuid": "dcc28f09-9045-477f-b5e4-1a4c09527d91",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "81834ea0-28a4-473a-9395-9b387b7314ca": {
+    "process.uuid": "81834ea0-28a4-473a-9395-9b387b7314ca",
+    "sequence_file.uuid": "e18c8c84-bf55-4bc8-a8fa-ac3917c66185",
+    "cell_suspension.uuid": "dcc28f09-9045-477f-b5e4-1a4c09527d91",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "c9a5d063-e454-4c02-b5df-58bdfece491d": {
+    "process.uuid": "c9a5d063-e454-4c02-b5df-58bdfece491d",
+    "sequence_file.uuid": "ab72784e-b03e-4549-8736-39bb88507127",
+    "cell_suspension.uuid": "de5bce9b-f14f-401c-8eb8-d67762619cd4",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "49bd97a9-8cd7-47b1-a64e-ad76bb09c31a": {
+    "process.uuid": "49bd97a9-8cd7-47b1-a64e-ad76bb09c31a",
+    "sequence_file.uuid": "23f6d8ab-11c6-4bf0-9d79-3b28866a8141",
+    "cell_suspension.uuid": "de5bce9b-f14f-401c-8eb8-d67762619cd4",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "a3077858-0b04-4385-9608-9c54649e83a7": {
+    "process.uuid": "a3077858-0b04-4385-9608-9c54649e83a7",
+    "sequence_file.uuid": "5ca2b788-fa06-401b-a91b-a3781dbde711",
+    "cell_suspension.uuid": "c0b7cafc-2b24-4b35-b809-3bf9942bb942",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "8d2aa7d6-fdad-4c2b-866b-03cc1c4045e6": {
+    "process.uuid": "8d2aa7d6-fdad-4c2b-866b-03cc1c4045e6",
+    "sequence_file.uuid": "25929fa5-8273-4d7e-9082-265a4ceeb398",
+    "cell_suspension.uuid": "c0b7cafc-2b24-4b35-b809-3bf9942bb942",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "ba429417-d796-478b-bf20-343cd1a1b42d": {
+    "process.uuid": "ba429417-d796-478b-bf20-343cd1a1b42d",
+    "sequence_file.uuid": "4a164883-8392-4b63-a3f0-9f0877721c64",
+    "cell_suspension.uuid": "8a1fcd94-b2cc-483d-8aee-bce4b30cbf6b",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "dd179940-0369-455c-9326-4aa76751a424": {
+    "process.uuid": "dd179940-0369-455c-9326-4aa76751a424",
+    "sequence_file.uuid": "2723bc66-44f0-4c38-a926-d826a8aefa33",
+    "cell_suspension.uuid": "8a1fcd94-b2cc-483d-8aee-bce4b30cbf6b",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "6ef82d4f-68a9-4f28-93fd-9d9887bbd09f": {
+    "process.uuid": "6ef82d4f-68a9-4f28-93fd-9d9887bbd09f",
+    "sequence_file.uuid": "0ad88dc5-cbe8-4c19-a2b1-20f2943041f9",
+    "cell_suspension.uuid": "61ef2836-4b17-4e31-a84b-3bda94daa064",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "b20dc0f4-87d8-4e60-8359-c7b86a0588fe": {
+    "process.uuid": "b20dc0f4-87d8-4e60-8359-c7b86a0588fe",
+    "sequence_file.uuid": "99304e95-ce5a-48ac-8fb6-237af0026ada",
+    "cell_suspension.uuid": "61ef2836-4b17-4e31-a84b-3bda94daa064",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "47c04a51-5cb1-4483-b6bf-087632404840": {
+    "process.uuid": "47c04a51-5cb1-4483-b6bf-087632404840",
+    "sequence_file.uuid": "f0385d95-5e7e-49c8-aab8-3793c70ecf3b",
+    "cell_suspension.uuid": "fdcdc4b8-ae22-48c0-aa85-53066ff5148e",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "394a55c8-31d1-4d38-b877-2bb4cb5ce440": {
+    "process.uuid": "394a55c8-31d1-4d38-b877-2bb4cb5ce440",
+    "sequence_file.uuid": "5dafa565-dd87-48e1-9049-541c4b63cfc6",
+    "cell_suspension.uuid": "fdcdc4b8-ae22-48c0-aa85-53066ff5148e",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "ab566234-6315-4bdf-9f0e-a89f7bf8b0dc": {
+    "process.uuid": "ab566234-6315-4bdf-9f0e-a89f7bf8b0dc",
+    "sequence_file.uuid": "06253220-5d56-4a20-9c6e-eadb037ac103",
+    "cell_suspension.uuid": "39d19527-773d-4374-972b-96ecc157a69e",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "f3c3aa05-06ea-4080-8f68-71e95ccf621f": {
+    "process.uuid": "f3c3aa05-06ea-4080-8f68-71e95ccf621f",
+    "sequence_file.uuid": "aa0c7118-0e5c-42ed-ba1b-a5a86c941262",
+    "cell_suspension.uuid": "39d19527-773d-4374-972b-96ecc157a69e",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "67597f90-a737-4de3-be5e-19497de414c4": {
+    "process.uuid": "67597f90-a737-4de3-be5e-19497de414c4",
+    "sequence_file.uuid": "0e2b7fa5-4a13-41a0-85fd-22b6dbd25112",
+    "cell_suspension.uuid": "48d75325-62cb-425d-9f35-b0cd8dadd252",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "1a96ce68-34cf-4593-842a-8b0ddcea2046": {
+    "process.uuid": "1a96ce68-34cf-4593-842a-8b0ddcea2046",
+    "sequence_file.uuid": "9a97ac6b-9096-4141-8659-80bc2cc8362d",
+    "cell_suspension.uuid": "48d75325-62cb-425d-9f35-b0cd8dadd252",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "dce26e1f-9c57-44ca-8a17-39c8413fad7f": {
+    "process.uuid": "dce26e1f-9c57-44ca-8a17-39c8413fad7f",
+    "sequence_file.uuid": "86dc4c36-5e48-4231-8efe-09419c4fe7a4",
+    "cell_suspension.uuid": "27db2627-b3c5-4ea1-85bd-d99374994f8a",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "88f4d711-ce8c-4adb-9638-5470be1f2858": {
+    "process.uuid": "88f4d711-ce8c-4adb-9638-5470be1f2858",
+    "sequence_file.uuid": "52184621-4fa7-48e3-bb18-ec233dd4647c",
+    "cell_suspension.uuid": "27db2627-b3c5-4ea1-85bd-d99374994f8a",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "dadd09be-afc0-4dd2-b971-b7b60c9a5947": {
+    "process.uuid": "dadd09be-afc0-4dd2-b971-b7b60c9a5947",
+    "sequence_file.uuid": "925fa0c2-e794-45ea-8a42-951ca0afa945",
+    "cell_suspension.uuid": "5c622cf8-97cd-4257-a4b3-c25aeffad4c7",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "8620ae19-253e-4edd-bc1f-17d8e5003616": {
+    "process.uuid": "8620ae19-253e-4edd-bc1f-17d8e5003616",
+    "sequence_file.uuid": "e6e143cd-5fb6-4555-996f-705468b9c78d",
+    "cell_suspension.uuid": "5c622cf8-97cd-4257-a4b3-c25aeffad4c7",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "633d25d8-68c2-4d0b-a56d-7adbc6adc84a": {
+    "process.uuid": "633d25d8-68c2-4d0b-a56d-7adbc6adc84a",
+    "sequence_file.uuid": "c0b500a5-36e6-4501-bc84-e57cd31e2427",
+    "cell_suspension.uuid": "2d4d7b82-d2bd-44c6-b30c-e39a8ebcd758",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "af0d1685-142c-4622-b56a-cad961f3c8cb": {
+    "process.uuid": "af0d1685-142c-4622-b56a-cad961f3c8cb",
+    "sequence_file.uuid": "f9084ed4-dd55-45da-9ca1-29dcb3a57cbe",
+    "cell_suspension.uuid": "2d4d7b82-d2bd-44c6-b30c-e39a8ebcd758",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "92186afd-ea98-4a1a-9bbd-e6470da2eaea": {
+    "process.uuid": "92186afd-ea98-4a1a-9bbd-e6470da2eaea",
+    "sequence_file.uuid": "a75a7315-5950-49e2-b028-c328f78f28fe",
+    "cell_suspension.uuid": "dcc28f09-9045-477f-b5e4-1a4c09527d91",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "68fa5265-1044-40f3-a122-67363ba08185": {
+    "process.uuid": "68fa5265-1044-40f3-a122-67363ba08185",
+    "sequence_file.uuid": "c6080ae6-85d8-4f95-8028-560e9e4ed9bd",
+    "cell_suspension.uuid": "dcc28f09-9045-477f-b5e4-1a4c09527d91",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "589b87cf-b48b-4062-b94c-8c2cd63703d8": {
+    "process.uuid": "589b87cf-b48b-4062-b94c-8c2cd63703d8",
+    "sequence_file.uuid": "da7031cb-4e39-43de-afd3-0233fcd85b53",
+    "cell_suspension.uuid": "de5bce9b-f14f-401c-8eb8-d67762619cd4",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "be58f503-75d3-47d3-96d0-d94392eb406f": {
+    "process.uuid": "be58f503-75d3-47d3-96d0-d94392eb406f",
+    "sequence_file.uuid": "2ed73d90-1655-4b69-a0e9-a3490e037454",
+    "cell_suspension.uuid": "de5bce9b-f14f-401c-8eb8-d67762619cd4",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "5b8dcdf6-a4db-4a32-80b1-44451ca0facb": {
+    "process.uuid": "5b8dcdf6-a4db-4a32-80b1-44451ca0facb",
+    "sequence_file.uuid": "08ae6adf-84e2-438f-932d-091ff9bb1e0e",
+    "cell_suspension.uuid": "c0b7cafc-2b24-4b35-b809-3bf9942bb942",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "bacd665f-cbf4-410e-a7bc-449b4f4f4b96": {
+    "process.uuid": "bacd665f-cbf4-410e-a7bc-449b4f4f4b96",
+    "sequence_file.uuid": "3ff1febd-28e4-4465-b428-7b63c7e9c9e9",
+    "cell_suspension.uuid": "c0b7cafc-2b24-4b35-b809-3bf9942bb942",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "e51db468-b525-469f-8f7c-33f9bb1339c2": {
+    "process.uuid": "e51db468-b525-469f-8f7c-33f9bb1339c2",
+    "sequence_file.uuid": "575bfbf0-7afd-4988-a021-b611cdd8f84e",
+    "cell_suspension.uuid": "8a1fcd94-b2cc-483d-8aee-bce4b30cbf6b",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "9f19f889-fdf2-4376-94e9-3006cebc9f7b": {
+    "process.uuid": "9f19f889-fdf2-4376-94e9-3006cebc9f7b",
+    "sequence_file.uuid": "18aa57f7-f791-49af-950e-5fd53ed2b33e",
+    "cell_suspension.uuid": "8a1fcd94-b2cc-483d-8aee-bce4b30cbf6b",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "d7f1a3a0-6263-447c-ae0d-6f3a2b9ed042": {
+    "process.uuid": "d7f1a3a0-6263-447c-ae0d-6f3a2b9ed042",
+    "sequence_file.uuid": "a1e3212a-85e2-4617-a1b0-de6b4536e8a6",
+    "cell_suspension.uuid": "61ef2836-4b17-4e31-a84b-3bda94daa064",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "bea7ff7d-9791-4d8a-9fa8-d327f2101206": {
+    "process.uuid": "bea7ff7d-9791-4d8a-9fa8-d327f2101206",
+    "sequence_file.uuid": "e72b107d-65da-4d1a-aa04-b86a693e8006",
+    "cell_suspension.uuid": "61ef2836-4b17-4e31-a84b-3bda94daa064",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "5e3123f9-42df-4025-b69e-de1dd88bd217": {
+    "process.uuid": "5e3123f9-42df-4025-b69e-de1dd88bd217",
+    "sequence_file.uuid": "4c8d0a54-0334-4d35-a760-1c98cebf4461",
+    "cell_suspension.uuid": "fdcdc4b8-ae22-48c0-aa85-53066ff5148e",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "9137fc66-6641-4920-b479-12f27de0d55a": {
+    "process.uuid": "9137fc66-6641-4920-b479-12f27de0d55a",
+    "sequence_file.uuid": "e14f51bb-7f5d-479c-a421-5bfcd7d85817",
+    "cell_suspension.uuid": "fdcdc4b8-ae22-48c0-aa85-53066ff5148e",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "27c18adb-d814-4fa9-8a62-8f146c7b3b4e": {
+    "process.uuid": "27c18adb-d814-4fa9-8a62-8f146c7b3b4e",
+    "sequence_file.uuid": "fec92f4d-6361-4d38-8149-76dde89f2275",
+    "cell_suspension.uuid": "39d19527-773d-4374-972b-96ecc157a69e",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "19d1df49-c155-4a6f-b838-db32101ca8a9": {
+    "process.uuid": "19d1df49-c155-4a6f-b838-db32101ca8a9",
+    "sequence_file.uuid": "ec2faf22-479e-4313-a46c-202fdc9c5aa5",
+    "cell_suspension.uuid": "39d19527-773d-4374-972b-96ecc157a69e",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "c81f7221-ffb8-48fc-a1f0-47f69f136bac": {
+    "process.uuid": "c81f7221-ffb8-48fc-a1f0-47f69f136bac",
+    "sequence_file.uuid": "dacea0aa-877d-49af-9d2d-a57c93a80026",
+    "cell_suspension.uuid": "48d75325-62cb-425d-9f35-b0cd8dadd252",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "b741f94c-cef5-4295-91d7-50b003caa29b": {
+    "process.uuid": "b741f94c-cef5-4295-91d7-50b003caa29b",
+    "sequence_file.uuid": "6571cd84-220c-4b59-b553-1825e2b3b9ec",
+    "cell_suspension.uuid": "48d75325-62cb-425d-9f35-b0cd8dadd252",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "f922344d-fef2-41c4-a6c3-165b7ff2f663": {
+    "process.uuid": "f922344d-fef2-41c4-a6c3-165b7ff2f663",
+    "sequence_file.uuid": "171d8960-4545-4e1e-b216-55548281a4a4",
+    "cell_suspension.uuid": "ff6558df-3119-48ef-a5dc-320e2e39379f",
+    "library_preparation_protocol.uuid": "19666bec-1f3d-419d-8cb5-7cf29ef4ac5a",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "3b6d3ede-e258-4423-87ee-13c1ba74f876": {
+    "process.uuid": "3b6d3ede-e258-4423-87ee-13c1ba74f876",
+    "sequence_file.uuid": "3c039ae6-fb8b-40b9-81e9-4eb0803203c1",
+    "cell_suspension.uuid": "ff6558df-3119-48ef-a5dc-320e2e39379f",
+    "library_preparation_protocol.uuid": "19666bec-1f3d-419d-8cb5-7cf29ef4ac5a",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "cba0d4c5-1360-4246-b39c-8ce378a2b290": {
+    "process.uuid": "cba0d4c5-1360-4246-b39c-8ce378a2b290",
+    "sequence_file.uuid": "01a75107-041d-4a27-919e-ae59c5f3ec9b",
+    "cell_suspension.uuid": "47b77f54-8153-47ba-936f-9f3565c537cf",
+    "library_preparation_protocol.uuid": "19666bec-1f3d-419d-8cb5-7cf29ef4ac5a",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "14c47beb-202f-4f55-bb58-9703d9ff4555": {
+    "process.uuid": "14c47beb-202f-4f55-bb58-9703d9ff4555",
+    "sequence_file.uuid": "1008066f-28b5-4a25-b515-4a5f9a1a7e73",
+    "cell_suspension.uuid": "47b77f54-8153-47ba-936f-9f3565c537cf",
+    "library_preparation_protocol.uuid": "19666bec-1f3d-419d-8cb5-7cf29ef4ac5a",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "45528d7b-79a7-4ff3-836e-4934d4bd2cce": {
+    "process.uuid": "45528d7b-79a7-4ff3-836e-4934d4bd2cce",
+    "sequence_file.uuid": "c2e0eb77-d399-45c9-aafa-0a207d7a711e",
+    "cell_suspension.uuid": "f0912bca-3632-420d-86d2-751744b172b9",
+    "library_preparation_protocol.uuid": "19666bec-1f3d-419d-8cb5-7cf29ef4ac5a",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "0e6c8c52-5423-4deb-bfdf-fafb305d82f2": {
+    "process.uuid": "0e6c8c52-5423-4deb-bfdf-fafb305d82f2",
+    "sequence_file.uuid": "e5b4033d-de0e-4489-9f89-a8fd8492bf08",
+    "cell_suspension.uuid": "f0912bca-3632-420d-86d2-751744b172b9",
+    "library_preparation_protocol.uuid": "19666bec-1f3d-419d-8cb5-7cf29ef4ac5a",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "2066fd1a-6c9c-4c50-a880-a92a85230434": {
+    "process.uuid": "2066fd1a-6c9c-4c50-a880-a92a85230434",
+    "sequence_file.uuid": "a745b381-4c21-4123-9ebd-9adf5556945f",
+    "cell_suspension.uuid": "7860d577-d031-456b-aa4b-4645fcaaeab8",
+    "library_preparation_protocol.uuid": "19666bec-1f3d-419d-8cb5-7cf29ef4ac5a",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "3d8c9eaf-775b-45f3-b859-e2d7942fc4fb": {
+    "process.uuid": "3d8c9eaf-775b-45f3-b859-e2d7942fc4fb",
+    "sequence_file.uuid": "56556f10-aa05-42b3-addc-a4be1001a180",
+    "cell_suspension.uuid": "7860d577-d031-456b-aa4b-4645fcaaeab8",
+    "library_preparation_protocol.uuid": "19666bec-1f3d-419d-8cb5-7cf29ef4ac5a",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "9721e4a4-e83a-47e5-bfd0-8ebb56b9b023": {
+    "process.uuid": "9721e4a4-e83a-47e5-bfd0-8ebb56b9b023",
+    "sequence_file.uuid": "d43ee68f-e730-4d6b-a139-f5eda20d9313",
+    "cell_suspension.uuid": "d6149ad1-0972-4c70-9477-1a8e02d311ae",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "d7b9cbc8-a841-4290-9d02-c517d116bd1d": {
+    "process.uuid": "d7b9cbc8-a841-4290-9d02-c517d116bd1d",
+    "sequence_file.uuid": "8746d6ab-c9ad-440b-aae1-85ef23e93c67",
+    "cell_suspension.uuid": "d6149ad1-0972-4c70-9477-1a8e02d311ae",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "a2a0aab8-c256-47a3-b68d-a0fd161537fa": {
+    "process.uuid": "a2a0aab8-c256-47a3-b68d-a0fd161537fa",
+    "sequence_file.uuid": "48151adf-d735-49d0-a540-4e04b3cab17b",
+    "cell_suspension.uuid": "5fff180d-a754-46df-8deb-c60a86bb0b4e",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "29299119-6b15-4e7e-883f-ad7886774dfb": {
+    "process.uuid": "29299119-6b15-4e7e-883f-ad7886774dfb",
+    "sequence_file.uuid": "08d3649a-5832-408c-af77-ca3af0e2d690",
+    "cell_suspension.uuid": "5fff180d-a754-46df-8deb-c60a86bb0b4e",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "be821d03-8c97-4987-9152-367c2712f875": {
+    "process.uuid": "be821d03-8c97-4987-9152-367c2712f875",
+    "sequence_file.uuid": "10aa75c5-f108-4210-872b-9e77ab474021",
+    "cell_suspension.uuid": "8758207f-1943-49bc-be9c-497b095f831b",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "d2e204a7-9371-4c9d-9da3-dda0ad3cd848": {
+    "process.uuid": "d2e204a7-9371-4c9d-9da3-dda0ad3cd848",
+    "sequence_file.uuid": "1c859ec0-dfec-44cb-a044-6d115ca8015a",
+    "cell_suspension.uuid": "8758207f-1943-49bc-be9c-497b095f831b",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "9e3c93ea-fdaa-4432-84c0-f05a0278b8ce": {
+    "process.uuid": "9e3c93ea-fdaa-4432-84c0-f05a0278b8ce",
+    "sequence_file.uuid": "beb9c7a7-b0c1-45b7-9a04-8550e16d2a94",
+    "cell_suspension.uuid": "64a92c12-af1e-42c3-8a81-47f6f36e123a",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "04bb9d80-f8d1-476a-b53e-c96b1c7656ab": {
+    "process.uuid": "04bb9d80-f8d1-476a-b53e-c96b1c7656ab",
+    "sequence_file.uuid": "b3195e4c-6a7b-4784-a597-f9c40367ec52",
+    "cell_suspension.uuid": "64a92c12-af1e-42c3-8a81-47f6f36e123a",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "5a9bf898-c4ba-4b59-8a98-5326b0a44f0e": {
+    "process.uuid": "5a9bf898-c4ba-4b59-8a98-5326b0a44f0e",
+    "sequence_file.uuid": "f6ea3323-047d-4b78-8edc-ca327c0aa077",
+    "cell_suspension.uuid": "ad8b7917-e1e4-4f01-8067-f96a7dc09745",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "05821926-c376-4bf1-a50e-dd4907baf0d4": {
+    "process.uuid": "05821926-c376-4bf1-a50e-dd4907baf0d4",
+    "sequence_file.uuid": "32d98e1a-db20-4c03-9c9b-b3c164d83d7c",
+    "cell_suspension.uuid": "ad8b7917-e1e4-4f01-8067-f96a7dc09745",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "a166b1f6-8324-40f9-a25d-233e73833c48": {
+    "process.uuid": "a166b1f6-8324-40f9-a25d-233e73833c48",
+    "sequence_file.uuid": "dabf1f95-fc0f-4294-ba0d-f207aedf92af",
+    "cell_suspension.uuid": "4e60e900-1b55-44ac-9c4e-5cb91d3b47fb",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "bcad5f29-1824-4a25-b66f-cddc5a92aeb4": {
+    "process.uuid": "bcad5f29-1824-4a25-b66f-cddc5a92aeb4",
+    "sequence_file.uuid": "9a02ae5a-273b-42aa-8ceb-3a224bdbd22b",
+    "cell_suspension.uuid": "4e60e900-1b55-44ac-9c4e-5cb91d3b47fb",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "bf756133-a83a-4ef0-960e-410345e79281": {
+    "process.uuid": "bf756133-a83a-4ef0-960e-410345e79281",
+    "sequence_file.uuid": "bcc6ce7d-df56-41c5-84ad-e83f6179ab4a",
+    "cell_suspension.uuid": "de4dc5fe-793a-48bd-a0e8-517ee2b4466a",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "9d0d95e9-c8eb-4eaf-a52c-c219d883c8b9": {
+    "process.uuid": "9d0d95e9-c8eb-4eaf-a52c-c219d883c8b9",
+    "sequence_file.uuid": "5dcc042c-91ab-4090-8833-4c698703ccd3",
+    "cell_suspension.uuid": "de4dc5fe-793a-48bd-a0e8-517ee2b4466a",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "cc114f37-b0df-4e80-9614-20aac6a700ee": {
+    "process.uuid": "cc114f37-b0df-4e80-9614-20aac6a700ee",
+    "sequence_file.uuid": "60265fb4-cb36-4fcf-b5a6-b822c3eea2a0",
+    "cell_suspension.uuid": "0120d53e-2c26-4220-92a2-333a9717f096",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "8aacb181-3f58-4a67-b6b4-dfe877c7d4f7": {
+    "process.uuid": "8aacb181-3f58-4a67-b6b4-dfe877c7d4f7",
+    "sequence_file.uuid": "87824e66-e005-4bba-a759-d0e38e604d24",
+    "cell_suspension.uuid": "0120d53e-2c26-4220-92a2-333a9717f096",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "f9c26184-d48e-49d0-92d5-7f788c998bd5": {
+    "process.uuid": "f9c26184-d48e-49d0-92d5-7f788c998bd5",
+    "sequence_file.uuid": "0a4872f1-3f0c-419d-960d-fafbdb21f06c",
+    "cell_suspension.uuid": "b6c0f3b3-dac3-424a-b8b4-66e9c293fb72",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "52b2d8c4-a2fb-4a2c-ac29-e31228f97f34": {
+    "process.uuid": "52b2d8c4-a2fb-4a2c-ac29-e31228f97f34",
+    "sequence_file.uuid": "040bfbdf-fd7c-4df6-bbd1-df8b6024ca9f",
+    "cell_suspension.uuid": "b6c0f3b3-dac3-424a-b8b4-66e9c293fb72",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "b45c6c90-2744-49f4-a815-09fb58a0e563": {
+    "process.uuid": "b45c6c90-2744-49f4-a815-09fb58a0e563",
+    "sequence_file.uuid": "df83c6be-8f85-4a02-b1a5-d972704f2c75",
+    "cell_suspension.uuid": "705b5dda-47ca-495e-b1b2-67c259fb4b29",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "d00cd9d2-e75b-4ee7-8ed8-800130779099": {
+    "process.uuid": "d00cd9d2-e75b-4ee7-8ed8-800130779099",
+    "sequence_file.uuid": "3ef340e6-2964-41d9-a175-ce5eefba799f",
+    "cell_suspension.uuid": "705b5dda-47ca-495e-b1b2-67c259fb4b29",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "101dc1d5-e81a-47a9-a0a9-3668b15a92c9": {
+    "process.uuid": "101dc1d5-e81a-47a9-a0a9-3668b15a92c9",
+    "sequence_file.uuid": "2e48841b-881b-4418-a602-29e350cacd0b",
+    "cell_suspension.uuid": "40327e26-5527-46e4-b326-fb49069b67aa",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "319194c7-cae9-4203-982c-7165ee7346b7": {
+    "process.uuid": "319194c7-cae9-4203-982c-7165ee7346b7",
+    "sequence_file.uuid": "ca54deee-630c-420e-87f1-2e55e719b582",
+    "cell_suspension.uuid": "40327e26-5527-46e4-b326-fb49069b67aa",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "1e2dd482-99e8-4d75-8735-13d66afc704d": {
+    "process.uuid": "1e2dd482-99e8-4d75-8735-13d66afc704d",
+    "sequence_file.uuid": "ff170121-ab03-42ac-b524-948c121b169a",
+    "cell_suspension.uuid": "1efd4691-8a72-4055-bd95-b546dcf1882d",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "5b522290-1b28-47ab-9b27-ccbcf550063d": {
+    "process.uuid": "5b522290-1b28-47ab-9b27-ccbcf550063d",
+    "sequence_file.uuid": "e467d1b5-cdfd-4122-b41f-3f3061538591",
+    "cell_suspension.uuid": "1efd4691-8a72-4055-bd95-b546dcf1882d",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "9869b220-ca3d-4944-b434-08945ee91cd4": {
+    "process.uuid": "9869b220-ca3d-4944-b434-08945ee91cd4",
+    "sequence_file.uuid": "d08be3b1-5ef0-451f-a8ba-77eb253a1958",
+    "cell_suspension.uuid": "4c9bbf65-b340-41e6-891c-9d2b8f16a555",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "d519ebb6-d570-4586-b70b-8e6c49396ba8": {
+    "process.uuid": "d519ebb6-d570-4586-b70b-8e6c49396ba8",
+    "sequence_file.uuid": "f330bc1b-d8d4-4337-bf94-ee290836739a",
+    "cell_suspension.uuid": "4c9bbf65-b340-41e6-891c-9d2b8f16a555",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "76ddc2e4-fba1-48ec-802d-12aa6cc8a8d4": {
+    "process.uuid": "76ddc2e4-fba1-48ec-802d-12aa6cc8a8d4",
+    "sequence_file.uuid": "ac9175b1-6f9d-4bdb-a1c4-351462bd8de6",
+    "cell_suspension.uuid": "33d2423d-45b9-4678-af05-6445ec294941",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "441c2dbb-b73f-47b2-bb19-2fd094c1244a": {
+    "process.uuid": "441c2dbb-b73f-47b2-bb19-2fd094c1244a",
+    "sequence_file.uuid": "5d80cfc5-e7af-4703-b9c3-772bd48596d1",
+    "cell_suspension.uuid": "33d2423d-45b9-4678-af05-6445ec294941",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "2a147c91-09fb-424e-a748-096c60e2e45a": {
+    "process.uuid": "2a147c91-09fb-424e-a748-096c60e2e45a",
+    "sequence_file.uuid": "f6120719-b86e-4af2-86d7-7aae9b1c9e5b",
+    "cell_suspension.uuid": "9d793a37-91b1-4119-93be-d8efad2c782a",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "d3c653cd-437f-43f3-8b81-a37357a647cd": {
+    "process.uuid": "d3c653cd-437f-43f3-8b81-a37357a647cd",
+    "sequence_file.uuid": "23a920cc-8dc2-41ea-a681-8f85f7a42292",
+    "cell_suspension.uuid": "9d793a37-91b1-4119-93be-d8efad2c782a",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "aeb51b15-39df-4a6f-a87c-3225698719db": {
+    "process.uuid": "aeb51b15-39df-4a6f-a87c-3225698719db",
+    "sequence_file.uuid": "c249f53c-e74b-4f4d-92ca-77b50e01bdc7",
+    "cell_suspension.uuid": "0ee6d95f-f1c1-4ce1-ae2a-8fc6cb6fc4f5",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "f5d23d9d-0c05-4667-ac02-7cf447b65522": {
+    "process.uuid": "f5d23d9d-0c05-4667-ac02-7cf447b65522",
+    "sequence_file.uuid": "e8d6aa7e-915e-4054-8eda-7e319be541e9",
+    "cell_suspension.uuid": "0ee6d95f-f1c1-4ce1-ae2a-8fc6cb6fc4f5",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "c1746785-3213-4d36-91b8-9ece15b47ad9": {
+    "process.uuid": "c1746785-3213-4d36-91b8-9ece15b47ad9",
+    "sequence_file.uuid": "481c5e7c-2f61-4457-99a9-5d8d2d338cbe",
+    "cell_suspension.uuid": "e3491faa-c37e-49df-bf38-5f67d8e75883",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "64ac2a85-dc6a-4ccc-8eed-13af82ca758d": {
+    "process.uuid": "64ac2a85-dc6a-4ccc-8eed-13af82ca758d",
+    "sequence_file.uuid": "69bd116d-6b2a-4a13-9c8c-307ee3231ffd",
+    "cell_suspension.uuid": "e3491faa-c37e-49df-bf38-5f67d8e75883",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "07088182-151c-408c-9a84-fffbcaf6c478": {
+    "process.uuid": "07088182-151c-408c-9a84-fffbcaf6c478",
+    "sequence_file.uuid": "73f37df2-ced5-44db-845b-800962b3de76",
+    "cell_suspension.uuid": "f61eeeb7-697b-4d8c-b525-a5fbdf0f3401",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "a0449daa-f8e7-4a2a-b5fb-c6f3581318cb": {
+    "process.uuid": "a0449daa-f8e7-4a2a-b5fb-c6f3581318cb",
+    "sequence_file.uuid": "22c0760e-15f5-42e1-bd61-05f25f46084d",
+    "cell_suspension.uuid": "f61eeeb7-697b-4d8c-b525-a5fbdf0f3401",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "5e0478ce-291b-4f1b-8973-386c8e4fbd66": {
+    "process.uuid": "5e0478ce-291b-4f1b-8973-386c8e4fbd66",
+    "sequence_file.uuid": "f8209684-01c9-40a4-b728-7532f00a839c",
+    "cell_suspension.uuid": "e933a0d2-09f6-4e65-9254-8a658205605b",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "14c88ddc-c0d7-4271-a1c9-bce1ba782726": {
+    "process.uuid": "14c88ddc-c0d7-4271-a1c9-bce1ba782726",
+    "sequence_file.uuid": "2def21f4-160c-4846-b9b7-b86c5b2cd18b",
+    "cell_suspension.uuid": "e933a0d2-09f6-4e65-9254-8a658205605b",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "4701f0c4-3879-4e4d-92ae-2c8258a08c39": {
+    "process.uuid": "4701f0c4-3879-4e4d-92ae-2c8258a08c39",
+    "sequence_file.uuid": "ced8cc81-7b88-4595-81f7-0c83ef396dec",
+    "cell_suspension.uuid": "8f963f28-c243-4a70-9da0-ba548b3e2760",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "f5978bab-7c93-4cac-891b-cd11f6cc90c6": {
+    "process.uuid": "f5978bab-7c93-4cac-891b-cd11f6cc90c6",
+    "sequence_file.uuid": "ff731109-75b9-48b0-a10b-ea06ea7792f3",
+    "cell_suspension.uuid": "8f963f28-c243-4a70-9da0-ba548b3e2760",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "b0be2b05-ec7a-470c-a52c-767e56771132": {
+    "process.uuid": "b0be2b05-ec7a-470c-a52c-767e56771132",
+    "sequence_file.uuid": "a880e6d1-f8fb-4a0a-9a21-b19569b56210",
+    "cell_suspension.uuid": "e70f56e7-ba02-4de3-b475-4a3589f3af40",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "fe9b425c-907b-4e9e-90bd-dc331c1b2770": {
+    "process.uuid": "fe9b425c-907b-4e9e-90bd-dc331c1b2770",
+    "sequence_file.uuid": "194110d3-3ec5-47bc-aa18-980de0d180fb",
+    "cell_suspension.uuid": "e70f56e7-ba02-4de3-b475-4a3589f3af40",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "a30c59ec-578e-48cd-b139-6c8e024e2e91": {
+    "process.uuid": "a30c59ec-578e-48cd-b139-6c8e024e2e91",
+    "sequence_file.uuid": "4d091d0c-19dd-4930-88ff-f18ee61ec627",
+    "cell_suspension.uuid": "d051c6de-0f2f-4e11-a1f7-ab50e205f3a3",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "276a465a-0e93-409f-9956-a9a98fd5aa87": {
+    "process.uuid": "276a465a-0e93-409f-9956-a9a98fd5aa87",
+    "sequence_file.uuid": "89d80f47-adee-43eb-8c09-6e82c18a31b4",
+    "cell_suspension.uuid": "d051c6de-0f2f-4e11-a1f7-ab50e205f3a3",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "b73c0eb1-41f8-45d7-a880-3e5d061a01af": {
+    "process.uuid": "b73c0eb1-41f8-45d7-a880-3e5d061a01af",
+    "sequence_file.uuid": "209a3f91-1733-4c80-a62f-567b64623db0",
+    "cell_suspension.uuid": "adc3fc7f-e969-40a8-bcd8-8c8b1799ad5f",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "7e5b5f56-41a9-4870-b6c4-8bef3e92b562": {
+    "process.uuid": "7e5b5f56-41a9-4870-b6c4-8bef3e92b562",
+    "sequence_file.uuid": "29e7c3fe-bee8-4420-9e77-a4490073d190",
+    "cell_suspension.uuid": "adc3fc7f-e969-40a8-bcd8-8c8b1799ad5f",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "004dba85-a210-487c-953f-d1b2bee8718a": {
+    "process.uuid": "004dba85-a210-487c-953f-d1b2bee8718a",
+    "sequence_file.uuid": "51030d81-a3de-4e0f-98cf-97d3492acb0f",
+    "cell_suspension.uuid": "b42562f8-6555-4885-990a-b221b4048b8f",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "f0c755e1-03a3-484b-801d-e267346b606a": {
+    "process.uuid": "f0c755e1-03a3-484b-801d-e267346b606a",
+    "sequence_file.uuid": "222a734e-2583-4859-8e8f-bcdb1a8c24a4",
+    "cell_suspension.uuid": "b42562f8-6555-4885-990a-b221b4048b8f",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "6296291f-dd8e-4b86-9180-51789162a436": {
+    "process.uuid": "6296291f-dd8e-4b86-9180-51789162a436",
+    "sequence_file.uuid": "821ecee8-3124-4fc2-b07e-b84d2e1dee21",
+    "cell_suspension.uuid": "442e6b74-d5f1-4bae-88cd-9655860961c5",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "a53c4669-0cf5-45b3-a473-3853651a5694": {
+    "process.uuid": "a53c4669-0cf5-45b3-a473-3853651a5694",
+    "sequence_file.uuid": "831b0cd6-6f09-4393-82a3-f35354d8c34b",
+    "cell_suspension.uuid": "442e6b74-d5f1-4bae-88cd-9655860961c5",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "0bd46f54-86f2-4f62-b9ab-762b557258f9": {
+    "process.uuid": "0bd46f54-86f2-4f62-b9ab-762b557258f9",
+    "sequence_file.uuid": "692602ff-1d0c-4d67-a70c-7be36fde760d",
+    "cell_suspension.uuid": "679fe8d7-fbfd-4f29-9945-e29f392dc227",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "6e174e7b-c8bf-4b4e-876c-d4f8039546de": {
+    "process.uuid": "6e174e7b-c8bf-4b4e-876c-d4f8039546de",
+    "sequence_file.uuid": "1ca5bddc-feb6-47e0-89a5-ee705e763f78",
+    "cell_suspension.uuid": "679fe8d7-fbfd-4f29-9945-e29f392dc227",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "08bef62d-d7e9-4e0d-b642-88ce1b918467": {
+    "process.uuid": "08bef62d-d7e9-4e0d-b642-88ce1b918467",
+    "sequence_file.uuid": "35117b61-863e-4a8b-ac88-272e0f11c0e7",
+    "cell_suspension.uuid": "5c28429b-3b58-4c67-bb84-88f7361d9f56",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "93a3bf94-b885-4a57-be32-86121ec81a75": {
+    "process.uuid": "93a3bf94-b885-4a57-be32-86121ec81a75",
+    "sequence_file.uuid": "424faf69-bc0d-4f9f-b520-25e805882d53",
+    "cell_suspension.uuid": "5c28429b-3b58-4c67-bb84-88f7361d9f56",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "682378a1-9e6c-4627-8693-2ac877d73203": {
+    "process.uuid": "682378a1-9e6c-4627-8693-2ac877d73203",
+    "sequence_file.uuid": "94f33aaf-2e81-44f2-bce5-47b47e53075f",
+    "cell_suspension.uuid": "33d2423d-45b9-4678-af05-6445ec294941",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "36eaada1-c98b-4fd9-885a-85507b3dfa54": {
+    "process.uuid": "36eaada1-c98b-4fd9-885a-85507b3dfa54",
+    "sequence_file.uuid": "a42d74a6-a1eb-4375-8657-37b06466d478",
+    "cell_suspension.uuid": "33d2423d-45b9-4678-af05-6445ec294941",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "8858dfad-8715-4910-8c99-be943c728fe0": {
+    "process.uuid": "8858dfad-8715-4910-8c99-be943c728fe0",
+    "sequence_file.uuid": "4ba00c42-51e6-4128-8fe8-0dc01d43d896",
+    "cell_suspension.uuid": "9d793a37-91b1-4119-93be-d8efad2c782a",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "459211f1-7e0d-4c13-b945-a2490d8b81fe": {
+    "process.uuid": "459211f1-7e0d-4c13-b945-a2490d8b81fe",
+    "sequence_file.uuid": "f3711ff8-aec7-4f6d-8b9f-0fb6a374ede9",
+    "cell_suspension.uuid": "9d793a37-91b1-4119-93be-d8efad2c782a",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "5858f069-87f2-4701-952c-28185b701477": {
+    "process.uuid": "5858f069-87f2-4701-952c-28185b701477",
+    "sequence_file.uuid": "747213c1-5d5f-4c4c-b90c-91139b1027a1",
+    "cell_suspension.uuid": "0ee6d95f-f1c1-4ce1-ae2a-8fc6cb6fc4f5",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "9d4ce420-1b79-4391-a498-1bdec455af9d": {
+    "process.uuid": "9d4ce420-1b79-4391-a498-1bdec455af9d",
+    "sequence_file.uuid": "0b8a3839-acac-4d5e-acd9-f709a4458c98",
+    "cell_suspension.uuid": "0ee6d95f-f1c1-4ce1-ae2a-8fc6cb6fc4f5",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "e3d91f56-9c58-4ab8-8ee5-9ead61d39592": {
+    "process.uuid": "e3d91f56-9c58-4ab8-8ee5-9ead61d39592",
+    "sequence_file.uuid": "66093e4d-0d0a-4b2e-8632-61f24fbed86d",
+    "cell_suspension.uuid": "e3491faa-c37e-49df-bf38-5f67d8e75883",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "1d397275-26a9-440c-ab98-bf3ece4ec704": {
+    "process.uuid": "1d397275-26a9-440c-ab98-bf3ece4ec704",
+    "sequence_file.uuid": "dc641a7a-f1c6-47f8-8e29-ee87075ee292",
+    "cell_suspension.uuid": "e3491faa-c37e-49df-bf38-5f67d8e75883",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "92483014-bdb1-41cc-a758-b2e1c151c96b": {
+    "process.uuid": "92483014-bdb1-41cc-a758-b2e1c151c96b",
+    "sequence_file.uuid": "792b86b1-c549-4fa3-8bb4-b0ee3fc54363",
+    "cell_suspension.uuid": "f61eeeb7-697b-4d8c-b525-a5fbdf0f3401",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "04c36a7a-8831-4796-9284-b57125e89d0c": {
+    "process.uuid": "04c36a7a-8831-4796-9284-b57125e89d0c",
+    "sequence_file.uuid": "102b6a0b-6bc4-426e-8fe4-00386b857c04",
+    "cell_suspension.uuid": "f61eeeb7-697b-4d8c-b525-a5fbdf0f3401",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "b5074fce-bc80-4e51-ba2e-13519927904d": {
+    "process.uuid": "b5074fce-bc80-4e51-ba2e-13519927904d",
+    "sequence_file.uuid": "e8adf66a-228e-4a5b-9e5b-a7c48ffa0a86",
+    "cell_suspension.uuid": "e933a0d2-09f6-4e65-9254-8a658205605b",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "4bc56f6b-42af-414c-95c6-f5fdbc4af936": {
+    "process.uuid": "4bc56f6b-42af-414c-95c6-f5fdbc4af936",
+    "sequence_file.uuid": "44918d10-4e5d-4636-aead-389dde00d19f",
+    "cell_suspension.uuid": "e933a0d2-09f6-4e65-9254-8a658205605b",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "d5c5bccc-5523-4ed7-b1dc-38e4c212b31c": {
+    "process.uuid": "d5c5bccc-5523-4ed7-b1dc-38e4c212b31c",
+    "sequence_file.uuid": "4528af15-f15d-4260-a101-2ac7f73ff17a",
+    "cell_suspension.uuid": "8f963f28-c243-4a70-9da0-ba548b3e2760",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "04eda7d8-9320-4d57-8036-1e51ec418680": {
+    "process.uuid": "04eda7d8-9320-4d57-8036-1e51ec418680",
+    "sequence_file.uuid": "2e433004-5179-49cf-854e-1e085b7afe93",
+    "cell_suspension.uuid": "8f963f28-c243-4a70-9da0-ba548b3e2760",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "857bf537-a52a-41cd-830d-c5c8f0fd092e": {
+    "process.uuid": "857bf537-a52a-41cd-830d-c5c8f0fd092e",
+    "sequence_file.uuid": "1538f74f-9c3e-4d2c-81c4-0a232359fb51",
+    "cell_suspension.uuid": "e70f56e7-ba02-4de3-b475-4a3589f3af40",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "ce1ff23f-43a5-4b04-a59a-dca1eb900402": {
+    "process.uuid": "ce1ff23f-43a5-4b04-a59a-dca1eb900402",
+    "sequence_file.uuid": "e6114892-c125-48f2-aa37-6212f3aeda3e",
+    "cell_suspension.uuid": "e70f56e7-ba02-4de3-b475-4a3589f3af40",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "5517763b-48dc-4ac1-b197-1306fed38f57": {
+    "process.uuid": "5517763b-48dc-4ac1-b197-1306fed38f57",
+    "sequence_file.uuid": "e270077e-5bee-4be4-ba92-e1596e308591",
+    "cell_suspension.uuid": "d051c6de-0f2f-4e11-a1f7-ab50e205f3a3",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "1153f2b1-8879-4f79-88e3-1950c71b80cc": {
+    "process.uuid": "1153f2b1-8879-4f79-88e3-1950c71b80cc",
+    "sequence_file.uuid": "892505f4-fe95-4bba-8616-5cd968613139",
+    "cell_suspension.uuid": "d051c6de-0f2f-4e11-a1f7-ab50e205f3a3",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "f4dc02e3-6cb8-47a8-9c6c-18046678045a": {
+    "process.uuid": "f4dc02e3-6cb8-47a8-9c6c-18046678045a",
+    "sequence_file.uuid": "e5d135e6-ce12-4805-8025-64af0fc1df66",
+    "cell_suspension.uuid": "adc3fc7f-e969-40a8-bcd8-8c8b1799ad5f",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "b153bd20-e75c-4ba5-a49f-df1c8ee296ba": {
+    "process.uuid": "b153bd20-e75c-4ba5-a49f-df1c8ee296ba",
+    "sequence_file.uuid": "59cd4a2e-0dec-48d4-93a4-338a58af1724",
+    "cell_suspension.uuid": "adc3fc7f-e969-40a8-bcd8-8c8b1799ad5f",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "d94fceab-bc77-49cc-9d97-12b529274a94": {
+    "process.uuid": "d94fceab-bc77-49cc-9d97-12b529274a94",
+    "sequence_file.uuid": "8f7551fc-86e7-410e-88de-6670412a7c49",
+    "cell_suspension.uuid": "33d2423d-45b9-4678-af05-6445ec294941",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "1ea75a39-a185-44ec-a4c9-b8ae6767998e": {
+    "process.uuid": "1ea75a39-a185-44ec-a4c9-b8ae6767998e",
+    "sequence_file.uuid": "48d6e444-8796-4113-b920-9a9a9cf920e8",
+    "cell_suspension.uuid": "33d2423d-45b9-4678-af05-6445ec294941",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "d0e79305-ed01-4086-9ff1-d4d6634c9dca": {
+    "process.uuid": "d0e79305-ed01-4086-9ff1-d4d6634c9dca",
+    "sequence_file.uuid": "7406e310-7ba8-470e-ba79-666c43ce42e9",
+    "cell_suspension.uuid": "9d793a37-91b1-4119-93be-d8efad2c782a",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "db0a6efe-471c-47c7-b658-be8512d99fad": {
+    "process.uuid": "db0a6efe-471c-47c7-b658-be8512d99fad",
+    "sequence_file.uuid": "11155036-d8c7-4d02-bbfe-db037333e401",
+    "cell_suspension.uuid": "9d793a37-91b1-4119-93be-d8efad2c782a",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "97392b3f-6692-4c39-81b4-f3242572b962": {
+    "process.uuid": "97392b3f-6692-4c39-81b4-f3242572b962",
+    "sequence_file.uuid": "48ab7357-a2d6-4b3a-bda7-ded108623f56",
+    "cell_suspension.uuid": "0ee6d95f-f1c1-4ce1-ae2a-8fc6cb6fc4f5",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "2b24d01e-9497-45a0-bb8f-8b9fb588569f": {
+    "process.uuid": "2b24d01e-9497-45a0-bb8f-8b9fb588569f",
+    "sequence_file.uuid": "414943a5-a597-4106-b731-aa82725238ec",
+    "cell_suspension.uuid": "0ee6d95f-f1c1-4ce1-ae2a-8fc6cb6fc4f5",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "6a1ef56a-fb8e-4297-b7b7-1d5601424f14": {
+    "process.uuid": "6a1ef56a-fb8e-4297-b7b7-1d5601424f14",
+    "sequence_file.uuid": "e0a5d952-07f7-49b6-9885-c1c9fdc2f54e",
+    "cell_suspension.uuid": "e3491faa-c37e-49df-bf38-5f67d8e75883",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "227a3997-7ae0-4b29-82c4-63ba4c6eb050": {
+    "process.uuid": "227a3997-7ae0-4b29-82c4-63ba4c6eb050",
+    "sequence_file.uuid": "8b0070f2-6cb8-41f8-9ffd-830c1520f6ba",
+    "cell_suspension.uuid": "e3491faa-c37e-49df-bf38-5f67d8e75883",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "73e9d360-7684-4944-85a9-c88585d34347": {
+    "process.uuid": "73e9d360-7684-4944-85a9-c88585d34347",
+    "sequence_file.uuid": "cf21f17e-fe53-4ace-9008-d8c72476ef4c",
+    "cell_suspension.uuid": "f61eeeb7-697b-4d8c-b525-a5fbdf0f3401",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "9d6f9efb-1245-4e52-b012-6be3185c8b70": {
+    "process.uuid": "9d6f9efb-1245-4e52-b012-6be3185c8b70",
+    "sequence_file.uuid": "50984a78-947e-4faa-870b-9f58207dd23c",
+    "cell_suspension.uuid": "f61eeeb7-697b-4d8c-b525-a5fbdf0f3401",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "92b3629f-9244-49cb-a9c0-638fb7f7b1e6": {
+    "process.uuid": "92b3629f-9244-49cb-a9c0-638fb7f7b1e6",
+    "sequence_file.uuid": "c30426ed-e6ce-47af-ae4d-6cfd7ae6f0c0",
+    "cell_suspension.uuid": "e933a0d2-09f6-4e65-9254-8a658205605b",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "45de878a-4baa-41a7-8517-82c09e1e9a13": {
+    "process.uuid": "45de878a-4baa-41a7-8517-82c09e1e9a13",
+    "sequence_file.uuid": "57693e1b-781e-484c-9c29-5293f9caaa08",
+    "cell_suspension.uuid": "e933a0d2-09f6-4e65-9254-8a658205605b",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "91e247ac-afd7-4ee6-90a2-e4d7cc0de79e": {
+    "process.uuid": "91e247ac-afd7-4ee6-90a2-e4d7cc0de79e",
+    "sequence_file.uuid": "d5ed1f50-63b1-4556-9fcd-f01675263b9e",
+    "cell_suspension.uuid": "8f963f28-c243-4a70-9da0-ba548b3e2760",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "e351e125-ba18-45fe-a4d1-60395daeea4a": {
+    "process.uuid": "e351e125-ba18-45fe-a4d1-60395daeea4a",
+    "sequence_file.uuid": "a7a04a07-a5c7-48ba-9213-24f9ec334b56",
+    "cell_suspension.uuid": "8f963f28-c243-4a70-9da0-ba548b3e2760",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "6c7382b6-ea82-4d58-bd03-075fa3e20e47": {
+    "process.uuid": "6c7382b6-ea82-4d58-bd03-075fa3e20e47",
+    "sequence_file.uuid": "9a8c3d16-fb78-4296-8dfc-ee71e8e28cd8",
+    "cell_suspension.uuid": "e70f56e7-ba02-4de3-b475-4a3589f3af40",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "4f7532a0-77ae-43b4-87d5-cee3dac4855f": {
+    "process.uuid": "4f7532a0-77ae-43b4-87d5-cee3dac4855f",
+    "sequence_file.uuid": "56ef3871-3de2-4cf6-b4f2-488fb05a138d",
+    "cell_suspension.uuid": "e70f56e7-ba02-4de3-b475-4a3589f3af40",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "5477de25-189b-4391-837d-fc83809a5c9d": {
+    "process.uuid": "5477de25-189b-4391-837d-fc83809a5c9d",
+    "sequence_file.uuid": "a493650b-8b44-45fd-9942-9ba795110af9",
+    "cell_suspension.uuid": "d051c6de-0f2f-4e11-a1f7-ab50e205f3a3",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "cb64e4a0-fa04-4e21-8a72-b68d99da9a53": {
+    "process.uuid": "cb64e4a0-fa04-4e21-8a72-b68d99da9a53",
+    "sequence_file.uuid": "84e23cc3-0516-4cc4-932f-4d5d4214890d",
+    "cell_suspension.uuid": "d051c6de-0f2f-4e11-a1f7-ab50e205f3a3",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "cef2966d-304c-4784-9a8e-62e933040123": {
+    "process.uuid": "cef2966d-304c-4784-9a8e-62e933040123",
+    "sequence_file.uuid": "d91a7e50-e3be-4050-b57c-4b0441650c92",
+    "cell_suspension.uuid": "adc3fc7f-e969-40a8-bcd8-8c8b1799ad5f",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "3665b01a-e8a4-49ac-94aa-5924ad5c44fa": {
+    "process.uuid": "3665b01a-e8a4-49ac-94aa-5924ad5c44fa",
+    "sequence_file.uuid": "6f69fc8a-ce72-475d-bc24-27e40d872259",
+    "cell_suspension.uuid": "adc3fc7f-e969-40a8-bcd8-8c8b1799ad5f",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "12e5071d-9e97-490e-b3c3-c6ca794f7723": {
+    "process.uuid": "12e5071d-9e97-490e-b3c3-c6ca794f7723",
+    "sequence_file.uuid": "513a73df-626c-4283-a5f5-775f0cc8e336",
+    "cell_suspension.uuid": "2a0c060f-246f-42d8-9f39-b6324f701121",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "f1c7281d-253c-4b95-b309-7139053a7c36": {
+    "process.uuid": "f1c7281d-253c-4b95-b309-7139053a7c36",
+    "sequence_file.uuid": "0f996384-3474-4d02-a101-1eb79f7cf099",
+    "cell_suspension.uuid": "2a0c060f-246f-42d8-9f39-b6324f701121",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "522b41e1-740a-4463-bd1d-cab435c13dd8": {
+    "process.uuid": "522b41e1-740a-4463-bd1d-cab435c13dd8",
+    "sequence_file.uuid": "91b489b7-912d-4816-a4cc-e3777f5c6479",
+    "cell_suspension.uuid": "69c68b3a-ade2-4067-8676-7584699a7d60",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "dbf6cc1d-5a80-478a-9d99-e3314447bb5c": {
+    "process.uuid": "dbf6cc1d-5a80-478a-9d99-e3314447bb5c",
+    "sequence_file.uuid": "bd6dd159-cd0f-4a92-bc83-0f8b034ec81e",
+    "cell_suspension.uuid": "69c68b3a-ade2-4067-8676-7584699a7d60",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "5d250b61-5f76-4cd5-b544-2ba3c87fc9bd": {
+    "process.uuid": "5d250b61-5f76-4cd5-b544-2ba3c87fc9bd",
+    "sequence_file.uuid": "fc3a949b-fedc-4438-ba84-4848dd42317d",
+    "cell_suspension.uuid": "0e572557-bb53-41c5-a1d9-0185fddf8b24",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "2640a277-1df3-4dca-8d1b-5efeb5ec4c6b": {
+    "process.uuid": "2640a277-1df3-4dca-8d1b-5efeb5ec4c6b",
+    "sequence_file.uuid": "108f81e7-1fa4-475c-8792-cd18835379ac",
+    "cell_suspension.uuid": "0e572557-bb53-41c5-a1d9-0185fddf8b24",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "9a947658-fd3f-4fb5-8451-caff82948cc0": {
+    "process.uuid": "9a947658-fd3f-4fb5-8451-caff82948cc0",
+    "sequence_file.uuid": "5d08768a-dacf-4b70-9691-a6c69bc32635",
+    "cell_suspension.uuid": "f4a8b5bb-4a99-47a7-b9fe-38d3120aea26",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "5cdd6709-bedb-4470-964d-85aa3bbec526": {
+    "process.uuid": "5cdd6709-bedb-4470-964d-85aa3bbec526",
+    "sequence_file.uuid": "a03e556d-5eb1-44b7-aea1-d5c60705e49a",
+    "cell_suspension.uuid": "f4a8b5bb-4a99-47a7-b9fe-38d3120aea26",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "3ab2f87a-071a-413b-83a2-0af684ba4a63": {
+    "process.uuid": "3ab2f87a-071a-413b-83a2-0af684ba4a63",
+    "sequence_file.uuid": "1cc36987-ab9e-4c35-9532-9e5d11f5620f",
+    "cell_suspension.uuid": "daa6b518-b79f-4daf-bf03-d6f7cbda75be",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "02261783-57e4-4054-a92f-245d41ccbbf4": {
+    "process.uuid": "02261783-57e4-4054-a92f-245d41ccbbf4",
+    "sequence_file.uuid": "24c95252-5518-4abf-9f52-7907bbe9f0fc",
+    "cell_suspension.uuid": "daa6b518-b79f-4daf-bf03-d6f7cbda75be",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "aef2ccf0-6c0a-4b58-836c-a289424f2082": {
+    "process.uuid": "aef2ccf0-6c0a-4b58-836c-a289424f2082",
+    "sequence_file.uuid": "8c159f3a-a506-425f-8aeb-9ba5d606cb8e",
+    "cell_suspension.uuid": "412d89e3-2fbe-4738-8865-5638baac85e5",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "bd117410-230c-47a7-83a0-85acf80a39fb": {
+    "process.uuid": "bd117410-230c-47a7-83a0-85acf80a39fb",
+    "sequence_file.uuid": "80c99a68-057d-4d43-aada-c318971153c1",
+    "cell_suspension.uuid": "412d89e3-2fbe-4738-8865-5638baac85e5",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "2c558d88-887f-4ee9-b346-8749ff966b83": {
+    "process.uuid": "2c558d88-887f-4ee9-b346-8749ff966b83",
+    "sequence_file.uuid": "515e718f-7450-46e7-ae7a-3256f34588de",
+    "cell_suspension.uuid": "c6871f2e-7286-492e-a563-4c0ddd740b17",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "a9658279-ebea-42a9-9a53-8d2763d7d065": {
+    "process.uuid": "a9658279-ebea-42a9-9a53-8d2763d7d065",
+    "sequence_file.uuid": "e26aacbe-1f3e-4dba-9937-e42d6a060667",
+    "cell_suspension.uuid": "c6871f2e-7286-492e-a563-4c0ddd740b17",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "ce5f8842-baad-4e34-8198-f50e90a34fca": {
+    "process.uuid": "ce5f8842-baad-4e34-8198-f50e90a34fca",
+    "sequence_file.uuid": "4814475a-64f8-43f3-b88e-3b228d28b0e6",
+    "cell_suspension.uuid": "9988cbd7-2b6f-4e68-b07f-3d1e75ebc80a",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "ea852757-3a3e-490f-bff8-d2d257e8bc20": {
+    "process.uuid": "ea852757-3a3e-490f-bff8-d2d257e8bc20",
+    "sequence_file.uuid": "1960012c-f4d5-4243-a6a5-8c557a47509c",
+    "cell_suspension.uuid": "9988cbd7-2b6f-4e68-b07f-3d1e75ebc80a",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "387f8bfa-25bd-4c25-8b51-235c23c1bfc9": {
+    "process.uuid": "387f8bfa-25bd-4c25-8b51-235c23c1bfc9",
+    "sequence_file.uuid": "b58cfb1c-94bc-4fe5-ac3c-0bfbf9e3a218",
+    "cell_suspension.uuid": "a7a82e56-5b50-4cad-b674-ac595ffe71b8",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "bd9b162b-f784-4d9f-9b75-0c9b40e7fd36": {
+    "process.uuid": "bd9b162b-f784-4d9f-9b75-0c9b40e7fd36",
+    "sequence_file.uuid": "5bf022ca-782d-4f56-9a21-f5dd0d001a5f",
+    "cell_suspension.uuid": "a7a82e56-5b50-4cad-b674-ac595ffe71b8",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "cacf478a-d650-402e-a802-10ee9e14f494": {
+    "process.uuid": "cacf478a-d650-402e-a802-10ee9e14f494",
+    "sequence_file.uuid": "d5c3fc33-091b-4ce9-a9df-e12f329b5239",
+    "cell_suspension.uuid": "4ff501a0-d2ff-427c-bdcd-a76f9dbb8af3",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "d3123d14-b3ed-4146-b69f-0360868f933d": {
+    "process.uuid": "d3123d14-b3ed-4146-b69f-0360868f933d",
+    "sequence_file.uuid": "144056f9-46e2-4716-b262-d3a815cd7ed6",
+    "cell_suspension.uuid": "4ff501a0-d2ff-427c-bdcd-a76f9dbb8af3",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "85775c45-3da6-44b3-9be8-9fde6ae9c5a1": {
+    "process.uuid": "85775c45-3da6-44b3-9be8-9fde6ae9c5a1",
+    "sequence_file.uuid": "ffd55e0e-b5d6-4399-b779-5ddfe6095d7a",
+    "cell_suspension.uuid": "2a0c060f-246f-42d8-9f39-b6324f701121",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "9f41ac74-8e75-42ca-b07f-85ce0153a623": {
+    "process.uuid": "9f41ac74-8e75-42ca-b07f-85ce0153a623",
+    "sequence_file.uuid": "1eb445cc-9910-4878-a885-fd101174a1fe",
+    "cell_suspension.uuid": "2a0c060f-246f-42d8-9f39-b6324f701121",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "f856e5af-1f77-4c3d-b139-74b60a10c0d3": {
+    "process.uuid": "f856e5af-1f77-4c3d-b139-74b60a10c0d3",
+    "sequence_file.uuid": "dc4a4d4e-6872-4e59-a1a7-819eb3944175",
+    "cell_suspension.uuid": "69c68b3a-ade2-4067-8676-7584699a7d60",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "faada555-3be0-4fc6-ac02-e1706c7c6575": {
+    "process.uuid": "faada555-3be0-4fc6-ac02-e1706c7c6575",
+    "sequence_file.uuid": "60df15d8-23bd-4192-802b-a5b0a28fd167",
+    "cell_suspension.uuid": "69c68b3a-ade2-4067-8676-7584699a7d60",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "9551da44-2520-4328-8376-c9239d6f6498": {
+    "process.uuid": "9551da44-2520-4328-8376-c9239d6f6498",
+    "sequence_file.uuid": "2bad8b44-6202-40d2-a8d9-4ea461eff4ca",
+    "cell_suspension.uuid": "0e572557-bb53-41c5-a1d9-0185fddf8b24",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "995dcad9-d8a9-4607-8a32-456792f0e143": {
+    "process.uuid": "995dcad9-d8a9-4607-8a32-456792f0e143",
+    "sequence_file.uuid": "be5f092f-bce6-408d-8616-5666a9c6a6ef",
+    "cell_suspension.uuid": "0e572557-bb53-41c5-a1d9-0185fddf8b24",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "92ece195-8fba-4988-960d-addc1c4ee2f0": {
+    "process.uuid": "92ece195-8fba-4988-960d-addc1c4ee2f0",
+    "sequence_file.uuid": "fa6efc68-c3ef-40e3-b1a6-2f5260b4f921",
+    "cell_suspension.uuid": "f4a8b5bb-4a99-47a7-b9fe-38d3120aea26",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "8fc622ff-9f9b-4b2f-8f34-4883211837df": {
+    "process.uuid": "8fc622ff-9f9b-4b2f-8f34-4883211837df",
+    "sequence_file.uuid": "34d87b94-3f79-47d5-b577-84871af6f1c1",
+    "cell_suspension.uuid": "f4a8b5bb-4a99-47a7-b9fe-38d3120aea26",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "3fa54e2e-e371-48b4-a227-0f54927d062c": {
+    "process.uuid": "3fa54e2e-e371-48b4-a227-0f54927d062c",
+    "sequence_file.uuid": "608ecbc5-12cc-425e-af84-5ad46ea67a45",
+    "cell_suspension.uuid": "daa6b518-b79f-4daf-bf03-d6f7cbda75be",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "aa6222ab-2b8c-4355-ad28-68a6ef83f942": {
+    "process.uuid": "aa6222ab-2b8c-4355-ad28-68a6ef83f942",
+    "sequence_file.uuid": "9dc4d68f-582e-4f95-a278-6626a80f1509",
+    "cell_suspension.uuid": "daa6b518-b79f-4daf-bf03-d6f7cbda75be",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "6a145a79-fee1-44cd-8658-6da6ef0e50c9": {
+    "process.uuid": "6a145a79-fee1-44cd-8658-6da6ef0e50c9",
+    "sequence_file.uuid": "04e9c22a-67e0-40de-b4cc-deb8fb01d9dc",
+    "cell_suspension.uuid": "412d89e3-2fbe-4738-8865-5638baac85e5",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "19c874f3-0960-4805-9739-0076cad11258": {
+    "process.uuid": "19c874f3-0960-4805-9739-0076cad11258",
+    "sequence_file.uuid": "69a29e70-8921-4c74-82f2-ad79bb2afc62",
+    "cell_suspension.uuid": "412d89e3-2fbe-4738-8865-5638baac85e5",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "04775923-ab8a-4ce8-a958-c0906a31893a": {
+    "process.uuid": "04775923-ab8a-4ce8-a958-c0906a31893a",
+    "sequence_file.uuid": "b610514d-6302-4436-b69b-afe45762e100",
+    "cell_suspension.uuid": "c6871f2e-7286-492e-a563-4c0ddd740b17",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "d6580841-f096-430d-8a1b-9a8f5e2f2da5": {
+    "process.uuid": "d6580841-f096-430d-8a1b-9a8f5e2f2da5",
+    "sequence_file.uuid": "d2fa0fe3-9b9f-4260-9681-b1e299283b6f",
+    "cell_suspension.uuid": "c6871f2e-7286-492e-a563-4c0ddd740b17",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "3db45983-9331-4f1b-86cb-e740ed99a100": {
+    "process.uuid": "3db45983-9331-4f1b-86cb-e740ed99a100",
+    "sequence_file.uuid": "8383e269-9bca-4551-b787-a372349345dd",
+    "cell_suspension.uuid": "9988cbd7-2b6f-4e68-b07f-3d1e75ebc80a",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "eb56854c-ec5d-4ef3-b041-9a58112dfebb": {
+    "process.uuid": "eb56854c-ec5d-4ef3-b041-9a58112dfebb",
+    "sequence_file.uuid": "67480976-4d39-4364-8c4b-09cdd780a81b",
+    "cell_suspension.uuid": "9988cbd7-2b6f-4e68-b07f-3d1e75ebc80a",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "cbdf2dea-059f-48cb-a01f-024df0038de0": {
+    "process.uuid": "cbdf2dea-059f-48cb-a01f-024df0038de0",
+    "sequence_file.uuid": "7cb553f5-3bf6-431f-9a3c-a43e9c938da2",
+    "cell_suspension.uuid": "a7a82e56-5b50-4cad-b674-ac595ffe71b8",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "aba5253b-ae68-4871-a77a-c441dbec6bb2": {
+    "process.uuid": "aba5253b-ae68-4871-a77a-c441dbec6bb2",
+    "sequence_file.uuid": "faca0a63-62bd-43a9-9cc4-356528073c8f",
+    "cell_suspension.uuid": "a7a82e56-5b50-4cad-b674-ac595ffe71b8",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "5348ffd5-7cfb-40f0-8118-06551d4ee198": {
+    "process.uuid": "5348ffd5-7cfb-40f0-8118-06551d4ee198",
+    "sequence_file.uuid": "830f07f8-8dda-4a90-b7f7-ecfa3261ada4",
+    "cell_suspension.uuid": "4ff501a0-d2ff-427c-bdcd-a76f9dbb8af3",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "ae6f0d57-a61d-4ab6-a095-1e19bce8eec8": {
+    "process.uuid": "ae6f0d57-a61d-4ab6-a095-1e19bce8eec8",
+    "sequence_file.uuid": "b887753c-f061-4dd7-953c-cb8cd9918b9e",
+    "cell_suspension.uuid": "4ff501a0-d2ff-427c-bdcd-a76f9dbb8af3",
+    "library_preparation_protocol.uuid": "83d6e01c-4d96-4c15-b082-0adff6ab9210",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "b886c48a-367a-45fb-8182-d30b97f456f5": {
+    "process.uuid": "b886c48a-367a-45fb-8182-d30b97f456f5",
+    "sequence_file.uuid": "8bdd6a29-9098-4a42-a7f3-6d9628dbb3bc",
+    "cell_suspension.uuid": "2a0c060f-246f-42d8-9f39-b6324f701121",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "bbb33fbd-fc7d-4904-9c03-bff2c1c41088": {
+    "process.uuid": "bbb33fbd-fc7d-4904-9c03-bff2c1c41088",
+    "sequence_file.uuid": "99338f5f-9cf5-47f9-9637-a961286d1d5e",
+    "cell_suspension.uuid": "2a0c060f-246f-42d8-9f39-b6324f701121",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "cc7a313e-33e0-4d85-8c9e-b9e005dcfa70": {
+    "process.uuid": "cc7a313e-33e0-4d85-8c9e-b9e005dcfa70",
+    "sequence_file.uuid": "61ca2c0d-9ae8-468b-8928-ebcc55edef2f",
+    "cell_suspension.uuid": "69c68b3a-ade2-4067-8676-7584699a7d60",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "cee5bd61-3ec0-4628-956c-180ce849942b": {
+    "process.uuid": "cee5bd61-3ec0-4628-956c-180ce849942b",
+    "sequence_file.uuid": "1f77ba15-12e6-4c66-8dfd-fa41eab5a2c2",
+    "cell_suspension.uuid": "69c68b3a-ade2-4067-8676-7584699a7d60",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "c56fdac8-5329-404e-af9f-8a22ede35b55": {
+    "process.uuid": "c56fdac8-5329-404e-af9f-8a22ede35b55",
+    "sequence_file.uuid": "b621989f-7e32-4239-868f-aae53e19fc45",
+    "cell_suspension.uuid": "0e572557-bb53-41c5-a1d9-0185fddf8b24",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "bc24a12a-de52-4890-ba7b-a04a5fa93ec4": {
+    "process.uuid": "bc24a12a-de52-4890-ba7b-a04a5fa93ec4",
+    "sequence_file.uuid": "22eb169b-1d97-4f9d-9ea6-f43327195dc0",
+    "cell_suspension.uuid": "0e572557-bb53-41c5-a1d9-0185fddf8b24",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "14e923f0-a3c0-48f9-800a-30ca055ff04c": {
+    "process.uuid": "14e923f0-a3c0-48f9-800a-30ca055ff04c",
+    "sequence_file.uuid": "8447175e-22ad-4f74-8915-7dd1d12680e0",
+    "cell_suspension.uuid": "f4a8b5bb-4a99-47a7-b9fe-38d3120aea26",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "d7776b52-c205-40b0-bf33-68a9e2b96dec": {
+    "process.uuid": "d7776b52-c205-40b0-bf33-68a9e2b96dec",
+    "sequence_file.uuid": "15218d83-faf2-4c0f-a048-f092892332ac",
+    "cell_suspension.uuid": "f4a8b5bb-4a99-47a7-b9fe-38d3120aea26",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "2b94bbed-f5d6-4dbf-a5ee-15dbef12794c": {
+    "process.uuid": "2b94bbed-f5d6-4dbf-a5ee-15dbef12794c",
+    "sequence_file.uuid": "d1d2798d-e140-4ba2-9030-bde3d5a6ad7f",
+    "cell_suspension.uuid": "daa6b518-b79f-4daf-bf03-d6f7cbda75be",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "e93ff062-520a-4b7b-9f57-f55453aa6a38": {
+    "process.uuid": "e93ff062-520a-4b7b-9f57-f55453aa6a38",
+    "sequence_file.uuid": "6bb8414c-de48-434f-9972-c8c5602701a3",
+    "cell_suspension.uuid": "daa6b518-b79f-4daf-bf03-d6f7cbda75be",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "7ff290b3-130f-431c-b0ad-abc6efeb2c44": {
+    "process.uuid": "7ff290b3-130f-431c-b0ad-abc6efeb2c44",
+    "sequence_file.uuid": "946fb444-30d9-4068-abac-47090cfd7dbe",
+    "cell_suspension.uuid": "412d89e3-2fbe-4738-8865-5638baac85e5",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "64c1146f-3eb4-497d-ad3e-925f40209975": {
+    "process.uuid": "64c1146f-3eb4-497d-ad3e-925f40209975",
+    "sequence_file.uuid": "bca84beb-9f64-4479-9267-c5a6d44f90d0",
+    "cell_suspension.uuid": "412d89e3-2fbe-4738-8865-5638baac85e5",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "63ff4fc3-6c40-4ee9-a2f0-d49f02e8d8f5": {
+    "process.uuid": "63ff4fc3-6c40-4ee9-a2f0-d49f02e8d8f5",
+    "sequence_file.uuid": "bd2b7142-edda-4e46-ae7b-86ecf54d80dd",
+    "cell_suspension.uuid": "c6871f2e-7286-492e-a563-4c0ddd740b17",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "8abb112b-fbb8-4600-8008-63517d1314fe": {
+    "process.uuid": "8abb112b-fbb8-4600-8008-63517d1314fe",
+    "sequence_file.uuid": "0f99f6f6-aae5-48c2-8f5b-a572f7e52cfe",
+    "cell_suspension.uuid": "c6871f2e-7286-492e-a563-4c0ddd740b17",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "5ac79e79-200c-4ce8-bd05-8d175808b191": {
+    "process.uuid": "5ac79e79-200c-4ce8-bd05-8d175808b191",
+    "sequence_file.uuid": "de989918-7c50-4df9-ac9c-a28d65da03a4",
+    "cell_suspension.uuid": "9988cbd7-2b6f-4e68-b07f-3d1e75ebc80a",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "d362497f-2149-4aa2-b74c-8532ea891270": {
+    "process.uuid": "d362497f-2149-4aa2-b74c-8532ea891270",
+    "sequence_file.uuid": "0c4be958-e2d1-435a-a31a-f532e032dfb7",
+    "cell_suspension.uuid": "9988cbd7-2b6f-4e68-b07f-3d1e75ebc80a",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "19bd435f-6872-4c9b-bd80-993f8ff8791f": {
+    "process.uuid": "19bd435f-6872-4c9b-bd80-993f8ff8791f",
+    "sequence_file.uuid": "5611ec9d-d26c-4c87-a2f9-68302e277f32",
+    "cell_suspension.uuid": "a7a82e56-5b50-4cad-b674-ac595ffe71b8",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "86926111-3f80-4f1d-9ee1-82d9a70bc6f4": {
+    "process.uuid": "86926111-3f80-4f1d-9ee1-82d9a70bc6f4",
+    "sequence_file.uuid": "9ab7c18f-a854-4414-9045-8c3b8ce43850",
+    "cell_suspension.uuid": "a7a82e56-5b50-4cad-b674-ac595ffe71b8",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "c290b2b8-f56f-453c-bf8c-cac67cfc647f": {
+    "process.uuid": "c290b2b8-f56f-453c-bf8c-cac67cfc647f",
+    "sequence_file.uuid": "5bd14f49-933f-48b7-9930-4be3786b7e87",
+    "cell_suspension.uuid": "4ff501a0-d2ff-427c-bdcd-a76f9dbb8af3",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "7d4711a6-54b9-450a-9d1f-26dc39f0c46e": {
+    "process.uuid": "7d4711a6-54b9-450a-9d1f-26dc39f0c46e",
+    "sequence_file.uuid": "f63840ee-a893-4b62-9f00-3f2234d25dc8",
+    "cell_suspension.uuid": "4ff501a0-d2ff-427c-bdcd-a76f9dbb8af3",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "09cff6e2-304a-4e59-9fe7-58aa1245ea70": {
+    "process.uuid": "09cff6e2-304a-4e59-9fe7-58aa1245ea70",
+    "sequence_file.uuid": "1aa74733-0f1b-419f-b9f2-1ba9dd7fe81d",
+    "cell_suspension.uuid": "e82ba6a2-32e1-4022-affb-577bf3818016",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "5c9d867b-3d06-461d-8498-9d2eb06c94ab": {
+    "process.uuid": "5c9d867b-3d06-461d-8498-9d2eb06c94ab",
+    "sequence_file.uuid": "d8fa1a9a-6026-4bb9-8c6e-4e296952ee3e",
+    "cell_suspension.uuid": "e82ba6a2-32e1-4022-affb-577bf3818016",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "22cbb631-3f09-42a4-9d3c-1b77b3b532f0": {
+    "process.uuid": "22cbb631-3f09-42a4-9d3c-1b77b3b532f0",
+    "sequence_file.uuid": "82cc9254-30da-4932-b61b-8b1306c81d43",
+    "cell_suspension.uuid": "97a3f3a4-a624-44d7-b4ce-fa700c62749c",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "327c3752-f7ea-4c83-858a-0e1e8d262ffe": {
+    "process.uuid": "327c3752-f7ea-4c83-858a-0e1e8d262ffe",
+    "sequence_file.uuid": "78b54304-b9b0-47a7-aae1-30670c431848",
+    "cell_suspension.uuid": "97a3f3a4-a624-44d7-b4ce-fa700c62749c",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "192f3ef5-4b09-4c3f-bba7-d63f26760d3a": {
+    "process.uuid": "192f3ef5-4b09-4c3f-bba7-d63f26760d3a",
+    "sequence_file.uuid": "bb086e4e-5a92-4c4c-b15c-e3c2bc2edd00",
+    "cell_suspension.uuid": "670ccddd-d1df-490d-8a74-68bfdae45d09",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "76f9ee3c-c4b4-4faf-8f1e-d792945a4650": {
+    "process.uuid": "76f9ee3c-c4b4-4faf-8f1e-d792945a4650",
+    "sequence_file.uuid": "15e19828-dba7-421e-b47e-d20ba3b218b8",
+    "cell_suspension.uuid": "670ccddd-d1df-490d-8a74-68bfdae45d09",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "20707c22-bbdc-4bfe-887b-bab962dc8faf": {
+    "process.uuid": "20707c22-bbdc-4bfe-887b-bab962dc8faf",
+    "sequence_file.uuid": "ece36edd-80e6-41df-9bf4-e00a0bb09037",
+    "cell_suspension.uuid": "eabeaf8e-3358-494f-8c84-c9a82687a421",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "0115f615-78a7-46c7-8768-e63c36bee947": {
+    "process.uuid": "0115f615-78a7-46c7-8768-e63c36bee947",
+    "sequence_file.uuid": "ee82fdd4-3c82-413d-a9ad-4c00ae8037b6",
+    "cell_suspension.uuid": "eabeaf8e-3358-494f-8c84-c9a82687a421",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "8e8134ee-24b8-4154-a5e0-d4896ab3058a": {
+    "process.uuid": "8e8134ee-24b8-4154-a5e0-d4896ab3058a",
+    "sequence_file.uuid": "a9062e11-66df-4464-adcc-3e832bb25e8b",
+    "cell_suspension.uuid": "84db777d-01ca-4935-b76d-a45fcbe35531",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "52095333-1696-4335-a1a6-e792bf458db4": {
+    "process.uuid": "52095333-1696-4335-a1a6-e792bf458db4",
+    "sequence_file.uuid": "e90b8b1e-9cb8-446a-9bd6-aa5143c1bec8",
+    "cell_suspension.uuid": "84db777d-01ca-4935-b76d-a45fcbe35531",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "bd013cce-7245-4e21-8183-8afc22a56404": {
+    "process.uuid": "bd013cce-7245-4e21-8183-8afc22a56404",
+    "sequence_file.uuid": "2fc2a826-6a7b-45bf-a53d-90918a311064",
+    "cell_suspension.uuid": "6a4fe872-3061-42f8-8c46-0f8c08cc7740",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "0ea82e81-78ad-468e-951a-ada6ad696d05": {
+    "process.uuid": "0ea82e81-78ad-468e-951a-ada6ad696d05",
+    "sequence_file.uuid": "cdeb5635-2420-4ec4-902a-f1e3308a4d64",
+    "cell_suspension.uuid": "6a4fe872-3061-42f8-8c46-0f8c08cc7740",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "3fa76777-e4a0-48cb-b0b8-cc28bb0dbe66": {
+    "process.uuid": "3fa76777-e4a0-48cb-b0b8-cc28bb0dbe66",
+    "sequence_file.uuid": "f9cc2cf3-3ecd-4eea-af4f-65bbff5343d2",
+    "cell_suspension.uuid": "85f9bb4b-0775-48f9-95d5-c300757efe17",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "680fec74-8e30-4b9a-a94f-1555ab4c545b": {
+    "process.uuid": "680fec74-8e30-4b9a-a94f-1555ab4c545b",
+    "sequence_file.uuid": "35b92c78-2fce-4617-875a-3e62cc59cbbd",
+    "cell_suspension.uuid": "85f9bb4b-0775-48f9-95d5-c300757efe17",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "5a730d1d-1d0e-4f7a-8e9b-3e9a02466d52": {
+    "process.uuid": "5a730d1d-1d0e-4f7a-8e9b-3e9a02466d52",
+    "sequence_file.uuid": "5bfdb8a8-d0cd-4a82-9010-51481963928a",
+    "cell_suspension.uuid": "6e27ad96-77ce-456c-8a26-7fee3ca44787",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "f3315497-a292-47d7-8d31-e47e86ff5f74": {
+    "process.uuid": "f3315497-a292-47d7-8d31-e47e86ff5f74",
+    "sequence_file.uuid": "069a3440-d3d9-49eb-a583-5e9923b5e99a",
+    "cell_suspension.uuid": "6e27ad96-77ce-456c-8a26-7fee3ca44787",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "779cc68e-3450-482e-adcc-bf47e5fde8b7": {
+    "process.uuid": "779cc68e-3450-482e-adcc-bf47e5fde8b7",
+    "sequence_file.uuid": "f99bc603-3ec6-4cd1-8fab-6e574c0f565c",
+    "cell_suspension.uuid": "a360caa5-08e0-4031-be89-e9c4e3415ea8",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "59aac145-785e-4c56-afae-e98a0c9c99ce": {
+    "process.uuid": "59aac145-785e-4c56-afae-e98a0c9c99ce",
+    "sequence_file.uuid": "4cf3e5b8-41b6-41e8-a59c-79d5d14cb580",
+    "cell_suspension.uuid": "a360caa5-08e0-4031-be89-e9c4e3415ea8",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "0d7f6c40-54e7-44ac-b826-6b5413412feb": {
+    "process.uuid": "0d7f6c40-54e7-44ac-b826-6b5413412feb",
+    "sequence_file.uuid": "8b7708a0-2682-4a13-955f-e61774eea310",
+    "cell_suspension.uuid": "b8e9f43d-43a1-458f-ae27-fa4f4de1bd06",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "14add13d-002e-4f7b-8c3f-387e389c4286": {
+    "process.uuid": "14add13d-002e-4f7b-8c3f-387e389c4286",
+    "sequence_file.uuid": "aa940c98-1ffb-4fd9-b04c-435fd3446428",
+    "cell_suspension.uuid": "b8e9f43d-43a1-458f-ae27-fa4f4de1bd06",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "506b6a0e-6c9e-447f-b966-b8e90d199f94": {
+    "process.uuid": "506b6a0e-6c9e-447f-b966-b8e90d199f94",
+    "sequence_file.uuid": "a7f9f4df-b9c3-4e05-802a-e9a7a49fd5af",
+    "cell_suspension.uuid": "eabeaf8e-3358-494f-8c84-c9a82687a421",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "49e28f9e-c5d3-4745-bb31-2e4a15464ae4": {
+    "process.uuid": "49e28f9e-c5d3-4745-bb31-2e4a15464ae4",
+    "sequence_file.uuid": "c0c58a02-4331-47ce-834b-e64d20ebad6a",
+    "cell_suspension.uuid": "eabeaf8e-3358-494f-8c84-c9a82687a421",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "471d1f03-a24c-451a-9489-0a0ed7f4a534": {
+    "process.uuid": "471d1f03-a24c-451a-9489-0a0ed7f4a534",
+    "sequence_file.uuid": "ae3b7afa-4261-4bc1-9d02-f14702201f0b",
+    "cell_suspension.uuid": "84db777d-01ca-4935-b76d-a45fcbe35531",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "872f73a6-88f6-4716-ad6b-8fd7ab6f7c80": {
+    "process.uuid": "872f73a6-88f6-4716-ad6b-8fd7ab6f7c80",
+    "sequence_file.uuid": "32edb4fd-447a-4d5d-b2e6-e8954d8caf35",
+    "cell_suspension.uuid": "84db777d-01ca-4935-b76d-a45fcbe35531",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "fce1661d-4209-460b-8fc1-441abc2468eb": {
+    "process.uuid": "fce1661d-4209-460b-8fc1-441abc2468eb",
+    "sequence_file.uuid": "0dce6854-8760-4da3-950e-e76a5e442ea6",
+    "cell_suspension.uuid": "6a4fe872-3061-42f8-8c46-0f8c08cc7740",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "ac4aa9ae-1691-490d-a159-892db02f0f2c": {
+    "process.uuid": "ac4aa9ae-1691-490d-a159-892db02f0f2c",
+    "sequence_file.uuid": "af2585ce-c023-491b-87c1-60c4ce6a3498",
+    "cell_suspension.uuid": "6a4fe872-3061-42f8-8c46-0f8c08cc7740",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "88341316-c1a1-46ff-8aa7-c040a2f91131": {
+    "process.uuid": "88341316-c1a1-46ff-8aa7-c040a2f91131",
+    "sequence_file.uuid": "64051a4c-8b16-43ec-801e-f25300af4d94",
+    "cell_suspension.uuid": "85f9bb4b-0775-48f9-95d5-c300757efe17",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "5bda0311-3795-473b-882d-5b24cc3fee32": {
+    "process.uuid": "5bda0311-3795-473b-882d-5b24cc3fee32",
+    "sequence_file.uuid": "10cd4ab5-4a62-496f-af88-6b9dccfed3cd",
+    "cell_suspension.uuid": "85f9bb4b-0775-48f9-95d5-c300757efe17",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "1382500c-cc07-420e-baeb-d51ee5436d96": {
+    "process.uuid": "1382500c-cc07-420e-baeb-d51ee5436d96",
+    "sequence_file.uuid": "6e2a7c06-e86b-455c-a457-97f9d3110dab",
+    "cell_suspension.uuid": "6e27ad96-77ce-456c-8a26-7fee3ca44787",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "fbd74ab5-920a-47f8-b5d9-3bb57b036766": {
+    "process.uuid": "fbd74ab5-920a-47f8-b5d9-3bb57b036766",
+    "sequence_file.uuid": "cc2979cf-c742-4236-b6e2-fd0f08cd74d4",
+    "cell_suspension.uuid": "6e27ad96-77ce-456c-8a26-7fee3ca44787",
+    "library_preparation_protocol.uuid": "a17de870-caa1-4c1c-9c1d-61fa52412ba8",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "e7343038-fe3b-45dc-9e8c-c343291174b6": {
+    "process.uuid": "e7343038-fe3b-45dc-9e8c-c343291174b6",
+    "sequence_file.uuid": "67b911f5-52f6-405a-b663-72e0ee22e9be",
+    "cell_suspension.uuid": "61bdb0f6-7519-48a1-b4c3-ed4369e3c63f",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "536e49b0-a477-4713-9f1e-d3cf7d7d4748": {
+    "process.uuid": "536e49b0-a477-4713-9f1e-d3cf7d7d4748",
+    "sequence_file.uuid": "c2a74659-c611-4682-b2fd-9f28c378f3be",
+    "cell_suspension.uuid": "61bdb0f6-7519-48a1-b4c3-ed4369e3c63f",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "08008387-80dd-4a59-946d-1524e9fa14e9": {
+    "process.uuid": "08008387-80dd-4a59-946d-1524e9fa14e9",
+    "sequence_file.uuid": "72b5a82c-fdc6-472d-ad89-94cf9f009daa",
+    "cell_suspension.uuid": "7ae8d7ec-d049-47a6-8c83-fba2bfd5ac84",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "4efffdcc-13e5-48e3-9b84-8c7c3edb2a6d": {
+    "process.uuid": "4efffdcc-13e5-48e3-9b84-8c7c3edb2a6d",
+    "sequence_file.uuid": "497b14ea-66c0-445a-85bc-1791fd2e61ee",
+    "cell_suspension.uuid": "7ae8d7ec-d049-47a6-8c83-fba2bfd5ac84",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "0010f71a-9c28-47f8-b1c3-c57cbc04012d": {
+    "process.uuid": "0010f71a-9c28-47f8-b1c3-c57cbc04012d",
+    "sequence_file.uuid": "e85ba06b-2780-4a9f-b1ec-9805ab068f34",
+    "cell_suspension.uuid": "5ddc03a7-4ab2-48c8-9165-5ff4ca69d49e",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "6a194553-a325-4ba7-bd92-6eec39b1ea68": {
+    "process.uuid": "6a194553-a325-4ba7-bd92-6eec39b1ea68",
+    "sequence_file.uuid": "1992324d-4c2f-4cd5-ad5b-7c879721c6cd",
+    "cell_suspension.uuid": "5ddc03a7-4ab2-48c8-9165-5ff4ca69d49e",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "37a8cafe-e255-467c-9835-e4583648a416": {
+    "process.uuid": "37a8cafe-e255-467c-9835-e4583648a416",
+    "sequence_file.uuid": "aa43f157-25d0-4d9d-ac47-90aabbea5c07",
+    "cell_suspension.uuid": "48482178-2226-4209-98e2-76c25d0e6d1d",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "af4702c5-6cb1-4273-a016-4b4b0c1787e1": {
+    "process.uuid": "af4702c5-6cb1-4273-a016-4b4b0c1787e1",
+    "sequence_file.uuid": "ebc48cd9-fecc-49bb-8a9c-4d4a60ce648d",
+    "cell_suspension.uuid": "48482178-2226-4209-98e2-76c25d0e6d1d",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "b8419ff4-5b4b-439d-b962-7f66fe33330b": {
+    "process.uuid": "b8419ff4-5b4b-439d-b962-7f66fe33330b",
+    "sequence_file.uuid": "defe077c-617e-40fd-8359-64e4fc99d571",
+    "cell_suspension.uuid": "1de2f9db-798f-40d6-b69e-5fe264081d21",
+    "library_preparation_protocol.uuid": "19666bec-1f3d-419d-8cb5-7cf29ef4ac5a",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "f1a379d9-0237-4588-8488-15f8449b153e": {
+    "process.uuid": "f1a379d9-0237-4588-8488-15f8449b153e",
+    "sequence_file.uuid": "71c3ccbc-fb58-4654-9ff7-6c1f0bff5399",
+    "cell_suspension.uuid": "1de2f9db-798f-40d6-b69e-5fe264081d21",
+    "library_preparation_protocol.uuid": "19666bec-1f3d-419d-8cb5-7cf29ef4ac5a",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "9e3b5741-915b-430d-9201-ed1960d7bca2": {
+    "process.uuid": "9e3b5741-915b-430d-9201-ed1960d7bca2",
+    "sequence_file.uuid": "a1e896cc-6f49-4240-b85e-e6446ebcb3b1",
+    "cell_suspension.uuid": "00c2a56d-c220-4928-9192-1404b48f8626",
+    "library_preparation_protocol.uuid": "19666bec-1f3d-419d-8cb5-7cf29ef4ac5a",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "605840d1-b5bf-42ed-932a-62c0bdfe6cef": {
+    "process.uuid": "605840d1-b5bf-42ed-932a-62c0bdfe6cef",
+    "sequence_file.uuid": "542350d0-3430-470c-9345-de1b1f07eb28",
+    "cell_suspension.uuid": "00c2a56d-c220-4928-9192-1404b48f8626",
+    "library_preparation_protocol.uuid": "19666bec-1f3d-419d-8cb5-7cf29ef4ac5a",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "dd2c1e2b-d9a5-43a9-aee3-14d730c3c356": {
+    "process.uuid": "dd2c1e2b-d9a5-43a9-aee3-14d730c3c356",
+    "sequence_file.uuid": "df3ea8ac-5c35-494a-9696-47b0da9a7afe",
+    "cell_suspension.uuid": "cf124344-af76-4a81-9b40-9fa461054749",
+    "library_preparation_protocol.uuid": "19666bec-1f3d-419d-8cb5-7cf29ef4ac5a",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "44d131c9-c2d5-499d-a984-93630f3fb40a": {
+    "process.uuid": "44d131c9-c2d5-499d-a984-93630f3fb40a",
+    "sequence_file.uuid": "75444590-f9f8-45e0-8845-2c79357c9300",
+    "cell_suspension.uuid": "cf124344-af76-4a81-9b40-9fa461054749",
+    "library_preparation_protocol.uuid": "19666bec-1f3d-419d-8cb5-7cf29ef4ac5a",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "d050dc77-9709-4f15-909e-0dc46a1cc136": {
+    "process.uuid": "d050dc77-9709-4f15-909e-0dc46a1cc136",
+    "sequence_file.uuid": "bc96dc52-d000-48d0-9f97-b743a9044830",
+    "cell_suspension.uuid": "25c3291e-ebd2-4470-b4c6-9ec0edb5d29f",
+    "library_preparation_protocol.uuid": "19666bec-1f3d-419d-8cb5-7cf29ef4ac5a",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "555a82d3-ae4a-48d0-9e5c-1c95c26053b8": {
+    "process.uuid": "555a82d3-ae4a-48d0-9e5c-1c95c26053b8",
+    "sequence_file.uuid": "26477c3f-cc27-4db1-9186-bcf977bd0a98",
+    "cell_suspension.uuid": "25c3291e-ebd2-4470-b4c6-9ec0edb5d29f",
+    "library_preparation_protocol.uuid": "19666bec-1f3d-419d-8cb5-7cf29ef4ac5a",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "292a87ec-ecee-46df-af43-907d54e6ac79": {
+    "process.uuid": "292a87ec-ecee-46df-af43-907d54e6ac79",
+    "sequence_file.uuid": "a43638ac-8df4-46c0-bf6e-f4a0a1a9945e",
+    "cell_suspension.uuid": "d6e663ce-48ed-4883-8f9e-b0de1b9a4963",
+    "library_preparation_protocol.uuid": "19666bec-1f3d-419d-8cb5-7cf29ef4ac5a",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "cfccbc80-182a-4092-864f-fd1d5c5c8b55": {
+    "process.uuid": "cfccbc80-182a-4092-864f-fd1d5c5c8b55",
+    "sequence_file.uuid": "0f2c4569-accb-4c77-bad8-8162f69596bf",
+    "cell_suspension.uuid": "d6e663ce-48ed-4883-8f9e-b0de1b9a4963",
+    "library_preparation_protocol.uuid": "19666bec-1f3d-419d-8cb5-7cf29ef4ac5a",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "8c8a6c89-d24c-4767-b91b-15e115ef8bbd": {
+    "process.uuid": "8c8a6c89-d24c-4767-b91b-15e115ef8bbd",
+    "sequence_file.uuid": "5f26be56-4731-42b5-955c-5769836a34f9",
+    "cell_suspension.uuid": "a15a9fb9-6465-4495-9a05-9254fa316aaa",
+    "library_preparation_protocol.uuid": "19666bec-1f3d-419d-8cb5-7cf29ef4ac5a",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "379bc2bf-6df2-470c-bd91-abcf360a3ef3": {
+    "process.uuid": "379bc2bf-6df2-470c-bd91-abcf360a3ef3",
+    "sequence_file.uuid": "a0f34768-7264-4ed3-9e49-8e0b35b22b25",
+    "cell_suspension.uuid": "a15a9fb9-6465-4495-9a05-9254fa316aaa",
+    "library_preparation_protocol.uuid": "19666bec-1f3d-419d-8cb5-7cf29ef4ac5a",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "d6c439b4-1820-4d09-b0ad-2d48251668ad": {
+    "process.uuid": "d6c439b4-1820-4d09-b0ad-2d48251668ad",
+    "sequence_file.uuid": "a2fd8662-602b-4e2a-9078-7f227bc95557",
+    "cell_suspension.uuid": "07d3b38e-a05f-4d92-bc8d-767710c49794",
+    "library_preparation_protocol.uuid": "19666bec-1f3d-419d-8cb5-7cf29ef4ac5a",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "c967c559-993d-4027-9419-3bf39d5131d3": {
+    "process.uuid": "c967c559-993d-4027-9419-3bf39d5131d3",
+    "sequence_file.uuid": "301f4a7b-c2de-4055-88e0-156ff316e3f6",
+    "cell_suspension.uuid": "07d3b38e-a05f-4d92-bc8d-767710c49794",
+    "library_preparation_protocol.uuid": "19666bec-1f3d-419d-8cb5-7cf29ef4ac5a",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "8082dace-fdba-4b03-9955-f676c31f5880": {
+    "process.uuid": "8082dace-fdba-4b03-9955-f676c31f5880",
+    "sequence_file.uuid": "5e84d063-eb82-4db9-8b4c-e3565b6a5813",
+    "cell_suspension.uuid": "bc9e2f98-af0d-49b7-a2b5-bd6a031546b3",
+    "library_preparation_protocol.uuid": "19666bec-1f3d-419d-8cb5-7cf29ef4ac5a",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "22492f1d-6f40-4b43-bff7-922909a33d60": {
+    "process.uuid": "22492f1d-6f40-4b43-bff7-922909a33d60",
+    "sequence_file.uuid": "7dce0acf-5dda-4c89-811f-e96711c22c14",
+    "cell_suspension.uuid": "bc9e2f98-af0d-49b7-a2b5-bd6a031546b3",
+    "library_preparation_protocol.uuid": "19666bec-1f3d-419d-8cb5-7cf29ef4ac5a",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "9b3e1238-0126-4b0b-a19c-f40bcb0a6901": {
+    "process.uuid": "9b3e1238-0126-4b0b-a19c-f40bcb0a6901",
+    "sequence_file.uuid": "58189e03-17ef-477e-adc2-4e4532657325",
+    "cell_suspension.uuid": "f73533a5-eeff-4351-87ba-e0bc86d5f7d9",
+    "library_preparation_protocol.uuid": "19666bec-1f3d-419d-8cb5-7cf29ef4ac5a",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "720e1e71-ad09-4ccd-a1cf-99f69dcbfd01": {
+    "process.uuid": "720e1e71-ad09-4ccd-a1cf-99f69dcbfd01",
+    "sequence_file.uuid": "da6405aa-255e-46af-88d4-fa4495e41b6c",
+    "cell_suspension.uuid": "f73533a5-eeff-4351-87ba-e0bc86d5f7d9",
+    "library_preparation_protocol.uuid": "19666bec-1f3d-419d-8cb5-7cf29ef4ac5a",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "e601a13f-d0fd-4f56-bb62-7fcc307fcc9d": {
+    "process.uuid": "e601a13f-d0fd-4f56-bb62-7fcc307fcc9d",
+    "sequence_file.uuid": "cd63cfde-89ad-4c11-b51b-6e805f094b84",
+    "cell_suspension.uuid": "17aedf63-7c59-4661-8e39-b845517e979a",
+    "library_preparation_protocol.uuid": "19666bec-1f3d-419d-8cb5-7cf29ef4ac5a",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "ef852fa1-f374-480b-a334-b402a1c27d05": {
+    "process.uuid": "ef852fa1-f374-480b-a334-b402a1c27d05",
+    "sequence_file.uuid": "2ade2380-b805-44af-91b4-7733165927e2",
+    "cell_suspension.uuid": "17aedf63-7c59-4661-8e39-b845517e979a",
+    "library_preparation_protocol.uuid": "19666bec-1f3d-419d-8cb5-7cf29ef4ac5a",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "7c033f6a-822b-4b20-99fa-4ec114a37b65": {
+    "process.uuid": "7c033f6a-822b-4b20-99fa-4ec114a37b65",
+    "sequence_file.uuid": "0342526f-459e-4ed2-8a7b-c90987dc7bf1",
+    "cell_suspension.uuid": "3eb95a66-0b54-4200-9110-f2b6504ddfca",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "d3097496-d76b-43d3-97ad-5717aaa6ace0": {
+    "process.uuid": "d3097496-d76b-43d3-97ad-5717aaa6ace0",
+    "sequence_file.uuid": "a1b0548d-364d-4b22-befe-68cec9e713ef",
+    "cell_suspension.uuid": "3eb95a66-0b54-4200-9110-f2b6504ddfca",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "5de7a12d-8c1a-4897-8f50-5bafa9a8c400": {
+    "process.uuid": "5de7a12d-8c1a-4897-8f50-5bafa9a8c400",
+    "sequence_file.uuid": "02c65449-32be-4c45-ba55-67488f511d01",
+    "cell_suspension.uuid": "2c89da23-5047-4673-bf22-f89a3753ec24",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "497030b9-65f3-40a8-843b-25825ad68095": {
+    "process.uuid": "497030b9-65f3-40a8-843b-25825ad68095",
+    "sequence_file.uuid": "bae1d110-7561-4f96-872f-fa3528bf1c0f",
+    "cell_suspension.uuid": "2c89da23-5047-4673-bf22-f89a3753ec24",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "5c973d5e-0b2a-4e24-857c-9bfb518448f0": {
+    "process.uuid": "5c973d5e-0b2a-4e24-857c-9bfb518448f0",
+    "sequence_file.uuid": "1378d858-7ed3-41b8-98df-2f2429ca4cda",
+    "cell_suspension.uuid": "b5167724-fc54-4e28-b23e-41706fb414c9",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "5b2f8c11-8ca0-4c60-8136-f119e367846b": {
+    "process.uuid": "5b2f8c11-8ca0-4c60-8136-f119e367846b",
+    "sequence_file.uuid": "0fbb11f0-08d1-411d-a8cf-31b722654c58",
+    "cell_suspension.uuid": "b5167724-fc54-4e28-b23e-41706fb414c9",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "aadc7f42-99d8-45c6-8d13-4a7146f76785": {
+    "process.uuid": "aadc7f42-99d8-45c6-8d13-4a7146f76785",
+    "sequence_file.uuid": "26c5a58e-a08b-4c88-b0b5-b601c071aed6",
+    "cell_suspension.uuid": "f8c5cc25-be73-40f9-a4df-0ea7768cd5bd",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "2121f32f-753b-4b4d-bae7-493d3f9e16ed": {
+    "process.uuid": "2121f32f-753b-4b4d-bae7-493d3f9e16ed",
+    "sequence_file.uuid": "60404aa9-18c2-446b-88fc-1216e4e1629e",
+    "cell_suspension.uuid": "f8c5cc25-be73-40f9-a4df-0ea7768cd5bd",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "fb76730c-b3c3-4929-a959-07e53ae39f06": {
+    "process.uuid": "fb76730c-b3c3-4929-a959-07e53ae39f06",
+    "sequence_file.uuid": "201aa3ba-4931-4dae-aed9-841a69a8e0fe",
+    "cell_suspension.uuid": "c517ce05-7b46-46c1-ace7-c4208685b626",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "e786695b-91c9-4479-8feb-d57985615221": {
+    "process.uuid": "e786695b-91c9-4479-8feb-d57985615221",
+    "sequence_file.uuid": "62f64206-dc9e-49cb-aa3b-90e5f273cd91",
+    "cell_suspension.uuid": "c517ce05-7b46-46c1-ace7-c4208685b626",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "2cad8394-e0a0-4c2d-9e8a-c3b3ed92b0de": {
+    "process.uuid": "2cad8394-e0a0-4c2d-9e8a-c3b3ed92b0de",
+    "sequence_file.uuid": "f82733d2-14ac-4e3e-b0da-13b88935ece6",
+    "cell_suspension.uuid": "e9efed05-1152-4533-9373-e9c1d3f06aa5",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "8e8f6044-7df6-41a9-a4fa-2350bdff8ea0": {
+    "process.uuid": "8e8f6044-7df6-41a9-a4fa-2350bdff8ea0",
+    "sequence_file.uuid": "6900af8c-e864-4d9a-9522-f2cbc67527d8",
+    "cell_suspension.uuid": "e9efed05-1152-4533-9373-e9c1d3f06aa5",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "f0afdcf4-e509-41ff-921d-dda76f8d8937": {
+    "process.uuid": "f0afdcf4-e509-41ff-921d-dda76f8d8937",
+    "sequence_file.uuid": "fc8b1275-c10f-4448-bc96-fa3701eef2df",
+    "cell_suspension.uuid": "b8549d23-4865-42db-ba03-5c9101f0b2f1",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "2a884508-2732-446e-81dd-51f203599af2": {
+    "process.uuid": "2a884508-2732-446e-81dd-51f203599af2",
+    "sequence_file.uuid": "9fed8ed5-904d-4bfb-a679-c02365c6fdbc",
+    "cell_suspension.uuid": "b8549d23-4865-42db-ba03-5c9101f0b2f1",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "fd37688f-1798-4fe1-92ed-8b841ed896d2": {
+    "process.uuid": "fd37688f-1798-4fe1-92ed-8b841ed896d2",
+    "sequence_file.uuid": "a6fc60d5-f664-4bc8-9b93-2a918db14b3c",
+    "cell_suspension.uuid": "0834f43d-9cac-4ad3-a5ea-703b3ff13cd3",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "2e4c8d34-9669-4489-a20a-a1fe75a8eecd": {
+    "process.uuid": "2e4c8d34-9669-4489-a20a-a1fe75a8eecd",
+    "sequence_file.uuid": "815a3641-d554-458e-94bd-82ca9047a2e8",
+    "cell_suspension.uuid": "0834f43d-9cac-4ad3-a5ea-703b3ff13cd3",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "8b2f16d4-3eec-4a06-b336-75461f43a91e": {
+    "process.uuid": "8b2f16d4-3eec-4a06-b336-75461f43a91e",
+    "sequence_file.uuid": "efe8bcee-6429-4ca3-ae6d-2fe917433c98",
+    "cell_suspension.uuid": "7c11fd12-87a9-4d18-b269-9ad3a69e947b",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "b2f99cd6-f63b-4234-b1e4-922bc5ef7deb": {
+    "process.uuid": "b2f99cd6-f63b-4234-b1e4-922bc5ef7deb",
+    "sequence_file.uuid": "452a57aa-10b4-44f4-8e72-fef28c58a7dd",
+    "cell_suspension.uuid": "7c11fd12-87a9-4d18-b269-9ad3a69e947b",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "d4766ee1-ce7d-4972-95da-21be4d0f48e0": {
+    "process.uuid": "d4766ee1-ce7d-4972-95da-21be4d0f48e0",
+    "sequence_file.uuid": "309ae862-23c7-4eda-80a0-5f3c5dc0d226",
+    "cell_suspension.uuid": "7480ff5d-3292-4d08-ac6c-82010b5a1b9c",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "0ee26416-5a6c-45d5-b063-b523d083359b": {
+    "process.uuid": "0ee26416-5a6c-45d5-b063-b523d083359b",
+    "sequence_file.uuid": "06d6ffcf-e7e1-4ab8-a97c-c7611b4a3ee6",
+    "cell_suspension.uuid": "7480ff5d-3292-4d08-ac6c-82010b5a1b9c",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "9a05e956-9169-4cbe-b5f1-f7184958abcc": {
+    "process.uuid": "9a05e956-9169-4cbe-b5f1-f7184958abcc",
+    "sequence_file.uuid": "579c8fe9-221c-4e03-b20d-cb983c03f5f4",
+    "cell_suspension.uuid": "4aedc198-78ed-4117-acc6-18167bb879a9",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "5d159826-a7d5-4b27-ac89-d4980e39883e": {
+    "process.uuid": "5d159826-a7d5-4b27-ac89-d4980e39883e",
+    "sequence_file.uuid": "48990697-f08e-459e-873d-3aefd52d8668",
+    "cell_suspension.uuid": "4aedc198-78ed-4117-acc6-18167bb879a9",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "07a39c2d-636d-4bd7-b535-ff3172ecd116": {
+    "process.uuid": "07a39c2d-636d-4bd7-b535-ff3172ecd116",
+    "sequence_file.uuid": "92e2a34e-97f1-40da-bb3d-8981afc670ae",
+    "cell_suspension.uuid": "f8c5cc25-be73-40f9-a4df-0ea7768cd5bd",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "425332da-461c-4321-99f4-7da74957769a": {
+    "process.uuid": "425332da-461c-4321-99f4-7da74957769a",
+    "sequence_file.uuid": "ac0650cb-d562-42d4-b2e3-02afcfcf339e",
+    "cell_suspension.uuid": "f8c5cc25-be73-40f9-a4df-0ea7768cd5bd",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "b966ec12-84a9-4dbc-b6c9-6883be6ac3ea": {
+    "process.uuid": "b966ec12-84a9-4dbc-b6c9-6883be6ac3ea",
+    "sequence_file.uuid": "0f6d9ec5-3e31-4f7a-a25e-d2de8ea4df05",
+    "cell_suspension.uuid": "c517ce05-7b46-46c1-ace7-c4208685b626",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "fb3593b6-e788-4c91-915e-eab2ec028eb7": {
+    "process.uuid": "fb3593b6-e788-4c91-915e-eab2ec028eb7",
+    "sequence_file.uuid": "fed41403-cd43-43d9-8bac-2292708b95ff",
+    "cell_suspension.uuid": "c517ce05-7b46-46c1-ace7-c4208685b626",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "0065540c-8b5c-4e50-a8b2-7feb2c45214f": {
+    "process.uuid": "0065540c-8b5c-4e50-a8b2-7feb2c45214f",
+    "sequence_file.uuid": "1dd72035-2377-424f-b7bf-9feb3a167c6a",
+    "cell_suspension.uuid": "e9efed05-1152-4533-9373-e9c1d3f06aa5",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "6037b455-1e2c-4446-90ea-a0443c0ec311": {
+    "process.uuid": "6037b455-1e2c-4446-90ea-a0443c0ec311",
+    "sequence_file.uuid": "a5e66630-5aa6-4a37-bc02-7cc087d625ed",
+    "cell_suspension.uuid": "e9efed05-1152-4533-9373-e9c1d3f06aa5",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "85458b1d-52d1-4725-9562-94bd557659b4": {
+    "process.uuid": "85458b1d-52d1-4725-9562-94bd557659b4",
+    "sequence_file.uuid": "220de415-2018-45d3-9fc7-973c82508048",
+    "cell_suspension.uuid": "b8549d23-4865-42db-ba03-5c9101f0b2f1",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "a07539e6-0e3a-489a-86b7-40cc2f0b139c": {
+    "process.uuid": "a07539e6-0e3a-489a-86b7-40cc2f0b139c",
+    "sequence_file.uuid": "2ab7bc06-769b-417c-b20e-1ccfecd1cf8f",
+    "cell_suspension.uuid": "b8549d23-4865-42db-ba03-5c9101f0b2f1",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "ff9c1564-6c7d-444c-a67e-4b78144b89d1": {
+    "process.uuid": "ff9c1564-6c7d-444c-a67e-4b78144b89d1",
+    "sequence_file.uuid": "b4ef7a41-94ff-40e5-9a40-55888e5ebdb8",
+    "cell_suspension.uuid": "0834f43d-9cac-4ad3-a5ea-703b3ff13cd3",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "082dae6f-473d-430a-9fe8-b10d33d3b427": {
+    "process.uuid": "082dae6f-473d-430a-9fe8-b10d33d3b427",
+    "sequence_file.uuid": "755eed90-2c6b-4ac0-9400-87d46df3ddf1",
+    "cell_suspension.uuid": "0834f43d-9cac-4ad3-a5ea-703b3ff13cd3",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "22ac3f68-4e0d-4fe2-8074-12a180669dbd": {
+    "process.uuid": "22ac3f68-4e0d-4fe2-8074-12a180669dbd",
+    "sequence_file.uuid": "aba26d44-7ce6-4c17-bf81-473fd206a502",
+    "cell_suspension.uuid": "7c11fd12-87a9-4d18-b269-9ad3a69e947b",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "0cc80bdf-8d3d-49d3-9f9a-47bef10f5e33": {
+    "process.uuid": "0cc80bdf-8d3d-49d3-9f9a-47bef10f5e33",
+    "sequence_file.uuid": "1706f6ab-6f11-4cec-8619-e69a47937769",
+    "cell_suspension.uuid": "7c11fd12-87a9-4d18-b269-9ad3a69e947b",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "b675ea95-e3b0-402a-97a3-d68a6f178a71": {
+    "process.uuid": "b675ea95-e3b0-402a-97a3-d68a6f178a71",
+    "sequence_file.uuid": "294ccbe0-843f-4d0d-a32c-6bd9ad0c1e4c",
+    "cell_suspension.uuid": "7480ff5d-3292-4d08-ac6c-82010b5a1b9c",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "86699568-d3e6-49ff-9703-f95369c4a9aa": {
+    "process.uuid": "86699568-d3e6-49ff-9703-f95369c4a9aa",
+    "sequence_file.uuid": "bad7e87a-bf12-4ab0-9dd0-42fea44c7c70",
+    "cell_suspension.uuid": "7480ff5d-3292-4d08-ac6c-82010b5a1b9c",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "9a2cf289-0973-445a-a86d-4d0e78def507": {
+    "process.uuid": "9a2cf289-0973-445a-a86d-4d0e78def507",
+    "sequence_file.uuid": "9d45412e-bc6d-42a2-8c47-22147d5064f1",
+    "cell_suspension.uuid": "4aedc198-78ed-4117-acc6-18167bb879a9",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "1b65b664-f6a5-421b-bac6-e7065696e814": {
+    "process.uuid": "1b65b664-f6a5-421b-bac6-e7065696e814",
+    "sequence_file.uuid": "93f9b9ef-80b9-4d57-a0cc-c27b763f7342",
+    "cell_suspension.uuid": "4aedc198-78ed-4117-acc6-18167bb879a9",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "7727a89f-55e5-4fe3-97ec-13b1c70a1885": {
+    "process.uuid": "7727a89f-55e5-4fe3-97ec-13b1c70a1885",
+    "sequence_file.uuid": "89f24665-4d0d-42e1-9110-c99a68ad5175",
+    "cell_suspension.uuid": "e9efed05-1152-4533-9373-e9c1d3f06aa5",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "73f34a1f-27ff-4b42-b45f-7b28e7bebf9d": {
+    "process.uuid": "73f34a1f-27ff-4b42-b45f-7b28e7bebf9d",
+    "sequence_file.uuid": "a5771cf2-77a3-4bd0-9bb5-63011cb8ee57",
+    "cell_suspension.uuid": "e9efed05-1152-4533-9373-e9c1d3f06aa5",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "69e1df3a-580d-4466-8f89-e781c220d4cf": {
+    "process.uuid": "69e1df3a-580d-4466-8f89-e781c220d4cf",
+    "sequence_file.uuid": "4b0bd677-e56c-4e41-b397-d9908f931755",
+    "cell_suspension.uuid": "7c11fd12-87a9-4d18-b269-9ad3a69e947b",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "8e1643e7-bf4b-450c-abd0-1c7f1ce515fe": {
+    "process.uuid": "8e1643e7-bf4b-450c-abd0-1c7f1ce515fe",
+    "sequence_file.uuid": "105ea37a-6a84-4e00-9d19-b6102cd57ffb",
+    "cell_suspension.uuid": "7c11fd12-87a9-4d18-b269-9ad3a69e947b",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "411c1682-2375-4956-830d-ae284242f724": {
+    "process.uuid": "411c1682-2375-4956-830d-ae284242f724",
+    "sequence_file.uuid": "46a1ca64-172e-4223-9757-84401ed882c5",
+    "cell_suspension.uuid": "7480ff5d-3292-4d08-ac6c-82010b5a1b9c",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "41a793e8-4318-4511-a2f4-2c7630c6e1e4": {
+    "process.uuid": "41a793e8-4318-4511-a2f4-2c7630c6e1e4",
+    "sequence_file.uuid": "cc9bb456-2364-4a87-99c8-573bb0f51f65",
+    "cell_suspension.uuid": "7480ff5d-3292-4d08-ac6c-82010b5a1b9c",
+    "library_preparation_protocol.uuid": "c4650185-04a7-47fe-989f-4bd435fa4f1c",
+    "sequencing_protocol.uuid": "add2f6f7-f76f-4303-8d7f-f3cdfc8474b6"
+  },
+  "81ba7c52-fc39-43dc-98b5-9a0b84bd3ace": {
+    "process.uuid": "81ba7c52-fc39-43dc-98b5-9a0b84bd3ace",
+    "sequence_file.uuid": "8bbd1c5b-acce-4aba-a2d2-340fce9884b9",
+    "cell_suspension.uuid": "b4248fb8-108d-4fff-811f-8659c79c86c3",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "11294427-c592-4ec2-995e-45018ac7f13e": {
+    "process.uuid": "11294427-c592-4ec2-995e-45018ac7f13e",
+    "sequence_file.uuid": "66aff357-03c5-488c-ac4a-a7f66e6a3b87",
+    "cell_suspension.uuid": "b4248fb8-108d-4fff-811f-8659c79c86c3",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "fc60c225-8b16-4f01-a919-7649e36cd25b": {
+    "process.uuid": "fc60c225-8b16-4f01-a919-7649e36cd25b",
+    "sequence_file.uuid": "b6b1cacb-830f-480c-89e0-4722636b0fe9",
+    "cell_suspension.uuid": "97eee9b4-a033-44c8-bdac-02323b3b06bf",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  },
+  "bb4db660-4cdf-46d7-852f-6534b2c948ff": {
+    "process.uuid": "bb4db660-4cdf-46d7-852f-6534b2c948ff",
+    "sequence_file.uuid": "b047d754-5bcb-4a2f-819f-06e00107d7cf",
+    "cell_suspension.uuid": "97eee9b4-a033-44c8-bdac-02323b3b06bf",
+    "library_preparation_protocol.uuid": "1526b78d-7e45-4bab-abe9-6a349fa518f6",
+    "sequencing_protocol.uuid": "4f9b96c7-5929-44d8-9a8e-4f49090fac12"
+  }
+}

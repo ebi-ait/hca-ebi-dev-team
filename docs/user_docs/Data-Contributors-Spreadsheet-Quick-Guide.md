@@ -4,6 +4,9 @@ title: Spreadsheet quick guide
 parent: User documentation
 ---
 
+NEEDS UPDATING
+{: .label .label-red }
+
 # Data Contibutors Spreadsheet Quick Guide
 
 Google Sheets and Excel spreadsheets are used to gather metadata about your project. Ths document is a brief walkthrough to help you get started filling out an HCA metadata spreadsheet.

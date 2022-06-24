@@ -1,0 +1,1094 @@
+{
+  "cddab57b-6868-4be4-806f-395ed9dd635a": {
+    "biomaterials": 2560,
+    "protocols": 4,
+    "processes": 5096,
+    "files": 5088,
+    "assays": 2544
+  },
+  "ae71be1d-ddd8-4feb-9bed-24c3ddb6e1ad": {
+    "biomaterials": 3534,
+    "protocols": 3,
+    "processes": 7038,
+    "files": 3514,
+    "assays": 3514
+  },
+  "8c3c290d-dfff-4553-8868-54ce45f4ba7f": {
+    "biomaterials": 6725,
+    "protocols": 14,
+    "processes": 13332,
+    "files": 13281,
+    "assays": 6639
+  },
+  "2043c65a-1cf8-4828-a656-9e247d4e64f1": {
+    "biomaterials": 1740,
+    "protocols": 5,
+    "processes": 3472,
+    "files": 3466,
+    "assays": 1733
+  },
+  "005d611a-14d5-4fbf-846e-571a1f874f70": {
+    "biomaterials": 27,
+    "protocols": 5,
+    "processes": 29,
+    "files": 21,
+    "assays": 6
+  },
+  "a9c022b4-c771-4468-b769-cabcf9738de3": {
+    "biomaterials": 31,
+    "protocols": 9,
+    "processes": 51,
+    "files": 44,
+    "assays": 22
+  },
+  "f83165c5-e2ea-4d15-a5cf-33f3550bffde": {
+    "biomaterials": 7666,
+    "protocols": 20,
+    "processes": 15278,
+    "files": 15287,
+    "assays": 7628
+  },
+  "a29952d9-925e-40f4-8a1c-274f118f1f51": {
+    "biomaterials": 9626,
+    "protocols": 4,
+    "processes": 9638,
+    "files": 52,
+    "assays": 25
+  },
+  "027c51c6-0719-469f-a7f5-640fe57cbece": {
+    "biomaterials": 6,
+    "protocols": 5,
+    "processes": 12,
+    "files": 18,
+    "assays": 7
+  },
+  "90bd6933-40c0-48d4-8d76-778c103bf545": {
+    "biomaterials": 2288,
+    "protocols": 13,
+    "processes": 4516,
+    "files": 2244,
+    "assays": 2244
+  },
+  "74b6d569-3b11-42ef-b6b1-a0454522b4a0": {
+    "biomaterials": 137,
+    "protocols": 3,
+    "processes": 5594,
+    "files": 16377,
+    "assays": 5459
+  },
+  "f81efc03-9f56-4354-aabb-6ce819c3d414": {
+    "biomaterials": 24,
+    "protocols": 5,
+    "processes": 19,
+    "files": 6,
+    "assays": 3
+  },
+  "cc95ff89-2e68-4a08-a234-480eca21ce79": {
+    "biomaterials": 270,
+    "protocols": 6,
+    "processes": 381,
+    "files": 762,
+    "assays": 127
+  },
+  "f86f1ab4-1fbb-4510-ae35-3ffd752d4dfc": {
+    "biomaterials": 39,
+    "protocols": 4,
+    "processes": 44,
+    "files": 38,
+    "assays": 19
+  },
+  "e0009214-c0a0-4a7b-96e2-d6a83e966ce0": {
+    "biomaterials": 53992,
+    "protocols": 61,
+    "processes": 153822,
+    "files": 199680,
+    "assays": 99840
+  },
+  "091cf39b-01bc-42e5-9437-f419a66c8a45": {
+    "biomaterials": 18,
+    "protocols": 4,
+    "processes": 24,
+    "files": 24,
+    "assays": 9
+  },
+  "f8aa201c-4ff1-45a4-890e-840d63459ca2": {
+    "biomaterials": 406,
+    "protocols": 14,
+    "processes": 761,
+    "files": 824,
+    "assays": 371
+  },
+  "abe1a013-af7a-45ed-8c26-f3793c24a1f4": {
+    "biomaterials": 7,
+    "protocols": 1,
+    "processes": 0,
+    "files": 0,
+    "assays": 0
+  },
+  "577c946d-6de5-4b55-a854-cd3fde40bff2": {
+    "biomaterials": 18,
+    "protocols": 4,
+    "processes": 18,
+    "files": 28,
+    "assays": 6
+  },
+  "4a95101c-9ffc-4f30-a809-f04518a23803": {
+    "biomaterials": 36,
+    "protocols": 1,
+    "processes": 0,
+    "files": 0,
+    "assays": 0
+  },
+  "8185730f-4113-40d3-9cc3-929271784c2b": {
+    "biomaterials": 11,
+    "protocols": 5,
+    "processes": 13,
+    "files": 15,
+    "assays": 5
+  },
+  "9c20a245-f2c0-43ae-82c9-2232ec6b594f": {
+    "biomaterials": 24,
+    "protocols": 5,
+    "processes": 31,
+    "files": 43,
+    "assays": 11
+  },
+  "116965f3-f094-4769-9d28-ae675c1b569c": {
+    "biomaterials": 7,
+    "protocols": 7,
+    "processes": 9,
+    "files": 36,
+    "assays": 3
+  },
+  "4d6f6c96-2a83-43d8-8fe1-0f53bffd4674": {
+    "biomaterials": 15,
+    "protocols": 5,
+    "processes": 15,
+    "files": 120,
+    "assays": 5
+  },
+  "1defdada-a365-44ad-9b29-443b06bd11d6": {
+    "biomaterials": 126,
+    "protocols": 4,
+    "processes": 2623,
+    "files": 10240,
+    "assays": 2560
+  },
+  "88ec040b-8705-4f77-8f41-f81e57632f7d": {
+    "biomaterials": 30,
+    "protocols": 18,
+    "processes": 2644,
+    "files": 6567,
+    "assays": 2618
+  },
+  "4e6f083b-5b9a-4393-9890-2a83da8188f1": {
+    "biomaterials": 57,
+    "protocols": 10,
+    "processes": 80,
+    "files": 568,
+    "assays": 29
+  },
+  "c4077b3c-5c98-4d26-a614-246d12c2e5d7": {
+    "biomaterials": 0,
+    "protocols": 2,
+    "processes": 0,
+    "files": 0,
+    "assays": 0
+  },
+  "0b2cbf1a-3f40-4e01-a99d-901fa6091ee5": {
+    "biomaterials": 133,
+    "protocols": 7,
+    "processes": 161,
+    "files": 165,
+    "assays": 55
+  },
+  "453d7ee2-319f-496c-9862-99d397870b63": {
+    "biomaterials": 43,
+    "protocols": 4,
+    "processes": 25,
+    "files": 45,
+    "assays": 1
+  },
+  "e07897dc-c25e-453d-b04c-27ca33adb630": {
+    "biomaterials": 14,
+    "protocols": 4,
+    "processes": 8,
+    "files": 24,
+    "assays": 4
+  },
+  "a72bed96-a4f7-401a-a67a-17b8a7357faf": {
+    "biomaterials": 6,
+    "protocols": 5,
+    "processes": 4,
+    "files": 7,
+    "assays": 2
+  },
+  "fc55bd4a-8694-4a28-9a35-59a685bda323": {
+    "biomaterials": 6,
+    "protocols": 0,
+    "processes": 6,
+    "files": 48,
+    "assays": 2
+  },
+  "a815c84b-8999-433f-958e-422c0720e00d": {
+    "biomaterials": 90,
+    "protocols": 4,
+    "processes": 117,
+    "files": 78,
+    "assays": 39
+  },
+  "38449aea-70b5-40db-84b3-1e08f32efe34": {
+    "biomaterials": 49,
+    "protocols": 4,
+    "processes": 60,
+    "files": 60,
+    "assays": 20
+  },
+  "c1a9a93d-d9de-4e65-9619-a9cec1052eaa": {
+    "biomaterials": 98,
+    "protocols": 9,
+    "processes": 111,
+    "files": 486,
+    "assays": 43
+  },
+  "455b46e6-d8ea-4611-861e-de720a562ada": {
+    "biomaterials": 14,
+    "protocols": 7,
+    "processes": 44,
+    "files": 192,
+    "assays": 32
+  },
+  "ad98d3cd-26fb-4ee3-99c9-8a2ab085e737": {
+    "biomaterials": 244,
+    "protocols": 12,
+    "processes": 378,
+    "files": 768,
+    "assays": 148
+  },
+  "c1810dbc-16d2-45c3-b45e-3e675f88d87b": {
+    "biomaterials": 107,
+    "protocols": 17,
+    "processes": 186,
+    "files": 206,
+    "assays": 103
+  },
+  "5b5f05b7-2482-468d-b76d-8f68c04a7a47": {
+    "biomaterials": 24,
+    "protocols": 6,
+    "processes": 36,
+    "files": 118,
+    "assays": 20
+  },
+  "2086eb05-10b9-432b-b7f0-169ccc49d270": {
+    "biomaterials": 14,
+    "protocols": 4,
+    "processes": 12,
+    "files": 24,
+    "assays": 4
+  },
+  "7027adc6-c9c9-46f3-84ee-9badc3a4f53b": {
+    "biomaterials": 46,
+    "protocols": 4,
+    "processes": 41,
+    "files": 24,
+    "assays": 12
+  },
+  "83f5188e-3bf7-4956-9544-cea4f8997756": {
+    "biomaterials": 1598,
+    "protocols": 18,
+    "processes": 3176,
+    "files": 3216,
+    "assays": 1584
+  },
+  "f2fe82f0-4454-4d84-b416-a885f3121e59": {
+    "biomaterials": 124,
+    "protocols": 8,
+    "processes": 188,
+    "files": 240,
+    "assays": 80
+  },
+  "95f07e6e-6a73-4e1b-a880-c83996b3aa5c": {
+    "biomaterials": 54,
+    "protocols": 4,
+    "processes": 57,
+    "files": 38,
+    "assays": 19
+  },
+  "c41dffbf-ad83-447c-a0e1-13e689d9b258": {
+    "biomaterials": 58,
+    "protocols": 11,
+    "processes": 68,
+    "files": 156,
+    "assays": 26
+  },
+  "42d4f8d4-5422-4b78-adae-e7c3c2ef511c": {
+    "biomaterials": 9,
+    "protocols": 9,
+    "processes": 9,
+    "files": 24,
+    "assays": 3
+  },
+  "2ef3655a-973d-4d69-9b41-21fa4041eed7": {
+    "biomaterials": 9,
+    "protocols": 4,
+    "processes": 9,
+    "files": 34,
+    "assays": 3
+  },
+  "f48e7c39-cc67-4055-9d79-bc437892840c": {
+    "biomaterials": 15,
+    "protocols": 6,
+    "processes": 18,
+    "files": 18,
+    "assays": 6
+  },
+  "efea6426-510a-4b60-9a19-277e52bfa815": {
+    "biomaterials": 30,
+    "protocols": 5,
+    "processes": 50,
+    "files": 60,
+    "assays": 30
+  },
+  "b3938158-4e8d-4fdb-9e13-9e94270dde16": {
+    "biomaterials": 62,
+    "protocols": 4,
+    "processes": 58,
+    "files": 6,
+    "assays": 6
+  },
+  "e579d0f4-18ef-4d42-90fa-4d2afb60a862": {
+    "biomaterials": 18,
+    "protocols": 9,
+    "processes": 18,
+    "files": 30,
+    "assays": 6
+  },
+  "3089d311-f9ed-44dd-bb10-397059bad4dc": {
+    "biomaterials": 163,
+    "protocols": 10,
+    "processes": 189,
+    "files": 126,
+    "assays": 63
+  },
+  "1cd1f41f-f81a-486b-a05b-66ec60f81dcf": {
+    "biomaterials": 38,
+    "protocols": 8,
+    "processes": 41,
+    "files": 28,
+    "assays": 14
+  },
+  "996120f9-e84f-409f-a01e-732ab58ca8b9": {
+    "biomaterials": 29,
+    "protocols": 3,
+    "processes": 36,
+    "files": 56,
+    "assays": 12
+  },
+  "6c040a93-8cf8-4fd5-98de-2297eb07e9f6": {
+    "biomaterials": 22,
+    "protocols": 7,
+    "processes": 26,
+    "files": 30,
+    "assays": 11
+  },
+  "559bb888-7829-41f2-ace5-2c05c7eb81e9": {
+    "biomaterials": 21,
+    "protocols": 9,
+    "processes": 27,
+    "files": 18,
+    "assays": 9
+  },
+  "1c6a960d-52ac-44ea-b728-a59c7ab9dc8e": {
+    "biomaterials": 27,
+    "protocols": 4,
+    "processes": 27,
+    "files": 18,
+    "assays": 9
+  },
+  "dbd836cf-bfc2-41f0-9834-41cc6c0b235a": {
+    "biomaterials": 23,
+    "protocols": 10,
+    "processes": 19,
+    "files": 1,
+    "assays": 1
+  },
+  "dc1a41f6-9e09-42a6-959e-3be23db6da56": {
+    "biomaterials": 62,
+    "protocols": 12,
+    "processes": 46,
+    "files": 40,
+    "assays": 5
+  },
+  "0d4b87ea-6e9e-4569-82e4-1343e0e3259f": {
+    "biomaterials": 3,
+    "protocols": 7,
+    "processes": 6,
+    "files": 44,
+    "assays": 4
+  },
+  "41fb1734-a121-4616-95c7-3b732c9433c7": {
+    "biomaterials": 15,
+    "protocols": 6,
+    "processes": 15,
+    "files": 30,
+    "assays": 5
+  },
+  "d3a4ceac-4d66-4984-9704-2570c0647a56": {
+    "biomaterials": 15,
+    "protocols": 8,
+    "processes": 18,
+    "files": 135,
+    "assays": 6
+  },
+  "16ed4ad8-7319-46b2-8859-6fe1c1d73a82": {
+    "biomaterials": 53,
+    "protocols": 12,
+    "processes": 75,
+    "files": 50,
+    "assays": 25
+  },
+  "379ed69e-be05-48bc-af5e-a7fc589709bf": {
+    "biomaterials": 2212,
+    "protocols": 12,
+    "processes": 2189,
+    "files": 4,
+    "assays": 4
+  },
+  "ce7b12ba-664f-4f79-8fc7-3de6b1892183": {
+    "biomaterials": 63,
+    "protocols": 5,
+    "processes": 63,
+    "files": 42,
+    "assays": 21
+  },
+  "9d97f01f-9313-416e-9b07-560f048b2350": {
+    "biomaterials": 32,
+    "protocols": 8,
+    "processes": 46,
+    "files": 102,
+    "assays": 22
+  },
+  "ce33dde2-382d-448c-b6ac-bfb424644f23": {
+    "biomaterials": 192,
+    "protocols": 7,
+    "processes": 379,
+    "files": 188,
+    "assays": 188
+  },
+  "ccef38d7-aa92-4010-9621-c4c7b1182647": {
+    "biomaterials": 1343,
+    "protocols": 14,
+    "processes": 2644,
+    "files": 2205,
+    "assays": 1313
+  },
+  "5116c081-8be7-49c5-8ce0-73b887328aa9": {
+    "biomaterials": 15,
+    "protocols": 14,
+    "processes": 30,
+    "files": 60,
+    "assays": 17
+  },
+  "7b947aa2-43a7-4082-afff-222a3e3a4635": {
+    "biomaterials": 19,
+    "protocols": 8,
+    "processes": 24,
+    "files": 50,
+    "assays": 7
+  },
+  "23587fb3-1a4a-4f58-ad74-cc9a4cb4c254": {
+    "biomaterials": 1491,
+    "protocols": 7,
+    "processes": 2958,
+    "files": 2950,
+    "assays": 1475
+  },
+  "7adede6a-0ab7-45e6-9b67-ffe7466bec1f": {
+    "biomaterials": 3218,
+    "protocols": 4,
+    "processes": 4800,
+    "files": 1600,
+    "assays": 1600
+  },
+  "e5d45579-1f5b-48c3-b568-320d93e7ca72": {
+    "biomaterials": 9,
+    "protocols": 8,
+    "processes": 9,
+    "files": 72,
+    "assays": 3
+  },
+  "a39728aa-70a0-4201-b0a2-81b7badf3e71": {
+    "biomaterials": 60,
+    "protocols": 13,
+    "processes": 72,
+    "files": 48,
+    "assays": 24
+  },
+  "07073c12-8006-4710-a00b-23abdb814904": {
+    "biomaterials": 33,
+    "protocols": 7,
+    "processes": 33,
+    "files": 22,
+    "assays": 11
+  },
+  "2d846095-8a33-4f3c-97d4-585bafac13b4": {
+    "biomaterials": 3600,
+    "protocols": 11,
+    "processes": 7184,
+    "files": 7176,
+    "assays": 3588
+  },
+  "2a64db43-1b55-4639-aabb-8dba0145689d": {
+    "biomaterials": 8,
+    "protocols": 4,
+    "processes": 10,
+    "files": 12,
+    "assays": 4
+  },
+  "e77ba921-bacb-4f47-9c35-b55155e28296": {
+    "biomaterials": 20,
+    "protocols": 5,
+    "processes": 25,
+    "files": 20,
+    "assays": 10
+  },
+  "4bec484d-ca7a-47b4-8d48-8830e06ad6db": {
+    "biomaterials": 15,
+    "protocols": 4,
+    "processes": 18,
+    "files": 192,
+    "assays": 6
+  },
+  "520afa10-f9d2-4e93-ab7a-26c4c863ce18": {
+    "biomaterials": 663,
+    "protocols": 8,
+    "processes": 1308,
+    "files": 648,
+    "assays": 648
+  },
+  "842605c7-375a-47c5-9e2c-a71c2c00fcad": {
+    "biomaterials": 9,
+    "protocols": 9,
+    "processes": 9,
+    "files": 6,
+    "assays": 3
+  },
+  "1ce3b3dc-02f2-44a8-96da-d6d107b27a76": {
+    "biomaterials": 430,
+    "protocols": 7,
+    "processes": 845,
+    "files": 840,
+    "assays": 420
+  },
+  "0fd8f918-62d6-4b8b-ac35-4c53dd601f71": {
+    "biomaterials": 21,
+    "protocols": 5,
+    "processes": 18,
+    "files": 124,
+    "assays": 4
+  },
+  "63b5b6c1-bbcd-487d-8c2e-0095150c1ecd": {
+    "biomaterials": 20,
+    "protocols": 5,
+    "processes": 25,
+    "files": 20,
+    "assays": 10
+  },
+  "0c3b7785-f74d-4091-8616-a68757e4c2a8": {
+    "biomaterials": 182,
+    "protocols": 7,
+    "processes": 353,
+    "files": 352,
+    "assays": 174
+  },
+  "08b794a0-519c-4516-b184-c583746254c5": {
+    "biomaterials": 113,
+    "protocols": 6,
+    "processes": 87,
+    "files": 86,
+    "assays": 1
+  },
+  "05657a59-9f9d-4bb9-b77b-24be13aa5cea": {
+    "biomaterials": 186,
+    "protocols": 6,
+    "processes": 369,
+    "files": 368,
+    "assays": 184
+  },
+  "5ee710d7-e2d5-4fe2-818d-15f5e31dae32": {
+    "biomaterials": 17,
+    "protocols": 7,
+    "processes": 32,
+    "files": 60,
+    "assays": 20
+  },
+  "ccd1f1ba-74ce-469b-9fc9-f6faea623358": {
+    "biomaterials": 223,
+    "protocols": 5,
+    "processes": 443,
+    "files": 442,
+    "assays": 221
+  },
+  "eaefa1b6-dae1-4414-953b-17b0427d061e": {
+    "biomaterials": 397,
+    "protocols": 5,
+    "processes": 778,
+    "files": 384,
+    "assays": 384
+  },
+  "05be4f37-4506-429b-b112-506444507d62": {
+    "biomaterials": 962,
+    "protocols": 6,
+    "processes": 2503,
+    "files": 1543,
+    "assays": 1543
+  },
+  "3a694703-3084-4ece-9abe-d935fd5f6748": {
+    "biomaterials": 252,
+    "protocols": 6,
+    "processes": 372,
+    "files": 124,
+    "assays": 124
+  },
+  "e8808cc8-4ca0-4096-80f2-bba73600cba6": {
+    "biomaterials": 550,
+    "protocols": 7,
+    "processes": 1441,
+    "files": 1794,
+    "assays": 897
+  },
+  "24c654a5-caa5-440a-8f02-582921f2db4a": {
+    "biomaterials": 6,
+    "protocols": 4,
+    "processes": 6,
+    "files": 4,
+    "assays": 2
+  },
+  "03c6fce7-789e-4e78-a27a-664d562bb738": {
+    "biomaterials": 1705,
+    "protocols": 5,
+    "processes": 3146,
+    "files": 1529,
+    "assays": 1529
+  },
+  "bd400331-54b9-4fcc-bff6-6bb8b079ee1f": {
+    "biomaterials": 30,
+    "protocols": 13,
+    "processes": 40,
+    "files": 378,
+    "assays": 18
+  },
+  "d2111fac-3fc4-4f42-9b6d-32cd6a828267": {
+    "biomaterials": 749,
+    "protocols": 8,
+    "processes": 1479,
+    "files": 1468,
+    "assays": 734
+  },
+  "b51f49b4-0d2e-4cbd-bbd5-04cd171fc2fa": {
+    "biomaterials": 405,
+    "protocols": 13,
+    "processes": 567,
+    "files": 398,
+    "assays": 189
+  },
+  "52b29aa4-c8d6-42b4-807a-b35be94469ca": {
+    "biomaterials": 494,
+    "protocols": 6,
+    "processes": 948,
+    "files": 932,
+    "assays": 466
+  },
+  "a96b71c0-78a7-42d1-88ce-83c78925cfeb": {
+    "biomaterials": 21,
+    "protocols": 4,
+    "processes": 18,
+    "files": 5,
+    "assays": 5
+  },
+  "c6ad8f9b-d26a-4811-b2ba-93d487978446": {
+    "biomaterials": 654,
+    "protocols": 4,
+    "processes": 1284,
+    "files": 638,
+    "assays": 638
+  },
+  "6072616c-8794-4b20-8f52-fb15992ea5a4": {
+    "biomaterials": 303,
+    "protocols": 5,
+    "processes": 904,
+    "files": 602,
+    "assays": 602
+  },
+  "0c09fade-e079-4fde-8e60-6725b8c1d84b": {
+    "biomaterials": 48,
+    "protocols": 4,
+    "processes": 62,
+    "files": 60,
+    "assays": 30
+  },
+  "2a72a4e5-66b2-405a-bb7c-1e463e8febb0": {
+    "biomaterials": 2435,
+    "protocols": 7,
+    "processes": 4682,
+    "files": 2289,
+    "assays": 2289
+  },
+  "4037007b-0eff-4e6d-b7bd-8dd8eec80143": {
+    "biomaterials": 99,
+    "protocols": 14,
+    "processes": 115,
+    "files": 76,
+    "assays": 38
+  },
+  "60ea42e1-af49-42f5-8164-d641fdb696bc": {
+    "biomaterials": 1151,
+    "protocols": 5,
+    "processes": 2293,
+    "files": 2290,
+    "assays": 1145
+  },
+  "946c5add-47d1-402a-97bb-a5af97e8bce7": {
+    "biomaterials": 164,
+    "protocols": 7,
+    "processes": 305,
+    "files": 296,
+    "assays": 148
+  },
+  "52d10a60-c8d1-4d06-8a5e-af0d5c0d5034": {
+    "biomaterials": 177,
+    "protocols": 7,
+    "processes": 351,
+    "files": 175,
+    "assays": 175
+  },
+  "955dfc2c-a8c6-4d04-aa4d-907610545d11": {
+    "biomaterials": 15,
+    "protocols": 10,
+    "processes": 24,
+    "files": 24,
+    "assays": 12
+  },
+  "1ad6cee6-53a5-4804-a870-e5bd991186e0": {
+    "biomaterials": 47,
+    "protocols": 8,
+    "processes": 58,
+    "files": 72,
+    "assays": 16
+  },
+  "53c53cd4-8127-4e12-bc7f-8fe1610a715c": {
+    "biomaterials": 25,
+    "protocols": 16,
+    "processes": 38,
+    "files": 32,
+    "assays": 16
+  },
+  "248fcf03-16c6-4a41-b6cc-aad4d894ca42": {
+    "biomaterials": 5941,
+    "protocols": 13,
+    "processes": 8874,
+    "files": 23592,
+    "assays": 2958
+  },
+  "115da023-665e-4e69-a25b-860bb89bb2a5": {
+    "biomaterials": 149,
+    "protocols": 5,
+    "processes": 210,
+    "files": 140,
+    "assays": 70
+  },
+  "b963bd4b-4bc1-4404-8425-69d74bc636b8": {
+    "biomaterials": 361,
+    "protocols": 26,
+    "processes": 243,
+    "files": 2,
+    "assays": 2
+  },
+  "962bd805-eb89-4c54-bad2-008e497d1307": {
+    "biomaterials": 12,
+    "protocols": 7,
+    "processes": 24,
+    "files": 26,
+    "assays": 13
+  },
+  "0792db34-8047-4e62-802c-9177c9cd8e28": {
+    "biomaterials": 19,
+    "protocols": 12,
+    "processes": 1463,
+    "files": 2898,
+    "assays": 1449
+  },
+  "99101928-d9b1-4aaf-b759-e97958ac7403": {
+    "biomaterials": 651,
+    "protocols": 5,
+    "processes": 1832,
+    "files": 1189,
+    "assays": 1189
+  },
+  "d3ac7c1b-5302-4804-b611-dad9f89c049d": {
+    "biomaterials": 110,
+    "protocols": 12,
+    "processes": 91,
+    "files": 11,
+    "assays": 11
+  },
+  "71eb5f6d-cee0-4297-b503-b1125909b8c7": {
+    "biomaterials": 63,
+    "protocols": 8,
+    "processes": 99,
+    "files": 93,
+    "assays": 36
+  },
+  "7c75f07c-608d-4c4a-a1b7-b13d11c0ad31": {
+    "biomaterials": 138,
+    "protocols": 14,
+    "processes": 194,
+    "files": 407,
+    "assays": 66
+  },
+  "67a3de09-45b9-49c3-a068-ff4665daa50e": {
+    "biomaterials": 1465,
+    "protocols": 10,
+    "processes": 2196,
+    "files": 1464,
+    "assays": 732
+  },
+  "a9301beb-e9fa-42fe-b75c-84e8a460c733": {
+    "biomaterials": 270,
+    "protocols": 12,
+    "processes": 260,
+    "files": 18,
+    "assays": 18
+  },
+  "c715cd2f-dc7c-44a6-9cd5-b6a6d9f075ae": {
+    "biomaterials": 153,
+    "protocols": 17,
+    "processes": 131,
+    "files": 9,
+    "assays": 9
+  },
+  "bbec9297-3f64-4453-bb27-d3cdee53cd75": {
+    "biomaterials": 6,
+    "protocols": 5,
+    "processes": 5,
+    "files": 1,
+    "assays": 1
+  },
+  "51f02950-ee25-4f4b-8d07-59aa99bb3498": {
+    "biomaterials": 15,
+    "protocols": 6,
+    "processes": 16,
+    "files": 6,
+    "assays": 6
+  },
+  "71436067-ac41-4ace-be1b-2fbcc2cb02fa": {
+    "biomaterials": 3,
+    "protocols": 6,
+    "processes": 6,
+    "files": 7,
+    "assays": 4
+  },
+  "f0bec3b9-db67-43c6-90cf-f6d33f1d6803": {
+    "biomaterials": 72,
+    "protocols": 7,
+    "processes": 281,
+    "files": 210,
+    "assays": 210
+  },
+  "d012d476-8f8c-4ff3-89d6-ebbe22c1b5c1": {
+    "biomaterials": 5,
+    "protocols": 6,
+    "processes": 12,
+    "files": 10,
+    "assays": 8
+  },
+  "3e329187-a9c4-48ec-90e3-cc45f7c2311c": {
+    "biomaterials": 1064,
+    "protocols": 9,
+    "processes": 2055,
+    "files": 2001,
+    "assays": 1001
+  },
+  "df88f39f-01a8-4b5b-92f4-3177d6c0f242": {
+    "biomaterials": 6,
+    "protocols": 5,
+    "processes": 5,
+    "files": 1,
+    "assays": 1
+  },
+  "376a7f55-b876-4f60-9cf3-ed7bc83d5415": {
+    "biomaterials": 91,
+    "protocols": 10,
+    "processes": 135,
+    "files": 90,
+    "assays": 45
+  },
+  "e77fed30-959d-4fad-bc15-a0a5a85c21d2": {
+    "biomaterials": 229,
+    "protocols": 4,
+    "processes": 559,
+    "files": 446,
+    "assays": 333
+  },
+  "e526d91d-cf3a-44cb-80c5-fd7676b55a1d": {
+    "biomaterials": 150,
+    "protocols": 12,
+    "processes": 706,
+    "files": 606,
+    "assays": 606
+  },
+  "c5f46615-68de-4cf4-bbc2-a0ae10f08243": {
+    "biomaterials": 204,
+    "protocols": 9,
+    "processes": 193,
+    "files": 1,
+    "assays": 1
+  },
+  "414acced-eba0-440f-b721-befbc5642bef": {
+    "biomaterials": 6,
+    "protocols": 6,
+    "processes": 8,
+    "files": 6,
+    "assays": 4
+  },
+  "3cfcdff5-dee1-4a7b-a591-c09c6e850b11": {
+    "biomaterials": 14,
+    "protocols": 6,
+    "processes": 16,
+    "files": 12,
+    "assays": 8
+  },
+  "14a26f57-9117-42c2-a613-891e173899cf": {
+    "biomaterials": 25,
+    "protocols": 5,
+    "processes": 50,
+    "files": 90,
+    "assays": 40
+  },
+  "8bd2e5f6-9453-4b9b-9c56-59e3a40dc87e": {
+    "biomaterials": 20,
+    "protocols": 6,
+    "processes": 96,
+    "files": 144,
+    "assays": 80
+  },
+  "dbcd4b1d-31bd-4eb5-94e1-50e8706fa192": {
+    "biomaterials": 87,
+    "protocols": 8,
+    "processes": 170,
+    "files": 84,
+    "assays": 84
+  },
+  "8787c238-89ef-4636-a57d-3167e8b54a80": {
+    "biomaterials": 30,
+    "protocols": 5,
+    "processes": 32,
+    "files": 60,
+    "assays": 3
+  },
+  "34cba5e9-ecb1-4d81-bf08-48987cd63073": {
+    "biomaterials": 25,
+    "protocols": 8,
+    "processes": 31,
+    "files": 21,
+    "assays": 11
+  },
+  "e57dc176-ab98-446b-90c2-89e0842152fd": {
+    "biomaterials": 72,
+    "protocols": 25,
+    "processes": 164,
+    "files": 94,
+    "assays": 94
+  },
+  "b9484e4e-dc40-4e38-9b85-4cecf5b8c068": {
+    "biomaterials": 70,
+    "protocols": 8,
+    "processes": 127,
+    "files": 122,
+    "assays": 62
+  },
+  "56e73ccb-7ae9-4fae-a738-acfb69936d7a": {
+    "biomaterials": 15,
+    "protocols": 6,
+    "processes": 20,
+    "files": 32,
+    "assays": 10
+  },
+  "8dacb243-e918-4bd2-bb9a-aac6dc424161": {
+    "biomaterials": 18,
+    "protocols": 6,
+    "processes": 24,
+    "files": 39,
+    "assays": 12
+  },
+  "da2747fa-2921-42e0-afd4-39ef57b2b88b": {
+    "biomaterials": 11,
+    "protocols": 9,
+    "processes": 18,
+    "files": 24,
+    "assays": 8
+  },
+  "dd7f2436-0c56-4709-bd17-e526bba4cc15": {
+    "biomaterials": 21,
+    "protocols": 10,
+    "processes": 55,
+    "files": 66,
+    "assays": 37
+  },
+  "0ccd30ef-6a23-4e68-b5a3-3d9ca511b5ed": {
+    "biomaterials": 597,
+    "protocols": 5,
+    "processes": 598,
+    "files": 200,
+    "assays": 200
+  },
+  "8999b456-6fa6-438b-ab17-b62b1d8ec0c3": {
+    "biomaterials": 6,
+    "protocols": 6,
+    "processes": 23,
+    "files": 35,
+    "assays": 19
+  },
+  "9bab0f03-a725-4a13-9ab1-196e46cd80ed": {
+    "biomaterials": 30,
+    "protocols": 6,
+    "processes": 35,
+    "files": 40,
+    "assays": 16
+  },
+  "4af795f7-3e1d-4341-b867-4ac0982b9efd": {
+    "biomaterials": 25,
+    "protocols": 5,
+    "processes": 17,
+    "files": 11,
+    "assays": 4
+  },
+  "79b13a2a-9ca1-42a4-97bd-70208a11bea6": {
+    "biomaterials": 9,
+    "protocols": 6,
+    "processes": 12,
+    "files": 8,
+    "assays": 4
+  },
+  "b7259878-436c-4274-bfff-ca76f4cb7892": {
+    "biomaterials": 6,
+    "protocols": 13,
+    "processes": 16,
+    "files": 16,
+    "assays": 11
+  },
+  "d7845650-f6b1-4b1c-b2fe-c0795416ba7b": {
+    "biomaterials": 80,
+    "protocols": 7,
+    "processes": 82,
+    "files": 28,
+    "assays": 28
+  },
+  "20f37aaf-caa1-40e6-9123-be6ce8feb2d6": {
+    "biomaterials": 766,
+    "protocols": 15,
+    "processes": 1035,
+    "files": 968,
+    "assays": 484
+  }
+}

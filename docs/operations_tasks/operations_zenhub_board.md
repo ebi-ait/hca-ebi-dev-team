@@ -2,6 +2,7 @@
 layout: default
 title: Operations Zenhub Board Pipeline and Process
 parent: Operations tasks
+nav_order: 1
 ---
 
 # Operations Zenhub Board Pipeline and Process
