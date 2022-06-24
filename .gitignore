@@ -5,4 +5,6 @@ _local/
 docs/_site/
 docs/.jekyll-cache/
 out/
-src/
+.DS_Store
+.ipynb_checkpoints
+~*
