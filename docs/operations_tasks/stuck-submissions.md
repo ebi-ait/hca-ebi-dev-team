@@ -35,7 +35,7 @@ Possible cause:
 Temporary resolution:
 - since the file validation succeeded, it should be safe to manually set the file to Valid to unblock the submission
 - 
-    ```
+    ```shell
     curl -X PUT -H "Authorization: Bearer $TOKEN" https://api.ingest.archive.data.humancellatlas.org/files/<fileDocumentId>/validEvent
     ```
 
@@ -51,6 +51,7 @@ Further investigation needed
 - Submissions can encounter errors/issues during exporting. The submission state can get stuck in "Exporting" and there's no way for user to know what's happening.
 - see [ticket](https://app.zenhub.com/workspaces/operations-5fa2d8f2df78bb000f7fb2b5/issues/ebi-ait/hca-ebi-wrangler-central/702)
 - **Use [stern](https://github.com/stern/stern) or [graphana](https://monitoring.ingest.archive.data.humancellatlas.org/)** to monitor the logs of multiple exporter pods.
+  - usefull query: `{container=~"ingest-.*"} |= "<submission-uuid>"` 
 
 
 ### Steps to troubleshoot:
@@ -63,7 +64,7 @@ Further investigation needed
    
    Initialize config env vars   
    ```bash
-   source config/environment_prod.sh
+   source config/environment_prod
    ```
    
    Tail all exporter logs and check if there's an exporter instance/pod which failed to process the message
@@ -80,6 +81,24 @@ Further investigation needed
    
 2. Investigate what the cause of the failure is.
    
+3. Check whether Submission is Actually Exported
+
+    1. count metadata by type on the staging area
+    
+    ```shell
+    gsutil ls -r gs://broad-dsp-monster-hca-prod-ebi-storage/prod/<project-uuid>/metadata | grep -v /: | cut -d/ -f7 | sed -r '/^\s*$/d' | uniq -c | sort -k2,2
+
+    ```
+    
+    2. compare to ingest api
+
+    ```shell
+    curl https://api.ingest.archive.data.humancellatlas.org/submissionEnvelopes/<submission_id>/submissionManifest
+    ```
+    
+    3. Check whether Required Changes are visible in the Staging Area
+    Check the entities you know were supposed to change.
+    
 ### Common Exporter Failures and how to solve them
 
 #### Error: There's a failed request to GCP file transfer status.
