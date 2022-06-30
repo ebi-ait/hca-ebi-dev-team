@@ -80,7 +80,10 @@ Further investigation needed
     ```shell
     gsutil ls -r gs://broad-dsp-monster-hca-prod-ebi-storage/prod/<project-uuid>/metadata | grep -v /: | cut -d/ -f7 | sed -r '/^\s*$/d' | uniq -c | sort -k2,2
     ```
-    2. compare to ingest api: https://api.ingest.archive.data.humancellatlas.org/submissionEnvelopes/<submission_id>/submissionManifest
+    2. compare to ingest api:
+    ```
+    curl https://api.ingest.archive.data.humancellatlas.org/submissionEnvelopes/<submission_id>/submissionManifest
+    ```
     3. Check whether Required Changes are visible in the Staging Area
     4. Check the entities you know were supposed to change.
     
