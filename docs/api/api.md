@@ -13,7 +13,7 @@ documentation and information about the available dats and operations.
 
 ## Search projects: 
 
-```
+```apiblueprint
 GET /projects/filter?search={search_keys}
 ```
 
@@ -30,6 +30,6 @@ query parameters:
 
 ## Additional search methods:
 
-```
+```text/vnd.apiblueprint
 GET /projects/search
 ```
