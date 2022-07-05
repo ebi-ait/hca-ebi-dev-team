@@ -11,9 +11,9 @@ documentation and information about the available dats and operations.
 
 # Project Search
 
-## Search projects: 
+## Search projects endpoint: 
 
-```apiblueprint
+```
 GET /projects/filter?search={search_keys}
 ```
 
