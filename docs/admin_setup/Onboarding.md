@@ -48,9 +48,9 @@ _Caveat: All practical descriptions for Mac/Linux._
 1. [Homebrew](https://brew.sh/)
 2. git and git-secrets
 3. [Docker Desktop](https://www.docker.com/products/docker-desktop)
-4. Kubernetes:
+4. Kubernetes tools: follow http://github.com/ebi-ait/ingest-kube-deployment
+5. docker-machine-driver-hyperkit
 ```
-brew install kubernetes-cli
 brew install docker-machine-driver-hyperkit
 sudo chown root:wheel /usr/local/opt/docker-machine-driver-hyperkit/bin/docker-machine-driver-hyperkit
 sudo chmod u+s /usr/local/opt/docker-machine-driver-hyperkit/bin/docker-machine-driver-hyperkit

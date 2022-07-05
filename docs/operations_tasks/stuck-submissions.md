@@ -35,7 +35,7 @@ Possible cause:
 Temporary resolution:
 - since the file validation succeeded, it should be safe to manually set the file to Valid to unblock the submission
 - 
-    ```
+    ```shell
     curl -X PUT -H "Authorization: Bearer $TOKEN" https://api.ingest.archive.data.humancellatlas.org/files/<fileDocumentId>/validEvent
     ```
 
@@ -50,36 +50,43 @@ Further investigation needed
 ### Description: 
 - Submissions can encounter errors/issues during exporting. The submission state can get stuck in "Exporting" and there's no way for user to know what's happening.
 - see [ticket](https://app.zenhub.com/workspaces/operations-5fa2d8f2df78bb000f7fb2b5/issues/ebi-ait/hca-ebi-wrangler-central/702)
-- **Use [stern](https://github.com/stern/stern) or [graphana](https://monitoring.ingest.archive.data.humancellatlas.org/)** to monitor the logs of multiple exporter pods.
-
 
 ### Steps to troubleshoot:
-1. Check the ingest-exporter logs to see if there are failed messages in the exporter.  
-
-   Go to your local workspace of [ingest-kube-deployment](https://github.com/ebi-ait/ingest-kube-deployment) Make sure your access to Ingest EKS clusters are setup correctly. Please follow the repo's README.
-   ```bash
-   cd ingest-kube-deployment
-   ```
-   
-   Initialize config env vars   
-   ```bash
-   source config/environment_prod.sh
-   ```
-   
-   Tail all exporter logs and check if there's an exporter instance/pod which failed to process the message
-   ```bash
-   k8tailall ingest-exporter
-   ```
-   
-   If needed, you may want to get all the logs from the exporter. This will save all logs in a file.
-   ```bash
-   k8logall ingest-exporter
-   ```
-   Once you get all the logs into a file, you can do some grep commands to check which pod cause the error
-   
-   
-2. Investigate what the cause of the failure is.
-   
+0. Go to your local workspace of [ingest-kube-deployment](https://github.com/ebi-ait/ingest-kube-deployment)
+    - Make sure your access to Ingest EKS clusters are setup correctly. Please follow the repo's README.
+1. Errored export messages should now be added to the Error Queue for invesitgation
+    -  `ingest.exporter.errored.queue`
+    ```bash
+    cd ingest-kube-deployment
+    source config/environment_prod
+    kubectl port-forward rabbit-0 15672:15672
+    ```
+    - [Rabbit Management Console](localhost:15672/#/queues/)
+    - View the messages in the queue **without acknowledging them** to give you id's that you can use in your log investigation
+    - If the errors are due to temporary problems you can move the messages back to their original queue to be reprocessed.
+    - *More information will be added here as we use this diagnostic path*
+2. Check the ingest-exporter logs to see if there are failed messages in the exporter.
+    - using [stern](https://github.com/stern/stern)
+    ```bash
+    cd ingest-kube-deployment
+    source config/environment_prod
+    stern ingest-exporter
+    ```
+    - or [graphana](https://monitoring.ingest.archive.data.humancellatlas.org/)
+        - usefull query: `{container=~"ingest-.*"} |= "<submission-uuid>"` 
+3. Investigate what the cause of the failure is.
+4. Check whether Submission is Actually Exported
+    1. count metadata by type on the staging area
+    ```shell
+    gsutil ls -r gs://broad-dsp-monster-hca-prod-ebi-storage/prod/<project-uuid>/metadata | grep -v /: | cut -d/ -f7 | sed -r '/^\s*$/d' | uniq -c | sort -k2,2
+    ```
+    2. compare to ingest api:
+    ```
+    curl https://api.ingest.archive.data.humancellatlas.org/submissionEnvelopes/<submission_id>/submissionManifest
+    ```
+    3. Check whether Required Changes are visible in the Staging Area
+    4. Check the entities you know were supposed to change.
+    
 ### Common Exporter Failures and how to solve them
 
 #### Error: There's a failed request to GCP file transfer status.
