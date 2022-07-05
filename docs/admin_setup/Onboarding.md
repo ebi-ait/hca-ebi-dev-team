@@ -183,15 +183,15 @@ source ~/.bashrc
 ```
 3. Install Node
 ```
-nvm install node
+nvm install node@12.16.3
 ```
 4. Install Yarn
 ```
-brew install yarn
+brew install yarn@1.22.4
 ```
 5. Add to ~/.bashrc, Restart Terminal
 ```
-export PATH="$PATH:/usr/local/Cellar/yarn/1.17.3/bin"
+export PATH="$PATH:/usr/local/Cellar/yarn/1.22.4/bin"
 ```
 6. Install global dependencies (ingest-ui/client):
 ```
