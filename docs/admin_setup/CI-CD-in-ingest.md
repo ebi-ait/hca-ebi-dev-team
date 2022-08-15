@@ -28,6 +28,12 @@ Deployment is currently **not** continuous - a change in code is not automatical
 
 However, we can [manually trigger deployment by running a Gitlab pipeline](https://docs.google.com/document/d/1Cuaw5DBD1VPqySUv7HqL-zCkM-sklUDzpb67XnmIgd4/edit#heading=h.nrf4ftc4j6su).
 
+## Setting up a new repository for CI/CD
+
+[![YouTube: Using GitLab CI/CD pipelines with GitHub repositories](https://img.youtube.com/vi/qgl3F2j-1cI/0.jpg)](https://www.youtube.com/watch?v=qgl3F2j-1cI "YouTube: Using GitLab CI/CD pipelines with GitHub repositories")
+
+[GitLab Docs: Using GitLab CI/CD with a GitHub repository](https://docs.gitlab.com/ee/ci/ci_cd_for_external_repos/github_integration.html)
+
 ## References
 * [Ingest Service Deployment Via Gitlab](https://docs.google.com/document/d/1Cuaw5DBD1VPqySUv7HqL-zCkM-sklUDzpb67XnmIgd4/edit#heading=h.nrf4ftc4j6su) - More information on deploying components through Gitlab.
 
