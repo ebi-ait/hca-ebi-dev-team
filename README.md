@@ -8,9 +8,33 @@ ingest development  development
 
 ```shell
 # configure where you store cloned repos
-export CLONE_ROOT=/home/$USER/dev
+export CLONE_ROOT=/Users/$USER/dev
 make all
 ```
+
+To see other targets run:
+```shell
+make help
+```
+
+## Prerequisites
+The Makefile takes care of installing all prerequisites but:
+- jdk
+- node
+- git
+- git-secret
+- pyenv/python
+
+### Validation of Prerequisites
+
+run 
+```shell
+make check-requirements
+```
+
+### Validation of environment
+
+start core, broker and ui with local configuration
 
 ## Ingest Documentation 
 

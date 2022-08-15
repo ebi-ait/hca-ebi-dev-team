@@ -8,6 +8,7 @@ tap "warrensbox/tap"
 # ingest requirements (keep sorted)
 brew "aws-iam-authenticator", link: false
 brew "docker-machine-driver-hyperkit"
+brew "git-secrets"
 brew "graphviz"
 brew "helm"
 brew "jq"
