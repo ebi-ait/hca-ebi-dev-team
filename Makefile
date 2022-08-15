@@ -22,6 +22,7 @@ help: ## print a help message
 CLONE_ROOT ?= /Users/amnon/dev
 # end of configuration variables
 
+# TODO: any additional repos needed?
 REPOS := \
 	ingest-archiver \
 	ingest-broker \
@@ -61,6 +62,9 @@ check-requirements: check-installed-python3
 check-requirements: check-installed-pip3
 check-requirements: check-installed-docker-compose
 check-requirements: check-installed-java
+
+#check-github-org-membership:
+
 
 install-requirements:
 	brew bundle
