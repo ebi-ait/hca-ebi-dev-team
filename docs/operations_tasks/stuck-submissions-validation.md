@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Investigate Submissions Stuck in Validation
-parent: Operations tasks
+parent: Investigate Stuck Submissions
 ---
 
 ## Problem: submission stuck in "Metadata Validating"
