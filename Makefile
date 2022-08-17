@@ -42,7 +42,7 @@ REPOS := \
 
 REPO_DIRS := $(addprefix $(CLONE_ROOT)/,$(REPOS))
 
-all: requirements clone-repos check-aws-profile
+all: requirements clone-repos aws-profile
 
 # checks whether a tool is available on the OS path
 check-installed-%:
@@ -100,10 +100,10 @@ aws-profile: requirements ## setup aws profile
 	aws configure set output json --profile embl-ebi
 	aws configure set dummy value --profile ebi
 
-check-aws: aws-profile ## check connection to aws
+check-aws-access: aws-profile ## check connection to aws
 	aws s3 ls
 
-setup-ingest-kube-deployment: requirements check-aws check-tfswitch
+setup-ingest-kube-deployment: requirements check-aws-access check-tfswitch
 	@mkdir -p ~/.kube
 	@cd $(CLONE_ROOT)/ingest-kube-deployment \
 		&& tfswitch 0.13.5 \
