@@ -1,7 +1,6 @@
+NEEDS UPDATING
+{: .label .label-red }
 # Quay.io
-## A bunch of important stuff
-To Do: Write about this stuff
-
 ## Maintaining ingest_base_images
 ### Adding an image
 
