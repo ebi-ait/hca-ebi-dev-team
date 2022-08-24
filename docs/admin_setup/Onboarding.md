@@ -23,13 +23,15 @@ parent: Admin and Setup
 * [Slack: HCA](https://humancellatlas.slack.com/)
     * #dcp-2
 * [Slack: AIT](https://embl-ebi-ait.slack.com)
-* [All Spark (Our instance of GitLab)](https://allspark.dev.data.humancellatlas.org/HumanCellAtlas)
+* [EBI GitLab](http://gitlab.ebi.ac.uk/)
+* [EBI AWS](https://embl-ebi.awsapps.com/start#/)
 * [Quay.io](https://quay.io/organization/ebi-ait)
 * [Confluence](https://www.ebi.ac.uk/seqdb/confluence/display/HCA/Human+Cell+Atlas+Home)
 * [Zenhub](https://app.zenhub.com/workspaces/ingest-dev-5cfe1cb26482e537cf35e8d1/board)
 * Google Apps (Google Drive [Shared HCA folder](https://drive.google.com/drive/folders/0B-_4IWxXwazQaEh1SnhOOHV4S0k) & Calendar) - use EBI Single sign-on
 * [Snyc](https://app.snyk.io/org/humancellatlas/)
 * [Ingest group e-mail](https://listserver.ebi.ac.uk/mailman/listinfo/hca-ingest-dev)
+
 
 # Licenses
 ## JetBrains Licenses
