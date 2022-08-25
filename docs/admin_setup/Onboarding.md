@@ -66,6 +66,7 @@ Follow the [RabbitMQ installation guide](https://www.rabbitmq.com/download.html)
 
 ## Repositories
 ### Ingest-Core (InteliJ)
+see [readme](https://github.com/ebi-ait/ingest-core)
 #### Run Dependencies in Docker
 ```
 docker-compose up mongo rabbitmq
