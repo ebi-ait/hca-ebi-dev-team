@@ -2,6 +2,7 @@
 layout: default
 title: Investigate Submissions Stuck in Exporting
 parent: Investigate Stuck Submissions
+grand_parent: Operations tasks
 ---
 
 ## Problem: submission stuck in "Exporting"
