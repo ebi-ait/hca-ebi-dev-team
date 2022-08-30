@@ -2,7 +2,7 @@ from hca_ingest.api.ingestapi import IngestApi
 from assertpy import assert_that, soft_assertions
 
 api_url = 'https://api.ingest.archive.data.humancellatlas.org'
-new_schema = 'https://schema.data.humancellatlas.org/type/project/17.0.0/project'
+new_schema = 'https://schema.humancellatlas.org/type/project/17.0.0/project'
 token = 'your_token_here'
 
 api = IngestApi(api_url)
