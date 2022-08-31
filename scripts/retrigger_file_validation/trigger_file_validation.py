@@ -4,6 +4,7 @@ import requests
 
 TOKEN = 'replace with JWT token without BEARER'
 SUBMISSION_URL = 'https://api.ingest.archive.data.humancellatlas.org/submissionEnvelopes/<replace_with_id>'
+TERABYTE_IN_BYTES = 1024 * 1024 * 1024 * 1024
 
 
 def get_submission_id(url: str):
@@ -15,9 +16,21 @@ if __name__ == '__main__':
         'Content-type': 'application/json',
         'Authorization': f'Bearer {TOKEN}'
     }
-    FILES_TO_REVALIDATE_FILENAME = f'{get_submission_id(SUBMISSION_URL)}_files_to_revalidate.json'
-    with open(FILES_TO_REVALIDATE_FILENAME, 'r') as infile:
-        files_to_revalidate = json.load(infile)
+    revalidate_files_file = f'{get_submission_id(SUBMISSION_URL)}_files_to_revalidate.json'
+    with open(revalidate_files_file, 'r') as infile:
+        files = json.load(infile)
+
+    files_to_revalidate = []
+    skipped_files = []
+    batch_size = 0
+    for file in files:
+        new_batch_size = batch_size + file.get('size', TERABYTE_IN_BYTES)
+        if (new_batch_size / TERABYTE_IN_BYTES) < 1:
+            files_to_revalidate.append(file)
+            batch_size = new_batch_size
+        else:
+            skipped_files.append(file)
+            print(f'Skipping file: {file.get("fileName")} so as not to go over the 1TB limit')
 
     for file in files_to_revalidate:
         url = file['_links']['invalid']['href']
@@ -41,5 +54,12 @@ if __name__ == '__main__':
         print(f'transition to draft {url}')
         r = requests.put(url, headers=headers)
         r.raise_for_status()
+
+    if skipped_files:
+        print(f'Some files were skipped, keeping remaining files here: {revalidate_files_file}')
+        with open(revalidate_files_file, 'w') as outfile:
+            json.dump(skipped_files, outfile, indent=4)
+        print(
+            'Wait until AWS is processing this batch to and then re-run this script to trigger the remaining files.')
 
     print('completed!')
