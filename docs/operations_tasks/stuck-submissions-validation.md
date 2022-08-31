@@ -29,10 +29,9 @@ grand_parent: Operations tasks
     - check the job validation log for any issue
 
 #### If the AWS Batch Job Succeeded 
-If:
-1. file stuck in validating
-2. AWS batch job succeeded
-3. but ingest file document `validationJob` status is not updated
+1. The file is validating
+2. The AWS batch job succeeded
+3. The `validationJob` status is not updated
 
 This suggests that the upload service call to ingest is failing / ingest is not receiving and processing the status and set the document to Valid.
 Since the file validation succeeded, it should be safe to manually set the file to Valid to unblock the submission
