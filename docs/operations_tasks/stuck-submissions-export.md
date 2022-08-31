@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Investigate Submissions Stuck in Exporting
+title: Stuck in Exporting
 parent: Investigate Stuck Submissions
 grand_parent: Operations tasks
 ---
