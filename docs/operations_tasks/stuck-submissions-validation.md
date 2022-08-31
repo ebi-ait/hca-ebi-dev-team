@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Investigate Submissions Stuck in Validation
+title: Stuck in Validation
 parent: Investigate Stuck Submissions
 grand_parent: Operations tasks
 ---
