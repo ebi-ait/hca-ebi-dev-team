@@ -59,10 +59,10 @@ sudo chmod u+s /usr/local/opt/docker-machine-driver-hyperkit/bin/docker-machine-
 ```
 
 ## MongoDB
-Follow the [MongoDB installation guide](https://docs.mongodb.com/manual/installation/) for your platform.
+Usually running MongoDB as a docker container is enough. If you need to install a local version, follow the [MongoDB installation guide](https://docs.mongodb.com/manual/installation/) for your platform.
 
 ## RabbitMQ
-Follow the [RabbitMQ installation guide](https://www.rabbitmq.com/download.html) for your platform.
+Usually running RabbitMQ as a docker container is enough. If you need to install a local version, follow the [RabbitMQ installation guide](https://www.rabbitmq.com/download.html) for your platform.
 
 ## Repositories
 ### Ingest-Core (InteliJ)
@@ -72,87 +72,18 @@ see [readme](https://github.com/ebi-ait/ingest-core)
 docker-compose up mongo rabbitmq
 ```
 #### Run Locally
-1. Add [Plugin](https://plugins.jetbrains.com/plugin/6317-lombok/) for [Project Lombok](https://projectlombok.org) 
-2. Edit Preferences: Preferences | Build, Execution, Deployment | Build Tools | Gradle
-    1. Build and run using: **Gradle**
-    2. Run tests using: **IntelliJ IDEA**
-3. Adjust IntelliJ Configuration
-    1. Create the following folder in IntelliJ under ingest-core project: `.idea/runConfigurations`.
-    2. Create `.idea/runConfigurations/Ingest_Core_Dependencies.xml`
 
-        ```
-        <component name="ProjectRunConfigurationManager">
-          <configuration default="false" name="Ingest-Core Dependencies" type="docker-deploy" factoryName="docker-compose.yml" activateToolWindowBeforeRun="false" server-name="Docker">
-            <deployment type="docker-compose.yml">
-              <settings>
-                <option name="envVars">
-                  <list>
-                    <DockerEnvVarImpl>
-                      <option name="name" value="MONGO_URI" />
-                      <option name="value" value="mongodb://localhost:27017/admin" />
-                    </DockerEnvVarImpl>
-                    <DockerEnvVarImpl>
-                      <option name="name" value="RABBIT_HOST" />
-                      <option name="value" value="localhost" />
-                    </DockerEnvVarImpl>
-                    <DockerEnvVarImpl>
-                      <option name="name" value="RABBIT_PORT" />
-                      <option name="value" value="5672" />
-                    </DockerEnvVarImpl>
-                    <DockerEnvVarImpl>
-                      <option name="name" value="SCHEMA_BASE_URI" />
-                      <option name="value" value="https://schema.humancellatlas.org/" />
-                    </DockerEnvVarImpl>
-                  </list>
-                </option>
-                <option name="services">
-                  <list>
-                    <option value="mongo" />
-                    <option value="rabbitmq" />
-                  </list>
-                </option>
-                <option name="sourceFilePath" value="docker-compose.yml" />
-              </settings>
-            </deployment>
-            <method v="2" />
-          </configuration>
-        </component>
-        ```
+Ingest Core is launched by running the Spring Boot Application class IngestCoreApplication with the "local" profile.
 
-    3. Create `.idea/runConfigurations/Ingest_Core_Application.xml`
+#### Run Locally from IntelliJ
+The default installation of IntelliJ Ultimate comes with the necessary plugins (Sprint, Gradle, Lombok).
+1. Search for IngestCoreApplication class
+2. Click the green triangle to crete a new Run Configuration
+3. set the Active Profile to local
+4. Click OK
+5. Run the new configuration
+6. If there are no errors, you would be able to access the [HAL Browser of ingest](http://localhost:8080).
 
-      ```
-<component name="ProjectRunConfigurationManager">
-    <configuration default="false" name="Ingest-Core Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-        <module name="ingest-core.main" />
-        <option name="SPRING_BOOT_MAIN_CLASS" value="org.humancellatlas.ingest.IngestCoreApplication" />
-        <option name="VM_PARAMETERS" value="-XX:+UseG1GC" />
-        <option name="PROGRAM_PARAMETERS" value="--spring.data.mongodb.uri=mongodb://localhost:27017/admin" />
-        <option name="ALTERNATIVE_JRE_PATH" />
-        <envs>
-            <env name="SCHEMA_BASE_URI" value="https://schema.humancellatlas.org/" />
-            <env name="AUTH_ISSUER" value="https://login.elixir-czech.org/oidc/" />
-            <env name="SVC_AUTH_AUDIENCE" value="https://dev.data.humancellatlas.org/" />
-            <env name="USR_AUTH_AUDIENCE" value="https://dev.data.humancellatlas.org/" />
-            <env name="GCP_JWK_PROVIDER_BASE_URL" value="https://www.googleapis.com/service_accounts/v1/jwk/" />
-            <env name="GCP_PROJECT_WHITELIST" value="hca-dcp-production.iam.gserviceaccount.com,human-cell-atlas-travis-test.iam.gserviceaccount.com,broad-dsde-mint-dev.iam.gserviceaccount.com,broad-dsde-mint-test.iam.gserviceaccount.com,broad-dsde-mint-staging.iam.gserviceaccount.com" />
-        </envs>
-        <method v="2">
-            <option name="Make" enabled="true" />
-        </method>
-    </configuration>
-</component>
-      ```
-
-    4. This will set the following environment variables:
-      - SCHEMA_BASE_URI=https://schema.humancellatlas.org/
-      - GCP_PROJECT_WHITELIST=hca-dcp-production.iam.gserviceaccount.com,human-cell-atlas-travis-test.iam.gserviceaccount.com,broad-dsde-mint-dev.iam.gserviceaccount.com,broad-dsde-mint-test.iam.gserviceaccount.com,broad-dsde-mint-staging.iam.gserviceaccount.com
-      - AUTH_ISSUER=https://login.elixir-czech.org/oidc/
-      - SVC_AUTH_AUDIENCE=https://dev.data.humancellatlas.org/
-      - USR_AUTH_AUDIENCE=https://dev.data.humancellatlas.org/
-      - GCP_JWK_PROVIDER_BASE_URL=https://www.googleapis.com/service_accounts/v1/jwk/
-
-    5. Restart your IntelliJ IDEA.
 
 ### Ingest-Broker (PyCharm)
 #### Run in Docker
