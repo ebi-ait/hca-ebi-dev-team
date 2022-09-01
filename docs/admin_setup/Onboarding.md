@@ -77,9 +77,9 @@ Ingest Core is launched by running the Spring Boot Application class IngestCoreA
 
 #### Run Locally from IntelliJ
 The default installation of IntelliJ Ultimate comes with the necessary plugins (Sprint, Gradle, Lombok).
-1. Search for IngestCoreApplication class
+1. Search for `IngestCoreApplication` class
 2. Click the green triangle to crete a new Run Configuration
-3. set the Active Profile to local
+3. set the Active Profile to `local`
 4. Click OK
 5. Run the new configuration
 6. If there are no errors, you would be able to access the [HAL Browser of ingest](http://localhost:8080).
@@ -87,7 +87,7 @@ The default installation of IntelliJ Ultimate comes with the necessary plugins (
 #### Run Locally from Commandline
 
 ```shell
-gradle bootRun  --args='--spring.profiles.active=local'
+./gradlew bootRun --args='--spring.profiles.active=local'
 ```
 
 #### More Info
