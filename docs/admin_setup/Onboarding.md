@@ -84,7 +84,14 @@ The default installation of IntelliJ Ultimate comes with the necessary plugins (
 5. Run the new configuration
 6. If there are no errors, you would be able to access the [HAL Browser of ingest](http://localhost:8080).
 
+#### Run Locally from Commandline
 
+```shell
+gradle bootRun  --args='--spring.profiles.active=local'
+```
+
+#### More Info
+See [spring docs](https://docs.spring.io/spring-boot/docs/1.1.0.RELEASE/reference/htmlsingle/#using-boot-gradle)
 ### Ingest-Broker (PyCharm)
 #### Run in Docker
 ```
