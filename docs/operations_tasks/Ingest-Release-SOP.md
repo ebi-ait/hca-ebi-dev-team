@@ -29,20 +29,21 @@ production
 5. Get approvals from two other devs on the PR
 6. Merge PR
 7. Ensure deploy and integration tests in `dev` environment are passed in GitLab for the project
-8. Merge `dev` to `master`
-    - `git checkout dev && git pull && git checkout master && git pull && git merge dev && git push`
-9. Ensure deploy and integration tests in `staging` environment are passed in GitLab for the project
-10. Check deployment in [staging](https://staging.contribute.data.humancellatlas.org/) and consult with wranglers for feedback if neccesary
+    1. Go to the CI/CD/pipelines section on the relevant project (e.g. ingest-core) in [gitlab](https://gitlab.ebi.ac.uk/hca)
+9. Merge `dev` to `master`
+    - `git fetch && git checkout dev && git pull && git checkout master && git pull && git merge dev && git push`
+10. Ensure deploy and integration tests in `staging` environment are passed in GitLab for the project
+11. Check deployment in [staging](https://staging.contribute.data.humancellatlas.org/) and consult with wranglers for feedback if neccesary
     - You can use the [#hca slack channel](https://join.slack.com/share/zt-pn5hl6a8-xWvSYSaW7i~qymWTLWmP_g) for consulting with wranglers.
-11. Check with the team if it is okay to deploy this feature to production.
-12. Deploy what's on `staging` to `prod` via the operations panel in GitLab
+12. Check with the team if it is okay to deploy this feature to production.
+13. Deploy what's on `staging` to `prod` via the operations panel in GitLab
     1. Navigate to [GitLab](https://gitlab.ebi.ac.uk/) > `project your're working on` > operations > environments
     2. Click "Deploy to" next to the `staging` environment
     3. In the dropdown, select "Release prod"
     4. Wait for the "Release prod" stage to complete (you can track the progress on the "CI/CD" page)
     5. In the Environments page, select "Deploy to" again and then select the "Deploy prod" task in the dropdown
     6. Track the deployment in the CI/CD page
-13. Ensure your changes are live on prod
+14. Ensure your changes are live on prod
     - You may used the `kubectl get pods` command to check this
     - Consult with [these docs](https://github.com/ebi-ait/ingest-kube-deployment) for further information on setting up `kubectl`
 
