@@ -13,6 +13,7 @@ parent: Operations tasks
 ```bash
 cd ./infra
 ./scripts/deploy_ontology.sh -v $ONTOLOGY_VERSION -e dev -g $GITLAB_TOKEN
+git push
 ```
 5. check integration tests are successful
 6. repeat steps 3-4 for staging and prod
