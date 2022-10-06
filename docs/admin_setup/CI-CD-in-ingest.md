@@ -27,6 +27,26 @@ Deployment is continuous on the dev environment. Any PR created to the dev branc
 
 Deployment to staging and production is done after merge to master by triggering the release and deploy jobs in the gitlab pipeline.
 
+## code organization
+
+- component repo
+  - .gitlab-ci.yaml
+    - includes template
+    - allows customization of process, e.g. compoent specific testing
+- ingest-kube-deployment
+  - apps
+    - directory per componet
+      - helm chart
+      - deployment descriptors (k8s yamls)
+- gitlab-ci-templates
+  - .gitlab-ci.yaml
+    - ci/cd pipeline definition 
+- gitlab runner
+  - work directory
+    - cloned components
+    - cloned ingest-kube-deployment 
+
+
 ## Setting up a new repository for CI/CD
 
 [![YouTube: Using GitLab CI/CD pipelines with GitHub repositories](https://img.youtube.com/vi/qgl3F2j-1cI/0.jpg)](https://www.youtube.com/watch?v=qgl3F2j-1cI "YouTube: Using GitLab CI/CD pipelines with GitHub repositories")
