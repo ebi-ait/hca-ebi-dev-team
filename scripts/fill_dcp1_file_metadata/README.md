@@ -48,7 +48,7 @@ To delete these, please follow the steps below
 ### Before you start 
 
 Please make sure you have the following installed and set-up, with the proper credentials:
-- gsutil
+- gsutil see https://ebi-ait.github.io/hca-ebi-dev-team/admin_setup/Setting-up-access-to-Terra-staging-area.html#using-ingest-exporters-gcp-service-account
 
 ### How to
 
