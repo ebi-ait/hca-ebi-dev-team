@@ -54,10 +54,8 @@ Please make sure you have the following installed and set-up, with the proper cr
 
 Run the following lines:
 ```
-gsutil -m rm -r gs://broad-dsp-monster-hca-prod-ebi-storage/prod/<project_uuid>/descriptors/
-gsutil -m rm -r gs://broad-dsp-monster-hca-prod-ebi-storage/prod/<project_uuid>/links/
-gsutil -m rm -r gs://broad-dsp-monster-hca-prod-ebi-storage/prod/<project_uuid>/metadata/sequence_file/
-gsutil -m rm -r gs://broad-dsp-monster-hca-prod-ebi-storage/prod/<project_uuid>/metadata/analysis_file/
+export PROJECT_UUID=
+echo {descriptors,links,metadata/sequence_file,metadata/analysis_file} | xargs -n1 -I{} gsutil -m rm -r gs://broad-dsp-monster-hca-prod-ebi-storage/prod/${PROJECT_UUID}/{}
 ```
 
 And it should be ready for import!
