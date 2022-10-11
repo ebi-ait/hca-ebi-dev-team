@@ -45,7 +45,7 @@ def define_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser()
     parser.add_argument("-p", "--project-uuid", type=is_published_uuid, required=True,
                         help="UUID of the project to be patched. Needs to be published in the DCP.")
-    parser.add_argument("-d", "--dry-run", action="store_true", default=False, help="Dry-run flag. No PATCH operations"
+    parser.add_argument("-d", "--dry-run", action="store_true", default=False, help="Dry-run flag. No PUT operations"
                                                                                     "will be performed.")
 
     return parser
