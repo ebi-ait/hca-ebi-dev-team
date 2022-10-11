@@ -1,5 +1,5 @@
 # Exporting a DCP1 dataset
-
+see ticket ebi-ait/dcp-ingest-central#793
 ## Fill missing size and fileContentType
 
 This script fixes the file metadata for DCP1 datasets, in which the `size` and `fileContentType` is not filled due to
