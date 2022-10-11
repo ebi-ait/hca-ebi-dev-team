@@ -12,6 +12,7 @@ Other fixes that may be needed, not covered in this script, are:
 
 ### Before you start
 
+- Create a virtual environment: `virtualenv <environment_name>`
 - Install the requirements: `pip3 install -r requirements.txt`
 
 This will install the hca-ingest client. Last tested with v2.4.1.
@@ -48,7 +49,7 @@ To delete these, please follow the steps below
 ### Before you start 
 
 Please make sure you have the following installed and set-up, with the proper credentials:
-- gsutil see https://ebi-ait.github.io/hca-ebi-dev-team/admin_setup/Setting-up-access-to-Terra-staging-area.html#using-ingest-exporters-gcp-service-account
+- gsutil: see https://ebi-ait.github.io/hca-ebi-dev-team/admin_setup/Setting-up-access-to-Terra-staging-area.html#using-ingest-exporters-gcp-service-account
 
 ### How to
 
