@@ -22,7 +22,7 @@ INGEST_TOKEN = ""
 # TODO: Check if file metadata is editable (submission editable). Don't know how to do it without 1 API call/file
 
 
-class NotPublishedUuid(HTTPError):
+class NotPublishedUuidError(HTTPError):
     def __init__(self, response: rq.Response, uuid: str):
         super().__init__(f"UUID {uuid} not found in Azul: GET request errored with status code {response.status_code}")
 
@@ -37,7 +37,7 @@ def is_published_uuid(uuid: str) -> str:
     try:
         r.raise_for_status()
     except HTTPError:
-        raise NotPublishedUuid(r, uuid)
+        raise NotPublishedUuidError(r, uuid)
     return uuid
 
 
