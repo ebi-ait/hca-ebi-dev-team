@@ -172,16 +172,16 @@ def file_list_to_document(path: str, file_list: list):
 
 
 def main(project_uuid, dry_run):
+    # Set up environment variables
+    config = Config(os.environ)
+
     # Set-up logging & environment variables
-    logging.basicConfig(filename=f'{project_uuid}.log', level=logging.INFO, filemode='w',
+    logging.basicConfig(filename=f'{project_uuid}.log', level=config.LOG_LEVEL, filemode='w',
                         format='%(levelname)s: %(message)s')
     print(f"A log of the operation will be saved in {project_uuid}.log")
     logging.info(f"Starting script for project {project_uuid}")
     if dry_run:
         logging.warning("Dry-run flag ON, no patch operations will be applied")
-
-    # Set up environment variables
-    config = Config(os.environ)
 
     # Query azul for the file metadata and massage the data a bit
     query = build_azul_query(project_uuid)
