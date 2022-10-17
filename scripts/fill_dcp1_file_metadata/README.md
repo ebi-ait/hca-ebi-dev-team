@@ -13,9 +13,18 @@ Other fixes that may be needed, not covered in this script, are:
 ### Before you start
 
 - Create a virtual environment: `virtualenv <environment_name>`
-- Install the requirements: `pip3 install -r requirements.txt`
-
-This will install the hca-ingest client. Last tested with v2.4.1.
+- Install the requirements: `pip3 install -r requirements.txt`. This will install the hca-ingest client. Last tested with v2.4.1.
+- Set up the required environment variables:
+```
+export INGEST_TOKEN=<ingest_token>
+```
+As a note, there are 3 other environment variables you can set up:
+```
+export LOG_LEVEL=<log_level. Default INFO>
+export AZUL_BASE=<Base URL for Azul's API. Default production API>
+export INGEST_BASE=<Base URL for Ingest's API. Default production API>
+```
+Azul's and Ingest APIs should always point to the same environments (prod &rarr; prod / dev-staging &rarr; dev-staging)
 
 ### How to run
 
@@ -43,3 +52,5 @@ Once that is done, the submission should be ready to be exported! However, pleas
     - Links
 
 To delete these, please follow the instructions to run the [dcp/1 cleanup script](https://github.com/ebi-ait/hca-ebi-dev-team/tree/master/scripts/cleanup-dcp1)
+
+In the future, we should be able to export the DCP/1 data files, so this can be skipped.
