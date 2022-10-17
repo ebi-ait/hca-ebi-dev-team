@@ -141,14 +141,11 @@ def patch_file_metadata(uuid_metadata_map: dict, ingest_api: IngestApi, dry_run:
             logging.info(f"Searching for file metadata for file {metadata['name']}")
             entity = ingest_api.get_entity_by_uuid('files', uuid)
         except HTTPError:
-            logging.warning(f"Could not find file {metadata['name']} in ingest, please make sure it's not a "
-                            f"non-organically described matrix.")
             not_found.append(metadata)
             continue
 
         # Check entity is not already filled in - Script will only fill size and fileContentType when both are missing
         if entity.get('size') and entity.get('fileContentType'):
-            logging.info(f"File {entity.get('fileName')}, with UUID {uuid} already has size and fileContentType set")
             already_filled.append(metadata)
             continue
 
