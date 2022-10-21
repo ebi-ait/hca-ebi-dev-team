@@ -1,7 +1,7 @@
 ---
 layout: default
 title: ingest API
-has_children: false
+has_children: true
 ---
 
 # API Browser
