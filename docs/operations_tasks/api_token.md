@@ -1,7 +1,7 @@
 ---
 layout: default
 title: API Tokens
-parent: Operations tasks
+parent: ingest API
 ---
 
 API Tokens are used to gain access to ingest api.
