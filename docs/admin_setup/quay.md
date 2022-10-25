@@ -1,5 +1,12 @@
+---
+layout: default
+title: Adding Quay base image
+parent: Admin and Setup
+---
+
 NEEDS UPDATING
 {: .label .label-red }
+
 # Quay.io
 ## Maintaining ingest_base_images
 ### Adding an image
