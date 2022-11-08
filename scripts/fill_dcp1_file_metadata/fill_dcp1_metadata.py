@@ -1,6 +1,7 @@
 import argparse
 import json
 import logging
+import math
 import os
 import requests as rq
 from requests.exceptions import HTTPError
@@ -8,6 +9,7 @@ from requests.exceptions import HTTPError
 from hca_ingest.api.ingestapi import IngestApi
 
 from config import Config
+import tqdm
 
 """
 The script follows the next steps to fix the missing size and fileContentType for DCP1 datasets:
@@ -54,7 +56,8 @@ def define_parser() -> argparse.ArgumentParser:
 
 def build_azul_query(project_uuid: str):
     """
-    Build a ElasticSearch query to extract all metadata related to project with UUID "project_uuid"
+    Build a ElasticSearch query to extract all metadata related to project with UUID "project_uuid", that does not
+    have a workflow indicated. This is the best way to avoid getting DCP1 Analysis files.
     :param project_uuid:
     :return query:          string dump of query
     """
@@ -64,9 +67,37 @@ def build_azul_query(project_uuid: str):
                 [
                     project_uuid
                 ]
+        },
+        "fileSource": {
+            "is":
+                [
+                    None,
+                    "Contributor",
+                    "ArrayExpress",
+                    "GEO",
+                    "SCEA",
+                    "SCP",
+                    "LungMAP",
+                    "Zenodo",
+                    "Publication"
+                ]
         }
     }
     return json.dumps(query)
+
+
+def yield_pages(first_page, session):
+    """
+    There has to be a more elegant way to deal with pagination
+    :param first_page:
+    :param session:
+    :return:
+    """
+    next_page = session.get(first_page['pagination']['next']).json()
+    yield next_page
+    while next_page['pagination'].get('next'):
+        next_page = session.get(next_page['pagination']['next']).json()
+        yield next_page
 
 
 def get_files_metadata_from_azul(azul_base: str, query: str) -> list:
@@ -78,15 +109,22 @@ def get_files_metadata_from_azul(azul_base: str, query: str) -> list:
     """
     # Build URL/endpoint and request metadata
     azul_manifest_request_endpoint = "index/files"
-    r = rq.get(f"{azul_base}{azul_manifest_request_endpoint}?filters={query}&size=100")
+    session = rq.Session()
+
+    # Get info from pagination with minimal load (1 entity)
+    r = session.get(f"{azul_base}{azul_manifest_request_endpoint}?filters={query}&size=100")
     r.raise_for_status()
     r = r.json()
+
+    hits = r['hits']
+    for page in yield_pages(r, session):
+        hits.extend(page['hits'])
 
     # Document ID (file metadata UUID) is outside of ["hits"]["files"], so some data massage
     def change_datafile_uuid(azul_hit: dict):
         azul_hit['files'][0]['uuid'] = azul_hit['entryId']
         return azul_hit
-    files = list(map(change_datafile_uuid, r['hits']))
+    files = list(map(change_datafile_uuid, hits))
 
     # A bit more data massage to return only the file metadata (Easier parsing for later)
     files = [hit['files'][0] for hit in files]
@@ -135,7 +173,8 @@ def patch_file_metadata(uuid_metadata_map: dict, ingest_api: IngestApi, dry_run:
     """
     not_found = []
     already_filled = []
-    for uuid, metadata in uuid_metadata_map.items():
+    for uuid, metadata in tqdm.tqdm(uuid_metadata_map.items()):
+        print(uuid, metadata)
         # Check file exists in Ingest (Non-organically described matrices are virtually indistinguishable via metadata)
         try:
             logging.info(f"Searching for file metadata for file {metadata['name']}")
