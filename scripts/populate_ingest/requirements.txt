@@ -1,11 +1,11 @@
 argparse~=1.4.0
 assertpy
 excel-submission-broker
-hca-ingest
+hca-ingest==1.0.2
 json-converter
 Levenshtein
 mergedeep
-openpyxl~=3.0.7
+openpyxl~=3.0.5
 pandas
 python-dotenv
 requests~=2.25.1
