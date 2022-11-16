@@ -37,11 +37,9 @@ def is_published_uuid(uuid: str) -> str:
     :return uuid:
     """
     r = rq.get(f"https://service.azul.data.humancellatlas.org/index/projects/{uuid}")
-    try:
-        r.raise_for_status()
-    except HTTPError:
-        raise NotPublishedUuidError(r, uuid)
-    return uuid
+    if r.ok:
+        return uuid
+    raise NotPublishedUuidError(r, uuid)
 
 
 def define_parser() -> argparse.ArgumentParser:
