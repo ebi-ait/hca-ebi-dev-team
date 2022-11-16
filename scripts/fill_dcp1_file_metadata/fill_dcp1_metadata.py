@@ -30,21 +30,19 @@ class NotPublishedUuidError(HTTPError):
         super().__init__(f"UUID {uuid} not found in Azul: GET request errored with status code {response.status_code}")
 
 
-def is_published_uuid(uuid: str) -> str:
+def confirm_published_uuid(uuid: str):
     """
-    Check if the UUID provided corresponds to a published Azul project
+    Confirm the UUID provided corresponds to a published Azul project
     :param uuid:    UUID of the project which contains the files
-    :return uuid:
     """
     r = rq.get(f"https://service.azul.data.humancellatlas.org/index/projects/{uuid}")
-    if r.ok:
-        return uuid
-    raise NotPublishedUuidError(r, uuid)
+    if not r.ok:
+        raise NotPublishedUuidError(r, uuid)
 
 
 def define_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser()
-    parser.add_argument("-p", "--project-uuid", type=is_published_uuid, required=True,
+    parser.add_argument("-p", "--project-uuid", required=True,
                         help="UUID of the project to be patched. Needs to be published in the DCP.")
     parser.add_argument("-d", "--dry-run", action="store_true", default=False, help="Dry-run flag. No PUT operations"
                                                                                     "will be performed.")
@@ -219,6 +217,9 @@ def main(project_uuid, dry_run):
     logging.info(f"Starting script for project {project_uuid}")
     if dry_run:
         logging.warning("Dry-run flag ON, no patch operations will be applied")
+
+    # Confirm UUID corresponds to a published Azul project
+    confirm_published_uuid(project_uuid)
 
     # Query azul for the file metadata and massage the data a bit
     query = build_azul_query(project_uuid)
