@@ -22,6 +22,7 @@ The script follows the next steps to fix the missing size and fileContentType fo
    b. PUT metadata file
 """
 
+
 # TODO: Check if file metadata is editable (submission editable). Don't know how to do it without 1 API call/file
 
 
@@ -44,8 +45,8 @@ def define_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser()
     parser.add_argument("-p", "--project-uuid", required=True,
                         help="UUID of the project to be patched. Needs to be published in the DCP.")
-    parser.add_argument("-d", "--dry-run", action="store_true", default=False, help="Dry-run flag. No PUT operations"
-                                                                                    "will be performed.")
+    parser.add_argument("-d", "--dry-run", action="store_true", default=False,
+                        help="Dry-run flag. No PUT operations will be performed.")
 
     return parser
 
@@ -120,6 +121,7 @@ def get_files_metadata_from_azul(azul_base: str, query: str) -> list:
     def change_datafile_uuid(azul_hit: dict):
         azul_hit['files'][0]['uuid'] = azul_hit['entryId']
         return azul_hit
+
     files = list(map(change_datafile_uuid, hits))
 
     # A bit more data massage to return only the file metadata (Easier parsing for later)
@@ -239,8 +241,6 @@ def main(project_uuid, dry_run):
     if already_filled:
         logging.info("Some files were already filled. Please find the list in 'already_filled.json'")
         file_list_to_document("already_filled.json", already_filled)
-
-
 
 
 if __name__ == "__main__":
