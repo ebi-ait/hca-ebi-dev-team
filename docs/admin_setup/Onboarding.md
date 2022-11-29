@@ -17,20 +17,25 @@ parent: Admin and Setup
 {:toc}
 
 ## Access
-* [ebi-ait Github organisation](https://github.com/ebi-ait) (set up 2-factor auth; install secret on machine)
+* github
+  * [ebi-ait Github organisation](https://github.com/ebi-ait) (set up 2-factor auth; install secret on machine)
     * Add developer to [hca-dev team](https://github.com/orgs/ebi-ait/teams/hca-dev)
-* [HumanCellAtlas Github organisation](https://github.com/HumanCellAtlas) (set up 2-factor auth; install secret on machine)
-* [Slack: HCA](https://humancellatlas.slack.com/)
+  * [HumanCellAtlas Github organisation](https://github.com/HumanCellAtlas) (set up 2-factor auth; install secret on machine)
+* Slack
+  * [Slack: HCA](https://humancellatlas.slack.com/)
     * #dcp-2
-* [Slack: AIT](https://embl-ebi-ait.slack.com)
+  * [Slack: AIT](https://embl-ebi-ait.slack.com)
 * [EBI GitLab](http://gitlab.ebi.ac.uk/)
 * [EBI AWS](https://embl-ebi.awsapps.com/start#/)
-* [Quay.io](https://quay.io/organization/ebi-ait)
+  * need to be in Google Group [grp-aws-ait-team-power-users](https://groups.google.com/u/3/a/ebi.ac.uk/g/grp-aws-ait-team-power-users/members)
+* [Quay.io](https://quay.io/organization/ebi-ait) - for built docker image storage
 * [Confluence](https://www.ebi.ac.uk/seqdb/confluence/display/HCA/Human+Cell+Atlas+Home)
 * [Zenhub](https://app.zenhub.com/workspaces/ingest-dev-5cfe1cb26482e537cf35e8d1/board)
 * Google Apps (Google Drive [Shared HCA folder](https://drive.google.com/drive/folders/0B-_4IWxXwazQaEh1SnhOOHV4S0k) & Calendar) - use EBI Single sign-on
 * [Snyc](https://app.snyk.io/org/humancellatlas/)
-* [Ingest group e-mail](https://listserver.ebi.ac.uk/mailman/listinfo/hca-ingest-dev)
+* mailing lists:
+  * [Ingest group e-mail](https://listserver.ebi.ac.uk/mailman/listinfo/hca-ingest-dev)
+  * [ait](https://listserver.ebi.ac.uk/mailman/listinfo/ait)
 
 
 # Licenses
@@ -222,7 +227,7 @@ Preferences | Project: ingest-client | Project Interpreter
 ### DevOps
 
 1. Verify you can [login to aws](https://embl-ebi.awsapps.com/start#/) using your EBI credentials.
-   1. New Users can be added through [ grp-aws-ait-team-power-usersgoogle group](https://groups.google.com/a/ebi.ac.uk/g/grp-aws-ait-team-power-users) via team manager.
+   1. New Users can be added through [grp-aws-ait-team-power-usersgoogle group](https://groups.google.com/a/ebi.ac.uk/g/grp-aws-ait-team-power-users) via team manager.
    2. You can click on ‘Management console’ to access console or use ‘Command line or programmatic access’ to access aws CLI. Add to your profile (`~/.aws/config`, `~/.aws/credentials`):
       * aws_access_key_id=
       * aws_secret_access_key=
