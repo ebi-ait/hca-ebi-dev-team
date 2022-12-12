@@ -174,7 +174,6 @@ def patch_file_metadata(uuid_metadata_map: dict, ingest_api: IngestApi, dry_run:
     not_found = []
     already_filled = []
     for uuid, metadata in tqdm.tqdm(uuid_metadata_map.items()):
-        print(uuid, metadata)
         # Check file exists in Ingest (Non-organically described matrices are virtually indistinguishable via metadata)
         try:
             logging.info(f"Searching for file metadata for file {metadata['name']}")

@@ -12,7 +12,9 @@ Other fixes that may be needed, not covered in this script, are:
 
 ### Before you start
 
+- cd to the folder: `cd scripts/fill_dcp1_file_metadata`
 - Create a virtual environment: `virtualenv <environment_name>`
+- Activate the virtual environment: `source <environment_name>/bin/activate`
 - Install the requirements: `pip3 install -r requirements.txt`. This will install the hca-ingest client. Last tested with v2.4.1.
 - Set up the required environment variables:
 ```
@@ -20,7 +22,7 @@ export INGEST_TOKEN=<ingest_token>
 ```
 As a note, there are 3 other environment variables you can set up:
 ```
-export LOG_LEVEL=<log_level. Default INFO>
+export LOG_LEVEL=<log_level. Defaults to INFO level>
 export AZUL_BASE=<Base URL for Azul's API. Default production API>
 export INGEST_BASE=<Base URL for Ingest's API. Default production API>
 ```
