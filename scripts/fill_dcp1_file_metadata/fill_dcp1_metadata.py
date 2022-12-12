@@ -22,6 +22,7 @@ The script follows the next steps to fix the missing size and fileContentType fo
    b. PUT metadata file
 """
 
+
 # TODO: Check if file metadata is editable (submission editable). Don't know how to do it without 1 API call/file
 
 
@@ -30,26 +31,22 @@ class NotPublishedUuidError(HTTPError):
         super().__init__(f"UUID {uuid} not found in Azul: GET request errored with status code {response.status_code}")
 
 
-def is_published_uuid(uuid: str) -> str:
+def confirm_published_uuid(uuid: str):
     """
-    Check if the UUID provided corresponds to a published Azul project
+    Confirm the UUID provided corresponds to a published Azul project
     :param uuid:    UUID of the project which contains the files
-    :return uuid:
     """
     r = rq.get(f"https://service.azul.data.humancellatlas.org/index/projects/{uuid}")
-    try:
-        r.raise_for_status()
-    except HTTPError:
+    if not r.ok:
         raise NotPublishedUuidError(r, uuid)
-    return uuid
 
 
 def define_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser()
-    parser.add_argument("-p", "--project-uuid", type=is_published_uuid, required=True,
+    parser.add_argument("-p", "--project-uuid", required=True,
                         help="UUID of the project to be patched. Needs to be published in the DCP.")
-    parser.add_argument("-d", "--dry-run", action="store_true", default=False, help="Dry-run flag. No PUT operations"
-                                                                                    "will be performed.")
+    parser.add_argument("-d", "--dry-run", action="store_true", default=False,
+                        help="Dry-run flag. No PUT operations will be performed.")
 
     return parser
 
@@ -124,6 +121,7 @@ def get_files_metadata_from_azul(azul_base: str, query: str) -> list:
     def change_datafile_uuid(azul_hit: dict):
         azul_hit['files'][0]['uuid'] = azul_hit['entryId']
         return azul_hit
+
     files = list(map(change_datafile_uuid, hits))
 
     # A bit more data massage to return only the file metadata (Easier parsing for later)
@@ -221,6 +219,9 @@ def main(project_uuid, dry_run):
     if dry_run:
         logging.warning("Dry-run flag ON, no patch operations will be applied")
 
+    # Confirm UUID corresponds to a published Azul project
+    confirm_published_uuid(project_uuid)
+
     # Query azul for the file metadata and massage the data a bit
     query = build_azul_query(project_uuid)
     azul_files_manifest = get_files_metadata_from_azul(config.AZUL_BASE, query)
@@ -239,8 +240,6 @@ def main(project_uuid, dry_run):
     if already_filled:
         logging.info("Some files were already filled. Please find the list in 'already_filled.json'")
         file_list_to_document("already_filled.json", already_filled)
-
-
 
 
 if __name__ == "__main__":
