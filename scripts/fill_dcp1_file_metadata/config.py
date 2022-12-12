@@ -13,7 +13,7 @@ class ConfigUrlConflictError(Exception):
 class Config:
     INGEST_TOKEN: str = None
     LOG_LEVEL: str = 'INFO'
-    AZUL_BASE: str = 'https://service.azul.data.humancellatlas.org/'
+    AZUL_BASE: str = 'https://service.azul.data.humancellatlas.org'
     INGEST_BASE: str = 'https://api.ingest.archive.data.humancellatlas.org'
 
     def __init__(self, env):

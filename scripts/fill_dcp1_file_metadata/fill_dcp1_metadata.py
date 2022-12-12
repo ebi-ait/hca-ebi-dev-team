@@ -1,9 +1,9 @@
 import argparse
 import json
 import logging
-import math
 import os
 import requests as rq
+from collections import namedtuple
 from requests.exceptions import HTTPError
 
 from hca_ingest.api.ingestapi import IngestApi
@@ -31,12 +31,13 @@ class NotPublishedUuidError(HTTPError):
         super().__init__(f"UUID {uuid} not found in Azul: GET request errored with status code {response.status_code}")
 
 
-def confirm_published_uuid(uuid: str):
+def confirm_published_uuid(uuid: str, azul_base: str):
     """
     Confirm the UUID provided corresponds to a published Azul project
-    :param uuid:    UUID of the project which contains the files
+    :param uuid:        UUID of the project which contains the files
+    :param azul_base:   Base of the URL pointing to Azul in its proper environment
     """
-    r = rq.get(f"https://service.azul.data.humancellatlas.org/index/projects/{uuid}")
+    r = rq.get(f"{azul_base}/index/projects/{uuid}")
     if not r.ok:
         raise NotPublishedUuidError(r, uuid)
 
@@ -109,7 +110,7 @@ def get_files_metadata_from_azul(azul_base: str, query: str) -> list:
     session = rq.Session()
 
     # Get info from pagination with minimal load (1 entity)
-    r = session.get(f"{azul_base}{azul_manifest_request_endpoint}?filters={query}&size=100")
+    r = session.get(f"{azul_base}/{azul_manifest_request_endpoint}?filters={query}&size=100")
     r.raise_for_status()
     r = r.json()
 
@@ -169,20 +170,21 @@ def patch_file_metadata(uuid_metadata_map: dict, ingest_api: IngestApi, dry_run:
     :return not_found:          List of file metadata that was not found in ingest
     :return already_filled:     List of file metadata that was already filled
     """
-    not_found = []
-    already_filled = []
+
+    FileMetadata = namedtuple('FileMetadata', 'already_filled not_found')
+    metadata = FileMetadata([], [])
     for uuid, metadata in tqdm.tqdm(uuid_metadata_map.items()):
         # Check file exists in Ingest (Non-organically described matrices are virtually indistinguishable via metadata)
         try:
             logging.info(f"Searching for file metadata for file {metadata['name']}")
             entity = ingest_api.get_entity_by_uuid('files', uuid)
         except HTTPError:
-            not_found.append(metadata)
+            metadata.not_found.append(metadata)
             continue
 
         # Check entity is not already filled in - Script will only fill size and fileContentType when both are missing
         if entity.get('size') and entity.get('fileContentType'):
-            already_filled.append(metadata)
+            metadata.already_filled.append(metadata)
             continue
 
         # Add size and fileContentType to metadata
@@ -199,12 +201,21 @@ def patch_file_metadata(uuid_metadata_map: dict, ingest_api: IngestApi, dry_run:
         ingest_api.put(entity['_links']['self']['href'], json=entity)
         logging.info(f"PATCHED file {entity.get('fileName')}, url: {entity['_links']['self']['href']}")
 
-    return not_found, already_filled
+
+    return metadata
 
 
-def file_list_to_document(path: str, file_list: list):
-    with open(path, 'w') as f:
-        json.dump(file_list, f, indent=4, separators=(", ", ": "))
+def namedtuple_to_documents(named_tuple: namedtuple):
+    """
+    Dump a named tuple with several fields into documents that are named as the fields in JSON format.
+    Only writes if the fields is filled.
+    :param named_tuple: namedtuple object
+    :return:
+    """
+    for field in named_tuple._fields:
+        if getattr(named_tuple, field):
+            with open(f"{field}.json", 'w') as f:
+                json.dump(getattr(named_tuple, field), f, indent=4, separators=(", ", ": "))
 
 
 def main(project_uuid, dry_run):
@@ -231,15 +242,10 @@ def main(project_uuid, dry_run):
     ingest_api = set_up_ingestapi(config.INGEST_TOKEN, config.INGEST_BASE)
 
     # Patch files (or log if dry-run is on)
-    not_patched, already_filled = patch_file_metadata(uuid_metadata_map, ingest_api, dry_run)
+    metadata = patch_file_metadata(uuid_metadata_map, ingest_api, dry_run)
 
-    if not_patched:
-        logging.warning("Some files were not found in ingest. Please find the list in 'not_patched.json'")
-        file_list_to_document("not_patched.json", not_patched)
-
-    if already_filled:
-        logging.info("Some files were already filled. Please find the list in 'already_filled.json'")
-        file_list_to_document("already_filled.json", already_filled)
+    # Write each of the fields to a document
+    namedtuple_to_documents(metadata)
 
 
 if __name__ == "__main__":
