@@ -5,6 +5,7 @@ import os
 import requests as rq
 from collections import namedtuple
 from requests.exceptions import HTTPError
+from urllib.parse import urljoin
 
 from hca_ingest.api.ingestapi import IngestApi
 
@@ -37,7 +38,7 @@ def confirm_published_uuid(uuid: str, azul_base: str):
     :param uuid:        UUID of the project which contains the files
     :param azul_base:   Base of the URL pointing to Azul in its proper environment
     """
-    r = rq.get(f"{azul_base}/index/projects/{uuid}")
+    r = rq.get(urljoin(azul_base, f"index/projects/{uuid}"))
     if not r.ok:
         raise NotPublishedUuidError(r, uuid)
 
@@ -105,12 +106,13 @@ def get_files_metadata_from_azul(azul_base: str, query: str) -> list:
     :param query:           Query in str format to pass as a filter
     :return files:          List of file metadata
     """
-    # Build URL/endpoint and request metadata
+    # Build URL/endpoint/payload and request metadata
     azul_manifest_request_endpoint = "index/files"
+    payload = {'filters': query, 'size': '100'}
     session = rq.Session()
 
     # Get info from pagination with minimal load (1 entity)
-    r = session.get(f"{azul_base}/{azul_manifest_request_endpoint}?filters={query}&size=100")
+    r = session.get(urljoin(azul_base,azul_manifest_request_endpoint), params=payload)
     r.raise_for_status()
     r = r.json()
 
@@ -141,7 +143,7 @@ def parse_azul_metadata(azul_file_list: list) -> dict:
 
     filesource_invalid_values = ["HCA Release", "DCP/2 Analysis", "DCP/1 Matrix Service"]
     uuid_metadata_map_filtered = {uuid: metadata for uuid, metadata in uuid_metadata_map.items()
-                                  if not any([source == metadata['fileSource'] for source in filesource_invalid_values])}
+                                  if metadata['fileSource'] not in filesource_invalid_values}
 
     return uuid_metadata_map_filtered
 
@@ -230,7 +232,6 @@ def main(project_uuid, dry_run):
     if dry_run:
         logging.warning("Dry-run flag ON, no patch operations will be applied")
 
-    # Confirm UUID corresponds to a published Azul project
     confirm_published_uuid(project_uuid)
 
     # Query azul for the file metadata and massage the data a bit
