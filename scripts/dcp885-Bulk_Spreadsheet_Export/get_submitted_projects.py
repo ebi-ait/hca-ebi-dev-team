@@ -1,8 +1,11 @@
 import json
 import requests
+from urllib.parse import urljoin
 
 from hca_ingest.api.ingestapi import IngestApi
 
+
+azul_url = 'https://service.azul.data.humancellatlas.org'
 api_url = 'https://api.ingest.archive.data.humancellatlas.org'
 ingest_api = IngestApi(api_url)
 token = '' # Your ingest token here
@@ -17,15 +20,15 @@ def get_azul_projects():
     return azul_projects
 
 def get_all_projects():
-    projects_url = f'{api_url}/projects'
+    projects_url = urljoin(api_url, 'projects')
     return ingest_api.get_all(projects_url, 'projects')
 
 def get_document_uuid(document: dict) -> str:
     return document.get('uuid', {}).get('uuid')
 
 def is_published_uuid(uuid: str) -> bool:
-    azul_url = 'https://service.azul.data.humancellatlas.org'
-    r = requests.get(f'{azul_url}/index/projects/{uuid}')
+    azul_project_url = urljoin(azul_url, f'index/projects/{uuid}')
+    r = requests.get(azul_project_url)
     return r.ok
 
 def save_json(filename: str, document: dict):
