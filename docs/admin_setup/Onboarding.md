@@ -27,7 +27,14 @@ parent: Admin and Setup
   * [Slack: AIT](https://embl-ebi-ait.slack.com)
 * [EBI GitLab](http://gitlab.ebi.ac.uk/)
 * [EBI AWS](https://embl-ebi.awsapps.com/start#/)
-  * need to be in Google Group [grp-aws-ait-team-power-users](https://groups.google.com/u/3/a/ebi.ac.uk/g/grp-aws-ait-team-power-users/members)
+   1. need to be in Google Group [grp-aws-ait-team-power-users](https://groups.google.com/a/ebi.ac.uk/g/grp-aws-ait-team-power-users/members). If you are not a member, talk to your supervisor.
+   2. You can click on ‘Management console’ to access console or use ‘Command line or programmatic access’ to access aws CLI. Add to your profile (`~/.aws/config`, `~/.aws/credentials`):
+      * aws_access_key_id=
+      * aws_secret_access_key= 
+      * aws_session_token=
+   3. note: The CLI Keys along with browser login session are short lived and has a timeout of 4hr.
+   4. Please reach to [Cloud-consultants](mailto:cloud-consultants@ebi.ac.uk) for any connection problems. 
+
 * [Quay.io](https://quay.io/organization/ebi-ait) - for built docker image storage
 * [Confluence](https://www.ebi.ac.uk/seqdb/confluence/display/HCA/Human+Cell+Atlas+Home)
 * [Zenhub](https://app.zenhub.com/workspaces/ingest-dev-5cfe1cb26482e537cf35e8d1/board)
@@ -227,13 +234,6 @@ Preferences | Project: ingest-client | Project Interpreter
 ### DevOps
 
 1. Verify you can [login to aws](https://embl-ebi.awsapps.com/start#/) using your EBI credentials.
-   1. New Users can be added through [grp-aws-ait-team-power-usersgoogle group](https://groups.google.com/a/ebi.ac.uk/g/grp-aws-ait-team-power-users) via team manager.
-   2. You can click on ‘Management console’ to access console or use ‘Command line or programmatic access’ to access aws CLI. Add to your profile (`~/.aws/config`, `~/.aws/credentials`):
-      * aws_access_key_id=
-      * aws_secret_access_key=
-      * aws_session_token=
-   3. note: The CLI Keys along with browser login session are short lived and has a timeout of 4hr.
-   4. Please reach to [Cloud-consultants](mailto:cloud-consultants@ebi.ac.uk) for any connection problems. 
 2. Setup our Infrastructure-as-Code tools following the readme in [ingest-kube-deployment](https://github.com/ebi-ait/ingest-kube-deployment)
 3. If necessary, read up on [Docker](https://www.docker.com/resources/what-container) and containerisation, [get familiar with Kubernetes basics](https://github.com/HumanCellAtlas/ingest-kube-deployment), and [Helm for application management in Kubernetes](https://github.com/helm/helm).
 
