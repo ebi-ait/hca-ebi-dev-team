@@ -1,3 +1,4 @@
 hca-ingest
 jupyter
 requests
+-e git+https://github.com/ebi-ait/ingest-exporter.git
