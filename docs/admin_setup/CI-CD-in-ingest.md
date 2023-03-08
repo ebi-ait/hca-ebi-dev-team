@@ -9,12 +9,9 @@ NEEDS UPDATING
 
 # Ingest CI/CD
 
-## Last major update
-2023-03-08
 ## Why this document?
 
-This is a document for summarizing Ingest's current continuous integration/deployment processes. It is a work in progress. For future plans and past detail please see the references.
-
+This is a document for summarizing Ingest's current continuous integration/deployment processes.
 ## Continuous Integration
 
 * On each pull request, the code is built and unit tests for that repository run in gitlab.
