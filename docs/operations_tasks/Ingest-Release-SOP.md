@@ -37,7 +37,7 @@ production
     - You can use the [#hca slack channel](https://join.slack.com/share/zt-pn5hl6a8-xWvSYSaW7i~qymWTLWmP_g) for consulting with wranglers.
 12. Check with the team if it is okay to deploy this feature to production.
 13. Deploy what's on `staging` to `prod` via the operations panel in GitLab
-    1. Navigate to [GitLab](https://gitlab.ebi.ac.uk/) > `project your're working on` > operations > environments
+    1. Navigate to [GitLab](https://gitlab.ebi.ac.uk/) > `project your're working on` > Deployments > Environments
     2. Click "Deploy to" next to the `staging` environment
     3. In the dropdown, select "Release prod"
     4. Wait for the "Release prod" stage to complete (you can track the progress on the "CI/CD" page)
