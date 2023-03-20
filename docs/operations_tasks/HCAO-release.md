@@ -8,7 +8,7 @@ parent: Operations tasks
 1. configure your aws credentials
 2. create a [personal access token in gitlab](https://gitlab.ebi.ac.uk/-/profile/personal_access_tokens)
     - only necessary if you want the script to run the integration tests on gitlab for you 
-3. clone ingest-kube-deployment repo
+3. clone [ingest-kube-deployment](https://github.com/ebi-ait/ingest-kube-deployment) repo
 4. run for dev environment
 ```bash
 cd ./infra
