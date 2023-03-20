@@ -26,7 +26,7 @@ parent: Admin and Setup
     * #dcp-2
   * [Slack: AIT](https://embl-ebi-ait.slack.com)
 * [EBI GitLab](http://gitlab.ebi.ac.uk/)
-* [EBI AWS](https://embl-ebi.awsapps.com/start#/)
+* login to [EBI AWS](https://embl-ebi.awsapps.com/start#/)
    1. need to be in Google Group [grp-aws-ait-team-power-users](https://groups.google.com/a/ebi.ac.uk/g/grp-aws-ait-team-power-users/members). If you are not a member, talk to your supervisor.
    2. You can click on ‘Management console’ to access console or use ‘Command line or programmatic access’ to access aws CLI. Add to your profile (`~/.aws/config`, `~/.aws/credentials`):
       * aws_access_key_id=
