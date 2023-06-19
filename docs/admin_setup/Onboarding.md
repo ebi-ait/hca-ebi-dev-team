@@ -17,6 +17,7 @@ parent: Admin and Setup
 {:toc}
 
 ## Access
+* create an [ebi account](https://account-manager.ebi.ac.uk/signin)
 * github
   * [ebi-ait Github organisation](https://github.com/ebi-ait) (set up 2-factor auth; install secret on machine)
     * Add developer to [hca-dev team](https://github.com/orgs/ebi-ait/teams/hca-dev)
@@ -43,6 +44,8 @@ parent: Admin and Setup
 * mailing lists:
   * [Ingest group e-mail](https://listserver.ebi.ac.uk/mailman/listinfo/hca-ingest-dev)
   * [ait](https://listserver.ebi.ac.uk/mailman/listinfo/ait)
+* Calendar
+  * see [Wranglers' onboarding page](https://ebi-ait.github.io/hca-ebi-wrangler-central/ebi-wrangler-onboarding.html#calendar)
 
 
 # Licenses
