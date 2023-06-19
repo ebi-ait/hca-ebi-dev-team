@@ -40,7 +40,7 @@ parent: Admin and Setup
 * [Confluence](https://www.ebi.ac.uk/seqdb/confluence/display/HCA/Human+Cell+Atlas+Home)
 * [Zenhub](https://app.zenhub.com/workspaces/ingest-dev-5cfe1cb26482e537cf35e8d1/board)
 * Google Apps (Google Drive [Shared HCA folder](https://drive.google.com/drive/folders/0B-_4IWxXwazQaEh1SnhOOHV4S0k) & Calendar) - use EBI Single sign-on
-* [Snyc](https://app.snyk.io/org/humancellatlas/)
+* [Snyk](https://app.snyk.io/org/humancellatlas/)
 * mailing lists:
   * [Ingest group e-mail](https://listserver.ebi.ac.uk/mailman/listinfo/hca-ingest-dev)
   * [ait](https://listserver.ebi.ac.uk/mailman/listinfo/ait)
@@ -50,9 +50,8 @@ parent: Admin and Setup
 
 # Licenses
 ## JetBrains Licenses
-* IntelliJ IDEA Ultimate
-* PyCharm Professional
-* WebStorm
+* IntelliJ IDEA Ultimate - can be used for java/python, node
+* Alternatively, the language packs can be used: PyCharm Professional, WebStorm
 
 1. Create a JetBrains Account using @ebi.ac.uk address - [Register here](https://account.jetbrains.com/login)
 2. Email: [itsupport@ebi.ac.uk](mailto:itsupport@ebi.ac.uk)
