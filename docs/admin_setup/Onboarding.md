@@ -53,8 +53,7 @@ parent: Admin and Setup
 * IntelliJ IDEA Ultimate - can be used for java/python, node
 * Alternatively, the language packs can be used: PyCharm Professional, WebStorm
 
-1. Create a JetBrains Account using @ebi.ac.uk address - [Register here](https://account.jetbrains.com/login)
-2. Email: [itsupport@ebi.ac.uk](mailto:itsupport@ebi.ac.uk)
+1. follow [this EBI procedure](https://embl.service-now.com/esc?id=kb_article&table=kb_knowledge&sys_kb_id=432680111bf61510b7405fc4464bcb47): 
 3. Ask for to be included in the “JetBrains All Products Pack”
 
 _Other software uses free/community licensing._
