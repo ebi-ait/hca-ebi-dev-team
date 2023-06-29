@@ -22,7 +22,7 @@ def test_upgrade_to_unsupported_version():
 
 def test_add_bionetwork():
     project = Project().with_schema_version('17.1.0')
-    test_bionetwork = HCABionetwork('x', 'y', 'z', 'w')
+    test_bionetwork = HCABionetwork('x', 'y', 'z', False)
     add_bionetwork(project, test_bionetwork)
     assert_that(project.content).contains_key('hca_bionetworks')
     assert_that(project.content['hca_bionetworks']) \
@@ -32,7 +32,7 @@ def test_add_bionetwork():
 
 def test_add_bionetwork_idempotent():
     project = Project().with_schema_version('17.1.0')
-    test_bionetwork = HCABionetwork('x', 'y', 'z', 'w')
+    test_bionetwork = HCABionetwork('x', 'y', 'z', False)
     add_bionetwork(project, test_bionetwork)
     add_bionetwork(project, test_bionetwork)
     assert_that(project.content['hca_bionetworks']) \
@@ -41,8 +41,8 @@ def test_add_bionetwork_idempotent():
 
 def test_add_2_networks():
     project = Project().with_schema_version('17.1.0')
-    test_bionetwork1 = HCABionetwork('x1', 'y1', 'z1', 'w2')
-    test_bionetwork2 = HCABionetwork('x2', 'y2', 'z2', 'w2')
+    test_bionetwork1 = HCABionetwork('x1', 'y1', 'z1', False)
+    test_bionetwork2 = HCABionetwork('x2', 'y2', 'z2', False)
 
     add_bionetwork(project, test_bionetwork1)
     add_bionetwork(project, test_bionetwork2)
