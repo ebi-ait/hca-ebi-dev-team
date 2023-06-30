@@ -38,6 +38,7 @@ class HCABionetwork:
     hca_tissue_atlas: str
     hca_tissue_atlas_version: str
     atlas_project: bool
+    # TODO: wait until pattern regex is sorted see https://github.com/HumanCellAtlas/metadata-schema/pull/1526
     # describedBy: str = field(init=False, default_factory=lambda:'')
     schema_version: str = field(init=False, default_factory=lambda:''   )
 
@@ -88,6 +89,7 @@ def run():
     token = os.environ.get('INGEST_TOKEN')
     api = IngestApi()
     api.set_token(f'Bearer {token}')
+    # TODO: uuid param from command line
     update_bionetwork_for_project('cddab57b-6868-4be4-806f-395ed9dd635a',
                                       HCABionetwork(name='Blood',
                                                     hca_tissue_atlas='Blood',
