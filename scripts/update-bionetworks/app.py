@@ -40,7 +40,7 @@ class HCABionetwork:
     atlas_project: bool
     # TODO: wait until pattern regex is sorted see https://github.com/HumanCellAtlas/metadata-schema/pull/1526
     # describedBy: str = field(init=False, default_factory=lambda:'')
-    schema_version: str = field(init=False, default_factory=lambda:''   )
+    schema_version: str = field(init=False, default_factory=lambda: '')
 
     def __str__(self):
         return json.dumps(self.__dict__)
@@ -58,8 +58,9 @@ def update_bionetwork_for_project(project_uuid: str, bionetwork: HCABionetwork, 
     project = api.get_project_by_uuid(project_uuid)
     upgrade_schema_to_17_1_0(project, project_uuid)
     add_bionetwork(project, bionetwork)
-    # json_schema = requests.get(project["content"]["describedBy"]).json()
-    # validate_against_schema(instance=project["content"], schema=json_schema)
+    # TODO: enable schema validation for the bionetwork document once https://github.com/HumanCellAtlas/metadata-schema/pull/1526 is done
+    json_schema = requests.get(project["content"]["describedBy"]).json()
+    validate_against_schema(instance=project["content"], schema=json_schema)
     project_url = api.get_link_from_resource(project, 'self')
     api.patch(project_url, json=project)
 
@@ -67,14 +68,20 @@ def update_bionetwork_for_project(project_uuid: str, bionetwork: HCABionetwork, 
 def add_bionetwork(project, bionetwork: HCABionetwork):
     hca_bionetworks: list = project['content'].setdefault('hca_bionetworks', [])
     bionetwork_as_dict = dataclasses.asdict(bionetwork)
-    if bionetwork_as_dict not in hca_bionetworks:
+
+    new_element = True
+    for x in hca_bionetworks:
+        if x['name'] == bionetwork.name:
+            new_element = False
+            x.update(bionetwork_as_dict)
+    if new_element:
         hca_bionetworks.append(bionetwork_as_dict)
 
 
 def upgrade_schema_to_17_1_0(project, project_uuid):
     project_content = project['content']
     project_schema = project_content['describedBy']
-    project_schema_version:str = re.findall('/project/(.*?)/project', project_schema)[0]    # upgrade schema
+    project_schema_version: str = re.findall('/project/(.*?)/project', project_schema)[0]  # upgrade schema
     if project_schema_version == '17.1.0':
         project_content['describedBy'] = 'https://schema.staging.data.humancellatlas.org/type/project/17.1.0/project'
         logging.info(f'project schema version OK: {project_schema_version}')
@@ -82,6 +89,8 @@ def upgrade_schema_to_17_1_0(project, project_uuid):
         project_content['hca_bionetworks'] = []
         project_content['describedBy'] = project_schema_version.replace('17.0.0', '17.1.0')
     else:
+        # TODO: we might need to support additional upgrades. I will add
+        #       support as needed whilst going over the different projects.
         raise ValueError(f'need to upgrade schema for project {project_uuid}. version is {project_schema_version}')
 
 
@@ -91,10 +100,10 @@ def run():
     api.set_token(f'Bearer {token}')
     # TODO: uuid param from command line
     update_bionetwork_for_project('cddab57b-6868-4be4-806f-395ed9dd635a',
-                                      HCABionetwork(name='Blood',
-                                                    hca_tissue_atlas='Blood',
-                                                    hca_tissue_atlas_version='v1.0',
-                                                    atlas_project=False),
+                                  HCABionetwork(name='Blood',
+                                                hca_tissue_atlas='Blood',
+                                                hca_tissue_atlas_version='v1.0',
+                                                atlas_project=False),
                                   api)
 
 

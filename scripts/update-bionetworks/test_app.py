@@ -49,12 +49,12 @@ def test_add_bionetwork_idempotent():
 
 def test_add_2_networks():
     project = Project().with_schema_version('17.1.0')
-    test_bionetwork1 = HCABionetwork(name='Blood',
-                                     hca_tissue_atlas='Blood',
-                                     hca_tissue_atlas_version='v1.0',
-                                     atlas_project=False)
     test_bionetwork2 = HCABionetwork(name='Kidney',
                                      hca_tissue_atlas='Kidney',
+                                     hca_tissue_atlas_version='v1.0',
+                                     atlas_project=False)
+    test_bionetwork1 = HCABionetwork(name='Blood',
+                                     hca_tissue_atlas='Blood',
                                      hca_tissue_atlas_version='v1.0',
                                      atlas_project=False)
     add_bionetwork(project, test_bionetwork1)
@@ -63,3 +63,27 @@ def test_add_2_networks():
         .is_length(2) \
         .contains(test_bionetwork1) \
         .contains(test_bionetwork2)
+
+
+def test_update_network():
+    project = Project().with_schema_version('17.1.0')
+    orig_bionetwork = HCABionetwork(name='Blood',
+                                    hca_tissue_atlas='Blood',
+                                    hca_tissue_atlas_version='v1.0',
+                                    atlas_project=False)
+    another_bionetwork = HCABionetwork(name='Kidney',
+                                    hca_tissue_atlas='Kidney',
+                                    hca_tissue_atlas_version='v2.0',
+                                    atlas_project=False)
+    updated_bionetwork = HCABionetwork(name='Blood',
+                                    hca_tissue_atlas='Blood',
+                                    hca_tissue_atlas_version='v2.0',
+                                    atlas_project=False)
+    add_bionetwork(project, orig_bionetwork)
+    add_bionetwork(project, another_bionetwork)
+    add_bionetwork(project, updated_bionetwork)
+    assert_that(project.content['hca_bionetworks']) \
+        .is_length(2) \
+        .contains(updated_bionetwork) \
+        .contains(another_bionetwork) \
+        .does_not_contain(orig_bionetwork)
