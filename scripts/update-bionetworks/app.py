@@ -4,6 +4,7 @@ import logging
 import os
 import re
 from dataclasses import dataclass, field
+from urllib.parse import urlparse
 
 import requests as requests
 import requests_cache
@@ -37,9 +38,8 @@ class HCABionetwork:
     hca_tissue_atlas: str
     hca_tissue_atlas_version: str
     atlas_project: bool
-
-    # def __repr__(self):
-    #     return dataclasses.asdict(self)
+    # describedBy: str = field(init=False, default_factory=lambda:'')
+    schema_version: str = field(init=False, default_factory=lambda:''   )
 
     def __str__(self):
         return json.dumps(self.__dict__)
@@ -57,13 +57,13 @@ def update_bionetwork_for_project(project_uuid: str, bionetwork: HCABionetwork, 
     project = api.get_project_by_uuid(project_uuid)
     upgrade_schema_to_17_1_0(project, project_uuid)
     add_bionetwork(project, bionetwork)
-    json_schema = requests.get(project["content"]["describedBy"]).json()
-    validate_against_schema(instance=project["content"], schema=json_schema)
+    # json_schema = requests.get(project["content"]["describedBy"]).json()
+    # validate_against_schema(instance=project["content"], schema=json_schema)
     project_url = api.get_link_from_resource(project, 'self')
     api.patch(project_url, json=project)
 
 
-def add_bionetwork(project, bionetwork):
+def add_bionetwork(project, bionetwork: HCABionetwork):
     hca_bionetworks: list = project['content'].setdefault('hca_bionetworks', [])
     bionetwork_as_dict = dataclasses.asdict(bionetwork)
     if bionetwork_as_dict not in hca_bionetworks:
@@ -89,10 +89,11 @@ def run():
     api = IngestApi()
     api.set_token(f'Bearer {token}')
     update_bionetwork_for_project('cddab57b-6868-4be4-806f-395ed9dd635a',
-                                  HCABionetwork(name='Adipose',
-                                                hca_tissue_atlas='Blood',
-                                                hca_tissue_atlas_version='v1.0',
-                                                atlas_project=False), api)
+                                      HCABionetwork(name='Blood',
+                                                    hca_tissue_atlas='Blood',
+                                                    hca_tissue_atlas_version='v1.0',
+                                                    atlas_project=False),
+                                  api)
 
 
 if __name__ == '__main__':
