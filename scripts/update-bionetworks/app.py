@@ -17,7 +17,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-requests_cache.install_cache('ingest')
+requests_cache.install_cache(__name__)
 
 
 @dataclass
@@ -63,12 +63,13 @@ def update_bionetwork_for_project(project_uuid: str, bionetwork: HCABionetwork, 
     validate_against_schema(instance=project["content"], schema=json_schema)
     project_url = api.get_link_from_resource(project, 'self')
     api.patch(project_url, json=project)
+    logging.info(f'project {project_uuid} updated with network {bionetwork}')
 
 
 def add_bionetwork(project, bionetwork: HCABionetwork):
     hca_bionetworks: list = project['content'].setdefault('hca_bionetworks', [])
     bionetwork_as_dict = dataclasses.asdict(bionetwork)
-
+    bionetwork_as_dict['schema_version'] = '1.0.1'
     new_element = True
     for x in hca_bionetworks:
         if x['name'] == bionetwork.name:
@@ -82,12 +83,15 @@ def upgrade_schema_to_17_1_0(project, project_uuid):
     project_content = project['content']
     project_schema = project_content['describedBy']
     project_schema_version: str = re.findall('/project/(.*?)/project', project_schema)[0]  # upgrade schema
-    if project_schema_version == '17.1.0':
-        project_content['describedBy'] = 'https://schema.staging.data.humancellatlas.org/type/project/17.1.0/project'
-        logging.info(f'project schema version OK: {project_schema_version}')
+    if project_schema_version == '17.1.1':
+        logging.info(f'project schema version is OK: {project_schema_version}')
+    elif project_schema_version == '17.1.0':
+        logging.info(f'upgrading project schema version from {project_schema_version} to 17.1.1')
+        project_content['describedBy'] = project_schema.replace('17.1.0', '17.1.1')
     elif project_schema_version == '17.0.0':
+        logging.info(f'upgrading project schema version from {project_schema_version} to 17.1.1')
         project_content['hca_bionetworks'] = []
-        project_content['describedBy'] = project_schema_version.replace('17.0.0', '17.1.0')
+        project_content['describedBy'] = project_schema.replace('17.0.0', '17.1.1')
     else:
         # TODO: we might need to support additional upgrades. I will add
         #       support as needed whilst going over the different projects.
@@ -99,13 +103,22 @@ def run():
     api = IngestApi()
     api.set_token(f'Bearer {token}')
     # TODO: uuid param from command line
-    update_bionetwork_for_project('cddab57b-6868-4be4-806f-395ed9dd635a',
-                                  HCABionetwork(name='Blood',
-                                                hca_tissue_atlas='Blood',
-                                                hca_tissue_atlas_version='v1.0',
-                                                atlas_project=False),
-                                  api)
+    project_uuids = [
+        # copy uuids from spreadsheet
+    ]
+    for uuid in project_uuids:
+        try:
+            update_bionetwork_for_project(uuid,
+                                          HCABionetwork(name='Kidney',
+                                                        hca_tissue_atlas='Kidney',
+                                                        hca_tissue_atlas_version='v1.0',
+                                                        atlas_project=False),
+                                          api)
+        except Exception as e:
+            logging.warning(f'problem with project {uuid}', exc_info=True)
 
 
 if __name__ == '__main__':
+    logging.basicConfig(level=logging.INFO,
+                        format='%(asctime)s %(name)s %(message)s')
     run()
