@@ -34,7 +34,7 @@ query parameters:
 GET /projects/search
 ```
 
-# metadata serach
+# Metadata search
 
 For each metadata type: biomaterials, files, processes, protocols, projects, it is possible to query to database using:
 ```
