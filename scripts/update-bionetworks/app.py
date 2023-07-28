@@ -54,13 +54,17 @@ class HCABionetwork:
             raise ValueError(f'unsupported equality comparison with {type(other)}')
 
 
-def update_bionetwork_for_project(project_uuid: str, bionetwork: HCABionetwork, api: IngestApi):
+def update_bionetwork_for_project(project_uuid: str,
+                                  bionetwork: HCABionetwork,
+                                  api: IngestApi,
+                                  validate=True):
     project = api.get_project_by_uuid(project_uuid)
     upgrade_schema_to_17_1_0(project, project_uuid)
     add_bionetwork(project, bionetwork)
-    # TODO: enable schema validation for the bionetwork document once https://github.com/HumanCellAtlas/metadata-schema/pull/1526 is done
-    json_schema = requests.get(project["content"]["describedBy"]).json()
-    validate_against_schema(instance=project["content"], schema=json_schema)
+    if validate:
+        # TODO: enable schema validation for the bionetwork document once https://github.com/HumanCellAtlas/metadata-schema/pull/1526 is done
+        json_schema = requests.get(project["content"]["describedBy"]).json()
+        validate_against_schema(instance=project["content"], schema=json_schema)
     project_url = api.get_link_from_resource(project, 'self')
     api.patch(project_url, json=project)
     logging.info(f'project {project_uuid} updated with network {bionetwork}')
@@ -104,13 +108,13 @@ def run():
     api.set_token(f'Bearer {token}')
     # TODO: uuid param from command line
     project_uuids = [
-        # copy uuids from spreadsheet
+        '453d7ee2-319f-496c-9862-99d397870b63',
     ]
     for uuid in project_uuids:
         try:
             update_bionetwork_for_project(uuid,
-                                          HCABionetwork(name='Kidney',
-                                                        hca_tissue_atlas='Kidney',
+                                          HCABionetwork(name='Lung',
+                                                        hca_tissue_atlas='Lung',
                                                         hca_tissue_atlas_version='v1.0',
                                                         atlas_project=False),
                                           api)
