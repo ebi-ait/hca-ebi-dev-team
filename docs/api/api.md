@@ -39,6 +39,8 @@ GET /projects/search
 For each metadata type: biomaterials, files, processes, protocols, projects, it is possible to query to database using:
 ```
 POST /{metadataType}/query
+Authorization: Bearer <TOKEN>
+
 [
     {
         "field": "validationState",
@@ -47,8 +49,9 @@ POST /{metadataType}/query
     }
 ]
 
+## querying multiple fields
 ```
-The body should be an array of criteria, e.g.:
+The body can have a list of comma separated criteria, e.g.:
 ```json
     {
         "field": "validationState",
@@ -56,4 +59,21 @@ The body should be an array of criteria, e.g.:
         "value": "Valid"
     }
 ```
+
+## Available operators
 Operator can be: `NE`, `IS`, `LT`, `LTE`, `GT`, `GTE`, `IN`, `NIN`, `REGEX`
+
+## Querying Referenced Fields
+
+To query referenced fields use the `.id` after the reference field's name.
+For example, to query processes by the submission to which the belong use the following criterion:
+```
+POST /processes/query
+```
+```json
+{
+        "field": "submissionEnvelope.id",
+        "operator": "IS",
+        "value": "64e36dfba3737b41e55023da"
+}
+```
