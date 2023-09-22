@@ -79,7 +79,7 @@ POST /processes/query
 
 ## querying array fields
 To find all documents that have a value inside an array, use the following query. In this case, `hca_bionetworks` is the array field and `name` is an attribute of each element in the array. This query is an improvised version of an `exists` query.
-```jso
+```json
 [
     {
         "field": "content.hca_bionetworks.name",
