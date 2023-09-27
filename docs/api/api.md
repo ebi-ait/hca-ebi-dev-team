@@ -76,4 +76,18 @@ POST /processes/query
         "operator": "IS",
         "value": "64e36dfba3737b41e55023da"
 }
+
+## querying array fields
+
+To find all documents that have a value inside an array, use the following query. In this case, `hca_bionetworks` is the array field and `name` is an attribute of each element in the array. This query is an improvised version of an `exists` query.
+
+```json
+[
+    {
+        "field": "content.hca_bionetworks.name",
+        "operator": "REGEX",
+        "value": ".*"
+    }   
+]
+```
 ```
