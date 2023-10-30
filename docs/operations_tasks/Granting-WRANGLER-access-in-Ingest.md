@@ -33,5 +33,5 @@ OR filter the result by name
 ```
 5. Copy account object id and use it in the update query
 ```
-> db.account.update({ "_id" : { $in:[ObjectId("5ece3464ec0680746267e784")]}}, {$set: {"roles": ["CONTRIBUTOR", "WRANGLER"]}} )
+> db.account.findAndModify({query: {name: "Wren Wrangler"}, update: {$push: {roles: "WRANGLER"}}})
 ```
