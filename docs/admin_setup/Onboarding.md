@@ -17,28 +17,43 @@ parent: Admin and Setup
 {:toc}
 
 ## Access
-* [ebi-ait Github organisation](https://github.com/ebi-ait) (set up 2-factor auth; install secret on machine)
+* create an [ebi account](https://account-manager.ebi.ac.uk/signin)
+* github
+  * [ebi-ait Github organisation](https://github.com/ebi-ait) (set up 2-factor auth; install secret on machine)
     * Add developer to [hca-dev team](https://github.com/orgs/ebi-ait/teams/hca-dev)
-* [HumanCellAtlas Github organisation](https://github.com/HumanCellAtlas) (set up 2-factor auth; install secret on machine)
-* [Slack: HCA](https://humancellatlas.slack.com/)
+  * [HumanCellAtlas Github organisation](https://github.com/HumanCellAtlas) (set up 2-factor auth; install secret on machine)
+* Slack
+  * [Slack: HCA](https://humancellatlas.slack.com/)
     * #dcp-2
-* [Slack: AIT](https://embl-ebi-ait.slack.com)
-* [All Spark (Our instance of GitLab)](https://allspark.dev.data.humancellatlas.org/HumanCellAtlas)
-* [Quay.io](https://quay.io/organization/ebi-ait)
+  * [Slack: AIT](https://embl-ebi-ait.slack.com)
+* [EBI GitLab](http://gitlab.ebi.ac.uk/)
+* login to [EBI AWS](https://embl-ebi.awsapps.com/start#/)
+   1. need to be in Google Group [grp-aws-ait-team-power-users](https://groups.google.com/a/ebi.ac.uk/g/grp-aws-ait-team-power-users/members). If you are not a member, talk to your supervisor.
+   2. You can click on ‘Management console’ to access console or use ‘Command line or programmatic access’ to access aws CLI. Add to your profile (`~/.aws/config`, `~/.aws/credentials`):
+      * aws_access_key_id=
+      * aws_secret_access_key= 
+      * aws_session_token=
+   3. note: The CLI Keys along with browser login session are short lived and has a timeout of 4hr.
+   4. Please reach to [Cloud-consultants](mailto:cloud-consultants@ebi.ac.uk) for any connection problems. 
+
+* [Quay.io](https://quay.io/organization/ebi-ait) - for built docker image storage
 * [Confluence](https://www.ebi.ac.uk/seqdb/confluence/display/HCA/Human+Cell+Atlas+Home)
 * [Zenhub](https://app.zenhub.com/workspaces/ingest-dev-5cfe1cb26482e537cf35e8d1/board)
 * Google Apps (Google Drive [Shared HCA folder](https://drive.google.com/drive/folders/0B-_4IWxXwazQaEh1SnhOOHV4S0k) & Calendar) - use EBI Single sign-on
-* [Snyc](https://app.snyk.io/org/humancellatlas/)
-* [Ingest group e-mail](https://listserver.ebi.ac.uk/mailman/listinfo/hca-ingest-dev)
+* [Snyk](https://app.snyk.io/org/humancellatlas/)
+* mailing lists:
+  * [Ingest group e-mail](https://listserver.ebi.ac.uk/mailman/listinfo/hca-ingest-dev)
+  * [ait](https://listserver.ebi.ac.uk/mailman/listinfo/ait)
+* Calendar
+  * see [Wranglers' onboarding page](https://ebi-ait.github.io/hca-ebi-wrangler-central/ebi-wrangler-onboarding.html#calendar)
+
 
 # Licenses
 ## JetBrains Licenses
-* IntelliJ IDEA Ultimate
-* PyCharm Professional
-* WebStorm
+* IntelliJ IDEA Ultimate - can be used for java/python, node
+* Alternatively, the language packs can be used: PyCharm Professional, WebStorm
 
-1. Create a JetBrains Account using @ebi.ac.uk address - [Register here](https://account.jetbrains.com/login)
-2. Email: [itsupport@ebi.ac.uk](mailto:itsupport@ebi.ac.uk)
+1. follow [this EBI procedure](https://embl.service-now.com/esc?id=kb_article&table=kb_knowledge&sys_kb_id=432680111bf61510b7405fc4464bcb47): 
 3. Ask for to be included in the “JetBrains All Products Pack”
 
 _Other software uses free/community licensing._
@@ -48,7 +63,7 @@ _Caveat: All practical descriptions for Mac/Linux._
 1. [Homebrew](https://brew.sh/)
 2. git and git-secrets
 3. [Docker Desktop](https://www.docker.com/products/docker-desktop)
-4. Kubernetes tools: follow http://github.com/ebi-ait/ingest-kube-deployment
+4. Kubernetes tools: follow see [ingest-kube-deployment repo](http://github.com/ebi-ait/ingest-kube-deployment)
 5. docker-machine-driver-hyperkit
 ```
 brew install docker-machine-driver-hyperkit
@@ -64,92 +79,18 @@ Follow the [RabbitMQ installation guide](https://www.rabbitmq.com/download.html)
 
 ## Repositories
 ### Ingest-Core (InteliJ)
+see [readme](https://github.com/ebi-ait/ingest-core)
 #### Run Dependencies in Docker
 ```
 docker-compose up mongo rabbitmq
 ```
 #### Run Locally
-1. Add [Plugin](https://plugins.jetbrains.com/plugin/6317-lombok/) for [Project Lombok](https://projectlombok.org) 
-2. Edit Preferences: Preferences | Build, Execution, Deployment | Build Tools | Gradle
+1. Add [Plugin](https://plugins.jetbrains.com/plugin/6317-lombok/) for [Project Lombok](https://projectlombok.org)
+    * usually not necessary, come by default with idea 
+3. Edit Preferences: Preferences | Build, Execution, Deployment | Build Tools | Gradle
     1. Build and run using: **Gradle**
     2. Run tests using: **IntelliJ IDEA**
-3. Adjust IntelliJ Configuration
-    1. Create the following folder in IntelliJ under ingest-core project: `.idea/runConfigurations`.
-    2. Create `.idea/runConfigurations/Ingest_Core_Dependencies.xml`
-
-        ```
-        <component name="ProjectRunConfigurationManager">
-          <configuration default="false" name="Ingest-Core Dependencies" type="docker-deploy" factoryName="docker-compose.yml" activateToolWindowBeforeRun="false" server-name="Docker">
-            <deployment type="docker-compose.yml">
-              <settings>
-                <option name="envVars">
-                  <list>
-                    <DockerEnvVarImpl>
-                      <option name="name" value="MONGO_URI" />
-                      <option name="value" value="mongodb://localhost:27017/admin" />
-                    </DockerEnvVarImpl>
-                    <DockerEnvVarImpl>
-                      <option name="name" value="RABBIT_HOST" />
-                      <option name="value" value="localhost" />
-                    </DockerEnvVarImpl>
-                    <DockerEnvVarImpl>
-                      <option name="name" value="RABBIT_PORT" />
-                      <option name="value" value="5672" />
-                    </DockerEnvVarImpl>
-                    <DockerEnvVarImpl>
-                      <option name="name" value="SCHEMA_BASE_URI" />
-                      <option name="value" value="https://schema.humancellatlas.org/" />
-                    </DockerEnvVarImpl>
-                  </list>
-                </option>
-                <option name="services">
-                  <list>
-                    <option value="mongo" />
-                    <option value="rabbitmq" />
-                  </list>
-                </option>
-                <option name="sourceFilePath" value="docker-compose.yml" />
-              </settings>
-            </deployment>
-            <method v="2" />
-          </configuration>
-        </component>
-        ```
-
-    3. Create `.idea/runConfigurations/Ingest_Core_Application.xml`
-
-      ```
-<component name="ProjectRunConfigurationManager">
-    <configuration default="false" name="Ingest-Core Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-        <module name="ingest-core.main" />
-        <option name="SPRING_BOOT_MAIN_CLASS" value="org.humancellatlas.ingest.IngestCoreApplication" />
-        <option name="VM_PARAMETERS" value="-XX:+UseG1GC" />
-        <option name="PROGRAM_PARAMETERS" value="--spring.data.mongodb.uri=mongodb://localhost:27017/admin" />
-        <option name="ALTERNATIVE_JRE_PATH" />
-        <envs>
-            <env name="SCHEMA_BASE_URI" value="https://schema.humancellatlas.org/" />
-            <env name="AUTH_ISSUER" value="https://login.elixir-czech.org/oidc/" />
-            <env name="SVC_AUTH_AUDIENCE" value="https://dev.data.humancellatlas.org/" />
-            <env name="USR_AUTH_AUDIENCE" value="https://dev.data.humancellatlas.org/" />
-            <env name="GCP_JWK_PROVIDER_BASE_URL" value="https://www.googleapis.com/service_accounts/v1/jwk/" />
-            <env name="GCP_PROJECT_WHITELIST" value="hca-dcp-production.iam.gserviceaccount.com,human-cell-atlas-travis-test.iam.gserviceaccount.com,broad-dsde-mint-dev.iam.gserviceaccount.com,broad-dsde-mint-test.iam.gserviceaccount.com,broad-dsde-mint-staging.iam.gserviceaccount.com" />
-        </envs>
-        <method v="2">
-            <option name="Make" enabled="true" />
-        </method>
-    </configuration>
-</component>
-      ```
-
-    4. This will set the following environment variables:
-      - SCHEMA_BASE_URI=https://schema.humancellatlas.org/
-      - GCP_PROJECT_WHITELIST=hca-dcp-production.iam.gserviceaccount.com,human-cell-atlas-travis-test.iam.gserviceaccount.com,broad-dsde-mint-dev.iam.gserviceaccount.com,broad-dsde-mint-test.iam.gserviceaccount.com,broad-dsde-mint-staging.iam.gserviceaccount.com
-      - AUTH_ISSUER=https://login.elixir-czech.org/oidc/
-      - SVC_AUTH_AUDIENCE=https://dev.data.humancellatlas.org/
-      - USR_AUTH_AUDIENCE=https://dev.data.humancellatlas.org/
-      - GCP_JWK_PROVIDER_BASE_URL=https://www.googleapis.com/service_accounts/v1/jwk/
-
-    5. Restart your IntelliJ IDEA.
+4. run Spring Boot with profile `local` (see src/main/resources/application-local.properties)
 
 ### Ingest-Broker (PyCharm)
 #### Run in Docker
@@ -158,7 +99,7 @@ docker build -t humancellatlas/ingest-broker .
 docker-compose up
 ```
 #### Run Locally
-Install Python 3.6 or higher
+Install Python 3.9 or higher
 ```
 brew install pyenv
 pyenv install --list
@@ -219,13 +160,6 @@ Preferences | Project: ingest-client | Project Interpreter
 ### DevOps
 
 1. Verify you can [login to aws](https://embl-ebi.awsapps.com/start#/) using your EBI credentials.
-   1. New Users can be added through [ grp-aws-ait-team-power-usersgoogle group](https://groups.google.com/a/ebi.ac.uk/g/grp-aws-ait-team-power-users) via team manager.
-   2. You can click on ‘Management console’ to access console or use ‘Command line or programmatic access’ to access aws CLI. Add to your profile (`~/.aws/config`, `~/.aws/credentials`):
-      * aws_access_key_id=
-      * aws_secret_access_key=
-      * aws_session_token=
-   3. note: The CLI Keys along with browser login session are short lived and has a timeout of 4hr.
-   4. Please reach to [Cloud-consultants](mailto:cloud-consultants@ebi.ac.uk) for any connection problems. 
 2. Setup our Infrastructure-as-Code tools following the readme in [ingest-kube-deployment](https://github.com/ebi-ait/ingest-kube-deployment)
 3. If necessary, read up on [Docker](https://www.docker.com/resources/what-container) and containerisation, [get familiar with Kubernetes basics](https://github.com/HumanCellAtlas/ingest-kube-deployment), and [Helm for application management in Kubernetes](https://github.com/helm/helm).
 
