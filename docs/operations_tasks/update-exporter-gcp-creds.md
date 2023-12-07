@@ -6,6 +6,13 @@ parent: Operations tasks
 
 # How to update GCP credentials of Ingest Exporter to access Terra staging area
 
+1. update the secret in aws secrets manager
+
+The secrets to update are for each environment `ingest/<env>/secrets`. The relevant entry is
+`ingest_exporter_terra_svc_account`. In this entry the entries `private_key_id` and `private_key` 
+would require changing. A new value will be periodically communicated by whoever managed the keys. 
+Currently it is the Broad.
+
 1. Go to ingest-kube-deployment local repository
 ```
 cd ingest-kube-deployment
