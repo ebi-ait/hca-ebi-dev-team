@@ -40,7 +40,14 @@ parent: Admin and Setup
 * [Confluence](https://www.ebi.ac.uk/seqdb/confluence/display/HCA/Human+Cell+Atlas+Home)
 * [Zenhub](https://app.zenhub.com/workspaces/ingest-dev-5cfe1cb26482e537cf35e8d1/board)
 * Google Apps (Google Drive [Shared HCA folder](https://drive.google.com/drive/folders/0B-_4IWxXwazQaEh1SnhOOHV4S0k) & Calendar) - use EBI Single sign-on
-* [Snyk](https://app.snyk.io/org/humancellatlas/)
+* Register at [Snyk](https://app.snyk.io/org/humancellatlas/). If Snyk authentication fails during your CI/CD pipeline, follow these steps to diagnose and resolve the issue:
+  * Authenticate: Run `snyk auth` in your terminal and follow prompts.
+  * Retrieve Token: Check the token stored locally:
+    ```
+      cat ~/.config/configstore/snyk.json
+    ```
+  * Add Variable: Set `SNYK_TOKEN` variable to Settings > CI/CD in GitLab with your token value.
+  * If you need to integrate Snyk into the Dockerfile, modify your Dockerfile to pass the Snyk token during build.
 * mailing lists:
   * [Ingest group e-mail](https://listserver.ebi.ac.uk/mailman/listinfo/hca-ingest-dev)
   * [ait](https://listserver.ebi.ac.uk/mailman/listinfo/ait)
