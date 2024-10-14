@@ -1,12 +1,12 @@
 import json
 import requests
 
-from scripts.retrigger_file_validation.trigger_file_validation import TOKEN
-from scripts.retrigger_file_validation.trigger_file_validation import SUBMISSION_URL
+from trigger_file_validation import TOKEN
+from trigger_file_validation import SUBMISSION_URL
 
 
-def get_all(url: str, entity_type: str):
-    r = requests.get(url)
+def get_all(url: str, entity_type: str, headers: dict):
+    r = requests.get(url, headers= headers)
     r.raise_for_status()
     result = r.json()
     entities = result["_embedded"][entity_type] if '_embedded' in result else []
@@ -14,22 +14,22 @@ def get_all(url: str, entity_type: str):
 
     while "next" in result["_links"]:
         next_url = result["_links"]["next"]["href"]
-        r = requests.get(next_url)
+        r = requests.get(next_url, headers= headers)
         r.raise_for_status()
         result = r.json()
         entities = result["_embedded"][entity_type]
         yield from entities
 
 
-def get_files_in_submission(submission_url, state):
+def get_files_in_submission(submission_url, state, headers):
     api_base = submission_url.split("/")[2]
     draft_url = f"https://{api_base}/files/search/findBySubmissionEnvelopeAndValidationState?envelopeUri={submission_url}&state={state}"
-    files = get_all(draft_url, 'files')
+    files = get_all(draft_url, 'files', headers)
     return list(files)
 
 
-def generate_input_file(submission_url, filename):
-    files_to_delete = get_files_in_submission(submission_url, 'VALIDATING')
+def generate_input_file(submission_url, filename, headers):
+    files_to_delete = get_files_in_submission(submission_url, 'VALIDATING', headers)
     with open(filename, 'w') as outfile:
         print(f'Saving info on files to delete to {filename}')
         json.dump(files_to_delete, outfile, indent=4)
@@ -46,4 +46,4 @@ if __name__ == '__main__':
     }
     # 1. Get the list of file resources to be revalidated - save them in a file
     FILES_TO_REVALIDATE_FILENAME = f'{get_submission_id(SUBMISSION_URL)}_files_to_revalidate.json'
-    generate_input_file(submission_url=SUBMISSION_URL, filename=FILES_TO_REVALIDATE_FILENAME)
+    generate_input_file(submission_url=SUBMISSION_URL, filename=FILES_TO_REVALIDATE_FILENAME, headers=headers) 
