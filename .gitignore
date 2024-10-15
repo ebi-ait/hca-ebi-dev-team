@@ -9,3 +9,5 @@ out/
 .ipynb_checkpoints
 ~*
 .lock
+
+scripts/**/.env
