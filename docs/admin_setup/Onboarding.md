@@ -16,6 +16,13 @@ parent: Admin and Setup
 1. TOC
 {:toc}
 
+## Team Working Procedures
+Follow [this document](https://ebi-ait.github.io/hca-ebi-wrangler-central/ebi-wrangler-onboarding.html) that contains, among others:
+1. [First Day tasks](https://ebi-ait.github.io/hca-ebi-wrangler-central/ebi-wrangler-onboarding.html#first-day)
+2. [First Week tasks](https://ebi-ait.github.io/hca-ebi-wrangler-central/ebi-wrangler-onboarding.html#first-week)
+3. [Shared Calendars](https://ebi-ait.github.io/hca-ebi-wrangler-central/ebi-wrangler-onboarding.html#calendar)
+4. [Regular meetings](https://ebi-ait.github.io/hca-ebi-wrangler-central/ebi-wrangler-onboarding.html#regular-meetings)
+
 ## Access
 * create an [ebi account](https://account-manager.ebi.ac.uk/signin)
 * github
