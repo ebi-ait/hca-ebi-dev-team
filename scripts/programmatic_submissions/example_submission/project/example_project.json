@@ -1,0 +1,40 @@
+{
+    "describedBy": "https://schema.staging.data.humancellatlas.org/type/project/17.0.0/project",
+    "schema_type": "project",
+    "project_core": {
+      "project_short_name": "myCoolLabel",
+      "project_title": "Test_project_with_minimum_information",
+      "project_description": "This is a test project with minimum information for the programmatic submissions guide"
+    },
+    "contributors": [
+      {
+        "name": "Enrique,,Ventura",
+        "email": "enrique@ebi.ac.uk",
+        "institution": "EMBL-EBI",
+        "corresponding_contributor": true,
+        "project_role": {
+          "text": "data curator",
+          "ontology": "EFO:0009737",
+          "ontology_label": "data curator"
+        }
+      }
+    ],
+    "publications": [
+      {
+        "authors": [
+          "Lorem IP",
+          "Sed UP"
+        ],
+        "title": "A combined approach for single-cell mRNA and intracellular protein expression analysis",
+        "url": "https://www.frontiersin.org/articles/10.3389/fcell.2020.00384/full",
+        "official_hca_publication": false
+      }
+    ],
+    "funders": [
+      {
+        "grant_title": "a cool grant",
+        "grant_id": "000000000bp1",
+        "organization": "EMBL-EBI"
+      }
+    ]
+}
