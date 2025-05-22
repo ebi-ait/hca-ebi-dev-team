@@ -1,6 +1,7 @@
 .idea/
 venv/
 .venv/
+.env
 _local/
 docs/_site/
 docs/.jekyll-cache/
@@ -9,5 +10,5 @@ out/
 .ipynb_checkpoints
 ~*
 .lock
-
-scripts/**/.env
+.sqlite
+.nextflow
