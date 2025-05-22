@@ -16,8 +16,38 @@ WRANGLING_STATE=PUBLISHED_IN_DCP
 CUTOFF_AGE_MONTHS=5m
 CUTOFF_DATE=$(date -v -$CUTOFF_AGE_MONTHS "+%Y-%m-%dT%H:%M:%SZ")
 
+log() {
+  local level="$1"
+  shift
+
+  # Color palette
+  local reset="\033[0m"
+  local dim="\033[2m"
+  local level_info="\033[1;34m"
+  local level_warn="\033[1;33m"
+  local level_error="\033[1;31m"
+  local func_color="\033[1;36m"
+  local message_color="\033[0m"
+
+  # Set level color
+  local level_color
+  case "$level" in
+    INFO) level_color=$level_info ;;
+    WARN) level_color=$level_warn ;;
+    ERROR) level_color=$level_error ;;
+    *) level_color=$reset ;;
+  esac
+
+  # Get caller function name
+  local caller="${FUNCNAME[1]:-main}"
+
+  # Print formatted log
+  echo -e "${dim}[$(date +'%Y-%m-%d %H:%M:%S')]${reset} ${level_color}[$level]${reset} ${func_color}[$caller]${reset} ${message_color}$*${reset}" >&2
+}
+
 # Functions
 fetch_projects() {
+  log INFO "Fetching projects with ${WRANGLING_STATE}..."
   curl --silent \
     --location --max-time 10 \
     --fail --show-error \
@@ -31,16 +61,19 @@ fetch_projects() {
 }
 
 filter_old_projects() {
+  log INFO "keeping projects older than $CUTOFF_DATE"
   jq -r \
     --arg date "$CUTOFF_DATE" '
       ._embedded.projects
       | map(select(.dcpVersion < $date))
-      | map({contentLastModified, updateDate, dcpVersion, u: ._links.submissionEnvelopes.href})
+      | map(._links.submissionEnvelopes.href)
+      | .[]
     ' \
   | tee output_02_filter_old_projects.txt
 }
 
 fetch_submission_staging_locations() {
+  log INFO "read submissions' staging areas"
   xargs -n1 curl -s | jq -r '
     select(._embedded?)
     ._embedded.submissionEnvelopes[0].stagingDetails.stagingAreaLocation.value
@@ -49,6 +82,7 @@ fetch_submission_staging_locations() {
 }
 
 generate_archive_s3_staging_areas_cmd() {
+  log INFO "generating archive command"
   xargs -n1 -I{} echo aws s3 cp "{}" "{}" \
     --recursive \
     --storage-class $TARGET_STORAGE_CLASS \
@@ -56,15 +90,17 @@ generate_archive_s3_staging_areas_cmd() {
   | tee output_04_archive_s3_staging_areas.txt
 }
 
+clean_outputs() {
+  rm output_*
+}
 # Main script logic
 
-echo "Archiving s3 upload areas of submissions with status $WRANGLING_STATE older than $CUTOFF_DATE"
+log INFO "Archiving s3 upload areas of submissions with status $WRANGLING_STATE older than $CUTOFF_DATE"
 
-fetch_projects \
-  | filter_old_projects
-#fetch_projects \
-#  | filter_old_projects \
-#  | fetch_submission_staging_locations \
-#  | generate_archive_s3_staging_areas_cmd
+clean_outputs \
+  && fetch_projects \
+  | filter_old_projects \
+  | fetch_submission_staging_locations \
+  | generate_archive_s3_staging_areas_cmd
 
-echo "Archival of s3 upload areas done complete."
+log INFO "Archival of s3 upload areas done complete."
