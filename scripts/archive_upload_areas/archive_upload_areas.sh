@@ -7,14 +7,15 @@ source .env
 
 : "${INGEST_URL:?Missing INGEST_URL in .env}"
 : "${INGEST_TOKEN:?Missing INGEST_TOKEN in .env}"
+: "${CUTOFF_DATE:?Missing CUTOFF_DATE in .env, format: %Y-%m-%d, e.g. 2025-02-14}"
 
 # Configuration
 PROJECT_PAGE_SIZE=600
 AUTH_HEADER="Authorization: Bearer ${INGEST_TOKEN}"
 TARGET_STORAGE_CLASS=GLACIER
 WRANGLING_STATE=PUBLISHED_IN_DCP
-CUTOFF_AGE_MONTHS=5m
-CUTOFF_DATE=$(date -v -$CUTOFF_AGE_MONTHS "+%Y-%m-%dT%H:%M:%SZ")
+#CUTOFF_AGE_MONTHS=3m
+CUTOFF_TIMESTAMP=${CUTOFF_DATE}T00:00:00Z
 
 log() {
   local level="$1"
@@ -58,18 +59,20 @@ fetch_projects() {
     --header "${AUTH_HEADER}" \
     --data "[{\"field\":\"wranglingState\",\"operator\":\"IS\",\"value\":\"${WRANGLING_STATE}\"}]" \
     | tee output_01_fetch_projects.json
+    log INFO There are $(cat output_01_fetch_projects.json | jq .page.totalElements) projects in state ${WRANGLING_STATE}
 }
 
 filter_old_projects() {
   log INFO "keeping projects older than $CUTOFF_DATE"
   jq -r \
-    --arg date "$CUTOFF_DATE" '
+    --arg date "$CUTOFF_TIMESTAMP" '
       ._embedded.projects
       | map(select(.dcpVersion < $date))
       | map(._links.submissionEnvelopes.href)
       | .[]
     ' \
   | tee output_02_filter_old_projects.txt
+  log INFO There are $(cat output_02_filter_old_projects.txt | wc -l) projects updated before $CUTOFF_DATE
 }
 
 fetch_submission_staging_locations() {
@@ -87,11 +90,12 @@ generate_archive_s3_staging_areas_cmd() {
     --recursive \
     --storage-class $TARGET_STORAGE_CLASS \
     --metadata-directive COPY \
-  | tee output_04_archive_s3_staging_areas.txt
+  > output_04_archive_s3_staging_areas.txt
+  log info aws s3 update comannds are in output_04_archive_s3_staging_areas.txt
 }
 
 clean_outputs() {
-  rm output_*
+  rm -f output_*
 }
 # Main script logic
 
