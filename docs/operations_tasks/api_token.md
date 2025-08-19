@@ -14,7 +14,7 @@ Instructions:
 1. Create a bookmarklet in the browser's bookmark list with the following code as the URL
 
 ```javascript
-javascript:(async function(navigator) { navigator.clipboard.writeText(Object.entries(window.localStorage).filter(([k,v])=>k.indexOf('elixir')>0).map(([k,v])=>v).map(JSON.parse)[0].access_token)})(navigator)
+javascript:(async function(navigator) { navigator.clipboard.writeText(Object.entries(window.localStorage).filter(([k,v])=>k.indexOf('lifescience-ri.eu')>0).map(([k,v])=>v).map(JSON.parse)[0].access_token)})(navigator)
 ```
 
 2. Log in to ingest ui
