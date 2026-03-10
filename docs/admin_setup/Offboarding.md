@@ -24,3 +24,7 @@ The leaving member should be removed from:
   * [grp-aws-ait-team-viewonly-access](https://groups.google.com/a/ebi.ac.uk/g/grp-aws-ait-team-viewonly-access/members)
   * [grp-gcp-molecular_archive_ait_hca-dev](https://groups.google.com/a/ebi.ac.uk/g/gcp-molecular_archive_ait_hca-dev/members) 
 * [Sprint Rota](https://docs.google.com/spreadsheets/d/1-y7QNoIdwYdFHVxJUc5XWcQuuv6VYhvPLpt9Ls2PK7M/edit?pli=1#gid=620193979) - remove name for Configs tab and update TeamMembers named range
+* Jira
+* gitlab
+* WRANGLER role in accounts collection in mongo
+* AWS access keys
